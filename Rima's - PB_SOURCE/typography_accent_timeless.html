@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accent · Timeless Options · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        /* ── 3-COL GRID ── */
+        .g3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        /* ── LABEL ROW ── */
+        .col-lbl {
+            background: #111;
+            padding: 20px 44px;
+        }
+
+        .col-lbl-name {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .col-lbl-desc {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #3a3a3a;
+            margin-top: 5px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            padding: 44px 44px 36px;
+            min-height: 68vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* each hero has same cool-gray gradient, only the warm glow changes */
+        .h-gold {
+            background:
+                radial-gradient(ellipse 52% 55% at 64% 26%, rgba(168, 144, 96, 0.28) 0%, transparent 62%),
+                radial-gradient(ellipse 38% 38% at 18% 82%, rgba(100, 108, 116, 0.2) 0%, transparent 58%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 22%, #9fa8af 52%, #b3b0ab 76%, #bfbcb6 100%);
+        }
+
+        .h-linen {
+            background:
+                radial-gradient(ellipse 52% 55% at 64% 26%, rgba(180, 168, 148, 0.26) 0%, transparent 62%),
+                radial-gradient(ellipse 38% 38% at 18% 82%, rgba(100, 108, 116, 0.2) 0%, transparent 58%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 22%, #9fa8af 52%, #b3b0ab 76%, #bfbcb6 100%);
+        }
+
+        .h-ivory {
+            background:
+                radial-gradient(ellipse 52% 55% at 64% 26%, rgba(200, 190, 170, 0.26) 0%, transparent 62%),
+                radial-gradient(ellipse 38% 38% at 18% 82%, rgba(100, 108, 116, 0.2) 0%, transparent 58%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 22%, #9fa8af 52%, #b3b0ab 76%, #bfbcb6 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .h-top {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-id {
+            font-weight: 700;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.42);
+            line-height: 1.7;
+        }
+
+        .h-id span {
+            display: block;
+            font-weight: 300;
+            font-size: 9px;
+            color: rgba(0, 0, 0, 0.32);
+        }
+
+        .h-name {
+            margin-top: auto;
+            padding-top: 36px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .n1 {
+            font-weight: 900;
+            font-size: clamp(52px, 8.5vw, 82px);
+            color: #050505;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .n2 {
+            font-weight: 200;
+            font-size: clamp(52px, 8.5vw, 82px);
+            color: #050505;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .h-foot {
+            margin-top: 22px;
+            padding-top: 14px;
+            border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-t {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.48);
+        }
+
+        .h-l {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.36);
+        }
+
+        /* ── QUOTE ── */
+        .quote {
+            background: #060606;
+            padding: 44px;
+            border-top: 3px solid;
+        }
+
+        .q-big {
+            font-weight: 900;
+            font-size: clamp(22px, 3.2vw, 38px);
+            color: #f2f0ec;
+            line-height: 1.1;
+            letter-spacing: -0.8px;
+        }
+
+        .q-sub {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-top: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .q-sub::before {
+            content: '';
+            display: block;
+            width: 22px;
+            height: .5px;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* ── BODY ── */
+        .body-s {
+            background: #f4f3f1;
+            padding: 44px;
+            border-top: 3px solid #050505;
+        }
+
+        .b-lbl {
+            font-weight: 600;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .b-h {
+            font-weight: 800;
+            font-size: 17px;
+            color: #050505;
+            line-height: 1.2;
+            letter-spacing: -.2px;
+            margin-bottom: 14px;
+        }
+
+        .b-p {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 1.85;
+            color: #666;
+        }
+
+        .b-p strong {
+            font-weight: 600;
+            color: #111;
+        }
+
+        .b-cred {
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #bbb;
+            margin-top: 14px;
+        }
+
+        /* ── SWATCH ── */
+        .swatch {
+            padding: 36px 44px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sw-text {}
+
+        .sw-name {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -.3px;
+            margin-bottom: 6px;
+        }
+
+        .sw-hex {
+            font-weight: 300;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #444;
+        }
+
+        .sw-ref {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: .8px;
+            color: #3a3a3a;
+            margin-top: 10px;
+            max-width: 200px;
+            line-height: 1.65;
+        }
+
+        .sw-dot {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LABELS -->
+    <div class="g3" style="padding:2px; gap:2px;">
+        <div class="col-lbl">
+            <p class="col-lbl-name" style="color:#a89060;">Antique Gold</p>
+            <p class="col-lbl-desc">#a89060 · Aged metal · Quiet prestige · Timeless</p>
+        </div>
+        <div class="col-lbl">
+            <p class="col-lbl-name" style="color:#b4a88c;">Raw Linen</p>
+            <p class="col-lbl-desc">#b4a88c · Undyed fabric · Stone · Natural luxury</p>
+        </div>
+        <div class="col-lbl">
+            <p class="col-lbl-name" style="color:#c8baa4;">Warm Parchment</p>
+            <p class="col-lbl-desc">#c8baa4 · Aged paper · Plaster · Understated depth</p>
+        </div>
+    </div>
+
+    <!-- HEROES -->
+    <div class="g3">
+        <div class="hero h-gold">
+            <div class="h-top">
+                <div class="h-id">Personal Brand<span>Antique Gold</span></div>
+                <div style="font-weight:300;font-size:9px;color:rgba(0,0,0,0.36);text-align:right;">25 — 02 —
+                    2026<br><strong style="color:#a89060;">R1</strong></div>
+            </div>
+            <div class="h-name"><span class="n1">Rima</span><span class="n2">Alshoufi</span></div>
+            <div class="h-foot">
+                <span class="h-t">Spatial Experience Designer / CD</span>
+                <span class="h-l">Dubai · GCC</span>
+            </div>
+        </div>
+        <div class="hero h-linen">
+            <div class="h-top">
+                <div class="h-id">Personal Brand<span>Raw Linen</span></div>
+                <div style="font-weight:300;font-size:9px;color:rgba(0,0,0,0.36);text-align:right;">25 — 02 —
+                    2026<br><strong style="color:#b4a88c;">R1</strong></div>
+            </div>
+            <div class="h-name"><span class="n1">Rima</span><span class="n2">Alshoufi</span></div>
+            <div class="h-foot">
+                <span class="h-t">Spatial Experience Designer / CD</span>
+                <span class="h-l">Dubai · GCC</span>
+            </div>
+        </div>
+        <div class="hero h-ivory">
+            <div class="h-top">
+                <div class="h-id">Personal Brand<span>Warm Parchment</span></div>
+                <div style="font-weight:300;font-size:9px;color:rgba(0,0,0,0.36);text-align:right;">25 — 02 —
+                    2026<br><strong style="color:#c8baa4;">R1</strong></div>
+            </div>
+            <div class="h-name"><span class="n1">Rima</span><span class="n2">Alshoufi</span></div>
+            <div class="h-foot">
+                <span class="h-t">Spatial Experience Designer / CD</span>
+                <span class="h-l">Dubai · GCC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUOTES -->
+    <div class="g3">
+        <div class="quote" style="border-top-color:#a89060;">
+            <p class="q-big">Not how it looks —<br><span style="color:#a89060;">how it makes them feel.</span></p>
+            <p class="q-sub" style="color:#a89060;">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+        <div class="quote" style="border-top-color:#b4a88c;">
+            <p class="q-big">Not how it looks —<br><span style="color:#b4a88c;">how it makes them feel.</span></p>
+            <p class="q-sub" style="color:#b4a88c;">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+        <div class="quote" style="border-top-color:#c8baa4;">
+            <p class="q-big">Not how it looks —<br><span style="color:#c8baa4;">how it makes them feel.</span></p>
+            <p class="q-sub" style="color:#c8baa4;">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="g3">
+        <div class="body-s">
+            <p class="b-lbl" style="color:#a89060;">01 — About the Practice</p>
+            <h2 class="b-h">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-p">A Spatial Experience Designer and Creative Director based in Dubai, she translates the
+                identity and emotional truth of a brand into environments that <strong>shape how people move, behave,
+                    and remember.</strong></p>
+            <p class="b-cred">MBA Luxury Management · Sup de Luxe, Paris · Inside LVMH</p>
+        </div>
+        <div class="body-s">
+            <p class="b-lbl" style="color:#b4a88c;">01 — About the Practice</p>
+            <h2 class="b-h">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-p">A Spatial Experience Designer and Creative Director based in Dubai, she translates the
+                identity and emotional truth of a brand into environments that <strong>shape how people move, behave,
+                    and remember.</strong></p>
+            <p class="b-cred">MBA Luxury Management · Sup de Luxe, Paris · Inside LVMH</p>
+        </div>
+        <div class="body-s">
+            <p class="b-lbl" style="color:#c8baa4;">01 — About the Practice</p>
+            <h2 class="b-h">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-p">A Spatial Experience Designer and Creative Director based in Dubai, she translates the
+                identity and emotional truth of a brand into environments that <strong>shape how people move, behave,
+                    and remember.</strong></p>
+            <p class="b-cred">MBA Luxury Management · Sup de Luxe, Paris · Inside LVMH</p>
+        </div>
+    </div>
+
+    <!-- SWATCHES -->
+    <div class="g3" style="gap:2px; background:#0a0a0a; padding:2px; margin-top:2px;">
+        <div class="swatch" style="background:#141414;">
+            <div class="sw-text">
+                <p class="sw-name" style="color:#a89060;">Antique Gold</p>
+                <p class="sw-hex">#a89060</p>
+                <p class="sw-ref">References aged metal — not polished, not shiny. The patina of a brass door handle in
+                    a well-kept building. Quiet prestige.</p>
+            </div>
+            <div class="sw-dot" style="background:#a89060;"></div>
+        </div>
+        <div class="swatch" style="background:#141414;">
+            <div class="sw-text">
+                <p class="sw-name" style="color:#b4a88c;">Raw Linen</p>
+                <p class="sw-hex">#b4a88c</p>
+                <p class="sw-ref">References undyed fabric, limestone, unfinished plaster. The material quality of a
+                    studio — natural and considered without being decorative.</p>
+            </div>
+            <div class="sw-dot" style="background:#b4a88c;"></div>
+        </div>
+        <div class="swatch" style="background:#141414;">
+            <div class="sw-text">
+                <p class="sw-name" style="color:#c8baa4;">Warm Parchment</p>
+                <p class="sw-hex">#c8baa4</p>
+                <p class="sw-ref">References aged paper, raw silk, Italian plaster. The warmest of the three — closest
+                    in feeling to the original brand cream palette.</p>
+            </div>
+            <div class="sw-dot" style="background:#c8baa4;"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

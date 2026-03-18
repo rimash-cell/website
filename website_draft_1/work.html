@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Rima Alshoufi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bk: #0a0a0a;
+            --ow: #f7f5f2;
+            --ww: #faf9f7;
+            --br: #b87333;
+            --sd: #c8c2b8;
+            --gr-d: rgba(255, 255, 255, 0.45);
+            --hl: 0.5px solid #c8c2b8;
+            --hl-d: 0.5px solid rgba(255, 255, 255, 0.1);
+            --max: 1200px;
+            --px: 40px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background: var(--ow);
+            color: var(--bk);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 200;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 26px var(--px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        nav.scrolled {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 20px var(--px) 28px;
+        }
+
+        /* Dark nav variation for white background page */
+        nav.dark-mode {
+            padding: 26px var(--px);
+        }
+
+        nav.dark-mode.scrolled {
+            background: linear-gradient(to bottom, rgba(250, 249, 247, 0.95) 0%, rgba(250, 249, 247, 0) 100%);
+            border-bottom: var(--hl);
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 15px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s;
+        }
+
+        .logo span {
+            font-weight: 200
+        }
+
+        nav.dark-mode .logo {
+            color: #111;
+            text-shadow: none;
+        }
+
+        nav.dark-mode.scrolled .logo,
+        nav.dark-mode.scrolled .nav-links a {
+            color: #111;
+            text-shadow: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            opacity: .8;
+            transition: all .2s;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links a.active {
+            opacity: 1;
+        }
+
+        nav.dark-mode .nav-links a {
+            color: #111;
+            text-shadow: none;
+            opacity: .6;
+        }
+
+        .nav-links a:hover {
+            opacity: 1
+        }
+
+        .nav-links a.cta {
+            opacity: 1;
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .nav-links a.cta span {
+            position: relative;
+            padding-bottom: 6px;
+        }
+
+        .nav-links a.cta span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.5px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+        }
+
+        .nav-links a.cta:hover span::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* HEADER PANEL */
+        .page-header {
+            padding: 160px var(--px) 40px;
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .sec-tag {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 0;
+        }
+
+        .sec-tag::after {
+            content: '';
+            width: 16px;
+            height: .5px;
+            background: #b87333
+        }
+
+        .page-title {
+            font-size: clamp(40px, 5vw, 68px);
+            font-weight: 200;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            color: #111;
+            margin-bottom: 24px;
+        }
+
+        .page-intro {
+            font-size: clamp(16px, 1.5vw, 20px);
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(0, 0, 0, 0.6);
+            max-width: 720px;
+        }
+
+        /* ── FILTER NAV ── */
+        .filter-nav {
+            display: flex;
+            align-items: flex-start;
+            padding: 0 var(--px);
+            margin: 0 auto 64px;
+            max-width: var(--max);
+            border-bottom: 0.5px solid rgba(0,0,0,0.12);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: flex-start;
+            flex: 1;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .filter-group::-webkit-scrollbar { display: none; }
+
+        /* Each pill */
+        .filter-item {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .filter-btn {
+            font-family: inherit;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            color: rgba(0,0,0,0.38);
+            cursor: pointer;
+            padding: 18px 20px;
+            transition: color 0.25s, border-color 0.25s;
+            white-space: nowrap;
+            display: block;
+        }
+
+        .filter-btn:hover { color: #111; }
+
+        .filter-btn.active {
+            color: #111;
+            border-bottom-color: #111;
+        }
+
+        /* ── DROPDOWN ── */
+        .sector-subcats {
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 0;
+            background: #fff;
+            border: 0.5px solid rgba(0,0,0,0.1);
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 190px;
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-4px);
+            transition: opacity 0.18s ease, transform 0.18s ease;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+        }
+
+        /* Desktop: open on hover */
+        @media (min-width: 901px) {
+            .filter-item:hover .sector-subcats {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile/tablet: open via .open class set by JS */
+        @media (max-width: 900px) {
+            .sector-subcats {
+                position: fixed;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border: none;
+                border-top: 0.5px solid rgba(0,0,0,0.1);
+                padding: 20px 24px 36px;
+                min-width: unset;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 12px 20px;
+                background: #fff;
+                box-shadow: 0 -8px 32px rgba(0,0,0,0.08);
+                transform: translateY(8px);
+            }
+            .filter-item.open .sector-subcats {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+            .filter-btn {
+                padding: 16px 14px;
+                font-size: 10px;
+            }
+        }
+
+        .sector-subcats a {
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: .1em;
+            color: rgba(0,0,0,0.5);
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+            transition: color 0.2s;
+        }
+        .sector-subcats a:hover,
+        .sector-subcats a.active-sub { color: #111; }
+
+        /* THE MAGAZINE SPREAD (CONTROLLED ASYMMETRY) */
+        .work-list {
+            padding: 0 var(--px) 160px;
+            max-width: var(--max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 40px 24px;
+        }
+
+        .work-row {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.3s ease;
+        }
+
+        .work-img {
+            width: 100%;
+            background: #eee;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 12px;
+            aspect-ratio: 16/9; /* Default for half-width cards */
+        }
+
+        /* Hover Overlay for 'View' Action */
+        .work-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            /* Darker for higher visibility */
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .work-img::before {
+            content: 'View';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .work-row:hover .work-img::after {
+            opacity: 1;
+        }
+
+        .work-row:hover .work-img::before {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .work-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* A subtle line to anchor the taxonomy to the row */
+        .work-meta::after {
+            content: '';
+            flex-grow: 1;
+            height: 0.5px;
+            background: rgba(0, 0, 0, 0.08);
+            max-width: 40px;
+        }
+
+        .work-meta {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 6px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .work-submeta {
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.45);
+            margin-bottom: 12px;
+        }
+
+        .work-title {
+            font-size: clamp(24px, 2.5vw, 32px);
+            font-weight: 200;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            /* Tightened from 12px */
+            color: #111;
+        }
+
+        .work-truth {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(0, 0, 0, 0.5);
+            /* lighter string color for scanning */
+            margin-bottom: 0;
+            max-width: 90%;
+        }
+
+        /* DYNAMIC INTENTIONAL HIERARCHY RULES */
+        /* Row 1 (Charles Zuber): Massive hero spread */
+        .work-row:nth-child(1) {
+            grid-column: span 12;
+        }
+
+        .work-row:nth-child(1) .work-img {
+            aspect-ratio: 21/8;
+            height: auto;
+        }
+
+        .work-row:nth-child(1) .work-title {
+            font-size: clamp(40px, 4vw, 56px);
+        }
+
+        /* Row 2 (Emovation + Private Office): 50/50 Split */
+        .work-row:nth-child(2) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(2) .work-img {
+            aspect-ratio: 16/9;
+        }
+
+        .work-row:nth-child(3) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(3) .work-img {
+            aspect-ratio: 16/9;
+        }
+
+        /* Row 3 (MHG Headquarter): Full width panoramic */
+        .work-row:nth-child(4) {
+            grid-column: span 12;
+        }
+
+        .work-row:nth-child(4) .work-img {
+            aspect-ratio: 21/8;
+            height: auto;
+        }
+
+        .work-row:nth-child(4) .work-title {
+            font-size: clamp(40px, 4vw, 56px);
+        }
+
+        /* Row 4 (Hind Aloud + Dubai Design Week): 50/50 Split */
+        .work-row:nth-child(5) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(5) .work-img {
+            aspect-ratio: 16/9;
+        }
+
+        .work-row:nth-child(6) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(6) .work-img {
+            aspect-ratio: 16/9;
+        }
+
+        /* Row 5 (ANA Restaurant): Full width panoramic */
+        .work-row:nth-child(7) {
+            grid-column: span 12;
+        }
+
+        .work-row:nth-child(7) .work-img {
+            aspect-ratio: 21/8;
+            height: auto;
+        }
+
+        .work-row:nth-child(7) .work-title {
+            font-size: clamp(40px, 4vw, 56px);
+        }
+
+        /* Row 6 (HOB Department Store + CUD Auditorium): 50/50 Split */
+        .work-row:nth-child(8) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(8) .work-img {
+            aspect-ratio: 16/9;
+        }
+
+        .work-row:nth-child(9) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(9) .work-img {
+            aspect-ratio: 16/9;
+        }
+
+
+        /* CLOSE */
+        .sec-close {
+            background: var(--bk);
+            padding: 130px var(--px);
+            text-align: center
+        }
+
+        .close-h {
+            font-size: clamp(28px, 4vw, 60px);
+            font-weight: 200;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            color: #fff;
+            margin-bottom: 20px
+        }
+
+        .close-h strong {
+            font-weight: 900
+        }
+
+        .close-p {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, .35);
+            max-width: 360px;
+            margin: 0 auto 40px;
+            line-height: 1.9
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 0;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn-cta span::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 0.5px;
+            background: currentColor;
+            transform: scaleX(0.2);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            opacity: 0.5;
+        }
+
+        .btn-cta:hover span::after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        .btn-cta i {
+            margin-left: 12px;
+            font-style: normal;
+            transition: transform 0.4s ease;
+            display: inline-block;
+        }
+
+        .btn-cta:hover i {
+            transform: translateX(8px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bk);
+            border-top: 0.5px solid rgba(200, 194, 184, .07);
+            padding: 26px var(--px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .f-logo {
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #fff
+        }
+
+        .f-logo span {
+            font-weight: 200
+        }
+
+        .f-links {
+            display: flex;
+            gap: 24px
+        }
+
+        .f-links a {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .2);
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .f-links a:hover {
+            color: rgba(255, 255, 255, .65)
+        }
+
+        .f-copy {
+            font-size: 11px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, .12);
+            letter-spacing: .08em;
+            text-transform: uppercase
+        }
+
+        /* Responsive Fixes */
+        @media(max-width: 900px) {
+            .filter-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding-bottom: 20px;
+            }
+            .filter-group {
+                flex-wrap: wrap;
+                overflow-x: visible;
+                gap: 8px 4px; /* Row gap and Column gap */
+            }
+
+            .work-list {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+            }
+
+            .work-img {
+                width: 100%;
+                height: 45vw !important; /* Reduced from 60vw for cleaner mobile viewport */
+                aspect-ratio: auto !important;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .filter-nav {
+                gap: 16px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-nav" class="dark-mode">
+        <a href="index.html" class="logo">RIMA <span>ALSHOUFI</span></a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="work.html" class="active">Work</a>
+            <a href="connect.html" class="cta"><span>Connect</span></a>
+        </div>
+    </nav>
+
+    <!-- HEADER INTRO -->
+    <header class="page-header">
+        <h1 class="page-title">Work</h1>
+        <p class="page-intro">An archive of spatial experience, creative direction, and narrative environments.</p>
+    </header>
+
+    <!-- FILTERS -->
+    <div class="filter-nav">
+        <div class="filter-item">
+            <button class="filter-btn active" data-filter="all">All</button>
+        </div>
+        <div class="filter-group">
+            <div class="filter-item">
+                <button class="filter-btn" data-filter="luxury-retail">Luxury Retail</button>
+                <div class="sector-subcats">
+                    <a href="#" data-sub="flagship-boutique">Flagship &amp; Boutique</a>
+                    <a href="#" data-sub="pop-up">Pop-Up</a>
+                    <a href="#" data-sub="experiential-spaces">Experiential Spaces</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" data-filter="luxury-residential">Luxury Residential</button>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+                <div class="sector-subcats">
+                    <a href="#" data-sub="restaurant">Restaurant</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" data-filter="immersive-experiences">Immersive Experiences</button>
+                <div class="sector-subcats">
+                    <a href="#" data-sub="experiential-spaces">Experiential Spaces</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" data-filter="workplace-environments">Workplace Environments</button>
+                <div class="sector-subcats">
+                    <a href="#" data-sub="headquarters">Headquarters</a>
+                    <a href="#" data-sub="office-spaces">Office Spaces</a>
+                    <a href="#" data-sub="executive-spaces">Executive Spaces</a>
+                    <a href="#" data-sub="experiential-spaces">Experiential Spaces</a>
+                </div>
+            </div>
+            <div class="filter-item">
+                <button class="filter-btn" data-filter="events-activations">Events &amp; Activations</button>
+                <div class="sector-subcats">
+                    <a href="#" data-sub="launch-events">Launch Events</a>
+                    <a href="#" data-sub="360-campaigns">360 Campaigns</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORK ARCHIVE LIST -->
+    <main class="work-list">
+
+        <!-- PROJECTS RENDERED DYNAMICALLY FROM PRISMIC -->
+
+    </main>
+
+    <!-- CLOSE SEC -->
+    <div class="sec-close" id="connect">
+        <div class="close-h">Space is felt <strong>before it is seen.</strong></div>
+        <div class="close-p">If you are building an environment that needs to be more than designed — let's
+            talk.
+        </div>
+        <a href="mailto:connect@rimaalshoufi.com" class="btn-cta"><span>Connect</span> <i>→</i></a>
+    </div>
+
+    <footer>
+        <div class="f-logo">RIMA <span>ALSHOUFI</span></div>
+        <div class="f-links">
+            <a href="index.html#about">About</a><a href="work.html">Work</a><a href="connect.html">Connect</a>
+        </div>
+        <div class="f-copy">Spatial Experience Designer · Dubai, UAE · © 2026</div>
+    </footer>
+
+    <script>
+        const CONTAINER = document.querySelector('.work-list');
+        const REPO_NAME = 'rima';
+        const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InJpbWEtYmY1MGZlZTAtMmQ5MC00MDg1LWJhNGUtOTNjMjMyZTQ3MTc0XzUiLCJkYXRlIjoxNzY3ODE2Mzc5LCJkb21haW4iOiJyaW1hIiwiYXBwTmFtZSI6ImFpLWFnZW50IiwiaWF0IjoxNzY3ODE2Mzc5fQ.yRmJo_s6uM7yDY7ezNneLctl3YGsje_24P082aT83hI';
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const subLinks = document.querySelectorAll('.sector-subcats a');
+
+        // Nav transparent trigger
+        const nav = document.getElementById('main-nav');
+        if(nav) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) nav.classList.add('scrolled');
+                else nav.classList.remove('scrolled');
+            });
+        }
+
+        async function loadFromPrismic() {
+            try {
+                // 1. Get Master Ref
+                const apiRes = await fetch(`https://${REPO_NAME}.cdn.prismic.io/api/v2?access_token=${TOKEN}`);
+                const apiData = await apiRes.json();
+                const ref = apiData.refs[0].ref;
+
+                // 2. Query works matching 'work'
+                const docsRes = await fetch(
+                    `https://${REPO_NAME}.cdn.prismic.io/api/v2/documents/search?ref=${ref}&access_token=${TOKEN}&pageSize=100&q=[[at(document.type,"work")]]`
+                );
+                const docsData = await docsRes.json();
+
+                CONTAINER.innerHTML = ''; // Clear fallback triggers
+
+                // Sort by sort_order ascending (nulls go to end)
+                docsData.results.sort((a, b) => {
+                    const sa = a.data.sort_order ?? 9999;
+                    const sb = b.data.sort_order ?? 9999;
+                    return sa - sb;
+                });
+
+                docsData.results.forEach((item) => {
+                    const data = item.data;
+                    const title = data.title?.[0]?.text || data.project_title || 'Untitled';
+
+                    let category = data.type || data.category || 'Other';
+                    if ((category === 'Other' || !category) && data.intro?.[0]?.text) {
+                        category = data.intro[0].text.split('|')[0].trim();
+                    }
+
+                    // Real subcategory from Prismic project_subcategory field
+                    let subcategory = data.project_subcategory || '';
+
+                    const img = data.preview_image?.url || data.main_image?.url || '';
+
+                    const node = document.createElement('a');
+                    node.href = `project_view.html?uid=${item.uid}`;
+                    node.className = 'work-row';
+
+                    // Normalize both category and subcategory to slug format
+                    const normCat = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                    const normSub = subcategory.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+                    node.setAttribute('data-category', normCat);
+                    node.setAttribute('data-subcategory', normSub);
+
+                    node.innerHTML = `
+                        <div class="work-img" style="background-image: url('${img}');"></div>
+                        <div class="work-info">
+                            ${subcategory ? `<div class="work-meta">${subcategory}</div>` : ''}
+                            <div class="work-title">${title}</div>
+                        </div>
+                    `;
+                    CONTAINER.appendChild(node);
+                });
+
+                // Trigger layout cycle once populated
+                filterGrid('all');
+
+            } catch (e) {
+                console.error("Prismic Load Error:", e);
+                CONTAINER.innerHTML = `<div style="padding: 40px; text-align: center; color: #555;">Failed to load items.</div>`;
+            }
+        }
+
+        function filterGrid(category, subFilter) {
+            let visibleIndex = 0;
+            const workItems = document.querySelectorAll('.work-row');
+
+            filterBtns.forEach(b => {
+                b.classList.toggle('active', b.getAttribute('data-filter') === category);
+            });
+
+            const filterWords = category === 'all' ? [] : category.split('-');
+
+            workItems.forEach(item => {
+                const itemCat = item.getAttribute('data-category') || '';
+                const itemSub = item.getAttribute('data-subcategory') || '';
+
+                let show = false;
+                if (category === 'all') {
+                    show = true;
+                } else {
+                    show = filterWords.some(word => itemCat.includes(word));
+                    // Subcategory drill-down: if subFilter provided, also match that
+                    if (show && subFilter) {
+                        show = itemSub.includes(subFilter.replace(/-/g, '')) ||
+                               subFilter.split('-').some(w => itemSub.includes(w));
+                    }
+                }
+
+                if (show) {
+                    item.style.display = 'flex';
+                    item.style.gridColumn = '';
+
+                    const cycle = visibleIndex % 3;
+                    const imgNode = item.querySelector('.work-img');
+
+                    if (cycle === 0) {
+                        // Full-width hero card — slim widescreen ratio
+                        item.style.gridColumn = 'span 12';
+                        if (imgNode) imgNode.style.aspectRatio = '21 / 8';
+                        item.querySelectorAll('.work-title').forEach(t => t.style.fontSize = 'clamp(32px, 3vw, 44px)');
+                    } else {
+                        // Half-width card — compact 16:9 keeps height restrained
+                        item.style.gridColumn = 'span 6';
+                        if (imgNode) imgNode.style.aspectRatio = '16 / 9';
+                        item.querySelectorAll('.work-title').forEach(t => t.style.fontSize = 'clamp(20px, 2vw, 26px)');
+                    }
+
+                    visibleIndex++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        /* ── FILTER EVENT WIRING ── */
+        const isMobile = () => window.innerWidth <= 900;
+
+        // Close all mobile open dropdowns
+        function closeAllDropdowns() {
+            document.querySelectorAll('.filter-item.open').forEach(el => el.classList.remove('open'));
+        }
+
+        // Close on outside tap (mobile)
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.filter-item')) closeAllDropdowns();
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const filterItem = btn.closest('.filter-item');
+                const subcats = filterItem.querySelector('.sector-subcats');
+                const cat = btn.getAttribute('data-filter');
+
+                if (isMobile() && subcats) {
+                    // Mobile: toggle dropdown open/closed
+                    const isOpen = filterItem.classList.contains('open');
+                    closeAllDropdowns();
+                    if (!isOpen) filterItem.classList.add('open');
+                } else {
+                    // Desktop or no subcats: filter immediately
+                    closeAllDropdowns();
+                }
+                // Always apply the category filter
+                filterGrid(cat);
+            });
+        });
+
+        subLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const sub = link.getAttribute('data-sub');
+                const cat = link.closest('.filter-item').querySelector('.filter-btn').getAttribute('data-filter');
+                // Mark active subcat visually
+                document.querySelectorAll('.sector-subcats a').forEach(a => a.classList.remove('active-sub'));
+                link.classList.add('active-sub');
+                closeAllDropdowns();
+                filterGrid(cat, sub);
+            });
+        });
+
+        // Hydrate
+        document.addEventListener('DOMContentLoaded', loadFromPrismic);
+    </script>
+</body>
+
+</html>

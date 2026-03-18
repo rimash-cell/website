@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "toda-event---ramadan-suhoor-",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "TODA Event - Ramadan Suhoor ",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "HAO",
+    "year": "2024",
+    "location": "Souk Madinat Jumeirah, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Immersive Brand Event",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

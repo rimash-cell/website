@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typography — Option E Refined · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 44px 56px;
+
+            /* Frosted gradient — close to Lee Jones reference */
+            background:
+                radial-gradient(ellipse 55% 55% at 62% 30%, rgba(184, 115, 51, 0.22) 0%, transparent 70%),
+                linear-gradient(160deg, #bfc4c8 0%, #c8cdd1 25%, #b8bdc3 55%, #cac8c4 80%, #d0cdc8 100%);
+        }
+
+        .hero-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .hero-tag {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #6e7275;
+            line-height: 1.7;
+        }
+
+        .hero-tag strong {
+            display: block;
+            font-weight: 700;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #2a2a2a;
+        }
+
+        .hero-date {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #888;
+            text-align: right;
+        }
+
+        /* Name — split weight like the reference */
+        .hero-name {
+            margin-top: auto;
+            padding-top: 100px;
+        }
+
+        .name-first {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 900;
+            font-size: clamp(72px, 14vw, 120px);
+            color: #0d0d0d;
+            line-height: 0.9;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .name-last {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 200;
+            font-size: clamp(72px, 14vw, 120px);
+            color: #0d0d0d;
+            line-height: 0.9;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 0.5px solid rgba(0, 0, 0, 0.18);
+        }
+
+        .hero-title {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .hero-location {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #888;
+        }
+
+        /* ── QUOTE STRIP ── */
+        .quote-strip {
+            background: #0d0d0d;
+            padding: 56px;
+        }
+
+        .quote-strip p {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: clamp(28px, 4.5vw, 52px);
+            color: #e8e4de;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            max-width: 800px;
+        }
+
+        .quote-strip p em {
+            font-style: normal;
+            color: #b87333;
+        }
+
+        .quote-attr {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #444;
+            margin-top: 28px;
+        }
+
+        /* ── BODY SECTION ── */
+        .body-section {
+            background: #f2f1ef;
+            padding: 64px 56px;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 64px;
+        }
+
+        .body-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding-top: 4px;
+        }
+
+        .sidebar-num {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 900;
+            font-size: 48px;
+            color: #e0dcd8;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .sidebar-label {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+        }
+
+        .body-content h2 {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 26px;
+            color: #0d0d0d;
+            letter-spacing: -0.3px;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+
+        .body-content p {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.85;
+            color: #666;
+            margin-bottom: 14px;
+        }
+
+        .body-content p strong {
+            font-weight: 500;
+            color: #222;
+        }
+
+        /* ── SCALE ── */
+        .scale-section {
+            background: #0d0d0d;
+            padding: 56px;
+        }
+
+        .scale-label {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 36px;
+        }
+
+        .scale-row {
+            display: flex;
+            align-items: baseline;
+            gap: 28px;
+            padding: 10px 0;
+            border-bottom: 0.5px solid #1e1e1e;
+        }
+
+        .scale-meta {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #3a3a3a;
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+
+        /* ── WEIGHTS STRIP ── */
+        .weights-strip {
+            background: #f2f1ef;
+            padding: 48px 56px;
+            display: flex;
+            gap: 0;
+            overflow: hidden;
+        }
+
+        .weight-item {
+            flex: 1;
+            padding: 30px 24px;
+            border-left: 0.5px solid #ddd;
+        }
+
+        .weight-item:first-child {
+            border-left: none;
+        }
+
+        .weight-sample {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 52px;
+            color: #0d0d0d;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .weight-name {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-top">
+            <div class="hero-tag">
+                <strong>Personal Brand</strong>
+                Typography System · Option E
+            </div>
+            <div class="hero-date">
+                25 — 02 — 2026<br>
+                <span style="color:#b87333; font-weight:400;">R1</span>
+            </div>
+        </div>
+
+        <div class="hero-name">
+            <span class="name-first">Rima</span>
+            <span class="name-last">Alshoufi</span>
+        </div>
+
+        <div class="hero-bottom">
+            <span class="hero-title">Spatial Experience Designer &nbsp;/&nbsp; Creative Director</span>
+            <span class="hero-location">Dubai &nbsp;·&nbsp; GCC &amp; Europe</span>
+        </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="quote-strip">
+        <p>Not how it looks —<br><em>how it makes them feel.</em></p>
+        <p class="quote-attr">Spatial Experience Design &nbsp;·&nbsp; 13 Years &nbsp;·&nbsp; GCC &amp; Europe</p>
+    </div>
+
+    <!-- BODY SYSTEM -->
+    <div class="body-section">
+        <div class="body-sidebar">
+            <p class="sidebar-num">01</p>
+            <p class="sidebar-label">About<br>the Practice</p>
+        </div>
+        <div class="body-content">
+            <h2>Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them
+                feel.</h2>
+            <p>
+                A Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and
+                emotional truth of a brand into environments that <strong>shape how people move, behave, and
+                    remember.</strong>
+            </p>
+            <p>
+                Every project begins with one question: who is this for, and what must they feel? That answer drives
+                every material choice, every sequence, every sensory decision — until the space becomes something people
+                carry with them when they leave.
+            </p>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif; font-size:9px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:#b87333; margin-top:10px;">
+                MBA Luxury Management · Sup de Luxe (Founded by Cartier) · Paris
+            </p>
+        </div>
+    </div>
+
+    <!-- WEIGHTS -->
+    <div class="weights-strip">
+        <div class="weight-item">
+            <p class="weight-sample" style="font-weight:900; letter-spacing:-1px;">Aa</p>
+            <p class="weight-name">Black 900</p>
+        </div>
+        <div class="weight-item">
+            <p class="weight-sample" style="font-weight:700; letter-spacing:-1px;">Aa</p>
+            <p class="weight-name">Bold 700</p>
+        </div>
+        <div class="weight-item">
+            <p class="weight-sample" style="font-weight:500;">Aa</p>
+            <p class="weight-name">Medium 500</p>
+        </div>
+        <div class="weight-item">
+            <p class="weight-sample" style="font-weight:300;">Aa</p>
+            <p class="weight-name">Light 300</p>
+        </div>
+        <div class="weight-item">
+            <p class="weight-sample" style="font-weight:200;">Aa</p>
+            <p class="weight-name">ExtraLight 200</p>
+        </div>
+    </div>
+
+    <!-- SCALE -->
+    <div class="scale-section">
+        <p class="scale-label">Hanken Grotesk — Type Scale</p>
+
+        <div class="scale-row">
+            <span class="scale-meta">120px · Black</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif; font-weight:900; font-size:64px; color:#e8e4de; letter-spacing:-2px; line-height:1;">
+                Display</p>
+        </div>
+        <div class="scale-row">
+            <span class="scale-meta">48px · Bold</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:40px; color:#ccc; letter-spacing:-0.5px; line-height:1;">
+                Heading</p>
+        </div>
+        <div class="scale-row">
+            <span class="scale-meta">24px · Light</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif; font-weight:300; font-size:24px; color:#888; line-height:1;">
+                Subheading / pull quote — light weight creates contrast</p>
+        </div>
+        <div class="scale-row">
+            <span class="scale-meta">15px · Light</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif; font-weight:300; font-size:15px; color:#666; line-height:1;">
+                Body text — Hanken Grotesk Light. Reads cleanly, doesn't compete.</p>
+        </div>
+        <div class="scale-row" style="border:none;">
+            <span class="scale-meta">10px · Medium</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif; font-weight:500; font-size:10px; color:#b87333; letter-spacing:3px; text-transform:uppercase; line-height:1;">
+                Label / Metadata · Bronze · Wide Tracking</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

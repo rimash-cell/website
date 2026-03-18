@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "alya",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "AlyaE'' Event",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "",
+    "year": "",
+    "location": "",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

@@ -1,0 +1,201 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const project = {
+    title: "The Perfumers",
+    category: "Events & Activations",
+    sector: "Fragrance & Retail",
+    year: "2023",
+    location: "UAE",
+    type: "360 Campaign",
+    tagline: "The creation of your story scent.",
+    intro: "A UAE-wide contest campaign that invited perfume enthusiasts to become “perfumers” by mixing and naming their own custom scent using a guided mixing kit—supported by retail VM/installations, a landing page, and multiple campaign videos.",
+};
+---
+
+<Layout title="The Perfumers | Rima Alshoufi">
+    <article class="animate-fade-in">
+
+        {/* ── HEADER ── */}
+        <header class="pt-32 pb-20 px-8 md:px-12 max-w-7xl mx-auto">
+
+            <div class="mb-14">
+                <a
+                    href="/work"
+                    class="text-[10px] uppercase tracking-[0.35em] text-neutral-400 dark:text-gray-500 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline"
+                >
+                    ← Back to Work
+                </a>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-end gap-12 mb-20">
+                <div class="max-w-4xl">
+                    <div class="text-[10px] uppercase tracking-[0.45em] text-neutral-400 dark:text-purple-400 mb-6 font-medium">
+                        {project.category}
+                    </div>
+                    <h1 class="text-6xl md:text-8xl leading-[0.88] tracking-tighter mb-6">
+                        {project.title}
+                    </h1>
+                    <p class="text-xl md:text-2xl font-light text-neutral-500 dark:text-gray-400 leading-relaxed max-w-xl italic">
+                        {project.tagline}
+                    </p>
+                </div>
+                <div class="text-right hidden md:block shrink-0">
+                    <div class="text-[56px] leading-none font-bold opacity-10 tracking-tight">
+                        {project.year}
+                    </div>
+                </div>
+            </div>
+
+            {/* Meta Grid */}
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-black/10 dark:border-white/10 pt-12 text-[10px] tracking-[0.2em] uppercase font-medium">
+                <div>
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Sector</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.sector}</span>
+                </div>
+                <div>
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Region</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.location}</span>
+                </div>
+                <div>
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Year</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.year}</span>
+                </div>
+                <div class="md:text-right">
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Type</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.type}</span>
+                </div>
+            </div>
+        </header>
+
+        {/* ── HERO IMAGE ── */}
+        <div class="w-full aspect-[21/9] overflow-hidden mb-28 group relative bg-neutral-100 dark:bg-[#111]">
+            <img
+                src="/projects/kht-the-perfumers/1_the_perfumers_banner.jpg"
+                alt="The Perfumers Banner"
+                class="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/10 dark:bg-black/20"></div>
+        </div>
+
+        {/* ── INTRO TEXT ── */}
+        <div class="px-8 md:px-12 max-w-4xl mx-auto mb-32">
+            <p class="text-2xl md:text-3xl font-light leading-relaxed text-neutral-700 dark:text-gray-300">
+                {project.intro}
+            </p>
+        </div>
+
+        {/* ── SECTION 1: CHALLENGE, INSIGHT, BIG IDEA ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="grid md:grid-cols-3 gap-px bg-black/10 dark:bg-white/10 border border-black/10 dark:border-white/10">
+
+                <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-10 md:p-14">
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-8">The Challenge</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        Build a campaign that doesn’t just advertise perfume—but gets people to create perfume. Make the mixing process accessible and engaging enough to trigger UGC while maintaining momentum through contest cycles and evaluations.
+                    </p>
+                </div>
+
+                <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-10 md:p-14">
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-8">The Insight</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        Gen Z and younger audiences desire self-expression and social proof. A guided "lab" kit makes the complex craft of perfumery approachable, bridging luxury with maker culture.
+                    </p>
+                </div>
+
+                <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-10 md:p-14">
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-8">The Big Idea</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        <span class="text-xl font-medium text-neutral-900 dark:text-white leading-tight block mb-4">Blending as Storytelling</span>
+                        Invite customers to unleash their creativity and become the masterminds behind their own scent creation. Participants blend, name, and share their signature scent.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        {/* ── RENDER 01 — WIDE ── */}
+        <div class="w-full mb-4 overflow-hidden group bg-neutral-100 dark:bg-[#111]">
+            <img
+                src="/projects/kht-the-perfumers/final_round.jpg"
+                alt="Final Round"
+                class="w-full h-auto transition-transform duration-[2.5s] group-hover:scale-103"
+            />
+        </div>
+
+        {/* ── IMAGE GRID ── */}
+        <div class="px-8 md:px-12 max-w-7xl mx-auto mb-4 mt-32">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="overflow-hidden group bg-neutral-100 dark:bg-[#111] aspect-[4/3]">
+                    <img
+                        src="/projects/kht-the-perfumers/2_the_perfumers_banner.jpg"
+                        alt="The Perfumers Banner 2"
+                        class="w-full h-full object-cover transition-transform duration-[2.5s] group-hover:scale-105"
+                    />
+                </div>
+                <div class="overflow-hidden group bg-neutral-100 dark:bg-[#111] aspect-[4/3]">
+                    <img
+                        src="/projects/kht-the-perfumers/store_photo.jpg"
+                        alt="Retail Installation"
+                        class="w-full h-full object-cover transition-transform duration-[2.5s] group-hover:scale-105 object-top"
+                    />
+                </div>
+            </div>
+        </div>
+
+        {/* ── SECTION 6: OUTCOMES ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32 mt-32">
+            <div class="border-t border-black/10 dark:border-white/10 pt-20 grid md:grid-cols-2 gap-20 items-start">
+
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-6">Outcomes & Strategic Value</div>
+                    <h2 class="text-3xl md:text-4xl leading-tight tracking-tight mb-8">
+                        The campaign reached<br />over 600+ participants.
+                    </h2>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        The campaign was created to engage perfume enthusiasts and people who love perfume mixing by involving them in the process of creating a perfume. It generated significant UGC and platform virality across the UAE.
+                    </p>
+                </div>
+
+                <div class="space-y-0 divide-y divide-black/10 dark:divide-white/10 border border-black/10 dark:border-white/10">
+                    {[
+                        "600+ active participants successfully mixed their own unique scents.",
+                        "UGC + virality achieved on TikTok and Instagram through #BlendwithLOVE.",
+                        "Integrated execution spanning retail VM, physical kits, and digital endpoints.",
+                        "Strong example of transforming a brand truth into a participatory 360 platform.",
+                    ].map((outcome) => (
+                        <div class="p-6 flex gap-6 items-start">
+                            <span class="text-neutral-300 dark:text-white/20 text-sm shrink-0 pt-0.5">→</span>
+                            <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">{outcome}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+
+        {/* ── IDENTITY TRUTH PULLQUOTE ── */}
+        <section class="px-8 md:px-12 max-w-5xl mx-auto mb-32 text-center">
+            <p class="text-3xl md:text-4xl font-light leading-relaxed tracking-tight text-neutral-700 dark:text-gray-300">
+                "Not just advertising perfume—<br class="hidden md:block" />
+                <span class="text-neutral-900 dark:text-white">getting people to create it.</span>"
+            </p>
+            <p class="mt-8 text-[10px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600">
+                360 Campaign · UAE · 3 Months
+            </p>
+        </section>
+
+    </article>
+</Layout>
+
+<style is:global>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .scale-103 {
+        transform: scale(1.03);
+    }
+</style>

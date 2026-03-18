@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accent Colour Options · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .option-divider {
+            background: #0a0a0a;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .option-divider span {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .option-divider .line {
+            flex: 1;
+            height: 0.5px;
+            background: #222;
+        }
+
+        /* ── COLUMN GRID ── */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        /* ── HERO CARD — shared ── */
+        .hero-card {
+            padding: 44px 44px 36px;
+            display: flex;
+            flex-direction: column;
+            min-height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* gradient — same for all 3, only accent glow changes */
+        .hero-clay {
+            background:
+                radial-gradient(ellipse 50% 55% at 65% 25%, rgba(196, 132, 122, 0.25) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(100, 110, 120, 0.2) 0%, transparent 60%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 20%, #9fa8af 50%, #b3b0ab 75%, #bfbcb6 100%);
+        }
+
+        .hero-sage {
+            background:
+                radial-gradient(ellipse 50% 55% at 65% 25%, rgba(122, 158, 142, 0.22) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(100, 120, 110, 0.2) 0%, transparent 60%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 20%, #9fa8af 50%, #b3b0ab 75%, #bfbcb6 100%);
+        }
+
+        .hero-slate {
+            background:
+                radial-gradient(ellipse 50% 55% at 65% 25%, rgba(110, 132, 153, 0.25) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(90, 105, 125, 0.2) 0%, transparent 60%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 20%, #9fa8af 50%, #b3b0ab 75%, #bfbcb6 100%);
+        }
+
+        .hero-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .h-top {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-id {
+            font-weight: 700;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.45);
+            line-height: 1.7;
+        }
+
+        .h-id span {
+            display: block;
+            font-weight: 300;
+            font-size: 9px;
+            color: rgba(0, 0, 0, 0.35);
+        }
+
+        .h-name {
+            margin-top: auto;
+            padding-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .n1 {
+            font-weight: 900;
+            font-size: clamp(52px, 8vw, 80px);
+            color: #060606;
+            line-height: 0.88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .n2 {
+            font-weight: 200;
+            font-size: clamp(52px, 8vw, 80px);
+            color: #060606;
+            line-height: 0.88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .h-foot {
+            margin-top: 24px;
+            padding-top: 14px;
+            border-top: 1.5px solid rgba(0, 0, 0, 0.22);
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-title {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .h-loc {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.38);
+        }
+
+        /* ── ACCENT STRIPE ── shows the raw colour ── */
+        .accent-stripe {
+            height: 4px;
+        }
+
+        /* ── QUOTE SECTION ── */
+        .quote-section {
+            background: #060606;
+            padding: 44px;
+            border-top: 3px solid;
+        }
+
+        .q-big {
+            font-weight: 900;
+            font-size: clamp(22px, 3vw, 36px);
+            color: #f4f3f1;
+            line-height: 1.1;
+            letter-spacing: -0.8px;
+            margin-bottom: 4px;
+        }
+
+        .q-em {
+            font-style: normal;
+        }
+
+        .q-sub {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-top: 22px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .q-sub::before {
+            content: '';
+            display: block;
+            width: 22px;
+            height: 0.5px;
+            background: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* ── BODY SECTION ── */
+        .body-section {
+            background: #f4f3f1;
+            padding: 44px;
+            border-top: 3px solid #060606;
+        }
+
+        .b-lbl {
+            font-weight: 600;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .b-head {
+            font-weight: 800;
+            font-size: 18px;
+            color: #060606;
+            letter-spacing: -0.2px;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .b-text {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 1.85;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .b-text strong {
+            font-weight: 600;
+            color: #111;
+        }
+
+        .b-meta {
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-top: 8px;
+        }
+
+        /* ── COLOUR SWATCH ROW ── */
+        .swatch-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: #0a0a0a;
+            padding: 2px;
+        }
+
+        .swatch {
+            padding: 36px 44px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .swatch-info {}
+
+        .swatch-name {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .swatch-hex {
+            font-weight: 300;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .swatch-desc {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            max-width: 200px;
+            line-height: 1.6;
+        }
+
+        .swatch-dot {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── COLUMN LABEL ROW ── -->
+    <div class="grid-3" style="gap:2px; background:#0a0a0a; padding:2px 2px 0;">
+        <div style="background:#111; padding:18px 44px;">
+            <p style="font-weight:500; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#c4847a;">
+                Option 1 — Warm Clay</p>
+            <p style="font-weight:300; font-size:9px; letter-spacing:1px; color:#444; margin-top:4px;">#c4847a ·
+                Sensorial · Luxury Editorial</p>
+        </div>
+        <div style="background:#111; padding:18px 44px;">
+            <p style="font-weight:500; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#7a9e8e;">
+                Option 2 — Sage</p>
+            <p style="font-weight:300; font-size:9px; letter-spacing:1px; color:#444; margin-top:4px;">#7a9e8e · Spatial
+                · Biophilic · Calm</p>
+        </div>
+        <div style="background:#111; padding:18px 44px;">
+            <p style="font-weight:500; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#6e8499;">
+                Option 3 — Slate Blue</p>
+            <p style="font-weight:300; font-size:9px; letter-spacing:1px; color:#444; margin-top:4px;">#6e8499 ·
+                Architectural · Gallery · Cool</p>
+        </div>
+    </div>
+
+    <!-- ── HERO ROW ── -->
+    <div class="grid-3">
+
+        <!-- CLAY -->
+        <div class="hero-card hero-clay">
+            <div class="h-top">
+                <div class="h-id">Personal Brand<span>Option · Clay</span></div>
+                <div style="font-weight:300; font-size:9px; color:rgba(0,0,0,0.38);">25 — 02 — 2026<br><strong
+                        style="color:#c4847a;">R1</strong></div>
+            </div>
+            <div class="h-name">
+                <span class="n1">Rima</span>
+                <span class="n2">Alshoufi</span>
+            </div>
+            <div
+                style="margin-top:24px; padding-top:14px; border-top:1.5px solid rgba(0,0,0,0.22); display:flex; justify-content:space-between; position:relative; z-index:1;">
+                <span
+                    style="font-weight:500; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(0,0,0,0.5);">Spatial
+                    Experience Designer / CD</span>
+                <span style="font-weight:300; font-size:9px; letter-spacing:1px; color:rgba(0,0,0,0.38);">Dubai ·
+                    GCC</span>
+            </div>
+        </div>
+
+        <!-- SAGE -->
+        <div class="hero-card hero-sage">
+            <div class="h-top">
+                <div class="h-id">Personal Brand<span>Option · Sage</span></div>
+                <div style="font-weight:300; font-size:9px; color:rgba(0,0,0,0.38);">25 — 02 — 2026<br><strong
+                        style="color:#7a9e8e;">R1</strong></div>
+            </div>
+            <div class="h-name">
+                <span class="n1">Rima</span>
+                <span class="n2">Alshoufi</span>
+            </div>
+            <div
+                style="margin-top:24px; padding-top:14px; border-top:1.5px solid rgba(0,0,0,0.22); display:flex; justify-content:space-between; position:relative; z-index:1;">
+                <span
+                    style="font-weight:500; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(0,0,0,0.5);">Spatial
+                    Experience Designer / CD</span>
+                <span style="font-weight:300; font-size:9px; letter-spacing:1px; color:rgba(0,0,0,0.38);">Dubai ·
+                    GCC</span>
+            </div>
+        </div>
+
+        <!-- SLATE -->
+        <div class="hero-card hero-slate">
+            <div class="h-top">
+                <div class="h-id">Personal Brand<span>Option · Slate Blue</span></div>
+                <div style="font-weight:300; font-size:9px; color:rgba(0,0,0,0.38);">25 — 02 — 2026<br><strong
+                        style="color:#6e8499;">R1</strong></div>
+            </div>
+            <div class="h-name">
+                <span class="n1">Rima</span>
+                <span class="n2">Alshoufi</span>
+            </div>
+            <div
+                style="margin-top:24px; padding-top:14px; border-top:1.5px solid rgba(0,0,0,0.22); display:flex; justify-content:space-between; position:relative; z-index:1;">
+                <span
+                    style="font-weight:500; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:rgba(0,0,0,0.5);">Spatial
+                    Experience Designer / CD</span>
+                <span style="font-weight:300; font-size:9px; letter-spacing:1px; color:rgba(0,0,0,0.38);">Dubai ·
+                    GCC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── QUOTE ROW ── -->
+    <div class="grid-3">
+        <!-- clay quote -->
+        <div class="quote-section" style="border-top-color: #c4847a;">
+            <p class="q-big">Not how it looks —<br><span class="q-em" style="color:#c4847a;">how it makes them
+                    feel.</span></p>
+            <p class="q-sub" style="color:#c4847a;">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+        <!-- sage quote -->
+        <div class="quote-section" style="border-top-color: #7a9e8e;">
+            <p class="q-big">Not how it looks —<br><span class="q-em" style="color:#7a9e8e;">how it makes them
+                    feel.</span></p>
+            <p class="q-sub" style="color:#7a9e8e;">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+        <!-- slate quote -->
+        <div class="quote-section" style="border-top-color: #6e8499;">
+            <p class="q-big">Not how it looks —<br><span class="q-em" style="color:#6e8499;">how it makes them
+                    feel.</span></p>
+            <p class="q-sub" style="color:#6e8499;">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+    </div>
+
+    <!-- ── BODY ROW ── -->
+    <div class="grid-3">
+        <!-- clay body -->
+        <div class="body-section">
+            <p class="b-lbl" style="color:#c4847a;">01 — About the Practice</p>
+            <h2 class="b-head">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-text">A Spatial Experience Designer and Creative Director based in Dubai, she translates the
+                identity and emotional truth of a brand into environments that <strong>shape how people move, behave,
+                    and remember.</strong></p>
+            <p class="b-meta">MBA Luxury Management · Sup de Luxe (Founded by Cartier) · Paris</p>
+        </div>
+        <!-- sage body -->
+        <div class="body-section">
+            <p class="b-lbl" style="color:#7a9e8e;">01 — About the Practice</p>
+            <h2 class="b-head">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-text">A Spatial Experience Designer and Creative Director based in Dubai, she translates the
+                identity and emotional truth of a brand into environments that <strong>shape how people move, behave,
+                    and remember.</strong></p>
+            <p class="b-meta">MBA Luxury Management · Sup de Luxe (Founded by Cartier) · Paris</p>
+        </div>
+        <!-- slate body -->
+        <div class="body-section">
+            <p class="b-lbl" style="color:#6e8499;">01 — About the Practice</p>
+            <h2 class="b-head">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-text">A Spatial Experience Designer and Creative Director based in Dubai, she translates the
+                identity and emotional truth of a brand into environments that <strong>shape how people move, behave,
+                    and remember.</strong></p>
+            <p class="b-meta">MBA Luxury Management · Sup de Luxe (Founded by Cartier) · Paris</p>
+        </div>
+    </div>
+
+    <!-- ── SWATCH ROW ── -->
+    <div class="swatch-row">
+        <div class="swatch" style="background:#1a1a1a;">
+            <div class="swatch-info">
+                <p class="swatch-name" style="color:#c4847a;">Warm Clay</p>
+                <p class="swatch-hex" style="color:#555;">#c4847a</p>
+                <p class="swatch-desc" style="color:#444;">Tactile, sensorial. References fired earth, ceramic, blush
+                    marble. Warmer and softer than bronze — feels closer to the body.</p>
+            </div>
+            <div class="swatch-dot" style="background:#c4847a;"></div>
+        </div>
+        <div class="swatch" style="background:#1a1a1a;">
+            <div class="swatch-info">
+                <p class="swatch-name" style="color:#7a9e8e;">Sage</p>
+                <p class="swatch-hex" style="color:#555;">#7a9e8e</p>
+                <p class="swatch-desc" style="color:#444;">Calm, spatial, grounded. References patinated copper,
+                    eucalyptus, architectural planting. Biophilic without being botanical.</p>
+            </div>
+            <div class="swatch-dot" style="background:#7a9e8e;"></div>
+        </div>
+        <div class="swatch" style="background:#1a1a1a;">
+            <div class="swatch-info">
+                <p class="swatch-name" style="color:#6e8499;">Slate Blue</p>
+                <p class="swatch-hex" style="color:#555;">#6e8499</p>
+                <p class="swatch-desc" style="color:#444;">Cool, precise, architectural. References oxidised steel,
+                    gallery walls, polished concrete. Most institutional of the three.</p>
+            </div>
+            <div class="swatch-dot" style="background:#6e8499;"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

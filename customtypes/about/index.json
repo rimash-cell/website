@@ -1,0 +1,75 @@
+{
+    "id": "about",
+    "label": "About",
+    "repeatable": false,
+    "status": true,
+    "json": {
+        "Main": {
+            "title": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Page Title",
+                    "single": "heading1"
+                }
+            },
+            "hero_image": {
+                "type": "Image",
+                "config": {
+                    "label": "Hero Portrait",
+                    "constraint": {},
+                    "thumbnails": []
+                }
+            },
+            "intro": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Introduction",
+                    "multi": "paragraph,heading2,heading3,em,strong,hyperlink,list-item,o-list-item"
+                }
+            },
+            "professional_photos": {
+                "type": "Group",
+                "config": {
+                    "label": "Professional Photos Gallery",
+                    "fields": {
+                        "image": {
+                            "type": "Image",
+                            "config": {
+                                "label": "Gallery Image",
+                                "constraint": {},
+                                "thumbnails": []
+                            }
+                        },
+                        "caption": {
+                            "type": "Text",
+                            "config": {
+                                "label": "Image Caption (Optional)"
+                            }
+                        }
+                    }
+                }
+            },
+            "experience": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Experience & Education",
+                    "multi": "paragraph,heading2,heading3,em,strong,hyperlink,list-item,o-list-item"
+                }
+            },
+            "skills": {
+                "type": "Group",
+                "config": {
+                    "label": "Skills & Expertise",
+                    "fields": {
+                        "skill": {
+                            "type": "Text",
+                            "config": {
+                                "label": "Skill Name"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

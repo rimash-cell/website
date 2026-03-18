@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB_R1 — Rima Alshoufi — Complete Master Brand</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --off-white: #f7f5f2;
+            --white: #faf9f7;
+            --bronze: #b87333;
+            --gray: #666666;
+            --sand: #c8c2b8;
+            --hairline: 0.5px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--off-white);
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 80px;
+        }
+
+        header {
+            margin-bottom: 120px;
+            border-bottom: var(--hairline) solid var(--sand);
+            padding-bottom: 40px;
+        }
+
+        .brand-id {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .brand-id span:first-child {
+            font-weight: 900;
+            font-size: 48px;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .brand-id span:last-child {
+            font-weight: 200;
+            font-size: 48px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .doc-meta {
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+        }
+
+        h2 {
+            font-weight: 800;
+            font-size: 32px;
+            letter-spacing: -0.5px;
+            margin-top: 140px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            text-transform: uppercase;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: var(--hairline);
+            background: var(--sand);
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 60px;
+            margin-bottom: 24px;
+            color: var(--black);
+            text-transform: none;
+            border-left: 3px solid var(--bronze);
+            padding-left: 20px;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 17px;
+            margin-bottom: 28px;
+            color: var(--gray);
+            font-feature-settings: "pnum" on, "lnum" on;
+        }
+
+        strong {
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        em {
+            color: var(--black);
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 24px;
+            font-weight: 300;
+            font-size: 16px;
+            color: var(--gray);
+            margin-bottom: 12px;
+        }
+
+        ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--bronze);
+        }
+
+        blockquote {
+            font-family: 'Hanken Grotesk', sans-serif;
+            border-left: var(--hairline) solid var(--sand);
+            padding: 40px 60px;
+            margin: 60px 0;
+            background: var(--white);
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 1.4;
+            color: var(--black);
+            letter-spacing: -0.5px;
+        }
+
+        .table-container {
+            margin: 40px 0 80px;
+            border: var(--hairline) solid var(--sand);
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 20px 32px;
+            background: rgba(0, 0, 0, 0.02);
+            border-bottom: var(--hairline) solid var(--sand);
+            color: var(--black);
+        }
+
+        td {
+            padding: 24px 32px;
+            font-size: 15px;
+            font-weight: 300;
+            border-bottom: var(--hairline) solid var(--sand);
+            vertical-align: top;
+            color: var(--gray);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        footer {
+            margin-top: 180px;
+            padding-top: 60px;
+            border-top: var(--hairline) solid var(--sand);
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--sand);
+            text-transform: uppercase;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                padding: 40px;
+                max-width: 100%;
+            }
+
+            h2 {
+                page-break-before: always;
+                margin-top: 40px;
+            }
+
+            .table-container {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand-id"><span>RIMA</span><span>ALSHOUFI</span></div>
+            <div class="doc-meta">Complete Master Brand Document · R1 · February 2026</div>
+        </header>
+
+        <p>This document defines the complete brand identity, positioning, voice, method, and strategic direction for
+            Rima Alshoufi's personal brand. It is the single source of truth for all brand decisions, content, and
+            communications.</p>
+
+        <h2>01 — Brand Core</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td>Rima Alshoufi</td>
+                </tr>
+                <tr>
+                    <td><strong>Title</strong></td>
+                    <td>Spatial Experience Designer & Creative Director</td>
+                </tr>
+                <tr>
+                    <td><strong>Discipline</strong></td>
+                    <td>Spatial Experience Design — the design of how people feel, move, and remember within physical
+                        environments</td>
+                </tr>
+                <tr>
+                    <td><strong>Experience</strong></td>
+                    <td>13+ years across luxury, hospitality, cultural, and corporate environments in the GCC and Europe
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Location</strong></td>
+                    <td>Dubai, UAE · GCC & Europe</td>
+                </tr>
+                <tr>
+                    <td><strong>Brand Essence</strong></td>
+                    <td>Emotion-led spatial intelligence. Sensory precision. Narrative-driven environments. Calm
+                        authority. Founder-level creative direction.</td>
+                </tr>
+                <tr>
+                    <td><strong>Identity Statement</strong></td>
+                    <td>Rima Alshoufi designs how people experience physical space — shaping identity, emotion, and
+                        narrative into luxury, cultural, hospitality, corporate, and residential environments that are
+                        felt long after they are left.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Credentials & Authority</h3>
+        <ul>
+            <li><strong>MBA — Luxury Management</strong> · Sup de Luxe (Founded by Cartier) · Paris, France · 2023–2024
+            </li>
+            <li><strong>BA — Interior Architecture</strong> · Damascus University · 2009–2013</li>
+            <li><strong>UAE Golden Visa</strong> · Creative Category</li>
+            <li><strong>Inside LVMH Certificate</strong> · Brand Experience & Innovation</li>
+            <li><strong>Design Jury Member</strong> · Sup de Luxe, Paris · 2025</li>
+            <li><strong>48H de la Créativité — Winner</strong> · Franco-Syrian · 2010</li>
+        </ul>
+
+        <h2>02 — Positioning</h2>
+        <h3>One-Line Positioning</h3>
+        <p><em>I design how people experience physical space — translating identity and emotion into luxury, cultural,
+                and hospitality environments.</em></p>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td><strong>Spatial Experience Design</strong></td>
+                    <td>Designing the full sensory, emotional, and behavioral experience of a physical environment — not
+                        its decoration.</td>
+                </tr>
+                <tr>
+                    <td><strong>Creative Direction</strong></td>
+                    <td>Leading the vision, narrative, and experiential strategy of spaces from concept through
+                        execution.</td>
+                </tr>
+                <tr>
+                    <td><strong>Atmospheric Intelligence</strong></td>
+                    <td>Designing what a space feels, sounds, and breathes like — the invisible architecture.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Sectors Served</h3>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Sector</th>
+                    <th>What It Covers</th>
+                </tr>
+                <tr>
+                    <td><strong>Luxury</strong></td>
+                    <td>Flagship retail, luxury brand environments, high-end boutiques</td>
+                </tr>
+                <tr>
+                    <td><strong>Cultural & Exhibition</strong></td>
+                    <td>Museums, cultural institutions, curated exhibition experiences</td>
+                </tr>
+                <tr>
+                    <td><strong>Hospitality</strong></td>
+                    <td>Hotels, F&B, resort environments — full atmosphere design</td>
+                </tr>
+                <tr>
+                    <td><strong>High-End Residential</strong></td>
+                    <td>Private residences designed around how the resident wants to feel</td>
+                </tr>
+                <tr>
+                    <td><strong>Experiential Events</strong></td>
+                    <td>Immersive activations, brand events, sensory installations</td>
+                </tr>
+                <tr>
+                    <td><strong>Corporate & Workplace</strong></td>
+                    <td>Headquarters and corporate campuses where identity and experience are designed with luxury
+                        intentionality</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>03 — Audience Architecture</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Audience</th>
+                    <th>What They're Missing</th>
+                    <th>What Rima Delivers</th>
+                </tr>
+                <tr>
+                    <td><strong>Luxury Founders</strong></td>
+                    <td>A space that looks expensive but doesn't feel like their brand</td>
+                    <td>Spatial identity — an environment that is unmistakably theirs</td>
+                </tr>
+                <tr>
+                    <td><strong>Cultural Institutions</strong></td>
+                    <td>Exhibitions that inform but don't move people</td>
+                    <td>Spatial narrative — an experience visitors carry with them</td>
+                </tr>
+                <tr>
+                    <td><strong>Hospitality Developers</strong></td>
+                    <td>Hotels specified to the mm, but atmosphere not designed</td>
+                    <td>Atmospheric intelligence — the invisible layer that makes a guest return</td>
+                </tr>
+                <tr>
+                    <td><strong>Corporate Leaders</strong></td>
+                    <td>Offices that are efficient but carry no identity</td>
+                    <td>Workplace environments where culture and identity are translated into spatial sequence</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>04 — Narrative System</h2>
+        <h3>Core Narrative Arc</h3>
+        <p><strong>Identity > Narrative > Space > Senses > Behavior > Atmosphere > Memory</strong></p>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Layer</th>
+                    <th>What It Says</th>
+                </tr>
+                <tr>
+                    <td><strong>Origin</strong></td>
+                    <td>Space is felt before it is seen. I design for that first feeling.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tension</strong></td>
+                    <td>Scale without emotional intelligence creates environments people pass through, not places they
+                        remember.</td>
+                </tr>
+                <tr>
+                    <td><strong>Belief</strong></td>
+                    <td>Luxury is atmosphere, not objects. Behavior is shaped by environment, not signage.</td>
+                </tr>
+                <tr>
+                    <td><strong>Vision</strong></td>
+                    <td>Setting the global standard for spatial experience design in the GCC and beyond.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>05 — Brand Voice</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Quality</th>
+                    <th>In Practice</th>
+                </tr>
+                <tr>
+                    <td><strong>Calm</strong></td>
+                    <td>Never rushed. Space between ideas. Confidence without volume.</td>
+                </tr>
+                <tr>
+                    <td><strong>Premium</strong></td>
+                    <td>Elevated, never generic. Every word chosen.</td>
+                </tr>
+                <tr>
+                    <td><strong>Spatial</strong></td>
+                    <td>Language rooted in physical environments — light, weight, texture, atmosphere.</td>
+                </tr>
+                <tr>
+                    <td><strong>Precise</strong></td>
+                    <td>Say it once, say it exactly right. Precision over decoration.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>06 — Messaging Framework</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Audience</th>
+                    <th>The Gap</th>
+                    <th>The Promise</th>
+                </tr>
+                <tr>
+                    <td><strong>Luxury Founders</strong></td>
+                    <td>Your space is designed — but does it feel like you?</td>
+                    <td>I design the spatial identity of your brand — the version people walk into and remember.</td>
+                </tr>
+                <tr>
+                    <td><strong>Hospitality Developers</strong></td>
+                    <td>Your hotel is specified to the mm. But the atmosphere was never designed.</td>
+                    <td>I design the invisible architecture: the sensory layer that turns a stay into a memory.</td>
+                </tr>
+                <tr>
+                    <td><strong>Corporate Leaders</strong></td>
+                    <td>Your headquarters is finished. But it doesn't feel like your company.</td>
+                    <td>I design the environment that makes your people feel what your brand stands for.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>07 — Personality Framework</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Trait</th>
+                    <th>Expression</th>
+                </tr>
+                <tr>
+                    <td><strong>Precision</strong></td>
+                    <td>Every detail is deliberate. Nothing accidental.</td>
+                </tr>
+                <tr>
+                    <td><strong>Depth</strong></td>
+                    <td>Works at the level of concept and emotion — not style trends.</td>
+                </tr>
+                <tr>
+                    <td><strong>Restraint</strong></td>
+                    <td>Knows what to leave out. Silence and space are as designed as presence.</td>
+                </tr>
+                <tr>
+                    <td><strong>Vision</strong></td>
+                    <td>Works from a position 10 years ahead of where the market currently sits.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>08 — Archetype Stack</h2>
+        <p><strong>The Creator (Primary)</strong> · Builds worlds, systems, and environments from vision.<br>
+            <strong>The Ruler (Secondary)</strong> · Commands through clarity and executive creative direction.<br>
+            <strong>The Magician (Expressive)</strong> · Transforms invisible identity into felt atmosphere.
+        </p>
+
+        <h2>09 — Core Capabilities</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Capability</th>
+                    <th>What It Means in Practice</th>
+                </tr>
+                <tr>
+                    <td><strong>Spatial Experience Design</strong></td>
+                    <td>Full sensory and behavioral design from brief through delivery</td>
+                </tr>
+                <tr>
+                    <td><strong>Creative Direction</strong></td>
+                    <td>Leading vision across interior, content, product, and digital</td>
+                </tr>
+                <tr>
+                    <td><strong>Visual Merchandising</strong></td>
+                    <td>Final act of brand storytelling where product and behavior converge</td>
+                </tr>
+                <tr>
+                    <td><strong>Interior Architecture</strong></td>
+                    <td>Technical spatial foundation used to execute experiential vision</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>10 — The Spatial Experience Method</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Phase</th>
+                    <th>Question</th>
+                    <th>Output</th>
+                </tr>
+                <tr>
+                    <td><strong>Identity</strong></td>
+                    <td>Who is this for? What is the core truth?</td>
+                    <td>Identity & vision brief</td>
+                </tr>
+                <tr>
+                    <td><strong>Narrative</strong></td>
+                    <td>What story must this space tell?</td>
+                    <td>Conceptual narrative</td>
+                </tr>
+                <tr>
+                    <td><strong>Sensory Spec</strong></td>
+                    <td>What does this space feel, sound, and smell like?</td>
+                    <td>Full sensory specification</td>
+                </tr>
+                <tr>
+                    <td><strong>Choreography</strong></td>
+                    <td>How will people move, pause, and interact?</td>
+                    <td>Movement & experience map</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>12 — 30-60-90 Day Roadmap</h2>
+        <p><strong>Month 1: Foundation & Launch</strong><br>
+            • Identity Lock across all platforms<br>
+            • Website Launch with narrative case studies<br>
+            • LinkedIn Launch as Spatial Experience Designer</p>
+
+        <h2>13 — Project Reference: Emovation Lab</h2>
+        <p><strong>Permanent Location:</strong> SRTIP. Purpose-built innovation space for fragrance and brand
+            discovery.<br>
+            <strong>Experiential Activations:</strong> Travelling pop-up formats extending the identity into brand
+            events.
+        </p>
+
+        <h2>14 — Benchmarks</h2>
+        <p><strong>Global Benchmarks:</strong> Collins · Nendo · Snøhetta · Moment Factory · Malherbe Paris · Heroine
+            Paris</p>
+
+        <h2>15 — Biography Suite</h2>
+        <h3>Long-Form</h3>
+        <p>Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them feel. A
+            Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and emotional
+            truth of a brand into environments that shape how people move, behave, and remember.</p>
+        <h3>One-Line</h3>
+        <p>Spatial Experience Designer & Creative Director — designing how people feel, move, and remember. GCC &
+            Europe.</p>
+
+        <h2>16 — Visual Identity</h2>
+        <p><strong>Locked Direction: Option E Light</strong><br>
+            Palette: Near-Black (#0a0a0a) · Warm Off-White (#f7f5f2) · Bronze (#b87333)<br>
+            Typography: Hanken Grotesk (Black 900 / ExtraLight 200 contrast pair)</p>
+
+        <h2>17 — Content Pillars</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Focus</th>
+                    <th>Outcome</th>
+                </tr>
+                <tr>
+                    <td><strong>01 Spatial Rituals</strong></td>
+                    <td>How people move and transition.</td>
+                    <td>Behavioral intelligence.</td>
+                </tr>
+                <tr>
+                    <td><strong>02 Decision Narratives</strong></td>
+                    <td>Case studies on trade-offs.</td>
+                    <td>Strategic peer trust.</td>
+                </tr>
+                <tr>
+                    <td><strong>03 Luxury Codes</strong></td>
+                    <td>GCC vs Europe cultural nuance.</td>
+                    <td>Cultural intelligence.</td>
+                </tr>
+                <tr>
+                    <td><strong>04 Leadership</strong></td>
+                    <td>Project gates and Anti-Drift.</td>
+                    <td>Operator authority.</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>19 — Taglines</h2>
+        <blockquote>"Not how it looks — how it makes them feel."</blockquote>
+
+        <footer>
+            <div>Rima Alshoufi · MB_R1 COMPLETE</div>
+            <div>STRICTLY CONFIDENTIAL · 2026</div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

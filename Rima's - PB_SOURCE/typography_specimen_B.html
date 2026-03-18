@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typography Specimen B — Editorial · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --dark: #2a2a2a;
+            --slate: #3d3d3d;
+            --gray: #6b6b6b;
+            --sand: #c4b5a4;
+            --cream: #f5f1ec;
+            --bronze: #b87333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #dedad4;
+            font-family: 'DM Sans', sans-serif;
+            padding: 40px 20px;
+            color: var(--dark);
+        }
+
+        .page-label {
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 8px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .option-label {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--bronze);
+            margin-bottom: 30px;
+        }
+
+        .card {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            padding: 60px;
+        }
+
+        .card.dark {
+            background: var(--black);
+        }
+
+        .card.cream {
+            background: var(--cream);
+            border-top: 2px solid var(--black);
+        }
+
+        .card.white {
+            background: #ffffff;
+            border-top: 1px solid var(--sand);
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 0.5px solid rgba(196, 181, 164, 0.4);
+            margin: 28px 0;
+        }
+
+        hr.thin.light {
+            border-top-color: rgba(196, 181, 164, 0.6);
+        }
+
+        /* WORDMARK */
+        .wordmark {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 44px;
+            color: var(--cream);
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .wordmark-title {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+        }
+
+        /* PULL QUOTE */
+        .pull-quote {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 30px;
+            line-height: 1.4;
+            color: var(--cream);
+            margin: 24px 0;
+        }
+
+        /* SECTION LABEL */
+        .section-label {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* HEADINGS */
+        .h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--black);
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+            line-height: 1.15;
+        }
+
+        .h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 10px;
+        }
+
+        /* BODY */
+        .body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .body strong {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .body em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 17px;
+            color: var(--slate);
+        }
+
+        /* ONE LINER */
+        .one-liner {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 1.5;
+            color: var(--slate);
+            border-left: 2px solid var(--bronze);
+            padding-left: 22px;
+            margin: 22px 0;
+        }
+
+        /* COMPARISON */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+        }
+
+        .comp-col {
+            padding: 44px;
+            border-top: 2px solid var(--black);
+        }
+
+        .comp-col.a {
+            background: var(--cream);
+        }
+
+        .comp-col.b {
+            background: #f9f9f7;
+            border-top-color: var(--sand);
+        }
+
+        .comp-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sand);
+            margin-bottom: 22px;
+            display: block;
+        }
+
+        .big-alpha-serif {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1;
+        }
+
+        .big-alpha-sans {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 52px;
+            font-weight: 300;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .alpha-row-serif {
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            color: var(--slate);
+            line-height: 2;
+        }
+
+        .alpha-row-sans {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .weight-strip {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 2;
+            margin-top: 10px;
+        }
+
+        .weight-strip-sans {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            color: var(--gray);
+            line-height: 2;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .use-tag {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--black);
+            margin-top: 14px;
+        }
+
+        /* SCALE CARD */
+        .scale-intro {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 30px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="page-label">Typography Specimen B · Rima Alshoufi · Personal Brand</p>
+    <p class="option-label">Option B — Editorial</p>
+
+    <!-- DARK CARD: WORDMARK -->
+    <div class="card dark">
+        <span class="wordmark">Rima Alshoufi</span>
+        <span class="wordmark-title">Spatial Experience Designer &nbsp;&amp;&nbsp; Creative Director</span>
+        <hr class="thin">
+        <p class="pull-quote">
+            "I design how people experience physical space — not how it looks, but how it makes them feel."
+        </p>
+        <hr class="thin">
+        <span
+            style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:#6b6b6b;">
+            Spatial Experience Design &nbsp;·&nbsp; Creative Direction &nbsp;·&nbsp; GCC & Europe
+        </span>
+    </div>
+
+    <!-- CREAM CARD: BODY SYSTEM -->
+    <div class="card cream">
+        <span class="section-label">02 — Positioning</span>
+        <p class="h2">One-Line Positioning</p>
+        <p class="one-liner">
+            I design how people experience physical space — translating identity and emotion into luxury, cultural, and
+            hospitality environments.
+        </p>
+        <hr class="thin light">
+        <p class="h2" style="margin-top:30px;">About the Practice</p>
+        <p class="h3">Spatial Experience Design</p>
+        <p class="body">
+            Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them feel. A
+            Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and emotional
+            truth of a brand into environments that <strong>shape how people move, behave, and remember.</strong>
+        </p>
+        <p class="body">
+            Every project begins with one question: <em>who is this for, and what must they feel?</em> That answer
+            drives every material choice, every sequence, every sensory decision.
+        </p>
+        <hr class="thin light">
+        <span
+            style="font-family:'DM Sans',sans-serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:#c4b5a4;">
+            Playfair Display (Display) &nbsp;·&nbsp; DM Sans (Body) &nbsp;·&nbsp; February 2026
+        </span>
+    </div>
+
+    <!-- FONT COMPARISON -->
+    <div class="comparison">
+        <div class="comp-col a">
+            <span class="comp-label">Playfair Display — Display · Serif</span>
+            <p class="big-alpha-serif">Aa</p>
+            <br>
+            <p class="alpha-row-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 .,—:;!?
+            </p>
+            <p class="weight-strip">
+                Regular &nbsp;·&nbsp; Medium &nbsp;·&nbsp; <strong>Bold</strong> &nbsp;·&nbsp; <strong
+                    style="font-weight:800;">ExtraBold</strong><br>
+                <em>Italic &nbsp;·&nbsp; <strong>Bold Italic</strong></em>
+            </p>
+            <p class="use-tag">Headlines · Wordmark · Pull Quotes · Captions</p>
+        </div>
+        <div class="comp-col b">
+            <span class="comp-label">DM Sans — Body · Sans-Serif</span>
+            <p class="big-alpha-sans">Aa</p>
+            <br>
+            <p class="alpha-row-sans">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 .,—:;!?</p>
+            <p class="weight-strip-sans">
+                Light &nbsp;·&nbsp; Regular &nbsp;·&nbsp; <span style="font-weight:500;">Medium</span>
+            </p>
+            <p class="use-tag">Body Copy · Labels · Navigation · Metadata</p>
+        </div>
+    </div>
+
+    <!-- TYPE SCALE -->
+    <div class="card white">
+        <span class="scale-intro">Type Scale — Option B</span>
+        <p
+            style="font-family:'Playfair Display',serif; font-size:52px; font-weight:800; color:#1a1a1a; line-height:1; margin-bottom:10px;">
+            Display 52px ExtraBold</p>
+        <p
+            style="font-family:'Playfair Display',serif; font-size:34px; font-weight:700; color:#1a1a1a; margin-bottom:8px;">
+            Heading 34px Bold</p>
+        <p
+            style="font-family:'Playfair Display',serif; font-size:22px; font-weight:500; color:#3d3d3d; margin-bottom:6px;">
+            Subheading 22px Medium</p>
+        <p
+            style="font-family:'Playfair Display',serif; font-size:19px; font-style:italic; font-weight:400; color:#6b6b6b; margin-bottom:6px;">
+            Pull quote / italic 19px</p>
+        <hr class="thin light" style="margin:18px 0;">
+        <p
+            style="font-family:'DM Sans',sans-serif; font-size:16px; font-weight:300; color:#6b6b6b; line-height:1.75; margin-bottom:8px;">
+            Body text 16px — DM Sans Light. Clean, neutral, legible. Steps aside for the display.</p>
+        <p
+            style="font-family:'DM Sans',sans-serif; font-size:13px; font-weight:400; color:#6b6b6b; line-height:1.75; margin-bottom:8px;">
+            Small body 13px — secondary content, table cells, footnotes.</p>
+        <p
+            style="font-family:'DM Sans',sans-serif; font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#b87333; margin-top:8px;">
+            Label / Caption · 10px · DM Sans Medium · 200 Tracking · Bronze</p>
+    </div>
+
+</body>
+
+</html>

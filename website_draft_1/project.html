@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- [PRISMIC] title = project_title + " — Rima Alshoufi" -->
+    <title>[Project Title] — Rima Alshoufi</title>
+    <meta name="description" content="[project_essence]">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ═══════════════════════════════════════════════
+           PROJECT MASTER TEMPLATE V5
+           ═══════════════════════════════════════════════ */
+
+        /* ─── NAV OVERRIDES ─── */
+        .proj-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 200;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 26px var(--px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .proj-nav.scrolled {
+            background: rgba(247, 245, 242, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 18px var(--px);
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .proj-nav .logo {
+            color: var(--bk);
+            text-shadow: none;
+        }
+
+        .proj-nav .nav-links a {
+            color: var(--bk);
+            opacity: 0.55;
+            text-shadow: none;
+        }
+
+        .proj-nav .nav-links a:hover {
+            opacity: 1;
+        }
+
+        .proj-nav .nav-links a.cta {
+            opacity: 1;
+        }
+
+        .proj-nav .nav-links a.cta span::after {
+            background: var(--bk);
+        }
+
+        /* ─── ANIMATIONS ─── */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .reveal-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── 1. HEADER ─── */
+        .proj-header {
+            padding: 120px var(--px) 64px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .proj-taxonomy {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sd);
+            margin-bottom: 24px;
+        }
+
+        .proj-taxi-sep {
+            width: 16px;
+            height: 0.5px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .proj-title {
+            font-size: clamp(48px, 6.5vw, 92px);
+            font-weight: 500;
+            letter-spacing: -0.04em;
+            line-height: 0.95;
+            color: #0a0a0a;
+            margin-bottom: 32px;
+        }
+
+        .proj-essence {
+            font-size: clamp(18px, 2.2vw, 24px);
+            font-weight: 300;
+            line-height: 1.5;
+            color: rgba(10, 10, 10, 0.6);
+            max-width: 720px;
+            margin-bottom: 56px;
+        }
+
+        .proj-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #0a0a0a;
+            align-items: center;
+        }
+
+        .proj-meta span:not(:last-child)::after {
+            content: "";
+            width: 3px;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 24px;
+            vertical-align: middle;
+        }
+
+        /* ─── 2. HERO VISUAL ─── */
+        .proj-hero {
+            width: 100%;
+            height: 80vh;
+            background: #e8e4de;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .proj-hero img,
+        .proj-hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(0.9) brightness(0.97);
+        }
+
+        /* ─── 3. INTRO (STICKY SPLIT) ─── */
+        .proj-intro-split {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px var(--px) 48px;
+            display: flex;
+            gap: 8vw;
+            align-items: flex-start;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .intro-left {
+            flex: 1;
+            position: sticky;
+            top: 140px;
+        }
+
+        .intro-sticky-title {
+            font-size: clamp(32px, 4vw, 42px);
+            font-weight: 500;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+            color: #0a0a0a;
+            max-width: 520px;
+            margin: 0;
+        }
+
+        .intro-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+        }
+
+        .br-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sd);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .br-text {
+            font-size: clamp(16px, 1.8vw, 19px);
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(10, 10, 10, 0.75);
+            max-width: 560px;
+        }
+
+        /* ─── NARRATIVE STORY BLOCK ─── */
+        .proj-story-block {
+            background-color: #f9f8f6;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            padding: 64px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+        }
+
+        .proj-concept {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 var(--px);
+        }
+
+        .proj-concept-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sd);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .proj-concept-name {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            color: #0a0a0a;
+            margin-bottom: 16px;
+        }
+
+        .proj-concept-body {
+            font-size: clamp(18px, 2vw, 22px);
+            font-weight: 300;
+            line-height: 1.6;
+            color: rgba(10, 10, 10, 0.65);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ─── 5. HORIZONTAL CANVAS ─── */
+        .proj-canvas {
+            display: flex;
+            gap: 20px;
+            padding: 0 var(--px) 24px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            cursor: grab;
+        }
+
+        .proj-canvas::-webkit-scrollbar {
+            display: none;
+        }
+
+        .canvas-module {
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .canvas-module.landscape {
+            height: clamp(280px, 45vh, 560px);
+            aspect-ratio: 16/10;
+        }
+
+        .canvas-module.portrait {
+            height: clamp(280px, 45vh, 560px);
+            aspect-ratio: 3/4;
+        }
+
+        .canvas-module.square {
+            height: clamp(280px, 45vh, 560px);
+            aspect-ratio: 1;
+        }
+
+        .canvas-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.9);
+            transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .canvas-module:hover .canvas-img {
+            transform: scale(1.08);
+        }
+
+        /* ─── 6. FILMS GRID ─── */
+        .proj-films-wrap {
+            padding: 0 var(--px);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .proj-films-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        .film-module {
+            position: relative;
+            background: #e3e0db;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .film-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .film-module:hover .film-cover {
+            transform: scale(1.05);
+        }
+
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .video-play-icon {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 16px;
+            border-color: transparent transparent transparent #fff;
+            margin-left: 6px;
+        }
+
+        /* ─── 7. WHAT I LED ─── */
+        .proj-scope {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin-top: 24px;
+        }
+
+        .proj-scope-item {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--bk);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .proj-scope-item::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background: var(--br);
+            border-radius: 50%;
+        }
+
+        /* ─── 8. PROOF ─── */
+        .proj-proof-wrap {
+            padding: 24px var(--px) 0;
+            text-align: center;
+        }
+
+        .proj-proof-statement {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: clamp(20px, 2.8vw, 22px);
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(10, 10, 10, 0.5);
+        }
+
+        .proj-proof-statement span {
+            color: #0a0a0a;
+            font-weight: 500;
+        }
+
+        /* ─── 10. FOOTER NAV ─── */
+        .proj-footer-nav {
+            padding: 80px var(--px);
+            border-top: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .nav-card {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .nav-img-box {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: #f6f5f3;
+        }
+
+        .nav-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .nav-card:hover .nav-img-box img {
+            transform: scale(1.04);
+        }
+
+        .nav-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sd);
+        }
+
+        .nav-title {
+            font-size: 24px;
+            font-weight: 300;
+            color: #0a0a0a;
+        }
+
+        /* ─── MODALS ─── */
+        .video-modal,
+        .img-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+
+        .video-modal.is-active,
+        .img-lightbox.is-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-close,
+        .img-lightbox-close {
+            position: absolute;
+            top: 32px;
+            right: var(--px);
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            width: 90%;
+            max-width: 1400px;
+            aspect-ratio: 16/9;
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .img-lb-content {
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-lb-content img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .img-lb-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 20px;
+        }
+
+        .img-lb-prev {
+            left: -60px;
+        }
+
+        .img-lb-next {
+            right: -60px;
+        }
+
+        @media(max-width: 768px) {
+            .proj-header {
+                padding: 140px var(--px) 64px;
+            }
+
+            .proj-intro-split {
+                flex-direction: column;
+                gap: 56px;
+            }
+
+            .intro-left {
+                position: relative;
+                top: 0;
+            }
+
+            .proj-hero {
+                height: 60vh;
+            }
+
+            .nav-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="proj-nav-bar" class="proj-nav">
+        <a href="index.html" class="logo">RIMA <span>ALSHOUFI</span></a>
+        <div class="nav-links">
+            <a href="work.html">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="connect.html" class="cta"><span>Connect</span></a>
+        </div>
+    </nav>
+
+    <header class="proj-header reveal-up">
+        <div class="proj-taxonomy">
+            <span>[taxonomy_label]</span>
+            <div class="proj-taxi-sep"></div>
+            <span>[taxonomy_label]</span>
+        </div>
+        <h1 class="proj-title">[Project Title]</h1>
+        <p class="proj-essence">[project_essence]</p>
+        <div class="proj-meta">
+            <span>[location]</span>
+            <span>[year]</span>
+            <span>[client_name]</span>
+        </div>
+    </header>
+
+    <section class="proj-hero">
+        <!-- [PRISMIC] Hybrid Logic -->
+        <video autoplay muted loop playsinline poster="[poster_url]">
+            <source src="[video_url]" type="video/mp4">
+        </video>
+    </section>
+
+    <section class="proj-intro-split reveal-up">
+        <div class="intro-left">
+            <h2 class="intro-sticky-title">[hook_title]</h2>
+        </div>
+        <div class="intro-right">
+            <div class="br-block">
+                <span class="br-label">The Ask</span>
+                <p class="br-text">[ask_text]</p>
+            </div>
+            <div class="br-block">
+                <span class="br-label">The Response</span>
+                <p class="br-text">[response_text]</p>
+            </div>
+            <div class="br-block">
+                <span class="br-label">What I Led</span>
+                <ul class="proj-scope">
+                    <!-- [PRISMIC] Repeat for Items -->
+                    <li class="proj-scope-item">[tag]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="proj-story-block reveal-up">
+        <section class="proj-concept">
+            <span class="proj-concept-label">The Concept</span>
+            <div class="proj-concept-name">[concept_title]</div>
+            <p class="proj-concept-body">[concept_description]</p>
+        </section>
+
+        <section class="proj-canvas">
+            <!-- [PRISMIC] Repeat for Canvas items -->
+            <div class="canvas-module portrait"><img src="[img_url]" class="canvas-img"></div>
+        </section>
+
+        <section class="proj-films-wrap">
+            <div class="proj-films-grid">
+                <!-- [PRISMIC] Repeat for Films items -->
+                <div class="film-module" onclick="openVideoModal('[vimeo_url]')">
+                    <img src="[poster_url]" class="film-cover">
+                    <div class="video-play-btn">
+                        <div class="video-play-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-proof-wrap">
+            <div class="proj-proof-statement">[proof_statement]</div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="f-logo">RIMA <span>ALSHOUFI</span></div>
+        <div class="f-links">
+            <a href="work.html">Work</a>
+            <a href="index.html#about">About</a>
+            <a href="connect.html">Connect</a>
+        </div>
+        <div class="f-copy">Spatial Experience Designer · Dubai, UAE · © 2026</div>
+    </footer>
+
+    <!-- LIGHTBOX & MODAL -->
+    <div id="imgLightbox" class="img-lightbox">
+        <button class="img-lightbox-close" id="imgLightboxClose">×</button>
+        <div class="img-lb-content">
+            <button class="img-lb-nav img-lb-prev" id="imgLbPrev">←</button>
+            <img id="lbImg" src="">
+            <button class="img-lb-nav img-lb-next" id="imgLbNext">→</button>
+        </div>
+    </div>
+
+    <div id="videoModal" class="video-modal">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <div class="modal-content"><iframe id="modalIframe" src="" frameborder="0" allow="autoplay; fullscreen"
+                allowfullscreen></iframe></div>
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        const canvases = document.querySelectorAll('.proj-canvas');
+        canvases.forEach(canvas => {
+            canvas.addEventListener('scroll', () => {
+                const scrollLeft = canvas.scrollLeft;
+                const canvasWidth = canvas.clientWidth;
+                canvas.querySelectorAll('.canvas-module').forEach(item => {
+                    const img = item.querySelector('.canvas-img');
+                    if (img) {
+                        const progress = (item.offsetLeft - scrollLeft - canvasWidth / 2 + item.offsetWidth / 2) / canvasWidth;
+                        img.style.setProperty('--parallax-x', `${Math.max(-1, Math.min(1, progress)) * 4}%`);
+                    }
+                });
+            }, { passive: true });
+        });
+
+        const imgLightbox = document.getElementById('imgLightbox');
+        const lbImg = document.getElementById('lbImg');
+        const lbImages = Array.from(document.querySelectorAll('.canvas-img')).map(img => img.src);
+        let currentIndex = 0;
+
+        document.querySelectorAll('.canvas-module').forEach((mod, i) => {
+            mod.addEventListener('click', () => {
+                currentIndex = i;
+                lbImg.src = lbImages[currentIndex];
+                imgLightbox.classList.add('is-active');
+            });
+        });
+
+        const closeModal = () => {
+            document.getElementById('videoModal').classList.remove('is-active');
+            document.getElementById('modalIframe').src = '';
+        };
+        const openVideoModal = (url) => {
+            document.getElementById('modalIframe').src = url;
+            document.getElementById('videoModal').classList.add('is-active');
+        };
+
+        document.getElementById('imgLightboxClose').addEventListener('click', () => imgLightbox.classList.remove('is-active'));
+        document.getElementById('imgLbNext').addEventListener('click', (e) => { e.stopPropagation(); currentIndex = (currentIndex + 1) % lbImages.length; lbImg.src = lbImages[currentIndex]; });
+        document.getElementById('imgLbPrev').addEventListener('click', (e) => { e.stopPropagation(); currentIndex = (currentIndex - 1 + lbImages.length) % lbImages.length; lbImg.src = lbImages[currentIndex]; });
+    </script>
+</body>
+
+</html>

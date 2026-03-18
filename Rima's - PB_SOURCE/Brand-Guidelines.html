@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Guidelines — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --off-white: #f7f5f2;
+            --white: #faf9f7;
+            --bronze: #b87333;
+            --gray: #666666;
+            --sand: #c8c2b8;
+            --hairline: 0.5px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--white);
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--black);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        header {
+            border-bottom: var(--hairline) solid var(--sand);
+            padding-bottom: 40px;
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .brand-id span:first-child {
+            font-weight: 900;
+            font-size: 32px;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+        }
+
+        .brand-id span:last-child {
+            font-weight: 200;
+            font-size: 32px;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .doc-meta {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+        }
+
+        section {
+            margin-bottom: 120px;
+        }
+
+        h2 {
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            color: var(--bronze);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: var(--hairline);
+            background: var(--sand);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        /* WORDMARK */
+        .wordmark-box {
+            border: var(--hairline) solid var(--sand);
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--off-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* COLORS */
+        .color-card {
+            border: var(--hairline) solid var(--sand);
+            margin-bottom: 20px;
+        }
+
+        .color-strip {
+            height: 160px;
+        }
+
+        .color-info {
+            padding: 24px;
+            background: white;
+        }
+
+        .color-info h4 {
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .color-data {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 500;
+            border-top: var(--hairline) solid var(--sand);
+            padding-top: 12px;
+            color: var(--gray);
+        }
+
+        .color-data span {
+            text-transform: uppercase;
+        }
+
+        /* TYPOGRAPHY */
+        .type-spec {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: var(--hairline) solid var(--sand);
+        }
+
+        .type-spec:last-child {
+            border: none;
+        }
+
+        .type-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--bronze);
+            margin-bottom: 10px;
+        }
+
+        .type-demo {
+            color: var(--black);
+            line-height: 1;
+        }
+
+        .type-meta {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--gray);
+            margin-top: 10px;
+        }
+
+        /* PROHIBITIONS */
+        .dont-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .dont-item {
+            text-align: center;
+        }
+
+        .dont-visual {
+            height: 120px;
+            border: var(--hairline) solid #ffcccc;
+            background: #fff5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #cc0000;
+            font-weight: 900;
+            font-size: 24px;
+            position: relative;
+        }
+
+        .dont-visual::after {
+            content: "✕";
+            position: absolute;
+            font-size: 64px;
+            opacity: 0.1;
+        }
+
+        .dont-text {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: var(--hairline) solid var(--sand);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--sand);
+            text-transform: uppercase;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand-id"><span>RIMA</span><span>ALSHOUFI</span></div>
+            <div class="doc-meta">Visual Guidelines v1.0</div>
+        </header>
+
+        <!-- SECTION 01: WORDMARK -->
+        <section>
+            <h2>01 — Wordmark Standard</h2>
+            <div class="wordmark-box">
+                <div class="brand-id" style="font-size: 80px;">
+                    <span style="font-size: 80px;">RIMA</span>
+                    <span style="font-size: 80px;">ALSHOUFI</span>
+                </div>
+                <!-- SPACING OVERLAY (Simulated) -->
+                <div
+                    style="position: absolute; border: 1px dashed var(--bronze); width: 80%; height: 60%; opacity: 0.2;">
+                </div>
+            </div>
+            <div class="grid" style="margin-top: 20px;">
+                <p class="col-8"><strong>Clear Space:</strong> Maintain a minimum clear space equal to 2x the height of
+                    the 'R' on all sides. Do not allow any graphic elements to enter this zone.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 02: COLOR SYSTEM -->
+        <section>
+            <h2>02 — Color Profiles</h2>
+            <div class="grid">
+                <div class="col-4 color-card">
+                    <div class="color-strip" style="background: #0a0a0a;"></div>
+                    <div class="color-info">
+                        <h4>Near-Black</h4>
+                        <div class="color-data"><span>HEX</span><span>#0a0a0a</span></div>
+                        <div class="color-data"><span>CMYK</span><span>0, 0, 0, 96</span></div>
+                    </div>
+                </div>
+                <div class="col-4 color-card">
+                    <div class="color-strip" style="background: #f7f5f2;"></div>
+                    <div class="color-info">
+                        <h4>Warm Off-White</h4>
+                        <div class="color-data"><span>HEX</span><span>#f7f5f2</span></div>
+                        <div class="color-data"><span>CMYK</span><span>0, 1, 2, 3</span></div>
+                    </div>
+                </div>
+                <div class="col-4 color-card">
+                    <div class="color-strip" style="background: #b87333;"></div>
+                    <div class="color-info">
+                        <h4>Bronze</h4>
+                        <div class="color-data"><span>HEX</span><span>#b87333</span></div>
+                        <div class="color-data"><span>CMYK</span><span>22, 56, 90, 10</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03: TYPOGRAPHY SCALE -->
+        <section>
+            <h2>03 — Typography Scale</h2>
+
+            <div class="type-spec">
+                <div class="type-label">Display 01</div>
+                <div class="type-demo" style="font-weight: 900; font-size: 80px; letter-spacing: -4px;">RIMA ALSHOUFI
+                </div>
+                <div class="type-meta">Hanken Grotesk Black 900 / 80px / 1.0 LH</div>
+            </div>
+
+            <div class="type-spec">
+                <div class="type-label">Heading 01</div>
+                <div class="type-demo" style="font-weight: 800; font-size: 48px; letter-spacing: -2px;">Translating
+                    identity into atmosphere.</div>
+                <div class="type-meta">Hanken Grotesk ExtraBold 800 / 48px / 1.1 LH</div>
+            </div>
+
+            <div class="type-spec">
+                <div class="type-label">Body Large</div>
+                <div class="type-demo" style="font-weight: 300; font-size: 20px; line-height: 1.6; color: var(--gray);">
+                    Space is felt before it is seen. We design the full sensory and behavioral experience of a physical
+                    environment.</div>
+                <div class="type-meta">Hanken Grotesk Light 300 / 20px / 1.6 LH</div>
+            </div>
+
+            <div class="type-spec">
+                <div class="type-label">Label Detail</div>
+                <div class="type-demo"
+                    style="font-weight: 500; font-size: 11px; letter-spacing: 4px; text-transform: uppercase;">Technical
+                    Specifications · V1.0</div>
+                <div class="type-meta">Hanken Grotesk Medium 500 / 11px / All Caps</div>
+            </div>
+        </section>
+
+        <!-- SECTION 04: DON'TS -->
+        <section>
+            <h2>04 — Usage Prohibitions</h2>
+            <div class="dont-grid">
+                <div class="dont-item">
+                    <div class="dont-visual">ABC</div>
+                    <div class="dont-text">No Clinical White / Cold Blues</div>
+                </div>
+                <div class="dont-item">
+                    <div class="dont-visual" style="text-shadow: 5px 5px 5px rgba(0,0,0,0.5);">DNA</div>
+                    <div class="dont-text">No Drop Shadows</div>
+                </div>
+                <div class="dont-item">
+                    <div class="dont-visual" style="transform: skewX(-20deg);">RS</div>
+                    <div class="dont-text">No Skewing or Stretching</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            Rima Alshoufi · Visual Guidelines · strictly Confidential · 2026
+        </footer>
+    </div>
+
+</body>
+
+</html>

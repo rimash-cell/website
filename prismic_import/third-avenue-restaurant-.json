@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "third-avenue-restaurant-",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Third Avenue Restaurant ",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "",
+    "year": "2024",
+    "location": "Dubai Mall",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

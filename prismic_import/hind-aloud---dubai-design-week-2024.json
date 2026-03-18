@@ -1,0 +1,229 @@
+{
+  "type": "work",
+  "uid": "hind-aloud---dubai-design-week-2024",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Dubai Design Week 2024",
+        "spans": []
+      }
+    ],
+    "category": "experiential-space",
+    "client": "Hind ALoud",
+    "year": "2024",
+    "location": "Dubai Design Week, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Experiential Pop-Up | Artistic Installation | Brand Activation",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31268cfdd1b6704993bef_1730803541923.jpeg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31268cfdd1b6704993bef_1730803541923.jpeg"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "When Scent Becomes Art",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "At Dubai Design Week, Hind Al-Oud presented an immersive pop-up installation that transformed fragrance into art and poetry into space. Inspired by Kibriya’E by poet Faisal Al-Adwani, the activation introduced two exclusive perfumes — Alifi and Ya’E — expressed as a multi-sensory journey from certainty to singularity, blending scent, light, sound, and spatial storytelling into an evocative design experience.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe787f6_1731419627558.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe787f6_1731419627558.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe7883a_1731419611191.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe7883a_1731419611191.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b0761e3f384a58059_1730803537307.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b0761e3f384a58059_1730803537307.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3108692d2b3414cb904e9_1731419612494.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3108692d2b3414cb904e9_1731419612494.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086b22ee95bf9f27af6_1731419641776.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086b22ee95bf9f27af6_1731419641776.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b3c36fe3216ccddd7_1730803539601.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b3c36fe3216ccddd7_1730803539601.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073bd91ae4a78df268cc_1730803537183.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073bd91ae4a78df268cc_1730803537183.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ab35144efa9250d6e_1730803538371.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ab35144efa9250d6e_1730803538371.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3117b36b30e9273152998_Captureee.JPG"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3117b36b30e9273152998_Captureee.JPG"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ac35638d62c441e30_1730803538131.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ac35638d62c441e30_1730803538131.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31172d92647de1029a463_Capture2.JPG"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31172d92647de1029a463_Capture2.JPG"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086162a977fcb5426ee_1731419622639.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086162a977fcb5426ee_1731419622639.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310869d6cf033963b0060_1731419610137.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310869d6cf033963b0060_1731419610137.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b30710e86b0b10ea7e0f87_1730803542099.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b30710e86b0b10ea7e0f87_1730803542099.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31184b2f93665e6008c9b_Capture33.JPG"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31184b2f93665e6008c9b_Capture33.JPG"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31180a749f198990f4e56_Capturewe.JPG"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31180a749f198990f4e56_Capturewe.JPG"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310bad2164e10c026727b_Capture1.JPG"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310bad2164e10c026727b_Capture1.JPG"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

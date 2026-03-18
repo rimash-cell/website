@@ -1,0 +1,166 @@
+{
+  "type": "work",
+  "uid": "anfasic-flagship-store-",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Anfasic Flagship Store ",
+        "spans": []
+      }
+    ],
+    "category": "luxury-retail-hospitality",
+    "client": "Anfasic",
+    "year": "2024",
+    "location": "Dubai Mall, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Flagship Store | Luxury Retail Architecture | Rebranding Rollout",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Designing the Future of Emirati Perfumery",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "The Anfasic flagship at Dubai Mall reimagines traditional perfume retail into a futuristic, immersive environment. Curved forms, glowing violet tones, and reflective surfaces create a space that feels both rooted in Emirati culture and ahead of its time. This store became the first physical expression of Anfasic’s rebranding, a bold step into modern luxury design within one of the world’s most prestigious retail destinations.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb883bf5431917edd71_9.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb883bf5431917edd71_9.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb843dac84784103ee6_8.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb843dac84784103ee6_8.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb9fb4f82f39164b6d1_10.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb9fb4f82f39164b6d1_10.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb8bf0308dce4939d6c_11.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb8bf0308dce4939d6c_11.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba0cfe3d16791585bb_7.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba0cfe3d16791585bb_7.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb8e2a9e7dd4239396_6.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb8e2a9e7dd4239396_6.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb3da90fc757630a9b_1.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb3da90fc757630a9b_1.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb7ad6ce8cc82a6552_2.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb7ad6ce8cc82a6552_2.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba864847576bed1bf2_3.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba864847576bed1bf2_3.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbad2ddbc8f128f1962_4.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbad2ddbc8f128f1962_4.png"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

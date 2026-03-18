@@ -1,0 +1,96 @@
+{
+    "id": "homepage",
+    "label": "Homepage",
+    "repeatable": false,
+    "status": true,
+    "json": {
+        "Main": {
+            "title": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Page Title",
+                    "single": "heading1"
+                }
+            },
+            "hero_title": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Hero Title (Name)",
+                    "single": "heading1"
+                }
+            },
+            "hero_subtitle": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Hero Subtitle (Role)",
+                    "single": "heading2"
+                }
+            },
+            "hero_image": {
+                "type": "Image",
+                "config": {
+                    "label": "Hero Image",
+                    "constraint": {},
+                    "thumbnails": []
+                }
+            },
+            "taglines": {
+                "type": "Group",
+                "config": {
+                    "label": "Taglines",
+                    "fields": {
+                        "text": {
+                            "type": "Text",
+                            "config": {
+                                "label": "Tagline Text"
+                            }
+                        }
+                    }
+                }
+            },
+            "bio": {
+                "type": "StructuredText",
+                "config": {
+                    "label": "Biography",
+                    "multi": "paragraph,em,strong,hyperlink"
+                }
+            },
+            "partner_logos": {
+                "type": "Group",
+                "config": {
+                    "label": "Partner Logos",
+                    "fields": {
+                        "logo": {
+                            "type": "Image",
+                            "config": {
+                                "label": "Partner Logo",
+                                "constraint": {},
+                                "thumbnails": []
+                            }
+                        },
+                        "name": {
+                            "type": "Text",
+                            "config": {
+                                "label": "Partner Name (Alt Text)"
+                            }
+                        }
+                    }
+                }
+            },
+            "slices": {
+                "type": "Slices",
+                "fieldset": "Slice Zone",
+                "config": {
+                    "choices": {
+                        "hero": {
+                            "type": "SharedSlice"
+                        },
+                        "work_grid": {
+                            "type": "SharedSlice"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

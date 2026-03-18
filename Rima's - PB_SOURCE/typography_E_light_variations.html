@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Option E · 3 Clear Moods · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .g3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+        }
+
+        /* ── LABEL BAR ── */
+        .lbl {
+            padding: 20px 40px;
+        }
+
+        .lbl-n {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .lbl-d {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            color: #3a3a3a;
+        }
+
+        /* ══════════════════════════════
+     SHARED HERO SHELL
+  ══════════════════════════════ */
+        .hero {
+            padding: 44px 40px 36px;
+            min-height: 72vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35%;
+            pointer-events: none;
+        }
+
+        .h-top {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-id {
+            font-weight: 700;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.7;
+        }
+
+        .h-id span {
+            display: block;
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+        }
+
+        .h-dt {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-align: right;
+            line-height: 1.7;
+        }
+
+        .h-name {
+            margin-top: auto;
+            padding-top: 36px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-foot {
+            margin-top: 22px;
+            padding-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ht {
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hl {
+            font-weight: 300;
+            font-size: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* ══════════════════════════════
+     V1 — COOL
+     Background: blue-gray #cfd5da
+     Glow: cool silver-blue
+     Type: near-black on cool field
+  ══════════════════════════════ */
+        .hero-cool {
+            background:
+                radial-gradient(ellipse 55% 50% at 64% 25%, rgba(120, 148, 175, 0.22) 0%, transparent 62%),
+                radial-gradient(ellipse 40% 42% at 20% 78%, rgba(100, 120, 145, 0.18) 0%, transparent 55%),
+                linear-gradient(148deg, #c5cdd5 0%, #cdd4db 25%, #c8d0d8 55%, #cdd4da 80%, #d0d7dc 100%);
+        }
+
+        .hero-cool::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.08) 0%, transparent 100%);
+        }
+
+        .v1-id {
+            color: rgba(0, 0, 0, 0.36);
+        }
+
+        .v1-id span {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+        .v1-dt {
+            color: rgba(0, 0, 0, 0.28);
+        }
+
+        .v1-n1 {
+            font-weight: 900;
+            font-size: clamp(54px, 9vw, 84px);
+            color: #080808;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .v1-n2 {
+            font-weight: 200;
+            font-size: clamp(54px, 9vw, 84px);
+            color: #080808;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .v1-foot {
+            border-top: 1px solid rgba(0, 0, 0, 0.16);
+        }
+
+        .v1-ht {
+            color: rgba(0, 0, 0, 0.42);
+        }
+
+        .v1-hl {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* ══════════════════════════════
+     V2 — LIGHTER
+     Background: near-white #f7f5f2
+     Almost no gradient — very airy
+     Type: pure black for maximum pop
+  ══════════════════════════════ */
+        .hero-light {
+            background:
+                radial-gradient(ellipse 40% 38% at 64% 28%, rgba(184, 115, 51, 0.07) 0%, transparent 60%),
+                #f7f5f2;
+        }
+
+        .hero-light::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.02) 0%, transparent 100%);
+        }
+
+        .v2-id {
+            color: rgba(0, 0, 0, 0.28);
+        }
+
+        .v2-id span {
+            color: rgba(0, 0, 0, 0.2);
+        }
+
+        .v2-dt {
+            color: rgba(0, 0, 0, 0.22);
+        }
+
+        .v2-n1 {
+            font-weight: 900;
+            font-size: clamp(54px, 9vw, 84px);
+            color: #000000;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .v2-n2 {
+            font-weight: 200;
+            font-size: clamp(54px, 9vw, 84px);
+            color: #000000;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .v2-foot {
+            border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .v2-ht {
+            color: rgba(0, 0, 0, 0.38);
+        }
+
+        .v2-hl {
+            color: rgba(0, 0, 0, 0.25);
+        }
+
+        /* ══════════════════════════════
+     V3 — MORE CONTRAST
+     Background: dark mid-gray #7a8088
+     Name: CREAM (flipped) — light on dark
+     Dramatic entry into black quote
+  ══════════════════════════════ */
+        .hero-contrast {
+            background:
+                radial-gradient(ellipse 55% 52% at 64% 26%, rgba(184, 115, 51, 0.28) 0%, transparent 62%),
+                radial-gradient(ellipse 40% 40% at 18% 80%, rgba(80, 88, 96, 0.3) 0%, transparent 55%),
+                linear-gradient(148deg, #717880 0%, #7a8088 25%, #72797f 55%, #7d8389 80%, #818890 100%);
+        }
+
+        .hero-contrast::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+        }
+
+        .v3-id {
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        .v3-id span {
+            color: rgba(255, 255, 255, 0.22);
+        }
+
+        .v3-dt {
+            color: rgba(255, 255, 255, 0.28);
+        }
+
+        /* Name is CREAM on dark — flipped contrast */
+        .v3-n1 {
+            font-weight: 900;
+            font-size: clamp(54px, 9vw, 84px);
+            color: #f0ede7;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .v3-n2 {
+            font-weight: 200;
+            font-size: clamp(54px, 9vw, 84px);
+            color: #f0ede7;
+            line-height: .88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .v3-foot {
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .v3-ht {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .v3-hl {
+            color: rgba(255, 255, 255, 0.28);
+        }
+
+        /* ── QUOTE — identical in all 3, dark anchor ── */
+        .quote {
+            background: #060606;
+            padding: 44px 40px;
+            border-top: 3px solid #b87333;
+        }
+
+        .q-big {
+            font-weight: 900;
+            font-size: clamp(20px, 3.2vw, 36px);
+            color: #f0ede7;
+            line-height: 1.1;
+            letter-spacing: -0.8px;
+        }
+
+        .q-em {
+            color: #b87333;
+            font-style: normal;
+        }
+
+        .q-sub {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #2a2a2a;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .q-sub::before {
+            content: '';
+            display: block;
+            width: 18px;
+            height: .5px;
+            background: #b87333;
+            flex-shrink: 0;
+        }
+
+        /* ── BODY — identical in all 3 ── */
+        .body-s {
+            background: #faf9f7;
+            padding: 44px 40px;
+            border-top: 2px solid #060606;
+        }
+
+        .b-lbl {
+            font-weight: 600;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 14px;
+        }
+
+        .b-h {
+            font-weight: 800;
+            font-size: 17px;
+            color: #060606;
+            letter-spacing: -.2px;
+            line-height: 1.2;
+            margin-bottom: 13px;
+        }
+
+        .b-p {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 1.85;
+            color: #666;
+        }
+
+        .b-p strong {
+            font-weight: 600;
+            color: #111;
+        }
+
+        .b-meta {
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-top: 12px;
+        }
+
+        /* ── DIFF SUMMARY ROW ── */
+        .diff-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            margin-top: 3px;
+            background: #0a0a0a;
+            padding: 3px;
+        }
+
+        .diff-cell {
+            padding: 30px 40px;
+        }
+
+        .diff-title {
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: -.2px;
+            margin-bottom: 10px;
+        }
+
+        .diff-list {
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .diff-list li {
+            list-style: none;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .diff-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LABELS -->
+    <div class="g3" style="background:#0a0a0a; padding:3px; gap:3px;">
+        <div class="lbl" style="background:#0e1114;">
+            <p class="lbl-n" style="color:#a0b0c0;">V1 — Cooler</p>
+            <p class="lbl-d">Blue-gray hero · Silver glow · Cold atmosphere</p>
+        </div>
+        <div class="lbl" style="background:#111110;">
+            <p class="lbl-n" style="color:#d0c8bc;">V2 — Lighter</p>
+            <p class="lbl-d">Near-white · Minimal gradient · Maximum air</p>
+        </div>
+        <div class="lbl" style="background:#131313;">
+            <p class="lbl-n" style="color:#b87333;">V3 — More Contrast</p>
+            <p class="lbl-d">Dark mid-gray hero · Cream name · Dramatic split</p>
+        </div>
+    </div>
+
+    <!-- HEROES -->
+    <div class="g3">
+        <!-- V1: COOL -->
+        <div class="hero hero-cool">
+            <div class="h-top">
+                <div class="h-id v1-id">Personal Brand<span>V1 · Cool</span></div>
+                <div class="h-dt v1-dt">25 — 02 — 2026<br><span style="color:#b87333;font-weight:600;">R1</span></div>
+            </div>
+            <div class="h-name">
+                <span class="v1-n1">Rima</span>
+                <span class="v1-n2">Alshoufi</span>
+            </div>
+            <div class="h-foot v1-foot">
+                <span class="ht v1-ht">Spatial Experience Designer / CD</span>
+                <span class="hl v1-hl">Dubai · GCC</span>
+            </div>
+        </div>
+
+        <!-- V2: LIGHTER -->
+        <div class="hero hero-light">
+            <div class="h-top">
+                <div class="h-id v2-id">Personal Brand<span>V2 · Lighter</span></div>
+                <div class="h-dt v2-dt">25 — 02 — 2026<br><span style="color:#b87333;font-weight:600;">R1</span></div>
+            </div>
+            <div class="h-name">
+                <span class="v2-n1">Rima</span>
+                <span class="v2-n2">Alshoufi</span>
+            </div>
+            <div class="h-foot v2-foot">
+                <span class="ht v2-ht">Spatial Experience Designer / CD</span>
+                <span class="hl v2-hl">Dubai · GCC</span>
+            </div>
+        </div>
+
+        <!-- V3: MORE CONTRAST -->
+        <div class="hero hero-contrast">
+            <div class="h-top">
+                <div class="h-id v3-id">Personal Brand<span>V3 · Contrast</span></div>
+                <div class="h-dt v3-dt">25 — 02 — 2026<br><span style="color:#b87333;font-weight:600;">R1</span></div>
+            </div>
+            <div class="h-name">
+                <span class="v3-n1">Rima</span>
+                <span class="v3-n2">Alshoufi</span>
+            </div>
+            <div class="h-foot v3-foot">
+                <span class="ht v3-ht">Spatial Experience Designer / CD</span>
+                <span class="hl v3-hl">Dubai · GCC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUOTES — all identical dark anchors -->
+    <div class="g3">
+        <div class="quote">
+            <p class="q-big">Not how it looks —<br><span class="q-em">how it makes them feel.</span></p>
+            <p class="q-sub">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+        <div class="quote">
+            <p class="q-big">Not how it looks —<br><span class="q-em">how it makes them feel.</span></p>
+            <p class="q-sub">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+        <div class="quote">
+            <p class="q-big">Not how it looks —<br><span class="q-em">how it makes them feel.</span></p>
+            <p class="q-sub">Spatial Experience Design · GCC &amp; Europe</p>
+        </div>
+    </div>
+
+    <!-- BODIES -->
+    <div class="g3">
+        <div class="body-s">
+            <p class="b-lbl">01 — About</p>
+            <h2 class="b-h">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-p">A Spatial Experience Designer based in Dubai, she translates the identity and emotional truth
+                of a brand into environments that <strong>shape how people move, behave, and remember.</strong></p>
+            <p class="b-meta">MBA · Sup de Luxe (Founded by Cartier) · Paris</p>
+        </div>
+        <div class="body-s">
+            <p class="b-lbl">01 — About</p>
+            <h2 class="b-h">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-p">A Spatial Experience Designer based in Dubai, she translates the identity and emotional truth
+                of a brand into environments that <strong>shape how people move, behave, and remember.</strong></p>
+            <p class="b-meta">MBA · Sup de Luxe (Founded by Cartier) · Paris</p>
+        </div>
+        <div class="body-s">
+            <p class="b-lbl">01 — About</p>
+            <h2 class="b-h">Rima Alshoufi designs how people experience physical space.</h2>
+            <p class="b-p">A Spatial Experience Designer based in Dubai, she translates the identity and emotional truth
+                of a brand into environments that <strong>shape how people move, behave, and remember.</strong></p>
+            <p class="b-meta">MBA · Sup de Luxe (Founded by Cartier) · Paris</p>
+        </div>
+    </div>
+
+    <!-- DIFFERENCE SUMMARY -->
+    <div class="diff-row">
+        <div class="diff-cell" style="background:#0e1114;">
+            <p class="diff-title" style="color:#a0b0c0;">V1 — Cooler</p>
+            <ul class="diff-list" style="color:#485058;">
+                <li>Blue-gray base `#c5cdd5`</li>
+                <li>Silver-blue gradient glow</li>
+                <li>Near-black type on cool field</li>
+                <li>Feels: mineral, architectural, cold</li>
+            </ul>
+        </div>
+        <div class="diff-cell" style="background:#111110;">
+            <p class="diff-title" style="color:#d0c8bc;">V2 — Lighter</p>
+            <ul class="diff-list" style="color:#484440;">
+                <li>Near-white base `#f7f5f2`</li>
+                <li>Barely-there glow — 7% only</li>
+                <li>Pure black type — max pop</li>
+                <li>Feels: airy, clean, editorial</li>
+            </ul>
+        </div>
+        <div class="diff-cell" style="background:#131313;">
+            <p class="diff-title" style="color:#b87333;">V3 — More Contrast</p>
+            <ul class="diff-list" style="color:#484440;">
+                <li>Dark mid-gray base `#7a8088`</li>
+                <li>Warm amber glow 28%</li>
+                <li>Cream type on dark — flipped</li>
+                <li>Feels: dramatic, spatial, moody</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

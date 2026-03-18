@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography References — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --bg: #f7f5f2;
+            --bg2: #faf9f7;
+            --bronze: #b87333;
+            --gray: #666666;
+            --sand: #c8c2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--black);
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--black);
+        }
+
+        /* COVER BAR */
+        .cover-bar {
+            background: var(--bg);
+            padding: 40px 64px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--bronze);
+        }
+
+        .cb-title {
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--black);
+            letter-spacing: -.5px;
+        }
+
+        .cb-title span {
+            font-weight: 200;
+        }
+
+        .cb-sub {
+            font-weight: 300;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: var(--gray);
+            margin-top: 6px;
+        }
+
+        .cb-doc {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            text-align: right;
+        }
+
+        /* CATEGORY LABEL */
+        .cat-bar {
+            background: #111;
+            padding: 20px 64px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-top: 0.5px solid #1a1a1a;
+        }
+
+        .cat-num {
+            font-weight: 900;
+            font-size: 11px;
+            color: #222;
+        }
+
+        .cat-name {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+        }
+
+        .cat-rule {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #333;
+            margin-left: auto;
+            max-width: 480px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        /* GRID LAYOUTS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3px;
+        }
+
+        .grid-hero {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3px;
+        }
+
+        .grid-tall {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3px;
+        }
+
+        /* IMAGE CARD */
+        .img-card {
+            position: relative;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .img-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(0.75) brightness(0.95);
+            transition: transform 0.4s ease;
+        }
+
+        .img-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .img-card .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .img-card .cap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 22px;
+            z-index: 1;
+        }
+
+        .cap-tag {
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 7px;
+        }
+
+        .cap-tag::before {
+            content: '';
+            display: block;
+            width: 14px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        .cap-title-img {
+            font-weight: 700;
+            font-size: 14px;
+            color: #f0ede7;
+            letter-spacing: -.1px;
+            line-height: 1.2;
+        }
+
+        .cap-note {
+            font-weight: 300;
+            font-size: 10px;
+            color: rgba(240, 237, 231, 0.55);
+            margin-top: 4px;
+        }
+
+        /* HEIGHT CLASSES */
+        .h-full {
+            height: 100%;
+            min-height: 420px;
+        }
+
+        .h-tall {
+            height: 520px;
+        }
+
+        .h-med {
+            height: 360px;
+        }
+
+        .h-short {
+            height: 280px;
+        }
+
+        /* RIGHT ANNOTATION */
+        .anno {
+            background: #111;
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .anno-label {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 18px;
+        }
+
+        .anno-head {
+            font-weight: 700;
+            font-size: 16px;
+            color: #ddd;
+            letter-spacing: -.1px;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .anno-text {
+            font-weight: 300;
+            font-size: 12px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .anno-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border: 0.5px solid #222;
+            color: #333;
+            margin-top: 8px;
+        }
+
+        .anno-tag.yes {
+            color: var(--bronze);
+            border-color: rgba(184, 115, 51, 0.3);
+        }
+
+        .anno-tag.no {
+            color: #444;
+            border-color: #1e1e1e;
+            text-decoration: line-through;
+        }
+
+        /* DIVIDER */
+        .div-3px {
+            height: 3px;
+            background: var(--black);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- COVER -->
+    <div class="cover-bar">
+        <div>
+            <p class="cb-title">Photography<span> References</span></p>
+            <p class="cb-sub">Visual Identity · Option E Light · Rima Alshoufi Personal Brand</p>
+        </div>
+        <div class="cb-doc">
+            R1 · February 2026<br>
+            <span style="color:var(--sand); font-weight:300; font-size:9px; letter-spacing:1px;">6 Categories · 18
+                References</span>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+  01 — THRESHOLD / ENTRY
+══════════════════════════════════ -->
+    <div class="cat-bar">
+        <span class="cat-num">01</span>
+        <span class="cat-name">Threshold &amp; Entry</span>
+        <span class="cat-rule">The moment before the reveal. Light pulled through an opening. Anticipation as
+            composition.</span>
+    </div>
+    <div class="grid-hero">
+        <div class="img-card h-tall">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80" alt="Doorway with light"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Hero Reference · Threshold</p>
+                <p class="cap-title-img">Side light through a wide opening — the depth of the corridor beyond is the
+                    subject, not the door</p>
+                <p class="cap-note">Long shadow · Warm stone · Negative space above</p>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:3px;">
+            <div class="img-card h-med">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Archway minimal"
+                    loading="lazy">
+                <div class="overlay"></div>
+                <div class="cap">
+                    <p class="cap-tag">Entry · Archway</p>
+                    <p class="cap-title-img">Arch framing empty space</p>
+                </div>
+            </div>
+            <div class="anno">
+                <p class="anno-label">Why this works</p>
+                <p class="anno-head">Light is the subject — the door is the frame</p>
+                <p class="anno-text">The opening tells you nothing about what's inside. You feel the quality of the
+                    space before you see it. That's what spatial experience design does.</p>
+                <span class="anno-tag yes">✓ Directional raking light</span>
+                <span class="anno-tag yes">✓ 40%+ negative space</span>
+                <span class="anno-tag yes">✓ Warm neutral tones</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-3px"></div>
+
+    <!-- ══════════════════════════════════
+  02 — MATERIAL & TEXTURE
+══════════════════════════════════ -->
+    <div class="cat-bar">
+        <span class="cat-num">02</span>
+        <span class="cat-name">Material &amp; Texture</span>
+        <span class="cat-rule">The vocabulary of spatial design. Stone, plaster, linen, bronze — close enough to read
+            with the eye the way the hand would read it.</span>
+    </div>
+    <div class="grid-3">
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8f647c8b63?w=800&q=80" alt="Stone texture"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Material · Stone</p>
+                <p class="cap-title-img">Travertine or limestone — warm grain under raking light</p>
+            </div>
+        </div>
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Fabric texture"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Material · Fabric</p>
+                <p class="cap-title-img">Linen or raw textile — shadow in the weave</p>
+            </div>
+        </div>
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80" alt="Plaster wall"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Material · Plaster</p>
+                <p class="cap-title-img">Unfinished wall surface — texture as identity</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-3px"></div>
+
+    <!-- ══════════════════════════════════
+  03 — SPATIAL ATMOSPHERE
+══════════════════════════════════ -->
+    <div class="cat-bar">
+        <span class="cat-num">03</span>
+        <span class="cat-name">Spatial Atmosphere</span>
+        <span class="cat-rule">The inhabited empty room. Designed silence. The environment is the character — everything
+            else is context.</span>
+    </div>
+    <div class="grid-hero" style="grid-template-columns:1fr 2fr;">
+        <div style="display:flex; flex-direction:column; gap:3px;">
+            <div class="anno" style="flex:1;">
+                <p class="anno-label">The Principle</p>
+                <p class="anno-head">Empty but not vacant</p>
+                <p class="anno-text">These spaces feel inhabited even with no one in them. A chair placed precisely.
+                    Light at a specific angle. The atmosphere of intention.</p>
+                <p class="anno-text" style="margin-top:10px;">This is what spatial experience design produces. The
+                    photograph must carry the same quality.</p>
+                <span class="anno-tag yes">✓ Stillness as content</span>
+                <span class="anno-tag yes">✓ Positive/negative space balance</span>
+                <span class="anno-tag no">✗ Busy, styled compositions</span>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:3px;">
+            <div class="img-card" style="height:280px;">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80" alt="Minimal interior"
+                    loading="lazy">
+                <div class="overlay"></div>
+                <div class="cap">
+                    <p class="cap-tag">Spatial Atmosphere · Interior</p>
+                    <p class="cap-title-img">The room as the subject — light, proportion, silence</p>
+                </div>
+            </div>
+            <div class="img-card" style="height:236px;">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80" alt="Minimal room"
+                    loading="lazy">
+                <div class="overlay"></div>
+                <div class="cap">
+                    <p class="cap-tag">Interior · Silence</p>
+                    <p class="cap-title-img">Wide margins, one light source</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-3px"></div>
+
+    <!-- ══════════════════════════════════
+  04 — DIRECTIONAL LIGHT
+══════════════════════════════════ -->
+    <div class="cat-bar">
+        <span class="cat-num">04</span>
+        <span class="cat-name">Directional Light</span>
+        <span class="cat-rule">Raking, golden-hour, and overcast-with-one-break. Light that reveals form rather than
+            flattering it.</span>
+    </div>
+    <div class="grid-2">
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80"
+                alt="Light through window" loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Light · Raking · Window</p>
+                <p class="cap-title-img">Hard geometry of shadow on warm surface</p>
+                <p class="cap-note">Long shadow · Warm stone · Negative space above</p>
+            </div>
+        </div>
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=1200&q=80" alt="Shadow on wall"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Light · Shadow Pattern</p>
+                <p class="cap-title-img">The shadow is the subject, not the object casting it</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-3px"></div>
+
+    <!-- ══════════════════════════════════
+  05 — DARK / QUIET
+══════════════════════════════════ -->
+    <div class="cat-bar">
+        <span class="cat-num">05</span>
+        <span class="cat-name">Dark &amp; Quiet</span>
+        <span class="cat-rule">Near-black frames with a single warm point of light. Used sparingly — one in a sequence,
+            not as a theme. Drama through restraint.</span>
+    </div>
+    <div class="grid-3">
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80" alt="Dark interior"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Dark · Warm Point</p>
+                <p class="cap-title-img">One light source from within</p>
+            </div>
+        </div>
+        <div class="img-card h-med">
+            <img src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?w=800&q=80" alt="Moody corridor"
+                loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Dark · Depth</p>
+                <p class="cap-title-img">Corridor receding into near-black</p>
+            </div>
+        </div>
+        <div class="anno" style="height:360px;">
+            <p class="anno-label">Use Rule</p>
+            <p class="anno-head">One dark image per six</p>
+            <p class="anno-text">In any sequence of images — website, press kit, SM — no more than 1 in 6 should be dark
+                dominant. Otherwise the brand reads as gloomy, not considered.</p>
+            <p class="anno-text" style="margin-top:10px;">The dark image works because the others are light. It's the
+                pause, not the tone.</p>
+            <span class="anno-tag yes">✓ One warm light source minimum</span>
+            <span class="anno-tag no">✗ Cold or blue-tinted darks</span>
+        </div>
+    </div>
+
+    <div class="div-3px"></div>
+
+    <!-- ══════════════════════════════════
+  06 — PORTRAIT / PERSON IN SPACE
+══════════════════════════════════ -->
+    <div class="cat-bar">
+        <span class="cat-num">06</span>
+        <span class="cat-name">Portrait — Person in Space</span>
+        <span class="cat-rule">When a person appears, the space is still the subject. The figure provides scale, not
+            focus. Never centred, never posed against a backdrop.</span>
+    </div>
+    <div class="grid-hero">
+        <div class="img-card h-tall">
+            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=1200&q=80"
+                alt="Person in architectural space" loading="lazy">
+            <div class="overlay"></div>
+            <div class="cap">
+                <p class="cap-tag">Portrait · Spatial</p>
+                <p class="cap-title-img">The architecture is the subject — the person is the scale</p>
+                <p class="cap-note">Figure small within the frame · Side or back view preferred · Space dominant</p>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:3px;">
+            <div class="img-card h-med">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                    alt="Professional portrait" loading="lazy">
+                <div class="overlay"></div>
+                <div class="cap">
+                    <p class="cap-tag">Portrait · Working</p>
+                    <p class="cap-title-img">In context, at work — not posed</p>
+                </div>
+            </div>
+            <div class="anno" style="flex:1;">
+                <p class="anno-label">Portrait Rules</p>
+                <p class="anno-head">Person as anchor, space as story</p>
+                <p class="anno-text">Side or back view is preferred for spatial shots. When frontal: natural light from
+                    the side, environment visible behind, no studio backdrop.</p>
+                <span class="anno-tag yes">✓ Space visible in frame</span>
+                <span class="anno-tag yes">✓ Natural / directional light</span>
+                <span class="anno-tag no">✗ Centred studio portrait</span>
+                <span class="anno-tag no">✗ Flat even lighting</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div
+        style="background:var(--bg); padding:32px 64px; display:flex; justify-content:space-between; align-items:center; border-top:2px solid var(--bronze);">
+        <div>
+            <p
+                style="font-weight:700; font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--black);">
+                Rima Alshoufi</p>
+            <p style="font-weight:300; font-size:10px; letter-spacing:1px; color:var(--gray); margin-top:4px;">
+                Photography Reference Guide · Visual Identity System · R1</p>
+        </div>
+        <p style="font-weight:300; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--sand);">
+            Images: Unsplash · For Reference Only · February 2026</p>
+    </div>
+
+</body>
+
+</html>

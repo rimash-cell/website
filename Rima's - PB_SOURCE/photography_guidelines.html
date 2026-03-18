@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Guidelines — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --bg: #f7f5f2;
+            --bg2: #faf9f7;
+            --bronze: #b87333;
+            --gray: #666666;
+            --sand: #c8c2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--black);
+        }
+
+        /* ── SHARED ── */
+        .sec-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 48px;
+        }
+
+        .sec-lbl::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        /* ═══ COVER ═══ */
+        .cover {
+            min-height: 100vh;
+            padding: 60px 72px;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse 38% 38% at 65% 32%, rgba(184, 115, 51, 0.08) 0%, transparent 60%),
+                var(--bg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .cover-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 0.5px solid var(--sand);
+            padding-bottom: 28px;
+            margin-bottom: 60px;
+        }
+
+        .cover-doc {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gray);
+        }
+
+        .cover-doc span {
+            display: block;
+            margin-top: 5px;
+            color: var(--bronze);
+        }
+
+        .cover-date {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--sand);
+        }
+
+        .cover-headline {
+            font-weight: 900;
+            font-size: clamp(52px, 10vw, 110px);
+            color: var(--black);
+            line-height: .88;
+            letter-spacing: -4px;
+        }
+
+        .cover-headline span {
+            font-weight: 200;
+            display: block;
+        }
+
+        .cover-foot {
+            margin-top: auto;
+            padding-top: 24px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .cover-desc {
+            font-weight: 300;
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.75;
+            max-width: 440px;
+        }
+
+        .cover-loc {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--sand);
+        }
+
+        /* ═══ SECTION SHELLS ═══ */
+        .section {
+            padding: 80px 72px;
+        }
+
+        .section-alt {
+            background: var(--bg2);
+        }
+
+        .section-dark {
+            background: var(--black);
+        }
+
+        /* ═══ PHILOSOPHY ═══ */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .phil-headline {
+            font-weight: 800;
+            font-size: clamp(26px, 3.5vw, 42px);
+            color: var(--black);
+            letter-spacing: -.5px;
+            line-height: 1.1;
+            margin-bottom: 28px;
+        }
+
+        .phil-text {
+            font-weight: 300;
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.85;
+            margin-bottom: 14px;
+        }
+
+        .phil-text strong {
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .phil-pull {
+            padding: 28px 0;
+            border-top: 0.5px solid var(--sand);
+            border-bottom: 0.5px solid var(--sand);
+            margin-top: 32px;
+        }
+
+        .phil-pull p {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--black);
+            line-height: 1.3;
+            letter-spacing: -.1px;
+        }
+
+        .phil-pull p em {
+            font-style: normal;
+            color: var(--bronze);
+        }
+
+        /* Side manifesto */
+        .phil-aside {
+            padding-left: 40px;
+            border-left: 2px solid var(--bronze);
+        }
+
+        .phil-aside-item {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+        }
+
+        .phil-aside-item:last-child {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ph-a-label {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 8px;
+        }
+
+        .ph-a-text {
+            font-weight: 300;
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.75;
+        }
+
+        /* ═══ MOOD REFERENCE ═══ */
+        .mood-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+        }
+
+        .mood-card {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mood-img {
+            height: 240px;
+        }
+
+        .mood-body {
+            background: var(--bg2);
+            padding: 20px 22px 24px;
+        }
+
+        .mood-tag {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            font-weight: 500;
+            font-size: 8px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.65);
+            background: rgba(0, 0, 0, 0.25);
+            padding: 4px 10px;
+            backdrop-filter: blur(4px);
+        }
+
+        .mood-lbl {
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--black);
+            margin-bottom: 6px;
+        }
+
+        .mood-desc {
+            font-weight: 300;
+            font-size: 11px;
+            color: var(--gray);
+            line-height: 1.65;
+        }
+
+        /* Gradient placeholders — each references the correct atmosphere */
+        .m1 {
+            background: radial-gradient(ellipse 65% 55% at 55% 35%, rgba(184, 115, 51, 0.22) 0%, transparent 65%), linear-gradient(148deg, #a8a09a 0%, #9a9490 100%);
+        }
+
+        .m2 {
+            background: radial-gradient(ellipse 50% 60% at 30% 60%, rgba(110, 120, 130, 0.3) 0%, transparent 62%), linear-gradient(148deg, #b0b8c2 0%, #9aa4ae 100%);
+        }
+
+        .m3 {
+            background: radial-gradient(ellipse 55% 55% at 70% 40%, rgba(180, 172, 160, 0.3) 0%, transparent 65%), linear-gradient(148deg, #a8a09a 0%, #989088 100%);
+        }
+
+        .m4 {
+            background: linear-gradient(155deg, #1c1c1c 0%, #0e0e0e 100%);
+        }
+
+        .m5 {
+            background: radial-gradient(ellipse 60% 60% at 45% 45%, rgba(184, 115, 51, 0.18) 0%, transparent 65%), linear-gradient(148deg, #b8b0a8 0%, #a8a09a 100%);
+        }
+
+        .m6 {
+            background: radial-gradient(ellipse 50% 50% at 60% 30%, rgba(120, 130, 140, 0.25) 0%, transparent 62%), linear-gradient(148deg, #c0c8d0 0%, #b0b8c0 100%);
+        }
+
+        /* ═══ DO / DON'T ═══ */
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+        }
+
+        .do-col {
+            background: var(--bg2);
+            padding: 52px;
+        }
+
+        .dont-col {
+            background: #111;
+            padding: 52px;
+        }
+
+        .do-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        .do-lbl::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        .do-item {
+            padding: 16px 0;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+        }
+
+        .dont-item {
+            padding: 16px 0;
+            border-bottom: 0.5px solid #1e1e1e;
+        }
+
+        .di-head {
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--black);
+            margin-bottom: 5px;
+            letter-spacing: -.1px;
+        }
+
+        .di-head-inv {
+            font-weight: 600;
+            font-size: 13px;
+            color: #ccc;
+            margin-bottom: 5px;
+            letter-spacing: -.1px;
+        }
+
+        .di-text {
+            font-weight: 300;
+            font-size: 12px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .di-text-inv {
+            font-weight: 300;
+            font-size: 12px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        /* ═══ TECHNICAL SPECS ═══ */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+        }
+
+        .spec-cell {
+            background: var(--bg2);
+            padding: 32px 28px;
+        }
+
+        .spec-label {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 14px;
+        }
+
+        .spec-val {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--black);
+            letter-spacing: -.1px;
+            margin-bottom: 6px;
+        }
+
+        .spec-sub {
+            font-weight: 300;
+            font-size: 11px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        /* ═══ GRADING PALETTE ═══ */
+        .grade-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 3px;
+        }
+
+        .grade-swatch {}
+
+        .grade-color {
+            height: 80px;
+        }
+
+        .grade-body {
+            background: var(--bg2);
+            padding: 14px 16px;
+        }
+
+        .grade-name {
+            font-weight: 500;
+            font-size: 10px;
+            color: var(--black);
+            margin-bottom: 4px;
+        }
+
+        .grade-hex {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            color: var(--sand);
+        }
+
+        /* ═══ CAPTION SYSTEM ═══ */
+        .caption-demo {
+            background: var(--black);
+            padding: 60px 72px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .cap-visual {
+            height: 280px;
+            background:
+                radial-gradient(ellipse 55% 55% at 60% 35%, rgba(184, 115, 51, 0.25) 0%, transparent 62%),
+                linear-gradient(148deg, #888e94, #6e7478);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cap-visual::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 60%);
+        }
+
+        .cap-meta {
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cap-meta::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        .cap-title {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            font-size: 16px;
+            color: #f0ede7;
+            letter-spacing: -.1px;
+            line-height: 1.2;
+        }
+
+        .cap-txt {}
+
+        .cap-txt-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .cap-txt-lbl::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        .cap-rule {
+            padding: 14px 0;
+            border-bottom: 0.5px solid #1e1e1e;
+        }
+
+        .cap-rule p {
+            font-weight: 300;
+            font-size: 13px;
+            color: #555;
+            line-height: 1.75;
+        }
+
+        .cap-rule strong {
+            font-weight: 500;
+            color: #aaa;
+        }
+
+        /* ═══ FOOTER ═══ */
+        .footer {
+            background: var(--black);
+            padding: 40px 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid var(--bronze);
+        }
+
+        .f-name {
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #f0ede7;
+        }
+
+        .f-sub {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .f-meta {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #2a2a2a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ COVER ═══ -->
+    <div class="cover">
+        <div class="cover-top">
+            <div class="cover-doc">
+                Photography Guidelines
+                <span>Visual Identity · Option E Light · R1</span>
+            </div>
+            <div class="cover-date">25 — 02 — 2026</div>
+        </div>
+
+        <div>
+            <div class="cover-headline">
+                The Image<span>is the Space.</span>
+            </div>
+        </div>
+
+        <div class="cover-foot">
+            <p class="cover-desc">
+                Every image in this identity must do what the brand does: not show what a space looks like, but
+                communicate what it feels like to be inside it. The camera is not a recorder. It is a designer's tool.
+            </p>
+            <span class="cover-loc">Rima Alshoufi · Personal Brand</span>
+        </div>
+    </div>
+
+    <!-- ═══ PHILOSOPHY ═══ -->
+    <div class="section">
+        <p class="sec-lbl">01 — Photography Philosophy</p>
+        <div class="philosophy-grid">
+            <div>
+                <h2 class="phil-headline">The subject is never the object.<br>The subject is the feeling.</h2>
+                <p class="phil-text">This brand communicates spatial experience — the intelligence of designing how a
+                    person moves through, reacts to, and remembers a place. The photography must carry that same
+                    intention.</p>
+                <p class="phil-text">A chair is not the subject. <strong>The quality of light falling across the chair
+                        is the subject.</strong> A doorway is not the subject. The anticipation of what is beyond it is
+                    the subject. Shoot the atmosphere, not the object.</p>
+                <div class="phil-pull">
+                    <p>Not how it looks — <em>how it makes them feel.</em></p>
+                </div>
+            </div>
+            <div class="phil-aside">
+                <div class="phil-aside-item">
+                    <p class="ph-a-label">The Only Question</p>
+                    <p class="ph-a-text">Before every shot: what emotion does this frame produce? If you cannot answer
+                        it in one word, the frame isn't ready.</p>
+                </div>
+                <div class="phil-aside-item">
+                    <p class="ph-a-label">The Reference</p>
+                    <p class="ph-a-text">Hiroshi Sugimoto's theatres. Peter Zumthor's atmospheric photographs. Kengo
+                        Kuma's material studies. Images that create presence without clutter.</p>
+                </div>
+                <div class="phil-aside-item">
+                    <p class="ph-a-label">The Standard</p>
+                    <p class="ph-a-text">If the image could work for any brand, it isn't right. It must be so specific
+                        to a sensory moment that it couldn't belong anywhere else.</p>
+                </div>
+                <div class="phil-aside-item">
+                    <p class="ph-a-label">Portrait Rule</p>
+                    <p class="ph-a-text">If a person appears, they are inside the space, not in front of it. The
+                        environment is the context, never the backdrop.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ MOOD REFERENCE ═══ -->
+    <div class="section section-alt" style="padding-bottom:60px;">
+        <p class="sec-lbl">02 — Mood Reference</p>
+        <div class="mood-grid">
+            <div class="mood-card">
+                <div class="mood-img m1"><span class="mood-tag">Threshold · Entry</span></div>
+                <div class="mood-body">
+                    <p class="mood-lbl">The moment before</p>
+                    <p class="mood-desc">Doorways, arches, corridors. The anticipation of what lies beyond the frame.
+                        Warm raking light from one side.</p>
+                </div>
+            </div>
+            <div class="mood-card">
+                <div class="mood-img m2"><span class="mood-tag">Material · Texture</span></div>
+                <div class="mood-body">
+                    <p class="mood-lbl">Surface intelligence</p>
+                    <p class="mood-desc">Stone grain, fabric weight, the reflection of a polished floor. The camera
+                        reads material the way the hand does — tactility translated into light.</p>
+                </div>
+            </div>
+            <div class="mood-card">
+                <div class="mood-img m3"><span class="mood-tag">Spatial · Atmosphere</span></div>
+                <div class="mood-body">
+                    <p class="mood-lbl">Environment as character</p>
+                    <p class="mood-desc">The empty room that still feels inhabited. Designed negative space. Stillness
+                        that implies presence.</p>
+                </div>
+            </div>
+            <div class="mood-card">
+                <div class="mood-img m4"><span class="mood-tag">Dark · Quiet</span></div>
+                <div class="mood-body">
+                    <p class="mood-lbl">Controlled depth</p>
+                    <p class="mood-desc">Near-black frames with a single point of warm light. Drama through restraint,
+                        not volume. Used sparingly — one in a series.</p>
+                </div>
+            </div>
+            <div class="mood-card">
+                <div class="mood-img m5"><span class="mood-tag">Light · Directional</span></div>
+                <div class="mood-body">
+                    <p class="mood-lbl">Raking and directional</p>
+                    <p class="mood-desc">Light that reveals form rather than flattening it. Long shadows, soft
+                        gradients, the hour before and after noon.</p>
+                </div>
+            </div>
+            <div class="mood-card">
+                <div class="mood-img m6"><span class="mood-tag">Portrait · Spatial</span></div>
+                <div class="mood-body">
+                    <p class="mood-lbl">Person inside environment</p>
+                    <p class="mood-desc">When a person appears: small within the space, or partially framed. The space
+                        is the story. The figure is the scale reference.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ DO / DON'T ═══ -->
+    <div class="do-dont">
+        <div class="do-col">
+            <p class="do-lbl">Do — Shoot This</p>
+            <div class="do-item">
+                <p class="di-head">Directional, raking light</p>
+                <p class="di-text">Side-lit, golden hour, overcast with a single break. Light that creates shadow and
+                    reveals form. Nothing flat, nothing even.</p>
+            </div>
+            <div class="do-item">
+                <p class="di-head">Generous negative space</p>
+                <p class="di-text">At least 40% of the frame is intentional empty space — sky, floor, wall. Silence as
+                    composition.</p>
+            </div>
+            <div class="do-item">
+                <p class="di-head">Threshold and entry moments</p>
+                <p class="di-text">The point of arrival. Doorways, arches, the edge of a space. The moment before the
+                    reveal.</p>
+            </div>
+            <div class="do-item">
+                <p class="di-head">Material at close range</p>
+                <p class="di-text">Stone, plaster, fabric, metal — close enough to read texture. Material is the
+                    vocabulary of spatial design.</p>
+            </div>
+            <div class="do-item">
+                <p class="di-head">The inhabited empty room</p>
+                <p class="di-text">Spaces without people that still feel like they have just been — or are about to be —
+                    used. Emotional residue.</p>
+            </div>
+            <div class="do-item" style="border:none;">
+                <p class="di-head">Warm, neutral colour grading</p>
+                <p class="di-text">Slight warmth in the shadows. Desaturated highlights. Tones that sit in the same
+                    palette as the identity: off-white, warm gray, stone.</p>
+            </div>
+        </div>
+        <div class="dont-col">
+            <p class="do-lbl">Don't — Avoid This</p>
+            <div class="dont-item">
+                <p class="di-head-inv">Flat, even studio lighting</p>
+                <p class="di-text-inv">Removes shadow. Removes depth. The image becomes a technical record, not a
+                    spatial experience.</p>
+            </div>
+            <div class="dont-item">
+                <p class="di-head-inv">Centred, posed portrait shots</p>
+                <p class="di-text-inv">Person front and centre against a backdrop. This positions the brand as personal,
+                    not spatial. The work is the subject.</p>
+            </div>
+            <div class="dont-item">
+                <p class="di-head-inv">Busy, cluttered compositions</p>
+                <p class="di-text-inv">Too many objects, too many focal points. The image should have one weight and one
+                    reading — not five competing ones.</p>
+            </div>
+            <div class="dont-item">
+                <p class="di-head-inv">Trend-led colour grading</p>
+                <p class="di-text-inv">Heavy presets — film grain filters, dark moody Instagram tones, oversaturated
+                    warm filters. The palette should be timeless.</p>
+            </div>
+            <div class="dont-item">
+                <p class="di-head-inv">Stock photography</p>
+                <p class="di-text-inv">Generic interiors, hands-on-coffee-cups, meeting rooms. If the image could belong
+                    to any professional services brand, it does not belong here.</p>
+            </div>
+            <div class="dont-item" style="border:none;">
+                <p class="di-head-inv">Cool or blue-toned grading</p>
+                <p class="di-text-inv">The identity has no cool tones. Any image with a blue or silver cast will feel
+                    disconnected from the visual system.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ TECHNICAL SPECS ═══ -->
+    <div class="section">
+        <p class="sec-lbl">03 — Technical Specifications</p>
+        <div class="spec-grid">
+            <div class="spec-cell">
+                <p class="spec-label">Format</p>
+                <p class="spec-val">3:2 · 4:5 · 1:1</p>
+                <p class="spec-sub">3:2 landscape for website hero and banners. 4:5 portrait for Instagram. 1:1 square
+                    for grid and thumbnails.</p>
+            </div>
+            <div class="spec-cell">
+                <p class="spec-label">Resolution</p>
+                <p class="spec-val">Min 2400px</p>
+                <p class="spec-sub">Long edge minimum for web. Print use requires 300dpi. No upscaling — never publish
+                    an image that wasn't captured at full quality.</p>
+            </div>
+            <div class="spec-cell">
+                <p class="spec-label">Colour Space</p>
+                <p class="spec-val">sRGB · Web<br>Adobe RGB · Print</p>
+                <p class="spec-sub">Export for web in sRGB. Print-ready documents in Adobe RGB. Always embed colour
+                    profile on export.</p>
+            </div>
+            <div class="spec-cell">
+                <p class="spec-label">File Format</p>
+                <p class="spec-val">JPG · WebP</p>
+                <p class="spec-sub">JPG for documents and print. WebP for all web use — smaller file, same visual
+                    quality. PNG only for flat graphics with transparency.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ GRADING PALETTE ═══ -->
+    <div class="section section-alt" style="padding-top:60px; padding-bottom:60px;">
+        <p class="sec-lbl">04 — Colour Grading Palette</p>
+        <div class="grade-row">
+            <div class="grade-swatch">
+                <div class="grade-color" style="background:#f0ede7;border:0.5px solid #e0ddd8;"></div>
+                <div class="grade-body">
+                    <p class="grade-name">Highlight Target</p>
+                    <p class="grade-hex">#f0ede7</p>
+                </div>
+            </div>
+            <div class="grade-swatch">
+                <div class="grade-color" style="background:#c8c0b4;"></div>
+                <div class="grade-body">
+                    <p class="grade-name">Mid-Tone Warm</p>
+                    <p class="grade-hex">#c8c0b4</p>
+                </div>
+            </div>
+            <div class="grade-swatch">
+                <div class="grade-color" style="background:#8e8880;"></div>
+                <div class="grade-body">
+                    <p class="grade-name">Mid-Shadow</p>
+                    <p class="grade-hex">#8e8880</p>
+                </div>
+            </div>
+            <div class="grade-swatch">
+                <div class="grade-color" style="background:#3a3630;"></div>
+                <div class="grade-body">
+                    <p class="grade-name">Shadow Warm</p>
+                    <p class="grade-hex">#3a3630</p>
+                </div>
+            </div>
+            <div class="grade-swatch">
+                <div class="grade-color" style="background:#0a0906;"></div>
+                <div class="grade-body">
+                    <p class="grade-name">Black Point</p>
+                    <p class="grade-hex">#0a0906</p>
+                </div>
+            </div>
+        </div>
+        <p
+            style="font-weight:300; font-size:12px; color:var(--sand); margin-top:22px; letter-spacing:.5px; line-height:1.7;">
+            The grading palette mirrors the identity palette. Highlights should lean warm off-white — never pure white.
+            Shadows lean warm black — never cool or blue-tinted. Mid-tones sit in the same sand register as the brand's
+            dividers and secondary text.
+        </p>
+    </div>
+
+    <!-- ═══ CAPTION & TEXT ON IMAGE ═══ -->
+    <div class="caption-demo">
+        <div class="cap-visual">
+            <p class="cap-meta">Spatial Experience · Dubai</p>
+            <p class="cap-title">Flagship Brand Environment<br>Luxury Retail · GCC · 2023</p>
+        </div>
+        <div class="cap-txt">
+            <p class="cap-txt-lbl">05 — Caption System</p>
+            <div class="cap-rule">
+                <p><strong>Text on image: bottom-left only.</strong> Never centred, never top. Caption sits in the final
+                    20% of the frame. Always with a subtle dark gradient beneath it.</p>
+            </div>
+            <div class="cap-rule">
+                <p><strong>Caption style:</strong> Bronze label in Medium 500 · 9px · 2.5px tracking. Title in Bold or
+                    ExtraBold. Off-white or cream — never pure white on dark images.</p>
+            </div>
+            <div class="cap-rule">
+                <p><strong>Overlay rule:</strong> If text cannot be read clearly without a gradient, use a gradient. If
+                    it can be read without one, do not use one. Overlays should be invisible.</p>
+            </div>
+            <div class="cap-rule" style="border:none;">
+                <p><strong>What to caption:</strong> Project name · Category · Location · Year. No more. No hashtags, no
+                    descriptive copy on the image itself.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <div class="footer">
+        <div>
+            <p class="f-name">Rima Alshoufi</p>
+            <p class="f-sub">Photography Guidelines — Visual Identity System · R1</p>
+        </div>
+        <p class="f-meta">February 2026</p>
+    </div>
+
+</body>
+
+</html>

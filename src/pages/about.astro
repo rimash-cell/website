@@ -1,0 +1,163 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { client } from "../lib/prismic";
+
+let page;
+try {
+    page = await client.getSingle("about");
+} catch (e) {
+    console.error("About page fetch failed:", e);
+}
+
+const { hero_image, professional_photos } = page?.data || {};
+---
+
+<Layout title="About | Rima Alshoufi">
+    <div class="page-shell">
+        <div class="left-col bg-white text-black" style="background: var(--ww)">
+            <!-- Hero Section -->
+            <div class="px-8 md:px-14 py-32 md:py-48 max-w-4xl" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="text-[12px] uppercase tracking-[0.25em] text-[#b87333] mb-8 font-medium animate-fade-in-up flex items-center gap-4">
+                    CREATIVE DIRECTOR
+                    <div class="w-6 h-[1px] bg-[#b87333]/80"></div>
+                </h2>
+                
+                <h1 class="text-4xl md:text-[56px] font-light leading-[1.1] mb-12 animate-fade-in-up delay-100 tracking-[-0.02em] max-w-3xl">
+                    Designing Luxury, Shaping Emotion, and Inspiring Innovation
+                </h1>
+
+                <p class="text-[20px] font-light leading-[1.6] text-black/70 animate-fade-in-up delay-200 max-w-2xl">
+                    My expertise bridges retail architecture, brand identity, and
+                    creative leadership. I focus on delivering immersive retail
+                    environments, strategic brand storytelling, and high-impact team
+                    direction, ensuring every project connects emotionally while
+                    achieving business goals.
+                </p>
+            </div>
+
+            <!-- Expertise Section -->
+            <section class="py-32 px-8 md:px-14 bg-white border-t border-[rgba(0,0,0,0.1)]">
+                <div class="sec-tag">Expertise</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 mt-16 max-w-4xl">
+                    <div>
+                        <h3 class="text-[18px] uppercase tracking-[0.1em] text-black mb-6 font-light">Retail Architecture</h3>
+                        <ul class="space-y-4 text-black/60 text-[15px] font-light leading-relaxed list-disc pl-4 marker:text-black/30">
+                            <li>Large-scale retail design and rollout execution</li>
+                            <li>Customer journey mapping, spatial storytelling, and sensory engagement</li>
+                            <li>Luxury detailing, zoning, and immersive pop-ups</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-[18px] uppercase tracking-[0.1em] text-black mb-6 font-light">Strategic Brand Identity</h3>
+                        <ul class="space-y-4 text-black/60 text-[15px] font-light leading-relaxed list-disc pl-4 marker:text-black/30">
+                            <li>Building brand worlds through narrative and luxury positioning</li>
+                            <li>Directing cohesive aesthetics across spatial and graphic systems</li>
+                            <li>Leading campaigns and activations that embody brand essence</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-[18px] uppercase tracking-[0.1em] text-black mb-6 font-light">Creative Leadership</h3>
+                        <ul class="space-y-4 text-black/60 text-[15px] font-light leading-relaxed list-disc pl-4 marker:text-black/30">
+                            <li>Strategic planning with clear timelines and KPIs</li>
+                            <li>Cross-functional team leadership and workflow optimization</li>
+                            <li>Inspiring and guiding high-performing creative teams</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-[18px] uppercase tracking-[0.1em] text-black mb-6 font-light">Luxury Events</h3>
+                        <ul class="space-y-4 text-black/60 text-[15px] font-light leading-relaxed list-disc pl-4 marker:text-black/30">
+                            <li>Immersive spatial design for high-end events and galas</li>
+                            <li>Concept development for corporate activations and exhibitions</li>
+                            <li>End-to-end creative direction and production oversight</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Creative Experience Section -->
+            <section class="py-32 px-8 md:px-14 border-t border-[rgba(0,0,0,0.1)]">
+                <div class="sec-tag">Experience</div>
+                
+                <div class="space-y-24 mt-16 max-w-4xl">
+                    {/* Item 1 */}
+                    <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 group">
+                        <div class="text-[13px] font-light tracking-[0.1em] text-black/40 pt-1">
+                            2024 — Present
+                        </div>
+                        <div>
+                            <h3 class="text-[24px] font-light mb-2 text-black tracking-[-0.01em]">Creative Director</h3>
+                            <div class="text-[12px] text-[#b87333] mb-6 font-medium uppercase tracking-[0.15em]">Mohamad Hilal Group</div>
+                            <p class="text-black/60 text-[16px] font-light leading-[1.8] max-w-2xl">
+                                Led the creative strategy, brand building, and campaign execution across a portfolio of luxury retail, fragrance, and F&B brands. Directed multidisciplinary teams and cross-functional partners to align design, storytelling, and customer experience with commercial goals across all brand touch points.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Item 2 */}
+                    <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 group">
+                        <div class="text-[13px] font-light tracking-[0.1em] text-black/40 pt-1">
+                            2022 — 2024
+                        </div>
+                        <div>
+                            <h3 class="text-[24px] font-light mb-2 text-black tracking-[-0.01em]">Design Manager</h3>
+                            <div class="text-[12px] text-[#b87333] mb-6 font-medium uppercase tracking-[0.15em]">Mohamad Hilal Group</div>
+                            <p class="text-black/60 text-[16px] font-light leading-[1.8] max-w-2xl">
+                                Led the in-house design and architectural department for MHG's multi-sector portfolio across luxury retail, F&B, commercial, and residential spaces. Collaborated directly with the CEO to restructure the design division, implement strategic systems, and elevate brand-aligned spatial and visual standards.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Item 3 */}
+                    <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 group">
+                        <div class="text-[13px] font-light tracking-[0.1em] text-black/40 pt-1">
+                            2018 — 2022
+                        </div>
+                        <div>
+                            <h3 class="text-[24px] font-light mb-2 text-black tracking-[-0.01em]">Design Manager / Director</h3>
+                            <div class="text-[12px] text-[#b87333] mb-6 font-medium uppercase tracking-[0.15em]">Catalina Interior Décor</div>
+                            <p class="text-black/60 text-[16px] font-light leading-[1.8] max-w-2xl">
+                                Led the design department across commercial, residential, hospitality, and F&B projects throughout the UAE. Oversaw full project lifecycles from concept to site execution while managing client relationships, creative teams, and stakeholder coordination.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Item 4 */}
+                    <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 group">
+                        <div class="text-[13px] font-light tracking-[0.1em] text-black/40 pt-1">
+                            2014 — 2018
+                        </div>
+                        <div>
+                            <h3 class="text-[24px] font-light mb-2 text-black tracking-[-0.01em]">Senior Designer</h3>
+                            <div class="text-[12px] text-[#b87333] mb-6 font-medium uppercase tracking-[0.15em]">CWAP</div>
+                            <p class="text-black/60 text-[16px] font-light leading-[1.8] max-w-2xl">
+                                Worked across multiple creative divisions including media, print, editorial, and spatial design. Delivered 3D concepts, visual branding, and editorial graphics for clients and internal publications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sticky Right Column with Hero Image -->
+        <div class="right-sticky" style="background: var(--bk)">
+            {hero_image?.url ? (
+                <img src={hero_image.url} alt="Rima Alshoufi" style="opacity: 0.9" />
+            ) : (
+                <img src="/hero.png" alt="Rima Alshoufi" style="opacity: 0.9" />
+            )}
+        </div>
+    </div>
+</Layout>
+
+<style>
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+    }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+</style>

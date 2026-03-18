@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "the-art-of-self",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "the Art of self",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "",
+    "year": "",
+    "location": "",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

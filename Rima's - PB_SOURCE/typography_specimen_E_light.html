@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Option E · Light · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e8e5e0;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        /* ── HERO — much lighter gradient, barely-there atmosphere ── */
+        .hero {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 48px 64px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(ellipse 55% 52% at 65% 28%, rgba(184, 115, 51, 0.13) 0%, transparent 66%),
+                radial-gradient(ellipse 40% 42% at 18% 78%, rgba(160, 165, 172, 0.15) 0%, transparent 58%),
+                linear-gradient(148deg, #f0eee9 0%, #ede9e4 25%, #eae6e0 55%, #ede9e3 80%, #f0ede7 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.04) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        /* ── TOP BAR ── */
+        .hero-top {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h-brand {
+            font-weight: 700;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.35);
+            line-height: 1.7;
+        }
+
+        .h-brand span {
+            display: block;
+            font-weight: 300;
+            font-size: 9px;
+            color: rgba(0, 0, 0, 0.28);
+            letter-spacing: 1.5px;
+            margin-top: 2px;
+        }
+
+        .h-ref {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.28);
+            text-align: right;
+            line-height: 1.7;
+        }
+
+        /* ── NAME — near-black on light field = high contrast ── */
+        .hero-name {
+            margin-top: auto;
+            padding-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .n-bold {
+            font-weight: 900;
+            font-size: clamp(80px, 14vw, 120px);
+            color: #0a0a0a;
+            line-height: 0.87;
+            letter-spacing: -4px;
+            display: block;
+        }
+
+        .n-light {
+            font-weight: 200;
+            font-size: clamp(80px, 14vw, 120px);
+            color: #0a0a0a;
+            line-height: 0.87;
+            letter-spacing: -4px;
+            display: block;
+        }
+
+        /* ── FOOTER BAR ── */
+        .hero-foot {
+            margin-top: 30px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            z-index: 1;
+        }
+
+        .f-title {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.45);
+        }
+
+        .f-loc {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.32);
+        }
+
+        /* ── QUOTE — dark on light, inverted from high-contrast version ── */
+        .quote {
+            background: #0a0a0a;
+            padding: 64px;
+        }
+
+        .q-text {
+            font-weight: 900;
+            font-size: clamp(30px, 5vw, 54px);
+            color: #f0ede7;
+            line-height: 1.08;
+            letter-spacing: -1.2px;
+            max-width: 800px;
+            margin-bottom: 4px;
+        }
+
+        .q-em {
+            color: #b87333;
+        }
+
+        .q-attr {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #303030;
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .q-attr::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 0.5px;
+            background: #b87333;
+            flex-shrink: 0;
+        }
+
+        /* ── BODY — pure white, maximum light feel ── */
+        .body-s {
+            background: #faf9f7;
+            padding: 64px;
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 64px;
+            border-top: 2px solid #0a0a0a;
+        }
+
+        .b-aside-num {
+            font-weight: 900;
+            font-size: 80px;
+            color: #f0ede7;
+            letter-spacing: -3px;
+            line-height: 1;
+        }
+
+        .b-aside-lbl {
+            font-weight: 600;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-top: 10px;
+        }
+
+        .b-main h2 {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0a0a0a;
+            letter-spacing: -.2px;
+            line-height: 1.18;
+            margin-bottom: 18px;
+        }
+
+        .b-main p {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.85;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .b-main p strong {
+            font-weight: 600;
+            color: #111;
+        }
+
+        .b-cred {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-top: 10px;
+        }
+
+        /* ── WEIGHTS ── light bg ── */
+        .weights {
+            background: #f0ede7;
+            display: flex;
+            gap: 0;
+            border-top: 0.5px solid #ddd;
+        }
+
+        .w {
+            flex: 1;
+            padding: 36px 28px;
+            border-left: 0.5px solid #e0ddd8;
+        }
+
+        .w:first-child {
+            border-left: none;
+        }
+
+        .w-a {
+            font-size: 54px;
+            color: #0a0a0a;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .w-n {
+            font-weight: 400;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+
+        /* ── SCALE ── light panel ── */
+        .scale {
+            background: #faf9f7;
+            padding: 52px 64px;
+            border-top: 0.5px solid #e8e4de;
+        }
+
+        .sc-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 32px;
+        }
+
+        .sc-row {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+            padding: 10px 0;
+            border-bottom: 0.5px solid #eee;
+        }
+
+        .sc-m {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #bbb;
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-top">
+            <div class="h-brand">
+                Rima Alshoufi
+                <span>Personal Brand · Typography System</span>
+            </div>
+            <div class="h-ref">
+                25 — 02 — 2026<br>
+                <span style="color:#b87333; font-weight:600;">R1</span>
+            </div>
+        </div>
+
+        <div class="hero-name">
+            <span class="n-bold">Rima</span>
+            <span class="n-light">Alshoufi</span>
+        </div>
+
+        <div class="hero-foot">
+            <span class="f-title">Spatial Experience Designer &nbsp;/&nbsp; Creative Director</span>
+            <span class="f-loc">Dubai &nbsp;·&nbsp; GCC &amp; Europe</span>
+        </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="quote">
+        <p class="q-text">Not how it looks —<br><span class="q-em">how it makes them feel.</span></p>
+        <p class="q-attr">Spatial Experience Design &nbsp;·&nbsp; 13 Years &nbsp;·&nbsp; GCC &amp; Europe</p>
+    </div>
+
+    <!-- BODY -->
+    <div class="body-s">
+        <div>
+            <p class="b-aside-num">01</p>
+            <p class="b-aside-lbl">About<br>the Practice</p>
+        </div>
+        <div class="b-main">
+            <h2>Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them
+                feel.</h2>
+            <p>A Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and
+                emotional truth of a brand into environments that <strong>shape how people move, behave, and
+                    remember.</strong></p>
+            <p>Every project begins with one question: who is this for, and what must they feel? That answer drives
+                every material choice, every sequence, every sensory decision.</p>
+            <p class="b-cred">MBA Luxury Management · Sup de Luxe (Founded by Cartier) · Paris · Inside LVMH</p>
+        </div>
+    </div>
+
+    <!-- WEIGHTS -->
+    <div class="weights">
+        <div class="w">
+            <p class="w-a" style="font-weight:900; letter-spacing:-1px;">Aa</p>
+            <p class="w-n">Black 900</p>
+        </div>
+        <div class="w">
+            <p class="w-a" style="font-weight:700; letter-spacing:-1px;">Aa</p>
+            <p class="w-n">Bold 700</p>
+        </div>
+        <div class="w">
+            <p class="w-a" style="font-weight:500;">Aa</p>
+            <p class="w-n">Medium 500</p>
+        </div>
+        <div class="w">
+            <p class="w-a" style="font-weight:300;">Aa</p>
+            <p class="w-n">Light 300</p>
+        </div>
+        <div class="w">
+            <p class="w-a" style="font-weight:200;">Aa</p>
+            <p class="w-n">ExtraLight 200</p>
+        </div>
+    </div>
+
+    <!-- SCALE -->
+    <div class="scale">
+        <p class="sc-lbl">Hanken Grotesk — Type Scale</p>
+        <div class="sc-row"><span class="sc-m">120px · Black</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:900;font-size:60px;color:#0a0a0a;letter-spacing:-2px;line-height:1;">
+                Display</p>
+        </div>
+        <div class="sc-row"><span class="sc-m">48px · Bold</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:40px;color:#1a1a1a;letter-spacing:-.5px;line-height:1;">
+                Heading</p>
+        </div>
+        <div class="sc-row"><span class="sc-m">24px · Light</span>
+            <p style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:24px;color:#777;line-height:1;">
+                Subheading — light weight, openness</p>
+        </div>
+        <div class="sc-row"><span class="sc-m">15px · Light</span>
+            <p style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:15px;color:#888;line-height:1;">
+                Body text — Hanken Light. Reads clean.</p>
+        </div>
+        <div class="sc-row" style="border:none;"><span class="sc-m">10px · Medium</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:10px;color:#b87333;letter-spacing:3px;text-transform:uppercase;line-height:1;">
+                Label · Accent · Wide Tracking</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

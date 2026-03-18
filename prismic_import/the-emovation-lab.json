@@ -1,0 +1,220 @@
+{
+  "type": "work",
+  "uid": "the-emovation-lab",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Emovation LAB",
+        "spans": []
+      }
+    ],
+    "category": "experiential-space",
+    "client": "Mohamad Hilal Group ",
+    "year": "2023",
+    "location": "Sharjah Research Technology and Innovation Park, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Multi-Sensory Hub for Innovation",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Emotional Design for Creativity",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "The Emovation Lab was designed as a first-of-its-kind hub for emotional innovation in Sharjah’s Technology and Innovation Park. Created as a space where invention begins with emotion, it offered a multi-sensory environment for students, researchers, and creators to imagine, develop, and showcase new ideas.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb22ab674a24f66b219_41.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb22ab674a24f66b219_41.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb43f3c2a85d808965c_40.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb43f3c2a85d808965c_40.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b5343f00503ee3a46bcc80_Untitled%20design%20(2).png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b5343f00503ee3a46bcc80_Untitled%20design%20(2).png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb2a70ab6fafacf69d3_42.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb2a70ab6fafacf69d3_42.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb195d8af8b0e90a0b1_44.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb195d8af8b0e90a0b1_44.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb153fb5920dfe1422e_45.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb153fb5920dfe1422e_45.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb025982ab007bce31e_46.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb025982ab007bce31e_46.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb5cbb6689c94e9c069_37.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb5cbb6689c94e9c069_37.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad62a8ec6d56365350_49.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad62a8ec6d56365350_49.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f75c1043de5add986a5_50.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f75c1043de5add986a5_50.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43faf81022e43087521f7_47.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43faf81022e43087521f7_47.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2edf33e4f056279ce4dfe_EMOVATION%20LAB%20MATERIAL%20BOARD.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2edf33e4f056279ce4dfe_EMOVATION%20LAB%20MATERIAL%20BOARD.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3c36fe3216efb1d5_51.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3c36fe3216efb1d5_51.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb51f6e749ac3a2887a_38.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb51f6e749ac3a2887a_38.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3090cca3788f1fab_53.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3090cca3788f1fab_53.png"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "hao-x-moser-",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "HAO x MOSER ",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "HAO x MOSER ",
+    "year": "2025",
+    "location": "Global",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

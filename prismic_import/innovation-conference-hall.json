@@ -1,0 +1,166 @@
+{
+  "type": "work",
+  "uid": "innovation-conference-hall",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Innovation Conference Hall",
+        "spans": []
+      }
+    ],
+    "category": "hospitality-lifestyle-spaces",
+    "client": "MHG",
+    "year": "2024",
+    "location": "Dubai, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Corporate Interior | Conference Hall | Experiential Design",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Futuristic Minimalism with Luxury Detail",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "The Innovation Conference Hall was conceived as a prestigious space for VIP gatherings, strategic meetings, and high-level discussions. Designed with a futuristic minimalist language and luxurious detailing, the hall embodies authority, sophistication, and forward-looking vision, creating an environment where leadership and innovation converge.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8fb35144efa92cafda_02_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8fb35144efa92cafda_02_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8e5a45cdc47b3f0a7e_04_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8e5a45cdc47b3f0a7e_04_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ebd8883d77dc717d7_05_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ebd8883d77dc717d7_05_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8d993999fc870bde83_06_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8d993999fc870bde83_06_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8c907e30f0a0d7a600_07_Interactive%20LightMix.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8c907e30f0a0d7a600_07_Interactive%20LightMix.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33af2f40bdb594e611155_09.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33af2f40bdb594e611155_09.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ca8ef92db17e23c2e_10.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ca8ef92db17e23c2e_10.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ce37fd1de44d83e88_11.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ce37fd1de44d83e88_11.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8cde14675fab066986_12.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8cde14675fab066986_12.jpg"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

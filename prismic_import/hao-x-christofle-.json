@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "hao-x-christofle-",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "HAO x Christofle ",
+        "spans": []
+      }
+    ],
+    "category": "brands-collaborations",
+    "client": "",
+    "year": "2025",
+    "location": "Global",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

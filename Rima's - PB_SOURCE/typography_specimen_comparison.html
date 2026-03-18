@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typography — Option E · Two Moods · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        .col-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+        }
+
+        /* ────── COLUMN LABELS ────── */
+        .col-label {
+            padding: 16px 20px;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            text-align: center;
+            background: #0a0a0a;
+            color: #444;
+        }
+
+        .col-label span {
+            color: #b87333;
+        }
+
+        /* ══════════════════════════════════════
+     LEFT — ATMOSPHERIC (frosted gradient)
+     ══════════════════════════════════════ */
+        .left {
+            background: #c8cdd1;
+        }
+
+        .l-hero {
+            padding: 48px 48px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 55% 55% at 62% 28%, rgba(184, 115, 51, 0.22) 0%, transparent 68%),
+                linear-gradient(155deg, #bfc4c8 0%, #c8cdd1 30%, #b8bdc3 55%, #cac8c4 80%, #d0cdc8 100%);
+        }
+
+        .l-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .l-tag {
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #6e7275;
+            line-height: 1.7;
+        }
+
+        .l-tag strong {
+            display: block;
+            font-weight: 700;
+            font-size: 10px;
+            color: #1a1a1a;
+        }
+
+        .l-date {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #888;
+            text-align: right;
+        }
+
+        .l-name {
+            margin-top: auto;
+            padding-top: 80px;
+        }
+
+        .l-first {
+            font-weight: 900;
+            font-size: clamp(68px, 12vw, 104px);
+            color: #0a0a0a;
+            line-height: 0.88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .l-last {
+            font-weight: 200;
+            font-size: clamp(68px, 12vw, 104px);
+            color: #0a0a0a;
+            line-height: 0.88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .l-foot {
+            margin-top: 32px;
+            padding-top: 18px;
+            border-top: 0.5px solid rgba(0, 0, 0, 0.16);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .l-foot-title {
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .l-foot-loc {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #888;
+        }
+
+        /* quote */
+        .l-quote {
+            background: #0d0d0d;
+            padding: 52px 48px;
+        }
+
+        .l-quote p {
+            font-weight: 800;
+            font-size: clamp(24px, 3.8vw, 42px);
+            color: #e8e4de;
+            line-height: 1.12;
+            letter-spacing: -0.8px;
+            max-width: 520px;
+        }
+
+        .l-quote p em {
+            font-style: normal;
+            color: #b87333;
+        }
+
+        .l-quote-sub {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #404040;
+            margin-top: 24px;
+        }
+
+        /* body */
+        .l-body {
+            background: #f0efed;
+            padding: 52px 48px;
+        }
+
+        .l-body-num {
+            font-weight: 900;
+            font-size: 56px;
+            color: #e0ddd8;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .l-body-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 22px;
+        }
+
+        .l-body h2 {
+            font-weight: 700;
+            font-size: 20px;
+            color: #0d0d0d;
+            letter-spacing: -0.2px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .l-body p {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.85;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .l-body p strong {
+            font-weight: 500;
+            color: #222;
+        }
+
+
+        /* ══════════════════════════════════════
+     RIGHT — CALM HIGH CONTRAST (flat)
+     ══════════════════════════════════════ */
+        .right {
+            background: #f4f3f1;
+        }
+
+        .r-hero {
+            padding: 48px 48px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f4f3f1;
+            /* flat cool off-white — no gradient */
+        }
+
+        .r-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .r-tag {
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .r-tag strong {
+            display: block;
+            font-weight: 700;
+            font-size: 10px;
+            color: #0a0a0a;
+        }
+
+        .r-date {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #bbb;
+            text-align: right;
+        }
+
+        /* big number as ambient graphic */
+        .r-ambient-num {
+            font-weight: 900;
+            font-size: clamp(160px, 30vw, 260px);
+            color: #eceae7;
+            line-height: 1;
+            letter-spacing: -8px;
+            margin-top: 10px;
+            margin-bottom: -30px;
+            margin-left: -6px;
+            user-select: none;
+        }
+
+        .r-name {
+            margin-top: auto;
+        }
+
+        .r-first {
+            font-weight: 900;
+            font-size: clamp(68px, 12vw, 104px);
+            color: #0a0a0a;
+            line-height: 0.88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .r-last {
+            font-weight: 200;
+            font-size: clamp(68px, 12vw, 104px);
+            color: #0a0a0a;
+            line-height: 0.88;
+            letter-spacing: -3px;
+            display: block;
+        }
+
+        .r-foot {
+            margin-top: 32px;
+            padding-top: 18px;
+            border-top: 1.5px solid #0a0a0a;
+            /* bolder rule — more contrast */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .r-foot-title {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #0a0a0a;
+        }
+
+        .r-foot-loc {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        /* quote */
+        .r-quote {
+            background: #0a0a0a;
+            padding: 52px 48px;
+        }
+
+        .r-quote p {
+            font-weight: 800;
+            font-size: clamp(24px, 3.8vw, 42px);
+            color: #f4f3f1;
+            line-height: 1.12;
+            letter-spacing: -0.8px;
+            max-width: 520px;
+        }
+
+        .r-quote p em {
+            font-style: normal;
+            color: #b87333;
+        }
+
+        .r-quote-sub {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #333;
+            margin-top: 24px;
+        }
+
+        /* body */
+        .r-body {
+            background: #ffffff;
+            padding: 52px 48px;
+            border-left: 0.5px solid #e8e8e8;
+        }
+
+        .r-body-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 22px;
+        }
+
+        .r-body h2 {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0a0a0a;
+            letter-spacing: -0.3px;
+            margin-bottom: 18px;
+            line-height: 1.18;
+        }
+
+        .r-body p {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.85;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        .r-body p strong {
+            font-weight: 500;
+            color: #111;
+        }
+
+        /* ── SHARED: TYPE SCALE at bottom ── */
+        .scale-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .scale-l {
+            background: #111;
+            padding: 44px 48px;
+        }
+
+        .scale-r {
+            background: #f9f8f6;
+            padding: 44px 48px;
+            border-left: 0.5px solid #eee;
+        }
+
+        .scale-title {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 26px;
+        }
+
+        .scale-title-dark {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 26px;
+        }
+
+        .sr {
+            padding: 9px 0;
+            border-bottom: 0.5px solid #222;
+            display: flex;
+            gap: 20px;
+            align-items: baseline;
+        }
+
+        .sr-l {
+            padding: 9px 0;
+            border-bottom: 0.5px solid #eee;
+            display: flex;
+            gap: 20px;
+            align-items: baseline;
+        }
+
+        .sm {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #444;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+
+        .sm-l {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #bbb;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- LABELS -->
+    <div style="display:grid; grid-template-columns:1fr 1fr;">
+        <div class="col-label">← Atmospheric · <span>Frosted gradient</span></div>
+        <div class="col-label">Calm · High contrast · <span>Flat field</span> →</div>
+    </div>
+
+    <!-- COLUMNS -->
+    <div class="col-wrap">
+
+        <!-- LEFT: ATMOSPHERIC -->
+        <div class="left">
+            <div class="l-hero">
+                <div class="l-top">
+                    <div class="l-tag"><strong>Personal Brand</strong>Option E · Atmospheric</div>
+                    <div class="l-date">25 — 02 — 2026<br><span style="color:#b87333;">R1</span></div>
+                </div>
+                <div class="l-name">
+                    <span class="l-first">Rima</span>
+                    <span class="l-last">Alshoufi</span>
+                </div>
+                <div class="l-foot">
+                    <span class="l-foot-title">Spatial Experience Designer / Creative Director</span>
+                    <span class="l-foot-loc">Dubai · GCC</span>
+                </div>
+            </div>
+
+            <div class="l-quote">
+                <p>Not how it looks —<br><em>how it makes them feel.</em></p>
+                <p class="l-quote-sub">Spatial Experience Design · GCC & Europe</p>
+            </div>
+
+            <div class="l-body">
+                <div class="l-body-num">01</div>
+                <p class="l-body-lbl">About the Practice</p>
+                <h2>Rima Alshoufi designs how people experience physical space.</h2>
+                <p>A Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and
+                    emotional truth of a brand into environments that <strong>shape how people move, behave, and
+                        remember.</strong></p>
+                <p>Every project begins with one question: who is this for, and what must they feel?</p>
+            </div>
+        </div>
+
+        <!-- RIGHT: CALM / HIGH CONTRAST -->
+        <div class="right">
+            <div class="r-hero">
+                <div class="r-top">
+                    <div class="r-tag"><strong>Personal Brand</strong>Option E · Calm</div>
+                    <div class="r-date">25 — 02 — 2026<br><span style="color:#b87333;">R1</span></div>
+                </div>
+                <div class="r-ambient-num">RA</div>
+                <div class="r-name">
+                    <span class="r-first">Rima</span>
+                    <span class="r-last">Alshoufi</span>
+                </div>
+                <div class="r-foot">
+                    <span class="r-foot-title">Spatial Experience Designer / Creative Director</span>
+                    <span class="r-foot-loc">Dubai · GCC</span>
+                </div>
+            </div>
+
+            <div class="r-quote">
+                <p>Not how it looks —<br><em>how it makes them feel.</em></p>
+                <p class="r-quote-sub">Spatial Experience Design · GCC & Europe</p>
+            </div>
+
+            <div class="r-body">
+                <p class="r-body-lbl">01 — About the Practice</p>
+                <h2>Rima Alshoufi designs how people experience physical space.</h2>
+                <p>A Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and
+                    emotional truth of a brand into environments that <strong>shape how people move, behave, and
+                        remember.</strong></p>
+                <p>Every project begins with one question: who is this for, and what must they feel?</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TYPE SCALE COMPARISON -->
+    <div class="scale-wrap">
+        <div class="scale-l">
+            <p class="scale-title-dark">Atmospheric — Weight Scale</p>
+            <div class="sr"><span class="sm-l">120px · 900</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:900;font-size:52px;color:#e8e4de;letter-spacing:-1.5px;line-height:1;">
+                    Display</p>
+            </div>
+            <div class="sr"><span class="sm-l">48px · 700</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:36px;color:#ccc;letter-spacing:-0.5px;line-height:1;">
+                    Heading</p>
+            </div>
+            <div class="sr"><span class="sm-l">22px · 300</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:22px;color:#888;line-height:1;">
+                    Subheading light</p>
+            </div>
+            <div class="sr"><span class="sm-l">15px · 300</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:15px;color:#666;line-height:1;">
+                    Body text light</p>
+            </div>
+            <div class="sr" style="border:none;"><span class="sm-l">10px · 500</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:10px;color:#b87333;letter-spacing:3px;text-transform:uppercase;line-height:1;">
+                    Label · Bronze</p>
+            </div>
+        </div>
+        <div class="scale-r">
+            <p class="scale-title">Calm — Weight Scale</p>
+            <div class="sr-l"><span class="sm">120px · 900</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:900;font-size:52px;color:#0a0a0a;letter-spacing:-1.5px;line-height:1;">
+                    Display</p>
+            </div>
+            <div class="sr-l"><span class="sm">48px · 700</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:36px;color:#222;letter-spacing:-0.5px;line-height:1;">
+                    Heading</p>
+            </div>
+            <div class="sr-l"><span class="sm">22px · 300</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:22px;color:#888;line-height:1;">
+                    Subheading light</p>
+            </div>
+            <div class="sr-l"><span class="sm">15px · 300</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:15px;color:#999;line-height:1;">
+                    Body text light</p>
+            </div>
+            <div class="sr-l" style="border:none;"><span class="sm">10px · 500</span>
+                <p
+                    style="font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:10px;color:#b87333;letter-spacing:3px;text-transform:uppercase;line-height:1;">
+                    Label · Bronze</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

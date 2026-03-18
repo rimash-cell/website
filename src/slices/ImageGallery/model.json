@@ -1,0 +1,31 @@
+{
+    "id": "image_gallery",
+    "type": "SharedSlice",
+    "name": "ImageGallery",
+    "description": "Gallery of images",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Image Gallery",
+            "primary": {},
+            "items": {
+                "image": {
+                    "type": "Image",
+                    "config": {
+                        "label": "Image",
+                        "constraint": {}
+                    }
+                },
+                "caption": {
+                    "type": "Text",
+                    "config": {
+                        "label": "Caption"
+                    }
+                }
+            }
+        }
+    ]
+}

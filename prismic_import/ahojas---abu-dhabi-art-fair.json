@@ -1,0 +1,193 @@
+{
+  "type": "work",
+  "uid": "ahojas---abu-dhabi-art-fair",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Abu Dhabi Art Fair",
+        "spans": []
+      }
+    ],
+    "category": "exhibitions-activations",
+    "client": "Hind Aloud",
+    "year": "2022",
+    "location": "ABU Dhabi Art Fair, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Perfume Launch Activation",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "When Fragrance Becomes Art",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "At Abu Dhabi Art Fair, Hind Al-Oud revealed Ahojas through an immersive installation that transformed fragrance into art. Designed as a sculptural, multi-sensory environment, the space invited visitors to think, feel, and create, positioning perfume as both an emotional journey and a contemporary artwork.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303eae82ac604cc694c2_2.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303eae82ac604cc694c2_2.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c4f86be1d424ad7f97_19.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c4f86be1d424ad7f97_19.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1ea0573b103be166f_18.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1ea0573b103be166f_18.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c68dc09cab89b75b9a_13.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c68dc09cab89b75b9a_13.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c051d51ac2a7058397_17.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c051d51ac2a7058397_17.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c6e4876ff3e97ba1db_14.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c6e4876ff3e97ba1db_14.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c3ea77044cbfd30e80_15.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c3ea77044cbfd30e80_15.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c47ed6a1da79d24aa4_16.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c47ed6a1da79d24aa4_16.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1d2164e10c02bd9dc_21.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1d2164e10c02bd9dc_21.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c12a6232ea09c1844f_22.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c12a6232ea09c1844f_22.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cb30d0cdb2456612d4_1.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cb30d0cdb2456612d4_1.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbe6240a05b9e25960_2.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbe6240a05b9e25960_2.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbf86be1d424ad8045_3.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbf86be1d424ad8045_3.png"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

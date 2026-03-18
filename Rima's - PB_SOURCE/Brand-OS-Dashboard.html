@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand OS Dashboard — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --off-white: #f7f5f2;
+            --white: #faf9f7;
+            --bronze: #b87333;
+            --gray: #666666;
+            --sand: #c8c2b8;
+            --hairline: 0.5px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--off-white);
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--black);
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+        aside {
+            background: var(--black);
+            color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        .brand-id span:first-child {
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .brand-id span:last-child {
+            font-weight: 200;
+            font-size: 24px;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            display: block;
+            margin-top: -5px;
+            color: var(--bronze);
+        }
+
+        nav {
+            margin-top: 80px;
+            flex: 1;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            margin-bottom: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: white;
+        }
+
+        .sidebar-footer {
+            font-size: 9px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            padding: 80px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 80px;
+            border-bottom: var(--hairline) solid var(--sand);
+            padding-bottom: 20px;
+        }
+
+        .os-title h1 {
+            font-weight: 900;
+            font-size: 48px;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .os-title p {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            color: var(--bronze);
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* MODULES */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--white);
+            border: var(--hairline) solid var(--sand);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            min-width: 0;
+            /* Prevents overflow/overlap in grid */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h2 {
+            font-weight: 800;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .col-12 {
+            grid-column: span 12;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .card h2::after {
+            content: "";
+            flex: 1;
+            height: var(--hairline);
+            background: var(--sand);
+        }
+
+        /* 02: DECISION FILTER */
+        .filter-item {
+            border-bottom: var(--hairline) solid var(--sand);
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .filter-item:last-child {
+            border: none;
+        }
+
+        .filter-num {
+            font-weight: 900;
+            font-size: 20px;
+            color: var(--bronze);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .filter-text {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+
+        .filter-text b {
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        /* 03: OFFER LADDER */
+        .ladder {
+            margin-top: 20px;
+        }
+
+        .ladder-step {
+            padding: 24px;
+            border: var(--hairline) solid var(--sand);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--off-white);
+            transition: transform 0.3s;
+            gap: 20px;
+        }
+
+        .ladder-step:hover {
+            transform: translateX(10px);
+            background: white;
+            border-color: var(--bronze);
+        }
+
+        .step-info h4 {
+            font-weight: 800;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .step-info p {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .step-price {
+            font-weight: 200;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--bronze);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* 10: INTEGRATION MAP */
+        .integration-box {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .node {
+            flex: 1;
+            min-width: 140px;
+            padding: 20px;
+            border: var(--hairline) solid var(--sand);
+            background: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .node h5 {
+            font-weight: 900;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .node p {
+            font-size: 11px;
+            font-weight: 300;
+            color: var(--gray);
+            line-height: 1.2;
+        }
+
+        .connector {
+            height: 1px;
+            flex: 0.2;
+            min-width: 20px;
+            background: var(--sand);
+            align-self: center;
+            position: relative;
+        }
+
+        .connector::after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            top: -3px;
+            border-left: 6px solid var(--sand);
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        /* KPI BOX */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+        }
+
+        .kpi-box {
+            padding: 20px;
+            border: var(--hairline) solid var(--sand);
+            background: var(--off-white);
+            text-align: center;
+        }
+
+        .kpi-val {
+            font-weight: 900;
+            font-size: 28px;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .kpi-label {
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--bronze);
+        }
+
+        /* DECORATIVE BRONZE GLOW */
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(184, 115, 51, 0.1) 0%, rgba(184, 115, 51, 0) 70%);
+            top: -150px;
+            right: -150px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @media (max-width: 1400px) {
+            .col-8 {
+                grid-column: span 12;
+            }
+
+            .col-4 {
+                grid-column: span 12;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: relative;
+                height: auto;
+                padding: 40px;
+                flex-direction: column;
+                border-bottom: var(--hairline) solid var(--sand);
+            }
+
+            nav {
+                margin-top: 40px;
+            }
+
+            main {
+                padding: 40px;
+            }
+
+            .col-6 {
+                grid-column: span 12;
+            }
+
+            .integration-box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .connector {
+                width: 1px;
+                height: 20px;
+                background: var(--sand);
+            }
+
+            .connector::after {
+                right: -3px;
+                top: auto;
+                bottom: -5px;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 6px solid var(--sand);
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <!-- SIDEBAR -->
+        <aside>
+            <div class="brand-id"><span>RIMA</span><span>ALSHOUFI</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#foundations" class="active">Foundations</a></li>
+                    <li><a href="#decisions">Decisions</a></li>
+                    <li><a href="#ladder">Offer Ladder</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#integration">Integration</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">BRAND OS V1.0 · OPERATIONAL</div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <header>
+                <div class="os-title">
+                    <h1>Brand Engine</h1>
+                    <p>Operational Dashboard · R1</p>
+                </div>
+                <div class="doc-meta"
+                    style="font-size: 11px; font-weight: 300; letter-spacing: 2px; color: var(--gray);">February 2026
+                </div>
+            </header>
+
+            <div class="grid">
+                <!-- 01: FOUNDATIONS -->
+                <div class="card col-8" id="foundations">
+                    <div class="glow"></div>
+                    <h2>01 — Strategic Foundations</h2>
+                    <div style="max-width: 600px;">
+                        <p style="font-size: 24px; font-weight: 200; margin-bottom: 40px; line-height: 1.2;">"Identity
+                            translated into atmosphere. Architecture as a feeling."</p>
+                        <div style="display: flex; gap: 40px;">
+                            <div>
+                                <span
+                                    style="font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--bronze);">Mission</span>
+                                <p style="font-size: 14px; font-weight: 300; margin-top: 10px;">To engineer the sensory
+                                    and behavioral DNA of physical space.</p>
+                            </div>
+                            <div>
+                                <span
+                                    style="font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--bronze);">Constraint</span>
+                                <p style="font-size: 14px; font-weight: 300; margin-top: 10px;">Spatial intelligence
+                                    precedes decorative style. Every line must serve the Narrative.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 08: KPIs -->
+                <div class="card col-4">
+                    <h2>08 — Success Metrics</h2>
+                    <div class="kpi-grid">
+                        <div class="kpi-box">
+                            <div class="kpi-val">92%</div>
+                            <div class="kpi-label">Narrative Resonance</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-val">1.4x</div>
+                            <div class="kpi-label">Offer Velocity</div>
+                        </div>
+                        <div class="kpi-box">
+                            <div class="kpi-val">A+</div>
+                            <div class="kpi-label">Memory Score</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 11px; margin-top: 20px; color: var(--gray);">Success is measured by client
+                        alignment to defined brand language.</p>
+                </div>
+
+                <!-- 02: DECISION FILTER -->
+                <div class="card col-6" id="decisions">
+                    <h2>02 — Decision Principles</h2>
+                    <div class="filter-item">
+                        <div class="filter-num">01</div>
+                        <div class="filter-text"><b>Identity Truth</b>: Does this project solve for a core immutable
+                            reason for existence?</div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-num">02</div>
+                        <div class="filter-text"><b>Atmospheric Stake</b>: Do I have control over the sensory outcome?
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-num">03</div>
+                        <div class="filter-text"><b>Scale Factor</b>: Does this project define the market standard for
+                            2026+?</div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-num">04</div>
+                        <div class="filter-text"><b>"Bronze" Rule</b>: Is the vision protected from administrative
+                            drift?</div>
+                    </div>
+                    <div class="filter-item">
+                        <div class="filter-num">05</div>
+                        <div class="filter-text"><b>Sensory ROI</b>: Can the emotional outcome be captured and
+                            documented?</div>
+                    </div>
+                </div>
+
+                <!-- 03: OFFER LADDER -->
+                <div class="card col-6" id="ladder">
+                    <h2>03 — The Offer Ladder</h2>
+                    <div class="ladder">
+                        <div class="ladder-step">
+                            <div class="step-info">
+                                <h4>Spatial Identity Session</h4>
+                                <p>Entry Point · DNA Focus</p>
+                            </div>
+                            <div class="step-price">Transition 01</div>
+                        </div>
+                        <div class="ladder-step">
+                            <div class="step-info">
+                                <h4>Spatial Experience Design</h4>
+                                <p>Core Product · Atmospheric execution</p>
+                            </div>
+                            <div class="step-price">Transition 02</div>
+                        </div>
+                        <div class="ladder-step">
+                            <div class="step-info">
+                                <h4>Creative Direction Retainer</h4>
+                                <p>Growth · Ongoing QC & Vision Protection</p>
+                            </div>
+                            <div class="step-price">Transition 03</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10: INTEGRATION MAP -->
+                <div class="card col-12" id="integration">
+                    <h2>10 — The Integration Map</h2>
+                    <p style="margin-bottom: 10px;">The unified engine uniting Brand, Sales, Product, and Experience.
+                    </p>
+                    <div class="integration-box">
+                        <div class="node">
+                            <h5>01 — Brand</h5>
+                            <p>The Identity Statement<br>(The Vision)</p>
+                        </div>
+                        <div class="connector"></div>
+                        <div class="node">
+                            <h5>02 — Sales</h5>
+                            <p>The Offer Ladder<br>(The Transition)</p>
+                        </div>
+                        <div class="connector"></div>
+                        <div class="node">
+                            <h5>03 — Product</h5>
+                            <p>Experience Method<br>(The Execution)</p>
+                        </div>
+                        <div class="connector"></div>
+                        <div class="node">
+                            <h5>04 — Experience</h5>
+                            <p>Customer Journey<br>(The Feeling)</p>
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--black); color: white; padding: 30px; margin-top: 40px; text-align: center;">
+                        <p style="color: white; font-size: 15px; font-weight: 200; letter-spacing: 1px;">ALIGNMENT CORE:
+                            THE IDENTITY TRUTH</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                DESIGNED BY ANTIGRAVITY FOR RIMA ALSHOUFI · 2026
+            </footer>
+        </main>
+    </div>
+
+</body>
+
+</html>

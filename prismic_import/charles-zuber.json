@@ -1,0 +1,121 @@
+{
+  "type": "work",
+  "uid": "charles-zuber",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "CHARLES ZUBER",
+        "spans": []
+      }
+    ],
+    "category": "luxury-retail-hospitality",
+    "client": "Charles Zuber (Switzerland)",
+    "year": "2023",
+    "location": "Yas Mall, Abu Dhabi, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Luxury Jewellery & Watch Retail",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Framing Watches as Works of Art",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "The Charles Zuber boutique at Yas Mall marks the brand’s first global flagship outside Switzerland. Designed at the Geneva headquarters, the Abu Dhabi boutique was envisioned as a contemporary temple of watchmaking and jewelry, blending Swiss precision with a Middle Eastern sense of luxury.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3912944d6aa9ee3be_CZ7.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3912944d6aa9ee3be_CZ7.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3b255c7f36ee76b65_CZ-inside-1.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3b255c7f36ee76b65_CZ-inside-1.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda39b54f4b2da437247_CZ-inside-2.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda39b54f4b2da437247_CZ-inside-2.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fd8c79f0181e37394a27_charles-zuber-abu-dhabi2.webp"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fd8c79f0181e37394a27_charles-zuber-abu-dhabi2.webp"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3ed93a757f222b834_20230523-RON_4511.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3ed93a757f222b834_20230523-RON_4511.jpg"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,219 @@
+{
+    "id": "project",
+    "label": "Project",
+    "repeatable": true,
+    "status": true,
+    "json": {
+        "Main": {
+            "uid": {
+                "type": "UID",
+                "config": {
+                    "label": "Slug",
+                    "placeholder": "unique-project-id"
+                }
+            },
+            "core_identity": {
+                "type": "Group",
+                "config": {
+                    "label": "Core Identity",
+                    "fields": {
+                        "project_title": {
+                            "type": "StructuredText",
+                            "config": {
+                                "label": "Project Title",
+                                "single": "heading1"
+                            }
+                        },
+                        "concept_title": {
+                            "type": "Text",
+                            "config": {
+                                "label": "Concept Title",
+                                "placeholder": "Short concept title"
+                            }
+                        },
+                        "project_type": {
+                            "type": "Select",
+                            "config": {
+                                "label": "Project Type",
+                                "options": []
+                            }
+                        },
+                        "client": {
+                            "type": "Text",
+                            "config": { "label": "Client" }
+                        },
+                        "year": {
+                            "type": "Text",
+                            "config": { "label": "Year" }
+                        },
+                        "location": {
+                            "type": "Text",
+                            "config": { "label": "Location" }
+                        },
+                        "my_role": {
+                            "type": "Text",
+                            "config": { "label": "My Role" }
+                        }
+                    }
+                }
+            },
+            "concept_and_narrative": {
+                "type": "Group",
+                "config": {
+                    "label": "Concept & Narrative",
+                    "fields": {
+                        "concept_narrative_short": {
+                            "type": "StructuredText",
+                            "config": {
+                                "label": "Concept Narrative (Short)",
+                                "multi": "paragraph,em,strong,hyperlink"
+                            }
+                        },
+                        "concept_narrative_full": {
+                            "type": "StructuredText",
+                            "config": {
+                                "label": "Concept Narrative (Full)",
+                                "multi": "paragraph,heading2,heading3,em,strong,hyperlink,list-item,o-list-item"
+                            }
+                        },
+                        "strategic_insight": {
+                            "type": "StructuredText",
+                            "config": { "label": "Strategic Insight", "multi": "paragraph,em,strong" }
+                        },
+                        "brand_decoding": {
+                            "type": "StructuredText",
+                            "config": { "label": "Brand Decoding", "multi": "paragraph,em,strong" }
+                        },
+                        "brand_concept_link": {
+                            "type": "StructuredText",
+                            "config": { "label": "Brand–Concept Link", "multi": "paragraph,em,strong" }
+                        },
+                        "narrative_architecture": {
+                            "type": "StructuredText",
+                            "config": { "label": "Narrative Architecture", "multi": "paragraph,em,strong" }
+                        },
+                        "story_chapters": {
+                            "type": "Group",
+                            "config": {
+                                "label": "Story Chapters",
+                                "fields": {
+                                    "chapter_title": {
+                                        "type": "Text",
+                                        "config": { "label": "Chapter Title" }
+                                    },
+                                    "chapter_body": {
+                                        "type": "StructuredText",
+                                        "config": { "label": "Chapter Body", "multi": "paragraph,em,strong,hyperlink" }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "hero_image": {
+                "type": "Image",
+                "config": { "label": "Hero Image", "constraint": {}, "thumbnails": [] }
+            },
+            "execution_images": {
+                "type": "Group",
+                "config": {
+                    "label": "Execution Images (real photos)",
+                    "fields": {
+                        "image": { "type": "Image", "config": { "label": "Photo", "constraint": {}, "thumbnails": [] } },
+                        "caption": { "type": "Text", "config": { "label": "Caption" } }
+                    }
+                }
+            },
+            "design_images": {
+                "type": "Group",
+                "config": {
+                    "label": "Design Images (renders)",
+                    "fields": {
+                        "image": { "type": "Image", "config": { "label": "Render", "constraint": {}, "thumbnails": [] } },
+                        "note": { "type": "Text", "config": { "label": "Note" } }
+                    }
+                }
+            },
+            "process_images": {
+                "type": "Group",
+                "config": {
+                    "label": "Process Images",
+                    "fields": {
+                        "image": { "type": "Image", "config": { "label": "Process Image", "constraint": {}, "thumbnails": [] } },
+                        "caption": { "type": "Text", "config": { "label": "Caption" } }
+                    }
+                }
+            },
+            "layouts_plans": {
+                "type": "Group",
+                "config": {
+                    "label": "Layouts / Plans",
+                    "fields": {
+                        "plan": { "type": "Image", "config": { "label": "Plan Image", "constraint": {}, "thumbnails": [] } },
+                        "description": { "type": "Text", "config": { "label": "Description" } }
+                    }
+                }
+            },
+            "videos": {
+                "type": "Group",
+                "config": {
+                    "label": "Videos (upload or embed)",
+                    "fields": {
+                        "video_file": { "type": "File", "config": { "label": "Video File" } },
+                        "video_embed": { "type": "Embed", "config": { "label": "Video Embed" } }
+                    }
+                }
+            },
+            "experience_spatial_strategy": {
+                "type": "Group",
+                "config": {
+                    "label": "Experience / Spatial Strategy",
+                    "fields": {
+                        "space_narrative": { "type": "StructuredText", "config": { "label": "Space Narrative", "multi": "paragraph,em,strong" } },
+                        "experience_journey": { "type": "StructuredText", "config": { "label": "Experience Journey", "multi": "paragraph,em,strong" } },
+                        "material_strategy": { "type": "StructuredText", "config": { "label": "Material Strategy", "multi": "paragraph,em,strong" } },
+                        "sensory_strategy": { "type": "StructuredText", "config": { "label": "Sensory Strategy", "multi": "paragraph,em,strong" } },
+                        "customer_experience_protocol": { "type": "StructuredText", "config": { "label": "Customer Experience Protocol", "multi": "paragraph,em,strong" } },
+                        "program_zoning": { "type": "StructuredText", "config": { "label": "Program / Zoning", "multi": "paragraph,em,strong" } }
+                    }
+                }
+            },
+            "strategy_and_method": {
+                "type": "Group",
+                "config": {
+                    "label": "Strategy & Method",
+                    "fields": {
+                        "challenge": { "type": "StructuredText", "config": { "label": "Challenge", "multi": "paragraph,em,strong" } },
+                        "objectives": { "type": "StructuredText", "config": { "label": "Objectives", "multi": "paragraph,em,strong" } },
+                        "big_unlock": { "type": "StructuredText", "config": { "label": "Big Unlock / Key Insight", "multi": "paragraph,em,strong" } },
+                        "experience_architecture": { "type": "StructuredText", "config": { "label": "Experience Architecture", "multi": "paragraph,em,strong" } },
+                        "methodology": { "type": "StructuredText", "config": { "label": "Methodology", "multi": "paragraph,em,strong" } }
+                    }
+                }
+            },
+            "outputs": {
+                "type": "Group",
+                "config": {
+                    "label": "Outputs",
+                    "fields": {
+                        "services_provided": { "type": "StructuredText", "config": { "label": "Services Provided", "multi": "paragraph,em,strong" } },
+                        "deliverables": { "type": "StructuredText", "config": { "label": "Deliverables", "multi": "paragraph,em,strong" } },
+                        "impact_outcome": { "type": "StructuredText", "config": { "label": "Impact / Outcome", "multi": "paragraph,em,strong" } },
+                        "awards_press": { "type": "StructuredText", "config": { "label": "Awards / Press", "multi": "paragraph,em,strong" } }
+                    }
+                }
+            }
+        },
+        "Settings": {
+            "order": {
+                "type": "Number",
+                "config": { "label": "Order", "placeholder": "Order (lower first)" }
+            },
+            "hidden": {
+                "type": "Boolean",
+                "config": { "label": "Hidden", "placeholder_false": "Visible", "placeholder_true": "Hidden", "default_value": false }
+            }
+        }
+    }
+}

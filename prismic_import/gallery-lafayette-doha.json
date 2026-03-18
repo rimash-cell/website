@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "gallery-lafayette-doha",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Gallery Lafayette Doha",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "",
+    "year": "",
+    "location": "",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

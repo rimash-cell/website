@@ -1,0 +1,395 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const project = {
+    title: "Emovation Lab",
+    category: "Innovation · Spatial Strategy",
+    sector: "Technology & Innovation",
+    year: "2021",
+    location: "UAE",
+    type: "Permanent Installation",
+    tagline: "Designing a place where emotion becomes the engine of invention.",
+    intro: "A fragrance-led organisation entering a technology and innovation park needed to demonstrate it belonged in an ecosystem defined by research, measurable outcomes, and repeatable invention — not brand impressions.",
+};
+---
+
+<Layout title="Emovation Lab | Rima Alshoufi">
+    <article class="animate-fade-in">
+
+        {/* ── HEADER ── */}
+        <header class="pt-32 pb-20 px-8 md:px-12 max-w-7xl mx-auto">
+
+            <div class="mb-14">
+                <a
+                    href="/work"
+                    class="text-[10px] uppercase tracking-[0.35em] text-neutral-400 dark:text-gray-500 hover:text-neutral-900 dark:hover:text-white transition-colors no-underline"
+                >
+                    ← Back to Work
+                </a>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-end gap-12 mb-20">
+                <div class="max-w-4xl">
+                    <div class="text-[10px] uppercase tracking-[0.45em] text-neutral-400 dark:text-purple-400 mb-6 font-medium">
+                        {project.category}
+                    </div>
+                    <h1 class="text-6xl md:text-8xl leading-[0.88] tracking-tighter mb-6">
+                        {project.title}
+                    </h1>
+                    <p class="text-xl md:text-2xl font-light text-neutral-500 dark:text-gray-400 leading-relaxed max-w-xl italic">
+                        {project.tagline}
+                    </p>
+                </div>
+                <div class="text-right hidden md:block shrink-0">
+                    <div class="text-[56px] leading-none font-bold opacity-10 tracking-tight">
+                        {project.year}
+                    </div>
+                </div>
+            </div>
+
+            {/* Meta Grid */}
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-black/10 dark:border-white/10 pt-12 text-[10px] tracking-[0.2em] uppercase font-medium">
+                <div>
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Sector</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.sector}</span>
+                </div>
+                <div>
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Region</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.location}</span>
+                </div>
+                <div>
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Year</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.year}</span>
+                </div>
+                <div class="md:text-right">
+                    <span class="block text-neutral-400 dark:text-gray-600 mb-3 tracking-[0.3em]">Type</span>
+                    <span class="text-neutral-700 dark:text-gray-300">{project.type}</span>
+                </div>
+            </div>
+        </header>
+
+        {/* ── HERO IMAGE ── */}
+        <div class="w-full aspect-[21/9] overflow-hidden mb-28 group relative bg-neutral-100 dark:bg-[#111]">
+            <img
+                src="/projects/emovation-lab/render-04.jpg"
+                alt="Emovation Lab — entrance facade showing 'Emovation Lab' signage through sheer glass panels"
+                class="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-black/10 dark:bg-black/20"></div>
+        </div>
+
+        {/* ── INTRO TEXT ── */}
+        <div class="px-8 md:px-12 max-w-4xl mx-auto mb-32">
+            <p class="text-2xl md:text-3xl font-light leading-relaxed text-neutral-700 dark:text-gray-300">
+                {project.intro}
+            </p>
+        </div>
+
+        {/* ── SECTION 1: CHALLENGE, INSIGHT, BIG IDEA ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="grid md:grid-cols-3 gap-px bg-black/10 dark:bg-white/10 border border-black/10 dark:border-white/10">
+
+                <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-10 md:p-14">
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-8">The Challenge</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        A fragrance-led business entering a technology and innovation park had to prove it belonged in an ecosystem shaped by technology, research, and measurable innovation. The brief required a space that could host institutions and internal teams while producing <em class="text-neutral-900 dark:text-white not-italic">repeatable outcomes, not just impressions</em>.
+                    </p>
+                </div>
+
+                <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-10 md:p-14">
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-8">The Insight</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        Many innovation spaces appear futuristic but do not actually generate invention. Fragrance is a <em class="text-neutral-900 dark:text-white not-italic">native technology of emotion</em> — creating an opportunity to transform emotion into a structured innovation input that can be facilitated, repeated, and scaled.
+                    </p>
+                </div>
+
+                <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-10 md:p-14">
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-8">The Big Idea</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        <span class="text-xl font-medium text-neutral-900 dark:text-white leading-tight block mb-4">Emovation = Emotion + Innovation</span>
+                        The platform reframes emotion as the beginning of innovation rather than the end of communication. Its conceptual loop:<br /><br />
+                        <em class="text-neutral-900 dark:text-gray-200 not-italic text-sm tracking-wide">Emotion → Need → Invention → New Emotion</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        {/* ── RENDER 01 — WIDE ── */}
+        <div class="w-full mb-4 overflow-hidden group bg-neutral-100 dark:bg-[#111]">
+            <img
+                src="/projects/emovation-lab/render-01.jpg"
+                alt="Emovation Lab — interior overview with sculptural brainwave ceiling and ripple mirror wall"
+                class="w-full h-auto transition-transform duration-[2.5s] group-hover:scale-103"
+            />
+        </div>
+
+        {/* ── SECTION 2: METHODOLOGY ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto my-32">
+            <div class="grid md:grid-cols-2 gap-20 items-start">
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-6">Core Methodology</div>
+                    <h2 class="text-4xl md:text-5xl leading-tight tracking-tight mb-8">
+                        One engine.<br />Three zones.
+                    </h2>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400 mb-8">
+                        The lab is built around a single, repeatable engine designed to convert incoming sensory experience into structured, validated output.
+                    </p>
+                    <div class="text-lg font-medium text-neutral-900 dark:text-white tracking-tight border-t border-black/10 dark:border-white/10 pt-6">
+                        Interaction → Processing → Reaction = Emotion
+                    </div>
+                </div>
+
+                <div class="space-y-0 border border-black/10 dark:border-white/10 divide-y divide-black/10 dark:divide-white/10">
+                    <div class="p-8">
+                        <div class="flex items-start gap-6">
+                            <span class="text-[10px] text-neutral-400 dark:text-gray-600 uppercase tracking-widest pt-1 shrink-0">01</span>
+                            <div>
+                                <div class="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-gray-500 mb-2">Interaction (Provocation)</div>
+                                <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                                    Changes perception through sensory provocation and controlled environmental shifts. Resets the mind and opens participants to new possibilities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-start gap-6">
+                            <span class="text-[10px] text-neutral-400 dark:text-gray-600 uppercase tracking-widest pt-1 shrink-0">02</span>
+                            <div>
+                                <div class="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-gray-500 mb-2">Processing (Making)</div>
+                                <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                                    Translates sensation into insight, intent, and prototype-making through facilitated workshop cycles with configurable furniture and adaptable lighting.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-start gap-6">
+                            <span class="text-[10px] text-neutral-400 dark:text-gray-600 uppercase tracking-widest pt-1 shrink-0">03</span>
+                            <div>
+                                <div class="text-xs uppercase tracking-[0.3em] text-neutral-500 dark:text-gray-500 mb-2">Reaction (Proof)</div>
+                                <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                                    Makes outcomes visible, shared, and testable through collective response and reflection. Response is treated as usable feedback.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* ── IMAGE GRID ── */}
+        <div class="px-8 md:px-12 max-w-7xl mx-auto mb-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="overflow-hidden group bg-neutral-100 dark:bg-[#111] aspect-[4/3]">
+                    <img
+                        src="/projects/emovation-lab/render-03.jpg"
+                        alt="Emovation Lab — Processing Zone with terrazzo flooring, ripple mirror detail, and brainwave ceiling"
+                        class="w-full h-full object-cover transition-transform duration-[2.5s] group-hover:scale-105"
+                    />
+                </div>
+                <div class="overflow-hidden group bg-neutral-100 dark:bg-[#111] aspect-[4/3]">
+                    <img
+                        src="/projects/emovation-lab/render-02.jpg"
+                        alt="Emovation Lab — Interaction Zone with organic wave-form chaise and ripple mirror wall"
+                        class="w-full h-full object-cover transition-transform duration-[2.5s] group-hover:scale-105"
+                    />
+                </div>
+            </div>
+        </div>
+
+        {/* ── RENDER 05 — FULL WIDTH ── */}
+        <div class="w-full mb-32 overflow-hidden group bg-neutral-100 dark:bg-[#111]">
+            <img
+                src="/projects/emovation-lab/render-05.jpg"
+                alt="Emovation Lab — Processing Zone overview showing the sculptural bio-form seating and wall panel with wave-field artwork"
+                class="w-full h-auto transition-transform duration-[2.5s] group-hover:scale-103"
+            />
+        </div>
+
+        {/* ── SECTION 3: DESIGN PHILOSOPHY ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="border-t border-black/10 dark:border-white/10 pt-20">
+                <div class="grid md:grid-cols-12 gap-12">
+                    <div class="md:col-span-4">
+                        <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-6">Design Philosophy</div>
+                        <h2 class="text-3xl md:text-4xl leading-tight tracking-tight">
+                            The space does not decorate.<br />It provokes.
+                        </h2>
+                    </div>
+                    <div class="md:col-span-8 grid md:grid-cols-3 gap-8">
+                        <div>
+                            <div class="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-gray-500 mb-4">Provocation</div>
+                            <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                                Unexpected environments, illusion, and sensory prompts reset attention and expand perception before the work begins.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-gray-500 mb-4">Making</div>
+                            <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                                Flexible knowledge tools, adaptable furniture, and clean working surfaces support research, discussion, and prototyping.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-gray-500 mb-4">Proof</div>
+                            <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                                Outcomes are staged to support reveal, critique, validation, and learning — making ideas public and assessable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* ── SECTION 4: SIGNATURE MOMENTS ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="border-t border-black/10 dark:border-white/10 pt-20">
+                <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-12">Five Signature Moments</div>
+                <div class="grid md:grid-cols-5 gap-px bg-black/10 dark:bg-white/10 border border-black/10 dark:border-white/10">
+                    {[
+                        { num: "01", name: "Veil Threshold", desc: "A soft boundary that transitions participants from public noise into invention state." },
+                        { num: "02", name: "Wave Field System", desc: "A repeatable signal language connecting emotion, flow, and method across surfaces and artifacts." },
+                        { num: "03", name: "Brainwave Ceiling", desc: "An overhead sculptural element that spatialises cognitive and emotional processing." },
+                        { num: "04", name: "Ripple Mirror Moment", desc: "A controlled reflection and distortion device that symbolises perception shift." },
+                        { num: "05", name: "Reaction Stage", desc: "A collective witnessing point where ideas are made public, assessed, and validated." },
+                    ].map((moment) => (
+                        <div class="bg-neutral-50 dark:bg-[#0d0d0d] p-8">
+                            <div class="text-[9px] text-neutral-400 dark:text-gray-700 mb-6 tracking-widest">{moment.num}</div>
+                            <div class="text-xs uppercase tracking-[0.2em] text-neutral-700 dark:text-gray-300 mb-4 font-medium leading-tight">{moment.name}</div>
+                            <p class="text-xs font-light leading-relaxed text-neutral-500 dark:text-gray-500">{moment.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* ── SECTION 5: MATERIAL & LIGHT ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-16">
+            <div class="grid md:grid-cols-2 gap-24 items-start">
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-6">Material Strategy</div>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400 mb-8">
+                        A restrained palette supports longevity and reprogrammability. White acts as the canvas. Metals and mirrors signal intelligence and precision. Light greys and micro-textures ground the environment.
+                    </p>
+                    <p class="text-sm font-light leading-relaxed text-neutral-500 dark:text-gray-500">
+                        Diffusion, reflection, and shadow are treated as <em class="not-italic text-neutral-700 dark:text-gray-300">narrative behaviours</em>, not finishes.
+                    </p>
+                </div>
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-6">Light as Primary Material</div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-1 h-full min-h-[48px] bg-neutral-300 dark:bg-white/20 shrink-0 mt-1"></div>
+                            <div>
+                                <div class="text-xs uppercase tracking-widest text-neutral-500 dark:text-gray-500 mb-1">Linear Precision</div>
+                                <p class="text-sm font-light text-neutral-500 dark:text-gray-500">Supports task clarity and focused workshop activity.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-1 h-full min-h-[48px] bg-neutral-400 dark:bg-white/40 shrink-0 mt-1"></div>
+                            <div>
+                                <div class="text-xs uppercase tracking-widest text-neutral-500 dark:text-gray-500 mb-1">Ambient Diffusion</div>
+                                <p class="text-sm font-light text-neutral-500 dark:text-gray-500">Supports calm, immersion, and open ideation.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-1 h-full min-h-[48px] bg-neutral-600 dark:bg-white/70 shrink-0 mt-1"></div>
+                            <div>
+                                <div class="text-xs uppercase tracking-widest text-neutral-500 dark:text-gray-500 mb-1">Spotlight Punctuation</div>
+                                <p class="text-sm font-light text-neutral-500 dark:text-gray-500">Supports reveal and reaction moments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* ── MATERIAL BOARD ── */}
+        <div class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="overflow-hidden group bg-neutral-100 dark:bg-[#111]">
+                <img
+                    src="/projects/emovation-lab/material-board.jpg"
+                    alt="Emovation Lab — Material Board: grey steel mirror with ripple effect, terrazo, white paint, sheer fabric, leather, concrete"
+                    class="w-full h-auto transition-all duration-[3s] group-hover:scale-105"
+                />
+            </div>
+            <p class="text-[10px] uppercase tracking-[0.3em] text-neutral-400 dark:text-gray-600 mt-4 text-center">Material Board — Grey Steel Mirror · Terrazo · White Paint · Sheer · Leather · Concrete</p>
+        </div>
+
+        {/* ── SECTION 6: OUTCOMES ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="border-t border-black/10 dark:border-white/10 pt-20 grid md:grid-cols-2 gap-20 items-start">
+
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-6">Outcomes & Strategic Value</div>
+                    <h2 class="text-3xl md:text-4xl leading-tight tracking-tight mb-8">
+                        The lab became<br />an active asset.
+                    </h2>
+                    <p class="text-base font-light leading-relaxed text-neutral-600 dark:text-gray-400">
+                        Instead of functioning as a static branded environment, the Emovation Lab operated as a live training and innovation platform — used repeatedly by institutions, universities, and cross-sector groups.
+                    </p>
+                </div>
+
+                <div class="space-y-0 divide-y divide-black/10 dark:divide-white/10 border border-black/10 dark:border-white/10">
+                    {[
+                        "Active training and innovation asset, not a static installation.",
+                        "Used by multiple institutions for facilitated programs.",
+                        "Hosted university groups and cross-sector sessions.",
+                        "Supported recurring internal education and innovation use.",
+                        "Success informed a strategy to scale the methodology into a broader GCC activation format.",
+                    ].map((outcome) => (
+                        <div class="p-6 flex gap-6 items-start">
+                            <span class="text-neutral-300 dark:text-white/20 text-sm shrink-0 pt-0.5">→</span>
+                            <p class="text-sm font-light leading-relaxed text-neutral-600 dark:text-gray-400">{outcome}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* ── SECTION 7: DELIVERABLES ── */}
+        <section class="px-8 md:px-12 max-w-7xl mx-auto mb-32">
+            <div class="border-t border-black/10 dark:border-white/10 pt-20">
+                <div class="text-[9px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600 mb-12">Confirmed Project Deliverables</div>
+                <div class="grid md:grid-cols-5 gap-8">
+                    {[
+                        { label: "Concept Invention", detail: "Full concept and narrative system for Emovation as a platform and methodology." },
+                        { label: "Methodology Design", detail: "Built around Interaction, Processing, and Reaction as its operative loop." },
+                        { label: "Experience Architecture", detail: "Journey design from Arrival through Provocation, Making, Proof, to Exit." },
+                        { label: "Spatial Design Direction", detail: "Visual language, material strategy, and lighting direction for all three zones." },
+                        { label: "Delivery Leadership", detail: "Design, execution, and early operations enablement across the full project lifecycle." },
+                    ].map((d) => (
+                        <div>
+                            <div class="text-xs uppercase tracking-[0.2em] text-neutral-700 dark:text-gray-300 mb-3 font-medium">{d.label}</div>
+                            <p class="text-xs font-light leading-relaxed text-neutral-500 dark:text-gray-500">{d.detail}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* ── IDENTITY TRUTH PULLQUOTE ── */}
+        <section class="px-8 md:px-12 max-w-5xl mx-auto mb-32 text-center">
+            <p class="text-3xl md:text-4xl font-light leading-relaxed tracking-tight text-neutral-700 dark:text-gray-300">
+                "The space does not impress.<br class="hidden md:block" />
+                <span class="text-neutral-900 dark:text-white">It works.</span>"
+            </p>
+            <p class="mt-8 text-[10px] uppercase tracking-[0.45em] text-neutral-400 dark:text-gray-600">
+                Innovation Platform · Permanent · UAE · 2021
+            </p>
+        </section>
+
+    </article>
+</Layout>
+
+<style is:global>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .scale-103 {
+        transform: scale(1.03);
+    }
+</style>

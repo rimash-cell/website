@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "old-is-gold-villa",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "OLD is Gold Villa",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "",
+    "year": "",
+    "location": "",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

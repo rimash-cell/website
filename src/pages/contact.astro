@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact | Rima Alshoufi">
+    <main
+        class="min-h-[80vh] flex flex-col justify-center px-8 md:px-12 max-w-7xl mx-auto"
+    >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 py-32">
+            <div class="animate-fade-in-up">
+                <h2
+                    class="text-xs uppercase tracking-[0.4em] mb-4 text-gray-500 font-light"
+                >
+                    Inquiries
+                </h2>
+                <h1
+                    class="text-6xl md:text-8xl mb-12 font-serif leading-tight tracking-tighter"
+                >
+                    Let's Talk
+                </h1>
+                <p
+                    class="text-gray-400 text-xl font-light leading-relaxed max-w-md mb-12"
+                >
+                    Interested in collaborating or discussing a new project?
+                    Reach out to start the conversation.
+                </p>
+
+                <!-- Tally Form Placeholder -->
+                <div
+                    class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg p-12 text-center"
+                >
+                    <p
+                        class="text-neutral-500 uppercase tracking-widest text-sm"
+                    >
+                        Tally Form Embed Placeholder
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-16 animate-fade-in-up delay-100 mt-12 md:mt-32">
+                <div>
+                    <h3
+                        class="text-xs uppercase tracking-widest text-gray-600 mb-4 font-bold"
+                    >
+                        General
+                    </h3>
+                    <a
+                        href="mailto:hello@rimaalshoufi.com"
+                        class="text-2xl md:text-3xl font-serif hover:text-gray-400 transition-colors no-underline text-white"
+                        >hello@rimaalshoufi.com</a
+                    >
+                </div>
+                <div>
+                    <h3
+                        class="text-xs uppercase tracking-widest text-gray-600 mb-4 font-bold"
+                    >
+                        Social
+                    </h3>
+                    <div class="flex gap-8 text-xl font-light">
+                        <a
+                            href="#"
+                            class="hover:text-gray-400 transition-colors no-underline text-white"
+                            >Instagram</a
+                        >
+                        <a
+                            href="#"
+                            class="hover:text-gray-400 transition-colors no-underline text-white"
+                            >LinkedIn</a
+                        >
+                    </div>
+                </div>
+                <div>
+                    <h3
+                        class="text-xs uppercase tracking-widest text-gray-600 mb-4 font-bold"
+                    >
+                        Location
+                    </h3>
+                    <p class="text-xl text-gray-400 font-light">
+                        UAE | GCC | GLOBAL
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+    }
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+</style>

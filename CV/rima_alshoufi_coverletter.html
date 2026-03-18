@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rima Alshoufi — Cover Letter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --near-black: #2a2a2a;
+            --dark-slate: #3d3d3d;
+            --mid-gray: #6b6b6b;
+            --warm-gray: #9a9590;
+            --sand: #c4b5a4;
+            --light-sand: #e8e0d6;
+            --cream: #f5f1ec;
+            --white: #ffffff;
+            --accent: #b87333;
+            --accent-dark: #96602a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 11px;
+            line-height: 1.85;
+            color: var(--near-black);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            margin: 0 auto;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── HEADER BAR ── */
+        .header-bar {
+            background: #1a1a1a;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            padding: 8mm 12mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-left .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: 0.5px;
+            line-height: 1;
+            margin-bottom: 1.5mm;
+        }
+
+        .header-left .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 9px;
+            font-weight: 400;
+            color: var(--sand);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        .contact-line {
+            font-size: 6.5px;
+            color: var(--light-sand);
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        .contact-line a {
+            color: var(--sand);
+            text-decoration: none;
+        }
+
+        /* ── ACCENT BAR ── */
+        .accent-bar {
+            height: 2px;
+            background: var(--accent);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            flex-shrink: 0;
+        }
+
+        /* ── BODY ── */
+        .letter-body {
+            padding: 14mm 18mm 8mm 18mm;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date-line {
+            display: none;
+        }
+
+        .salutation {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--near-black);
+            margin-bottom: 7mm;
+        }
+
+        .letter-text {
+            font-size: 11px;
+            color: var(--near-black);
+            line-height: 1.85;
+            font-weight: 300;
+            flex: 1;
+        }
+
+        .letter-text p {
+            margin-bottom: 6mm;
+        }
+
+        .letter-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .letter-text strong {
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        /* ── SIGN-OFF ── */
+        .sign-off {
+            margin-top: 10mm;
+        }
+
+        .sign-off-text {
+            font-size: 9.5px;
+            color: var(--near-black);
+            font-weight: 300;
+            margin-bottom: 6mm;
+        }
+
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--black);
+            line-height: 1;
+            margin-bottom: 1mm;
+        }
+
+        .signature-title {
+            font-size: 7.5px;
+            color: var(--warm-gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            padding: 4mm 18mm;
+            border-top: 0.5px solid var(--light-sand);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .footer-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 8px;
+            font-style: italic;
+            color: var(--warm-gray);
+        }
+
+        .footer-contact {
+            font-size: 7px;
+            color: var(--sand);
+        }
+
+        .footer-contact a {
+            color: var(--sand);
+            text-decoration: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                margin: 0;
+            }
+        }
+
+        @media screen {
+            body {
+                background: #e0ddd8;
+                padding: 20px 0;
+            }
+
+            .page {
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- Header Bar -->
+        <div class="header-bar">
+            <div class="header-left">
+                <div class="name">Rima Alshoufi</div>
+                <div class="title">Creative Director &amp; Interior Architect</div>
+            </div>
+            <div class="header-right">
+                <div class="contact-line">
+                    +971 52 873 1303 &nbsp;|&nbsp; +41 78 304 35 68<br>
+                    <a href="mailto:rimaalshoufi@gmail.com">rimaalshoufi@gmail.com</a><br>
+                    <a href="https://rima-alshoufi.webflow.io">rima-alshoufi.webflow.io</a> &nbsp;|&nbsp;
+                    <a href="https://linkedin.com/in/rima-alshoufi-46962628b/">LinkedIn</a><br>
+                    Dubai, UAE &amp; Lausanne, Switzerland
+                </div>
+            </div>
+        </div>
+
+        <!-- Accent Bar -->
+        <div class="accent-bar"></div>
+
+        <!-- Letter Body -->
+        <div class="letter-body">
+
+            <div class="date-line">February 2026</div>
+
+            <div class="salutation">Dear Hiring Manager,</div>
+
+            <div class="letter-text">
+
+                <p>I'm writing to express interest in opportunities where I can contribute as a <strong>Creative
+                        Director and Interior Architect</strong> specialising in luxury retail, hospitality, cultural
+                    spaces, and high-end residential environments. My work focuses on the sensory, emotional, and
+                    behavioral layer that makes a space memorable — and I bring the leadership discipline required to
+                    deliver that intent consistently, from concept through execution.</p>
+
+                <p>Across <strong>12+ years in the GCC and Europe</strong>, I've led teams and multi-disciplinary
+                    workflows spanning interior architecture, visual merchandising, content, production, and site
+                    delivery. I've built and managed design functions, set quality standards and operating rhythms, and
+                    directed end-to-end project delivery across flagship environments, multi-site rollouts, and
+                    experience-led concepts. My leadership style is structured and outcome-driven: clear direction,
+                    strong governance, and fast alignment across stakeholders, suppliers, and contractors.</p>
+
+                <p>In practice, this includes mentoring designers, reviewing work for narrative and technical rigor,
+                    assigning responsibilities based on strengths, and maintaining delivery discipline across parallel
+                    projects. I'm experienced in managing the full project lifecycle — concept development, space
+                    planning, <strong>FF&amp;E strategy</strong>, technical drawings, tendering, contractor management,
+                    and site supervision — while protecting brand standards and ensuring the built outcome matches the
+                    intended atmosphere.</p>
+
+                <p>I also integrate <strong>AI-driven visualisation and generative workflows</strong> to accelerate
+                    iteration, improve team communication, and support faster decision-making — without compromising
+                    design intent or build quality.</p>
+
+                <p>I would welcome the opportunity to share relevant work and discuss how my leadership and
+                    <strong>Spatial Experience Design</strong> approach can support your team's objectives.
+                </p>
+
+            </div>
+
+            <div class="sign-off">
+                <div class="sign-off-text">Sincerely,</div>
+                <div class="signature">Rima Alshoufi</div>
+                <div class="signature-title">Creative Director &amp; Interior Architect</div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-tagline">Atmosphere is a strategy, not a side effect.</div>
+            <div class="footer-contact">
+                <a href="https://rima-alshoufi.webflow.io">rima-alshoufi.webflow.io</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

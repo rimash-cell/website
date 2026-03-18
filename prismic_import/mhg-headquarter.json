@@ -1,0 +1,184 @@
+{
+  "type": "work",
+  "uid": "mhg-headquarter",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "MHG Headquarter",
+        "spans": []
+      }
+    ],
+    "category": "hospitality-lifestyle-spaces",
+    "client": "MHG",
+    "year": "2021",
+    "location": "SRTIP, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Corporate Headquarters | Experiential Office Design | Emotional Spatial Concept",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Where Work Becomes Wellbeing",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "The MHG Headquarters was envisioned as more than a workplace — it was designed as an emotional journey. I led the project from concept to completion, shaping the headquarters around the philosophy of Breath Out, Breath In, Innovation. Each zone was crafted to influence mood, wellbeing, and creativity, turning the office into a living ecosystem of energy and belonging.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1de534d02c267e7700_75.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1de534d02c267e7700_75.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1d8e2a9e7dd4143854_76.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1d8e2a9e7dd4143854_76.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1e4cd54a4d274712d3_78.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1e4cd54a4d274712d3_78.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b2830d0cdb245a5b3d7_80.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b2830d0cdb245a5b3d7_80.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4f145c9dc5b62647f0_54.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4f145c9dc5b62647f0_54.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4fcc319d9245e48158_55.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4fcc319d9245e48158_55.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4e1568ffba5d1ed7fa_57.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4e1568ffba5d1ed7fa_57.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4bc79d8c1e20d682a7_61.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4bc79d8c1e20d682a7_61.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4492d2b3414cfe6c22_74.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4492d2b3414cfe6c22_74.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b442bcc1dd2b918944e_72.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b442bcc1dd2b918944e_72.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4883bf5431916e3192_71.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4883bf5431916e3192_71.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b471501677bed2b5c26_73.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b471501677bed2b5c26_73.png"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

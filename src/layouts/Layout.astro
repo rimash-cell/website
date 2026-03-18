@@ -1,0 +1,235 @@
+---
+import "../styles/global.css";
+import ThemeToggle from "../components/ThemeToggle";
+import MobileMenu from "../components/MobileMenu";
+
+interface Props {
+	title?: string;
+}
+
+const { title = "Rima Alshoufi | Creative Director" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Rima Alshoufi - Creative Director & Experiential Brand Strategist"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav id="main-nav">
+			<a href="/" class="logo">RIMA <span>ALSHOUFI</span></a>
+			
+			{/* Desktop Links */}
+			<div class="nav-links hidden md:flex items-center gap-6">
+				<a href="/#key-projects">Work</a>
+				<a href="/about">About</a>
+				<a href="/contact" class="cta"><span>Connect</span></a>
+			</div>
+			
+			{/* Mobile Menu */}
+			<div class="block md:hidden">
+				<MobileMenu client:load />
+			</div>
+		</nav>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer>
+			<div class="f-logo">RIMA <span>ALSHOUFI</span></div>
+			<div class="f-links">
+				<a href="/#key-projects">Work</a>
+				<a href="/about">About</a>
+				<a href="mailto:connect@rimaalshoufi.com">Connect</a>
+			</div>
+			<div class="f-copy">Spatial Experience Designer · Dubai, UAE · &copy; {new Date().getFullYear()}</div>
+		</footer>
+
+		<script is:inline>
+			const nav = document.getElementById('main-nav');
+			if(nav) {
+				window.addEventListener('scroll', () => {
+					if (window.scrollY > 50) {
+						nav.classList.add('scrolled');
+					} else {
+						nav.classList.remove('scrolled');
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	/* NAV */
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 200;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 26px var(--px);
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	nav.scrolled {
+		background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0) 100%);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		padding: 20px var(--px) 28px;
+	}
+
+	.logo {
+		font-weight: 900;
+		font-size: 15px;
+		letter-spacing: .12em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	.logo span {
+		font-weight: 200
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+	}
+
+	.nav-links a {
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: .15em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		opacity: .8;
+		transition: all .2s;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	}
+
+	.nav-links a:hover {
+		opacity: 1
+	}
+
+	.nav-links a.cta {
+		opacity: 1;
+		padding: 10px 0;
+		font-size: 15px;
+		font-weight: 300;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		position: relative;
+	}
+
+	.nav-links a.cta span {
+		position: relative;
+		padding-bottom: 6px;
+	}
+
+	.nav-links a.cta span::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.5px;
+		background: #fff;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.4s ease;
+	}
+
+	.nav-links a.cta:hover span::after {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	/* FOOTER */
+	footer {
+		padding: 60px var(--px) 48px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
+		background: var(--bk);
+		color: #fff;
+		text-align: center;
+	}
+
+	.f-logo {
+		font-weight: 900;
+		font-size: 18px;
+		letter-spacing: .15em;
+	}
+
+	.f-logo span {
+		font-weight: 200
+	}
+
+	.f-links {
+		display: flex;
+		gap: 40px;
+	}
+
+	.f-links a {
+		font-size: 11px;
+		font-weight: 500;
+		letter-spacing: .12em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, .2);
+		text-decoration: none;
+		transition: color .2s
+	}
+
+	.f-links a:hover {
+		color: #fff;
+	}
+
+	.f-copy {
+		font-size: 11px;
+		font-weight: 300;
+		color: rgba(255, 255, 255, .12);
+		letter-spacing: .08em;
+		text-transform: uppercase
+	}
+
+	@media(max-width:800px) {
+		nav {
+			padding: 18px var(--px)
+		}
+
+		nav.scrolled {
+			padding: 14px var(--px)
+		}
+
+		.nav-links a {
+			font-size: 11px;
+			opacity: 0.95;
+		}
+
+		.f-links {
+			flex-direction: column;
+			gap: 16px;
+			margin-top: 32px;
+		}
+	}
+</style>

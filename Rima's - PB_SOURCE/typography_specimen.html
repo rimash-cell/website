@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typography Specimen — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --dark: #2a2a2a;
+            --slate: #3d3d3d;
+            --gray: #6b6b6b;
+            --sand: #c4b5a4;
+            --cream: #f5f1ec;
+            --bronze: #b87333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e8e4de;
+            font-family: 'Inter', sans-serif;
+            padding: 40px 20px;
+            color: var(--dark);
+        }
+
+        .page-label {
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .card {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            background: var(--cream);
+            padding: 60px;
+            border-top: 2px solid var(--black);
+        }
+
+        .card.dark {
+            background: var(--black);
+        }
+
+        /* --- WORDMARK --- */
+        .wordmark {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 38px;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: var(--cream);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .wordmark-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--bronze);
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 0.5px solid var(--sand);
+            margin: 30px 0;
+        }
+
+        hr.thin.on-dark {
+            border-top-color: #3a3a3a;
+        }
+
+        /* --- PULL QUOTE --- */
+        .pull-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 28px;
+            line-height: 1.45;
+            color: var(--cream);
+            margin: 20px 0;
+        }
+
+        /* --- SECTION LABEL --- */
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* --- H2 STYLE --- */
+        .h2-specimen {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 24px;
+            color: var(--black);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        /* --- H3 STYLE --- */
+        .h3-specimen {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 8px;
+        }
+
+        /* --- BODY TEXT --- */
+        .body-specimen {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .body-specimen strong {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        /* --- CAPTION --- */
+        .caption {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            color: var(--sand);
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* --- ONE LINER --- */
+        .one-liner {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: var(--gray);
+            font-style: italic;
+            border-left: 2px solid var(--bronze);
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        /* Side-by-side comparison */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+        }
+
+        .comp-col {
+            background: var(--cream);
+            padding: 40px;
+            border-top: 2px solid var(--black);
+        }
+
+        .comp-col.right-col {
+            background: var(--white);
+            border-top-color: var(--sand);
+        }
+
+        .comp-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sand);
+            margin-bottom: 20px;
+        }
+
+        .large-serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 300;
+            color: var(--black);
+            line-height: 1;
+        }
+
+        .large-sans {
+            font-family: 'Inter', sans-serif;
+            font-size: 42px;
+            font-weight: 300;
+            color: var(--dark);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .alphabet-serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            color: var(--slate);
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .alphabet-sans {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.9;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="page-label">Typography Specimen · Rima Alshoufi · Personal Brand</p>
+
+    <!-- DARK CARD: Wordmark -->
+    <div class="card dark">
+        <span class="wordmark">Rima Alshoufi</span>
+        <span class="wordmark-title">Spatial Experience Designer &amp; Creative Director</span>
+
+        <hr class="thin on-dark">
+
+        <p class="pull-quote">
+            "I design how people experience physical space — not how it looks, but how it makes them feel."
+        </p>
+
+        <hr class="thin on-dark">
+
+        <span class="wordmark"
+            style="font-size: 13px; letter-spacing: 6px; font-weight: 300; color: #9a9590; margin-bottom: 0;">
+            Spatial Experience Design &nbsp;·&nbsp; Creative Direction &nbsp;·&nbsp; Sensory Intelligence
+        </span>
+    </div>
+
+    <!-- LIGHT CARD: Body system -->
+    <div class="card">
+        <span class="section-label">02 — Positioning</span>
+
+        <p class="h2-specimen">One-Line Positioning</p>
+
+        <p class="one-liner">
+            I design how people experience physical space — translating identity and emotion into luxury, cultural, and
+            hospitality environments.
+        </p>
+
+        <hr class="thin">
+
+        <p class="h2-specimen" style="margin-top: 30px;">About the Practice</p>
+        <p class="h3-specimen">Spatial Experience Design</p>
+        <p class="body-specimen">
+            Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them feel. A
+            Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and emotional
+            truth of a brand into environments that <strong>shape how people move, behave, and remember.</strong>
+        </p>
+
+        <p class="body-specimen">
+            Every project begins with one question: <em
+                style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #3d3d3d;">who is this for, and
+                what must they feel?</em> That answer drives every material choice, every sequence, every sensory
+            decision.
+        </p>
+
+        <hr class="thin">
+        <p class="caption">Cormorant Garamond (Display) &nbsp;·&nbsp; Inter (Body) &nbsp;·&nbsp; February 2026</p>
+    </div>
+
+    <!-- SIDE BY SIDE FONT COMPARISON -->
+    <div class="comparison">
+        <div class="comp-col">
+            <p class="comp-label">Cormorant Garamond — Display · Serif</p>
+            <p class="large-serif">Aa</p>
+            <br>
+            <p class="alphabet-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 .,—:;!?</p>
+            <br>
+            <p
+                style="font-family:'Cormorant Garamond',serif; font-size:14px; font-weight:300; color:#6b6b6b; line-height:1.7;">
+                Light · Regular · Medium · SemiBold · Bold<br>
+                <em>Italic · Italic SemiBold</em>
+            </p>
+            <br>
+            <p
+                style="font-family:'Cormorant Garamond',serif; font-size:13px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#1a1a1a;">
+                USE: Headlines · Wordmark · Pull Quotes · Section Titles</p>
+        </div>
+
+        <div class="comp-col right-col">
+            <p class="comp-label">Inter — Body · Sans-Serif</p>
+            <p class="large-sans">Aa</p>
+            <br>
+            <p class="alphabet-sans">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 .,—:;!?</p>
+            <br>
+            <p style="font-family:'Inter',sans-serif; font-size:12px; font-weight:300; color:#6b6b6b; line-height:1.9;">
+                Light · Regular · Medium · SemiBold<br>
+                &nbsp;
+            </p>
+            <br>
+            <p
+                style="font-family:'Inter',sans-serif; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#1a1a1a;">
+                USE: Body Copy · Labels · Captions · Navigation · Metadata</p>
+        </div>
+    </div>
+
+    <!-- SIZE SCALE -->
+    <div class="card" style="margin-bottom: 0;">
+        <span class="section-label">Type Scale</span>
+        <p
+            style="font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:600; color:#1a1a1a; line-height:1;">
+            Display 48px</p>
+        <p
+            style="font-family:'Cormorant Garamond',serif; font-size:32px; font-weight:600; color:#1a1a1a; margin-top:8px;">
+            Heading 32px</p>
+        <p
+            style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:#3d3d3d; margin-top:6px;">
+            Subheading 22px</p>
+        <p
+            style="font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; color:#6b6b6b; margin-top:4px;">
+            Pull quote / italic 18px</p>
+        <hr class="thin" style="margin: 20px 0;">
+        <p
+            style="font-family:'Inter',sans-serif; font-size:16px; font-weight:300; color:#6b6b6b; line-height:1.7; margin-bottom:6px;">
+            Body text 16px — Inter Light. Quiet, undecorated clarity. Lets the serif lead.</p>
+        <p
+            style="font-family:'Inter',sans-serif; font-size:13px; font-weight:400; color:#6b6b6b; line-height:1.7; margin-bottom:6px;">
+            Small body 13px — used for secondary content, footnotes, table cells.</p>
+        <p
+            style="font-family:'Inter',sans-serif; font-size:10px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:#b87333; margin-top:10px;">
+            Label / Caption · 10px · Inter Medium · 200 Tracking · Bronze</p>
+    </div>
+
+</body>
+
+</html>

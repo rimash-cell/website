@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Image Adjustment — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --bg: #f7f5f2;
+            --bronze: #b87333;
+            --gray: #666666;
+            --sand: #c8c2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--black);
+            padding: 60px 72px;
+        }
+
+        .header {
+            border-bottom: 0.5px solid var(--sand);
+            padding-bottom: 24px;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-weight: 900;
+            font-size: 32px;
+            letter-spacing: -1.5px;
+        }
+
+        .header p {
+            font-weight: 300;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-top: 8px;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        /* IMAGE SIDE */
+        .image-container {
+            position: sticky;
+            top: 60px;
+        }
+
+        .image-box {
+            background: #eee;
+            width: 100%;
+            aspect-ratio: 16/9;
+            position: relative;
+            overflow: hidden;
+            border: 0.5px solid #ddd;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .brand-overlay {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border: 20px solid var(--bg);
+        }
+
+        .swatch-overlay {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .sw-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* FEEDBACK SIDE */
+        .feedback h2 {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            margin-bottom: 24px;
+        }
+
+        .point {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .point-label {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 8px;
+        }
+
+        .point-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .point-desc {
+            font-weight: 300;
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .c-box {
+            padding: 12px;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .c-keep {
+            background: rgba(0, 0, 0, 0.02);
+            border-left: 2px solid #ddd;
+        }
+
+        .c-adjust {
+            background: rgba(184, 115, 51, 0.03);
+            border-left: 2px solid var(--bronze);
+        }
+
+        .c-lbl {
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            color: var(--sand);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Hero Image Adjustment</h1>
+        <p>Visual Identity Alignment · Option E Light</p>
+    </div>
+
+    <div class="analysis-grid">
+        <!-- IMAGE ANALYSIS -->
+        <div class="image-container">
+            <div class="image-box">
+                <img src="C:/Users/rimaa/3D Objects/Website/downloaded-images/Homepage Hero - Rima ALshoufi.png"
+                    alt="Current Hero">
+                <div class="swatch-overlay">
+                    <div class="sw-dot" style="background:#0a0a0a;"></div>
+                    <div class="sw-dot" style="background:#b87333;"></div>
+                    <div class="sw-dot" style="background:#f7f5f2;"></div>
+                </div>
+            </div>
+            <div style="margin-top:20px; font-weight:300; font-size:12px; color:var(--gray); font-style:italic;">
+                Analysis of current homepage hero shot inside the brand palette.
+            </div>
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+        <div class="feedback">
+            <h2>Styling & Production Guide</h2>
+
+            <div class="point">
+                <p class="point-label">01 — The Outfit</p>
+                <p class="point-title">Near-Black Blazer with Bronze Accents</p>
+                <p class="point-desc">You are already vertically aligned with the brand. The black blazer provides the
+                    required "Near-Black" anchor, and the gold buttons reference the brand's Bronze accent color
+                    perfectly.</p>
+                <div class="comparison">
+                    <div class="c-box c-keep"><span class="c-lbl">KEEP</span> Strong black structure · Classic tailoring
+                        · Metallic button details</div>
+                    <div class="c-box c-adjust"><span class="c-lbl">POUSH</span> Opt for a matte finish on the fabric.
+                        If buttons are very shiny/bright yellow gold, an "Antique Bronze" finish would feel more
+                        "Editorial luxury".</div>
+                </div>
+            </div>
+
+            <div class="point">
+                <p class="point-label">02 — Lighting</p>
+                <p class="point-title">From Flat Studio to Directional Raking</p>
+                <p class="point-desc">The current lighting is very even and safe. To match the "Atmospheric" requirement
+                    of the identity, the light should have more direction to reveal form through shadow.</p>
+                <div class="comparison">
+                    <div class="c-box c-keep"><span class="c-lbl">KEEP</span> The clarity and catchlights in the eyes.
+                    </div>
+                    <div class="c-box c-adjust"><span class="c-lbl">ADJUST</span> Move the primary light source to the
+                        side (45°). Allow the "shadow side" of the face to fall off slightly. This adds depth and
+                        "Spatial" feeling.</div>
+                </div>
+            </div>
+
+            <div class="point">
+                <p class="point-label">03 — Background</p>
+                <p class="point-title">Warm Off-White Atmosphere</p>
+                <p class="point-desc">The current white-grey gradient feels like a standard corporate backdrop. We need
+                    to transition this into a material-driven "Atmosphere".</p>
+                <div class="comparison">
+                    <div class="c-box c-keep"><span class="c-lbl">KEEP</span> The clean separation between you and the
+                        background.</div>
+                    <div class="c-box c-adjust"><span class="c-lbl">ADJUST</span> Grade the background to #f7f5f2 (Warm
+                        Off-White). Use the subtle "Bronze Glow" logic from the web mockup behind your head to create a
+                        halo effect.</div>
+                </div>
+            </div>
+
+            <div class="point">
+                <p class="point-label">04 — Color Grading</p>
+                <p class="point-title">Skin Tones & Shadows</p>
+                <p class="point-desc">Ensure the final edit leans into warm neutrals. No blue or silver highlights in
+                    the hair or skin.</p>
+                <div class="comparison">
+                    <div class="c-box c-adjust" style="grid-column: span 2;"><span class="c-lbl">TECH SPEC</span> Grade
+                        highlights toward #f0ede7 (Cream) and shadows toward #0a0906 (Warm Black). Desaturate any cool
+                        tones in the blazer to keep it in the "Near-Black" range.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        Photography Alignment Guide · Rima Alshoufi · Option E Light
+    </div>
+
+</body>
+
+</html>

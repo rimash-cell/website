@@ -1,0 +1,157 @@
+{
+  "type": "work",
+  "uid": "canadian-university-dubai-auditorium",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "CUD Auditorium",
+        "spans": []
+      }
+    ],
+    "category": "hospitality-lifestyle-spaces",
+    "client": "Canadian University Dubai ",
+    "year": "2024",
+    "location": "Dubai, UAE",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Auditorium & Innovation Hub",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Futuristic Auditorium & Training Hub",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "For Canadian University Dubai, a new auditorium and innovation hub was designed to serve as both the university’s formal ceremonial hall and a training ground for the next generation of marketers and brand builders. With a capacity of 200–300, the space embodies a futuristic, VIP atmosphere aligned with the university’s innovative spirit.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f5557ed96c2f7af2e_2404_AUDITORIUM_CUD_DXB_09.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f5557ed96c2f7af2e_2404_AUDITORIUM_CUD_DXB_09.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f42513fd144fddc43_2404_AUDITORIUM_CUD_DXB_08.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f42513fd144fddc43_2404_AUDITORIUM_CUD_DXB_08.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a6dae8bd34ebc211_2404_AUDITORIUM_CUD_DXB_04.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a6dae8bd34ebc211_2404_AUDITORIUM_CUD_DXB_04.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33777a8ef92db17e1d071_2404_AUDITORIUM_CUD_DXB_01.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33777a8ef92db17e1d071_2404_AUDITORIUM_CUD_DXB_01.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3377d87f35d2c5c9f03b0_2404_AUDITORIUM_CUD_DXB_03.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3377d87f35d2c5c9f03b0_2404_AUDITORIUM_CUD_DXB_03.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337942199006db8a30897_2404_AUDITORIUM_CUD_DXB_02.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337942199006db8a30897_2404_AUDITORIUM_CUD_DXB_02.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337900f5b95bfbd940bec_2404_AUDITORIUM_CUD_DXB_06.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337900f5b95bfbd940bec_2404_AUDITORIUM_CUD_DXB_06.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378eea0573b103be5c08_2404_AUDITORIUM_CUD_DXB_07.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378eea0573b103be5c08_2404_AUDITORIUM_CUD_DXB_07.jpg"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Typography Specimen C — Contemporary Editorial · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=Outfit:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --black: #1a1a1a;
+            --dark: #2a2a2a;
+            --slate: #3d3d3d;
+            --gray: #6b6b6b;
+            --sand: #c4b5a4;
+            --cream: #f5f1ec;
+            --bronze: #b87333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1a1a1a;
+            font-family: 'Outfit', sans-serif;
+            padding: 40px 20px;
+        }
+
+        .page-label {
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #4a4a4a;
+            margin-bottom: 8px;
+        }
+
+        .option-label {
+            text-align: center;
+            font-family: 'Fraunces', serif;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--bronze);
+            margin-bottom: 30px;
+        }
+
+        /* CARDS */
+        .card {
+            max-width: 900px;
+            margin: 0 auto 3px auto;
+            padding: 60px;
+        }
+
+        .card.dark {
+            background: var(--black);
+        }
+
+        .card.cream {
+            background: var(--cream);
+        }
+
+        .card.mid {
+            background: #242424;
+        }
+
+        .card.white {
+            background: #f9f8f6;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 0.5px solid #333;
+            margin: 28px 0;
+        }
+
+        hr.thin.l {
+            border-top-color: var(--sand);
+            opacity: 0.4;
+        }
+
+        /* WORDMARK — all Outfit, tight and graphic */
+        .wordmark {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 200;
+            font-size: 46px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: var(--cream);
+            display: block;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .wordmark-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+        }
+
+        /* PULL QUOTE — Fraunces italic, large */
+        .pull-quote {
+            font-family: 'Fraunces', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 32px;
+            line-height: 1.38;
+            color: var(--cream);
+            margin: 26px 0;
+            font-variation-settings: 'opsz' 72;
+        }
+
+        /* SECTION LABEL */
+        .lbl {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        /* H2 — Fraunces display */
+        .h2 {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 30px;
+            color: var(--black);
+            margin-bottom: 14px;
+            line-height: 1.1;
+            font-variation-settings: 'opsz' 72;
+        }
+
+        /* H3 — Outfit caps */
+        .h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--slate);
+            margin-bottom: 10px;
+        }
+
+        /* BODY */
+        .body {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--gray);
+            margin-bottom: 14px;
+        }
+
+        .body strong {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .body em {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 17px;
+            color: var(--slate);
+            font-variation-settings: 'opsz' 18;
+        }
+
+        /* ONE LINER BLOCKQUOTE */
+        .one-liner {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 1.5;
+            color: var(--slate);
+            border-left: 1.5px solid var(--bronze);
+            padding-left: 22px;
+            margin: 20px 0;
+            font-variation-settings: 'opsz' 36;
+        }
+
+        /* COMPARISON GRID */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            max-width: 900px;
+            margin: 3px auto;
+        }
+
+        .comp {
+            padding: 44px;
+        }
+
+        .comp.a {
+            background: #222;
+        }
+
+        .comp.b {
+            background: #2e2e2e;
+        }
+
+        .comp-lbl {
+            font-family: 'Outfit', sans-serif;
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #555;
+            margin-bottom: 22px;
+            display: block;
+        }
+
+        .big-f {
+            font-family: 'Fraunces', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--cream);
+            line-height: 1;
+            font-variation-settings: 'opsz' 144;
+        }
+
+        .big-o {
+            font-family: 'Outfit', sans-serif;
+            font-size: 72px;
+            font-weight: 200;
+            color: var(--cream);
+            line-height: 1;
+        }
+
+        .alpha-f {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #666;
+            line-height: 2;
+            font-variation-settings: 'opsz' 18;
+        }
+
+        .alpha-o {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 300;
+            color: #666;
+            line-height: 2;
+        }
+
+        .weights-f {
+            font-family: 'Fraunces', serif;
+            font-size: 13px;
+            color: #555;
+            line-height: 2.2;
+            margin-top: 10px;
+        }
+
+        .weights-o {
+            font-family: 'Outfit', sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            color: #555;
+            line-height: 2.2;
+            margin-top: 10px;
+        }
+
+        .use-tag {
+            font-family: 'Outfit', sans-serif;
+            font-size: 9px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            margin-top: 14px;
+        }
+
+        /* SCALE */
+        .scale-gap {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="page-label">Typography Specimen C · Rima Alshoufi · Personal Brand</p>
+    <p class="option-label">Option C — Contemporary Editorial</p>
+
+    <!-- WORDMARK — dark, graphic -->
+    <div class="card dark">
+        <span class="wordmark">Rima Alshoufi</span>
+        <span class="wordmark-title">Spatial Experience Designer &nbsp;&amp;&nbsp; Creative Director &nbsp;·&nbsp; Dubai
+            &nbsp;·&nbsp; GCC & Europe</span>
+        <hr class="thin">
+        <p class="pull-quote">
+            "I design how people experience physical space — not how it looks, but how it makes them feel."
+        </p>
+        <hr class="thin">
+        <p
+            style="font-family:'Outfit',sans-serif; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:#444;">
+            Spatial Experience Design &nbsp;&nbsp;/&nbsp;&nbsp; Creative Direction &nbsp;&nbsp;/&nbsp;&nbsp; Sensory
+            Intelligence
+        </p>
+    </div>
+
+    <!-- MID DARK — secondary wordmark treatment -->
+    <div class="card mid">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:40px;">
+            <div style="flex:1;">
+                <span class="lbl" style="color:#555;">The discipline</span>
+                <p
+                    style="font-family:'Fraunces',serif; font-weight:300; font-style:italic; font-size:48px; color:var(--cream); line-height:1.1; font-variation-settings:'opsz' 72;">
+                    Spatial<br>Experience<br>Design.
+                </p>
+            </div>
+            <div style="flex:1; padding-top:40px;">
+                <p
+                    style="font-family:'Outfit',sans-serif; font-weight:300; font-size:14px; line-height:1.8; color:#666;">
+                    Designing the full sensory, emotional, and behavioral experience of a physical environment — not its
+                    decoration. The story a space tells. The feeling it creates. The memory it leaves.
+                </p>
+                <br>
+                <p
+                    style="font-family:'Outfit',sans-serif; font-weight:500; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--bronze);">
+                    GCC &amp; Europe &nbsp;·&nbsp; 13 Years
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CREAM — body system -->
+    <div class="card cream">
+        <span class="lbl">About the Practice</span>
+        <p class="h2">Spatial Experience Design</p>
+        <p class="one-liner">
+            I design how people experience physical space — translating identity and emotion into luxury, cultural, and
+            hospitality environments.
+        </p>
+        <hr class="thin l" style="margin:22px 0;">
+        <p class="h3">The Practice</p>
+        <p class="body">
+            Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them feel. A
+            Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and emotional
+            truth of a brand into environments that <strong>shape how people move, behave, and remember.</strong>
+        </p>
+        <p class="body">
+            Every project begins with one question: <em>who is this for, and what must they feel?</em> That answer
+            drives every material choice, every sequence, every sensory decision.
+        </p>
+        <hr class="thin l">
+        <span
+            style="font-family:'Outfit',sans-serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:var(--sand);">
+            Fraunces (Display) &nbsp;·&nbsp; Outfit (Body)
+        </span>
+    </div>
+
+    <!-- FONT COMPARISON — on dark -->
+    <div class="comparison scale-gap">
+        <div class="comp a">
+            <span class="comp-lbl">Fraunces — Display · Optical Variable Serif</span>
+            <p class="big-f">Ff</p>
+            <br>
+            <p class="alpha-f">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 .,—:;!?</p>
+            <p class="weights-f">
+                <span style="font-weight:100;">Thin</span> &nbsp;·&nbsp;
+                <span style="font-weight:300;">Light</span> &nbsp;·&nbsp;
+                <span style="font-weight:400;">Regular</span> &nbsp;·&nbsp;
+                <span style="font-weight:700;">Bold</span> &nbsp;·&nbsp;
+                <span style="font-weight:900;">Black</span><br>
+                <em style="font-size:13px; color:#555;">Italic variants</em>
+            </p>
+            <p class="use-tag">Headlines · Pull Quotes · Wordmark Italic · Long-form titles</p>
+        </div>
+        <div class="comp b">
+            <span class="comp-lbl">Outfit — Body · Contemporary Geometric Sans</span>
+            <p class="big-o">Oo</p>
+            <br>
+            <p class="alpha-o">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 .,—:;!?</p>
+            <p class="weights-o">
+                <span style="font-weight:200;">ExtraLight</span> &nbsp;·&nbsp;
+                <span style="font-weight:300;">Light</span> &nbsp;·&nbsp;
+                <span style="font-weight:400;">Regular</span> &nbsp;·&nbsp;
+                <span style="font-weight:500;">Medium</span> &nbsp;·&nbsp;
+                <span style="font-weight:600;">SemiBold</span>
+            </p>
+            <p class="use-tag">Body · Labels · Navigation · Wordmark Caps · UI</p>
+        </div>
+    </div>
+
+    <!-- TYPE SCALE — white -->
+    <div class="card white" style="margin-top:3px;">
+        <span class="lbl">Type Scale — Option C</span>
+        <p
+            style="font-family:'Fraunces',serif; font-weight:900; font-size:54px; color:var(--black); line-height:1; margin-bottom:10px; font-variation-settings:'opsz' 144;">
+            Display 54px Black</p>
+        <p
+            style="font-family:'Fraunces',serif; font-weight:700; font-size:36px; color:var(--black); margin-bottom:8px; font-variation-settings:'opsz' 72;">
+            Heading 36px Bold</p>
+        <p
+            style="font-family:'Fraunces',serif; font-weight:300; font-size:24px; color:var(--slate); margin-bottom:6px; font-variation-settings:'opsz' 36;">
+            Subheading 24px Light</p>
+        <p
+            style="font-family:'Fraunces',serif; font-weight:300; font-style:italic; font-size:20px; color:var(--gray); margin-bottom:6px; font-variation-settings:'opsz' 18;">
+            Pull quote italic 20px</p>
+        <hr class="thin l" style="margin:18px 0; opacity:1;">
+        <p
+            style="font-family:'Outfit',sans-serif; font-weight:300; font-size:16px; color:var(--gray); line-height:1.75; margin-bottom:8px;">
+            Body text 16px — Outfit Light. Geometric, modern, undecorated. Reads clearly without competing.</p>
+        <p
+            style="font-family:'Outfit',sans-serif; font-weight:300; font-size:13px; color:var(--gray); line-height:1.75; margin-bottom:6px;">
+            Small body 13px — table cells, footnotes, secondary content.</p>
+        <p
+            style="font-family:'Outfit',sans-serif; font-weight:500; font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--bronze); margin-top:8px;">
+            Label / Caption · Outfit Medium · 300 Tracking · Bronze</p>
+    </div>
+
+</body>
+
+</html>

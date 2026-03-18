@@ -1,0 +1,256 @@
+{
+  "type": "work",
+  "uid": "ana-restaurant-",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "ANA Restaurant ",
+        "spans": []
+      }
+    ],
+    "category": "hospitality-lifestyle-spaces",
+    "client": "ANA Restaurant ",
+    "year": "2024",
+    "location": "Dubai Mall",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "Concept & Interior Design, Brand Experience, Customer Journey, Menu & Experience Design",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+    },
+    "preview_image": {
+      "origin": {
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+      },
+      "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "Designing Identity into Dining",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "ANA was conceived as a living cultural canvas, reflecting the UAE’s diversity and Emirati hospitality. The façade features a “no-logo logo” wall, where every version of “ANA / أنا” represents a different personality and identity. This symbolism mirrors the UAE as a melting pot of cultures, translated into Emirati-fusion cuisine, interior design, and a holistic guest experience. The design balances contemporary Arabesque aesthetics with modern luxury — refined materials, warm tones, and bold art statements. From dining areas to the majlis event zone, every detail reinforces ANA’s philosophy of celebrating individuality through shared experience.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec7442707ebb6d7873ef_DSC04912-Edit-scaled.jpg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec7442707ebb6d7873ef_DSC04912-Edit-scaled.jpg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec745f662b20348ceb2c_DSC02462-scaled.webp"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec745f662b20348ceb2c_DSC02462-scaled.webp"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec73241dd1d377e5de5f_DSC04936-scaled.webp"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec73241dd1d377e5de5f_DSC04936-scaled.webp"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec731ccc19d03a29571a_Interior-at-ANA-Restaurant%20(1).webp"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec731ccc19d03a29571a_Interior-at-ANA-Restaurant%20(1).webp"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec739c3bbb96934ba405_Featured-Soigne-marwa-2-1200-x-800-px-8.webp"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec739c3bbb96934ba405_Featured-Soigne-marwa-2-1200-x-800-px-8.webp"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e84aa5ee9f88de7ee0ca_1.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e84aa5ee9f88de7ee0ca_1.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e2dd93d88ab9e5008_2.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e2dd93d88ab9e5008_2.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ece0810c818e9ef81_3.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ece0810c818e9ef81_3.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ee3f999cd212379ac_4.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ee3f999cd212379ac_4.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86ad92de94bb11e9a07_5.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86ad92de94bb11e9a07_5.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86a9b9b06e54e1bff98_6.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86a9b9b06e54e1bff98_6.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86aeeff88f8dcf410f0_8.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86aeeff88f8dcf410f0_8.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e864ba4239545714e0cf_9.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e864ba4239545714e0cf_9.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86441fc8f79b9bdd89f_10.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86441fc8f79b9bdd89f_10.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e50c6b7a413785eae_11.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e50c6b7a413785eae_11.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c896f8901554ed167_12.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c896f8901554ed167_12.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c711762ddd2e1bb18_13.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c711762ddd2e1bb18_13.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85d9ec9cda2c675046d_14.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85d9ec9cda2c675046d_14.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85dc7a77a2ec3cb5041_15.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85dc7a77a2ec3cb5041_15.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e8645b43596ec8447bab_16.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e8645b43596ec8447bab_16.png"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

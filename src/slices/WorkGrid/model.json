@@ -1,0 +1,43 @@
+{
+    "id": "work_grid",
+    "type": "SharedSlice",
+    "name": "WorkGrid",
+    "description": "Grid of selected works",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Work Grid",
+            "primary": {
+                "title": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "Section Title",
+                        "single": "heading2"
+                    }
+                },
+                "description": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "Section Description",
+                        "multi": "paragraph"
+                    }
+                }
+            },
+            "items": {
+                "work_item": {
+                    "type": "Link",
+                    "config": {
+                        "label": "Project",
+                        "select": "document",
+                        "customtypes": [
+                            "work"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}

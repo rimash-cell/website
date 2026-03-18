@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Identity — Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --near-black: #0a0a0a;
+            --off-white: #f7f5f2;
+            --warm-white: #faf9f7;
+            --bronze: #b87333;
+            --warm-gray: #666666;
+            --light-sand: #c8c2b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--off-white);
+            color: var(--near-black);
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        /* ─────────────────────────────────────
+     COVER
+  ───────────────────────────────────── */
+        .cover {
+            min-height: 100vh;
+            padding: 60px 72px;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse 40% 38% at 65% 32%, rgba(184, 115, 51, 0.08) 0%, transparent 60%),
+                var(--off-white);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .cover-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 0.5px solid var(--light-sand);
+            padding-bottom: 28px;
+            margin-bottom: 60px;
+        }
+
+        .cover-doc {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--warm-gray);
+        }
+
+        .cover-doc span {
+            display: block;
+            margin-top: 5px;
+            color: var(--bronze);
+        }
+
+        .cover-date {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--light-sand);
+        }
+
+        .cover-name {
+            margin-top: auto;
+            font-weight: 900;
+            font-size: clamp(80px, 14vw, 148px);
+            color: var(--near-black);
+            line-height: 0.865;
+            letter-spacing: -6px;
+        }
+
+        .cover-name-light {
+            font-weight: 200;
+            font-size: clamp(80px, 14vw, 148px);
+            color: var(--near-black);
+            line-height: 0.865;
+            letter-spacing: -6px;
+            display: block;
+        }
+
+        .cover-foot {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .cover-title {
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.45);
+        }
+
+        .cover-loc {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: var(--light-sand);
+        }
+
+        /* ─────────────────────────────────────
+     SECTION SHELL
+  ───────────────────────────────────── */
+        .section {
+            padding: 80px 72px;
+        }
+
+        .section-alt {
+            background: var(--warm-white);
+        }
+
+        .section-dark {
+            background: var(--near-black);
+        }
+
+        .sec-label {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 52px;
+        }
+
+        .sec-label::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        .sec-label-light {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--bronze);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 52px;
+        }
+
+        .sec-label-light::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        /* ─────────────────────────────────────
+     01 — COLOUR PALETTE
+  ───────────────────────────────────── */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 3px;
+        }
+
+        .swatch {
+            overflow: hidden;
+        }
+
+        .swatch-color {
+            height: 160px;
+        }
+
+        .swatch-body {
+            padding: 18px 18px 22px;
+            background: var(--warm-white);
+        }
+
+        .swatch-name {
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--near-black);
+            letter-spacing: -.1px;
+            margin-bottom: 6px;
+        }
+
+        .swatch-hex {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: var(--warm-gray);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .swatch-role {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: .5px;
+            color: var(--light-sand);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        /* ─────────────────────────────────────
+     02 — TYPOGRAPHY SCALE
+  ───────────────────────────────────── */
+        .type-scale {}
+
+        .ts-row {
+            display: flex;
+            align-items: baseline;
+            gap: 28px;
+            padding: 14px 0;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+        }
+
+        .ts-meta {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: var(--light-sand);
+            min-width: 130px;
+            flex-shrink: 0;
+            line-height: 1.6;
+        }
+
+        .ts-meta strong {
+            display: block;
+            font-weight: 500;
+            color: #bbb;
+        }
+
+        /* ─────────────────────────────────────
+     03 — WEIGHT CONTRAST PAIR (Wordmark)
+  ───────────────────────────────────── */
+        .wordmark-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+        }
+
+        .wm-left {
+            background: var(--off-white);
+            padding: 60px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .wm-left-inner {}
+
+        .wm-name-blk {
+            font-weight: 900;
+            font-size: 64px;
+            color: var(--near-black);
+            letter-spacing: -2px;
+            line-height: .9;
+            display: block;
+        }
+
+        .wm-name-lt {
+            font-weight: 200;
+            font-size: 64px;
+            color: var(--near-black);
+            letter-spacing: -2px;
+            line-height: .9;
+            display: block;
+        }
+
+        .wm-monogram {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 6px;
+            color: var(--near-black);
+            margin-top: 24px;
+        }
+
+        .wm-right {
+            background: var(--near-black);
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wm-right-inner {}
+
+        .wm-name-blk-inv {
+            font-weight: 900;
+            font-size: 64px;
+            color: #f0ede7;
+            letter-spacing: -2px;
+            line-height: .9;
+            display: block;
+        }
+
+        .wm-name-lt-inv {
+            font-weight: 200;
+            font-size: 64px;
+            color: #f0ede7;
+            letter-spacing: -2px;
+            line-height: .9;
+            display: block;
+        }
+
+        .wm-monogram-inv {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 6px;
+            color: #f0ede7;
+            margin-top: 24px;
+        }
+
+        /* ─────────────────────────────────────
+     04 — GRAPHIC PRINCIPLES
+  ───────────────────────────────────── */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3px;
+        }
+
+        .principle {
+            background: var(--warm-white);
+            padding: 36px 32px;
+            border-top: 2px solid transparent;
+        }
+
+        .principle.bronze-top {
+            border-top-color: var(--bronze);
+        }
+
+        .principle.black-top {
+            border-top-color: var(--near-black);
+        }
+
+        .p-num {
+            font-weight: 900;
+            font-size: 36px;
+            color: #eee;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .p-name {
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--near-black);
+            letter-spacing: -.1px;
+            margin-bottom: 8px;
+        }
+
+        .p-desc {
+            font-weight: 300;
+            font-size: 12px;
+            color: var(--warm-gray);
+            line-height: 1.75;
+        }
+
+        /* ─────────────────────────────────────
+     05 — IN USE: PHOTOGRAPHY / LABEL SYSTEM / RULES
+  ───────────────────────────────────── */
+        .in-use-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+        }
+
+        .photo-card {
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-a {
+            background:
+                radial-gradient(ellipse 60% 60% at 65% 35%, rgba(184, 115, 51, 0.22) 0%, transparent 62%),
+                radial-gradient(ellipse 40% 40% at 20% 75%, rgba(100, 110, 120, 0.18) 0%, transparent 58%),
+                linear-gradient(148deg, #9ea5ab 0%, #adb4ba 30%, #b3b0ab 70%, #bfbcb6 100%);
+        }
+
+        .photo-b {
+            background:
+                linear-gradient(145deg, #1a1c1e 0%, #0e1012 100%);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.25) 0%, transparent 60%);
+        }
+
+        .photo-tag {
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .photo-tag::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: .5px;
+            background: var(--bronze);
+            flex-shrink: 0;
+        }
+
+        .photo-caption {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            font-size: 18px;
+            color: #f0ede7;
+            letter-spacing: -.2px;
+            line-height: 1.15;
+        }
+
+        .label-demo {
+            background: var(--warm-white);
+            padding: 48px 52px;
+        }
+
+        .label-row {
+            padding: 16px 0;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+        }
+
+        /* ─────────────────────────────────────
+     FOOTER
+  ───────────────────────────────────── */
+        .footer-band {
+            background: var(--near-black);
+            padding: 40px 72px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid var(--bronze);
+        }
+
+        .footer-name {
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #f0ede7;
+        }
+
+        .footer-sub {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .footer-meta {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #2a2a2a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ═══ COVER ═══ -->
+    <div class="cover">
+        <div class="cover-top">
+            <div class="cover-doc">
+                Visual Identity System
+                <span>Option E Light · Locked · R1</span>
+            </div>
+            <div class="cover-date">25 — 02 — 2026</div>
+        </div>
+
+        <div>
+            <div class="cover-name">Rima</div>
+            <div class="cover-name-light">Alshoufi</div>
+        </div>
+
+        <div class="cover-foot">
+            <span class="cover-title">Spatial Experience Designer &nbsp;·&nbsp; Creative Director</span>
+            <span class="cover-loc">Dubai &nbsp;·&nbsp; GCC &amp; Europe</span>
+        </div>
+    </div>
+
+    <!-- ═══ 01 — COLOUR PALETTE ═══ -->
+    <div class="section">
+        <p class="sec-label">01 — Colour Palette</p>
+        <div class="palette-grid">
+            <div class="swatch">
+                <div class="swatch-color" style="background:#0a0a0a;"></div>
+                <div class="swatch-body">
+                    <p class="swatch-name">Near-Black</p>
+                    <p class="swatch-hex">#0a0a0a</p>
+                    <p class="swatch-role">Headlines, borders, authority</p>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#f7f5f2; border:0.5px solid #e8e5e0;"></div>
+                <div class="swatch-body">
+                    <p class="swatch-name">Warm Off-White</p>
+                    <p class="swatch-hex">#f7f5f2</p>
+                    <p class="swatch-role">Hero background, primary field</p>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#faf9f7; border:0.5px solid #e8e5e0;"></div>
+                <div class="swatch-body">
+                    <p class="swatch-name">Warm White</p>
+                    <p class="swatch-hex">#faf9f7</p>
+                    <p class="swatch-role">Body sections, cards</p>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#b87333;"></div>
+                <div class="swatch-body">
+                    <p class="swatch-name">Bronze</p>
+                    <p class="swatch-hex">#b87333</p>
+                    <p class="swatch-role">Accent — one touch per layout</p>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#666666;"></div>
+                <div class="swatch-body">
+                    <p class="swatch-name">Warm Gray</p>
+                    <p class="swatch-hex">#666666</p>
+                    <p class="swatch-role">Body text, secondary content</p>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="swatch-color" style="background:#c8c2b8;"></div>
+                <div class="swatch-body">
+                    <p class="swatch-name">Light Sand</p>
+                    <p class="swatch-hex">#c8c2b8</p>
+                    <p class="swatch-role">Dividers, hairlines, metadata</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ 02 — TYPOGRAPHY ═══ -->
+    <div class="section section-alt">
+        <p class="sec-label">02 — Typography · Hanken Grotesk</p>
+        <div class="type-scale">
+            <div class="ts-row">
+                <div class="ts-meta"><strong>Black 900</strong>Display · Name</div>
+                <p style="font-weight:900; font-size:72px; color:#0a0a0a; letter-spacing:-2.5px; line-height:1;">Rima
+                    Alshoufi</p>
+            </div>
+            <div class="ts-row">
+                <div class="ts-meta"><strong>ExtraLight 200</strong>Display · Contrast</div>
+                <p style="font-weight:200; font-size:72px; color:#0a0a0a; letter-spacing:-2.5px; line-height:1;">Rima
+                    Alshoufi</p>
+            </div>
+            <div class="ts-row">
+                <div class="ts-meta"><strong>ExtraBold 800</strong>Headline · Quote</div>
+                <p style="font-weight:800; font-size:36px; color:#0a0a0a; letter-spacing:-.5px; line-height:1.1;">Not
+                    how it looks — how it makes them feel.</p>
+            </div>
+            <div class="ts-row">
+                <div class="ts-meta"><strong>Bold 700</strong>Section Heading</div>
+                <p style="font-weight:700; font-size:24px; color:#0a0a0a; letter-spacing:-.2px; line-height:1;">Spatial
+                    Experience Design</p>
+            </div>
+            <div class="ts-row">
+                <div class="ts-meta"><strong>Light 300</strong>Body Copy</div>
+                <p style="font-weight:300; font-size:16px; color:#666; line-height:1.85; max-width:700px;">Rima Alshoufi
+                    designs how people experience physical space — not how it looks, but how it makes them feel. A
+                    Spatial Experience Designer and Creative Director based in Dubai.</p>
+            </div>
+            <div class="ts-row" style="border:none;">
+                <div class="ts-meta"><strong>Medium 500</strong>Labels &amp; Caps</div>
+                <p
+                    style="font-weight:500; font-size:10px; color:#b87333; letter-spacing:3px; text-transform:uppercase; line-height:1;">
+                    Spatial Experience Design &nbsp;·&nbsp; GCC &amp; Europe &nbsp;·&nbsp; 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ 03 — WORDMARK ═══ -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3px;">
+        <div class="wm-left">
+            <div class="wm-left-inner">
+                <span class="wm-name-blk">Rima</span>
+                <span class="wm-name-lt">Alshoufi</span>
+                <p class="wm-monogram">RA &nbsp;&nbsp; RIMA ALSHOUFI</p>
+            </div>
+        </div>
+        <div class="wm-right">
+            <div class="wm-right-inner">
+                <span class="wm-name-blk-inv">Rima</span>
+                <span class="wm-name-lt-inv">Alshoufi</span>
+                <p class="wm-monogram-inv">RA &nbsp;&nbsp; RIMA ALSHOUFI</p>
+            </div>
+        </div>
+    </div>
+    <div style="background:#111; padding:14px 72px; display:flex; justify-content:space-between;">
+        <p style="font-weight:300; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:#2e2e2e;">03 —
+            Wordmark</p>
+        <p style="font-weight:300; font-size:9px; letter-spacing:1.5px; color:#2e2e2e;">Black on Off-White &nbsp;·&nbsp;
+            Cream on Near-Black</p>
+    </div>
+
+    <!-- ═══ 04 — PRINCIPLES ═══ -->
+    <div class="section">
+        <p class="sec-label">04 — Graphic Principles</p>
+        <div class="principles-grid">
+            <div class="principle bronze-top">
+                <p class="p-num">01</p>
+                <p class="p-name">Space is designed</p>
+                <p class="p-desc">Generous margins. Silence is as intentional as content. Never fill the frame.</p>
+            </div>
+            <div class="principle black-top">
+                <p class="p-num">02</p>
+                <p class="p-name">One accent per layout</p>
+                <p class="p-desc">Bronze used once — not scattered. When it appears, it carries meaning. When it
+                    doesn't, everything else does.</p>
+            </div>
+            <div class="principle bronze-top">
+                <p class="p-num">03</p>
+                <p class="p-name">Type as architecture</p>
+                <p class="p-desc">Weight, spacing, and silence are the design. Black 900 against ExtraLight 200 is the
+                    brand's visual signature.</p>
+            </div>
+            <div class="principle black-top">
+                <p class="p-num">04</p>
+                <p class="p-name">Hairline rules only</p>
+                <p class="p-desc">Dividers at 0.5–1px. Nothing structural should shout. The content is the authority,
+                    not its container.</p>
+            </div>
+            <div class="principle bronze-top">
+                <p class="p-num">05</p>
+                <p class="p-name">Gradient: atmosphere only</p>
+                <p class="p-desc">Max 7–13% opacity glow in hero. Atmosphere, not decoration. The field itself should
+                    feel calm.</p>
+            </div>
+            <div class="principle black-top">
+                <p class="p-num">06</p>
+                <p class="p-name">No drop shadows</p>
+                <p class="p-desc">Everything sits on the surface. Nothing floats. The brand references the physical
+                    world — weight, material, presence.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ 05 — IN USE ═══ -->
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:3px;">
+        <!-- photo card: atmospheric -->
+        <div class="photo-card photo-a" style="grid-column: span 2;">
+            <div class="photo-overlay"></div>
+            <p class="photo-tag">Spatial Experience · Dubai</p>
+            <p class="photo-caption">Flagship Brand Environment<br>Luxury Retail · GCC</p>
+        </div>
+        <!-- labels demo -->
+        <div class="label-demo">
+            <p
+                style="font-weight:500; font-size:9px; letter-spacing:3px; text-transform:uppercase; color:#b87333; margin-bottom:30px;">
+                05 — In Use</p>
+            <div class="label-row">
+                <p
+                    style="font-weight:500; font-size:9px; letter-spacing:2.5px; text-transform:uppercase; color:#b87333;">
+                    Label Style</p>
+                <p style="font-weight:300; font-size:12px; color:#666; margin-top:6px;">9px · Medium · Bronze · +3px</p>
+            </div>
+            <div class="label-row">
+                <p style="font-weight:800; font-size:20px; color:#0a0a0a; letter-spacing:-.2px; margin-top:18px;">
+                    Section Heading</p>
+                <p style="font-weight:300; font-size:12px; color:#666; margin-top:4px;">ExtraBold 800 · Near-Black</p>
+            </div>
+            <div class="label-row">
+                <p style="font-weight:300; font-size:13px; color:#666; line-height:1.8; margin-top:18px;">Body text in
+                    Light 300, warm gray. Reads clearly without competing with the headings.</p>
+            </div>
+            <div
+                style="margin-top:24px; padding-top:16px; border-top:0.5px solid #e8e5e0; display:flex; gap:16px; flex-wrap:wrap;">
+                <span
+                    style="font-weight:500; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:#0a0a0a; padding:8px 16px; border:1px solid #0a0a0a;">Primary
+                    CTA</span>
+                <span
+                    style="font-weight:400; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:#aaa; padding:8px 16px; border:0.5px solid #ddd;">Secondary</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <div class="footer-band">
+        <div>
+            <p class="footer-name">Rima Alshoufi</p>
+            <p class="footer-sub">Visual Identity System — Option E Light · Locked R1</p>
+        </div>
+        <p class="footer-meta">February 2026</p>
+    </div>
+
+</body>
+
+</html>

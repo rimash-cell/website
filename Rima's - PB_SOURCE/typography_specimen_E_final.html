@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Option E · High Contrast Atmospheric · Rima Alshoufi</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+
+        /* ── HERO ──
+     Gradient is now deeper — darker base, stronger amber glow.
+     The name sits in more shadow → more contrast when it's black */
+        .hero {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 44px 60px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(ellipse 50% 60% at 65% 25%, rgba(184, 115, 51, 0.30) 0%, transparent 65%),
+                radial-gradient(ellipse 40% 40% at 20% 80%, rgba(100, 110, 120, 0.25) 0%, transparent 60%),
+                linear-gradient(155deg, #9ea5ab 0%, #adb4ba 20%, #9fa8af 50%, #b3b0ab 75%, #bfbcb6 100%);
+        }
+
+        /* dark overlay at bottom to make name pop more */
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 45%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.12) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .hero-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag-id {
+            font-weight: 700;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.7;
+        }
+
+        .hero-tag-sub {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            color: rgba(0, 0, 0, 0.38);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .hero-date {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.38);
+            text-align: right;
+            line-height: 1.7;
+        }
+
+        .hero-date strong {
+            color: #b87333;
+            font-weight: 600;
+        }
+
+        /* name — larger and tighter for more impact */
+        .hero-name {
+            margin-top: auto;
+            padding-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .name-first {
+            font-weight: 900;
+            font-size: clamp(80px, 16vw, 128px);
+            color: #060606;
+            /* near-pure black for max contrast on mid gray */
+            line-height: 0.86;
+            letter-spacing: -4px;
+            display: block;
+        }
+
+        .name-last {
+            font-weight: 200;
+            font-size: clamp(80px, 16vw, 128px);
+            color: #060606;
+            line-height: 0.86;
+            letter-spacing: -4px;
+            display: block;
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1.5px solid rgba(0, 0, 0, 0.25);
+            /* thicker, darker rule */
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-weight: 500;
+            font-size: 10px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-loc {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* ── QUOTE — pure black, very bold, maximum contrast ── */
+        .quote {
+            background: #060606;
+            padding: 64px 60px;
+            border-top: 3px solid #b87333;
+            /* bronze rule = signal colour */
+        }
+
+        .quote-big {
+            font-weight: 900;
+            font-size: clamp(32px, 5.5vw, 60px);
+            color: #f4f3f1;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            max-width: 820px;
+            margin-bottom: 4px;
+        }
+
+        .quote-em {
+            color: #b87333;
+            font-style: normal;
+        }
+
+        .quote-sub {
+            font-weight: 300;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #333;
+            margin-top: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .quote-sub::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 0.5px;
+            background: #b87333;
+            flex-shrink: 0;
+        }
+
+        /* ── BODY — bright white, strong type ── */
+        .body-section {
+            background: #f4f3f1;
+            padding: 64px 60px;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 60px;
+            border-top: 3px solid #060606;
+            /* hard black rule — high contrast entry */
+        }
+
+        .body-aside-num {
+            font-weight: 900;
+            font-size: 72px;
+            color: #e6e3df;
+            line-height: 1;
+            letter-spacing: -3px;
+        }
+
+        .body-aside-lbl {
+            font-weight: 600;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-top: 10px;
+        }
+
+        .body-content h2 {
+            font-weight: 800;
+            font-size: 22px;
+            color: #060606;
+            letter-spacing: -0.3px;
+            line-height: 1.18;
+            margin-bottom: 18px;
+        }
+
+        .body-content p {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.85;
+            color: #5a5a5a;
+            margin-bottom: 14px;
+        }
+
+        .body-content p strong {
+            font-weight: 600;
+            color: #0d0d0d;
+        }
+
+        .body-meta {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-top: 8px;
+        }
+
+        /* ── WEIGHTS — dark panel ── */
+        .weights {
+            background: #0a0a0a;
+            padding: 48px 60px;
+            display: flex;
+            gap: 0;
+            border-top: 0.5px solid #1a1a1a;
+        }
+
+        .w-item {
+            flex: 1;
+            padding: 24px 20px;
+            border-left: 0.5px solid #1e1e1e;
+            transition: background 0.2s;
+        }
+
+        .w-item:first-child {
+            border-left: none;
+        }
+
+        .w-alpha {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 56px;
+            color: #e8e4de;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .w-name {
+            font-weight: 400;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #3a3a3a;
+        }
+
+        /* ── SCALE ── */
+        .scale {
+            background: #0d0d0d;
+            padding: 48px 60px;
+            border-top: 0.5px solid #1a1a1a;
+        }
+
+        .scale-lbl {
+            font-weight: 500;
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 32px;
+        }
+
+        .sc-row {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+            padding: 10px 0;
+            border-bottom: 0.5px solid #1c1c1c;
+        }
+
+        .sc-meta {
+            font-weight: 300;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #383838;
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-top">
+            <div>
+                <p class="hero-tag-id">Rima Alshoufi</p>
+                <span class="hero-tag-sub">Personal Brand · Typography System</span>
+            </div>
+            <div class="hero-date">
+                25 — 02 — 2026<br>
+                <strong>R1</strong>
+            </div>
+        </div>
+
+        <div class="hero-name">
+            <span class="name-first">Rima</span>
+            <span class="name-last">Alshoufi</span>
+        </div>
+
+        <div class="hero-bottom">
+            <span class="hero-title">Spatial Experience Designer &nbsp;/&nbsp; Creative Director</span>
+            <span class="hero-loc">Dubai &nbsp;·&nbsp; GCC &amp; Europe</span>
+        </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="quote">
+        <p class="quote-big">Not how it looks —<br><span class="quote-em">how it makes them feel.</span></p>
+        <p class="quote-sub">Spatial Experience Design &nbsp;·&nbsp; 13 Years &nbsp;·&nbsp; GCC &amp; Europe</p>
+    </div>
+
+    <!-- BODY -->
+    <div class="body-section">
+        <div>
+            <p class="body-aside-num">01</p>
+            <p class="body-aside-lbl">About<br>the Practice</p>
+        </div>
+        <div class="body-content">
+            <h2>Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them
+                feel.</h2>
+            <p>A Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and
+                emotional truth of a brand into environments that <strong>shape how people move, behave, and
+                    remember.</strong></p>
+            <p>Every project begins with one question: who is this for, and what must they feel? That answer drives
+                every material choice, every sequence, every sensory decision.</p>
+            <p class="body-meta">MBA Luxury Management · Sup de Luxe (Founded by Cartier) · Paris · Inside LVMH</p>
+        </div>
+    </div>
+
+    <!-- WEIGHTS -->
+    <div class="weights">
+        <div class="w-item">
+            <p class="w-alpha" style="font-weight:900; letter-spacing:-1px;">Aa</p>
+            <p class="w-name">Black 900</p>
+        </div>
+        <div class="w-item">
+            <p class="w-alpha" style="font-weight:700; letter-spacing:-1px;">Aa</p>
+            <p class="w-name">Bold 700</p>
+        </div>
+        <div class="w-item">
+            <p class="w-alpha" style="font-weight:500;">Aa</p>
+            <p class="w-name">Medium 500</p>
+        </div>
+        <div class="w-item">
+            <p class="w-alpha" style="font-weight:300;">Aa</p>
+            <p class="w-name">Light 300</p>
+        </div>
+        <div class="w-item">
+            <p class="w-alpha" style="font-weight:200;">Aa</p>
+            <p class="w-name">ExtraLight 200</p>
+        </div>
+    </div>
+
+    <!-- SCALE -->
+    <div class="scale">
+        <p class="scale-lbl">Hanken Grotesk — Type Scale</p>
+        <div class="sc-row"><span class="sc-meta">128px · Black</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:900;font-size:60px;color:#f4f3f1;letter-spacing:-2px;line-height:1;">
+                Display</p>
+        </div>
+        <div class="sc-row"><span class="sc-meta">48px · Bold</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:700;font-size:40px;color:#ccc;letter-spacing:-0.5px;line-height:1;">
+                Heading</p>
+        </div>
+        <div class="sc-row"><span class="sc-meta">24px · Light</span>
+            <p style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:24px;color:#777;line-height:1;">
+                Subheading — light weight, breathing room</p>
+        </div>
+        <div class="sc-row"><span class="sc-meta">15px · Light</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:300;font-size:15px;color:#5a5a5a;line-height:1;">
+                Body text — Hanken Grotesk Light. Reads cleanly.</p>
+        </div>
+        <div class="sc-row" style="border:none;"><span class="sc-meta">10px · Medium</span>
+            <p
+                style="font-family:'Hanken Grotesk',sans-serif;font-weight:500;font-size:10px;color:#b87333;letter-spacing:3px;text-transform:uppercase;line-height:1;">
+                Label · Bronze · Wide Tracking</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

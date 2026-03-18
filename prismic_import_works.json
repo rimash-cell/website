@@ -1,0 +1,3772 @@
+[
+  {
+    "type": "work",
+    "uid": "183-lunch",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "183 Lunch",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "ana-restaurant-",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "ANA Restaurant ",
+          "spans": []
+        }
+      ],
+      "category": "hospitality-lifestyle-spaces",
+      "client": "ANA Restaurant ",
+      "year": "2024",
+      "location": "Dubai Mall",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Concept & Interior Design, Brand Experience, Customer Journey, Menu & Experience Design",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Designing Identity into Dining",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "ANA was conceived as a living cultural canvas, reflecting the UAE’s diversity and Emirati hospitality. The façade features a “no-logo logo” wall, where every version of “ANA / أنا” represents a different personality and identity. This symbolism mirrors the UAE as a melting pot of cultures, translated into Emirati-fusion cuisine, interior design, and a holistic guest experience. The design balances contemporary Arabesque aesthetics with modern luxury — refined materials, warm tones, and bold art statements. From dining areas to the majlis event zone, every detail reinforces ANA’s philosophy of celebrating individuality through shared experience.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec7442707ebb6d7873ef_DSC04912-Edit-scaled.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec7442707ebb6d7873ef_DSC04912-Edit-scaled.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec745f662b20348ceb2c_DSC02462-scaled.webp"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec745f662b20348ceb2c_DSC02462-scaled.webp"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec73241dd1d377e5de5f_DSC04936-scaled.webp"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec73241dd1d377e5de5f_DSC04936-scaled.webp"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec731ccc19d03a29571a_Interior-at-ANA-Restaurant%20(1).webp"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec731ccc19d03a29571a_Interior-at-ANA-Restaurant%20(1).webp"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec739c3bbb96934ba405_Featured-Soigne-marwa-2-1200-x-800-px-8.webp"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec739c3bbb96934ba405_Featured-Soigne-marwa-2-1200-x-800-px-8.webp"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e84aa5ee9f88de7ee0ca_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e84aa5ee9f88de7ee0ca_1.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e2dd93d88ab9e5008_2.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e2dd93d88ab9e5008_2.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ece0810c818e9ef81_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ece0810c818e9ef81_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ee3f999cd212379ac_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85ee3f999cd212379ac_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86ad92de94bb11e9a07_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86ad92de94bb11e9a07_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86a9b9b06e54e1bff98_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86a9b9b06e54e1bff98_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86aeeff88f8dcf410f0_8.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86aeeff88f8dcf410f0_8.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e864ba4239545714e0cf_9.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e864ba4239545714e0cf_9.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86441fc8f79b9bdd89f_10.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e86441fc8f79b9bdd89f_10.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e50c6b7a413785eae_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85e50c6b7a413785eae_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c896f8901554ed167_12.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c896f8901554ed167_12.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c711762ddd2e1bb18_13.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85c711762ddd2e1bb18_13.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85d9ec9cda2c675046d_14.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85d9ec9cda2c675046d_14.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85dc7a77a2ec3cb5041_15.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e85dc7a77a2ec3cb5041_15.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e8645b43596ec8447bab_16.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9e8645b43596ec8447bab_16.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "ana-terrace",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "ANA Terrace",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "ahojas---abu-dhabi-art-fair",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Abu Dhabi Art Fair",
+          "spans": []
+        }
+      ],
+      "category": "exhibitions-activations",
+      "client": "Hind Aloud",
+      "year": "2022",
+      "location": "ABU Dhabi Art Fair, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Perfume Launch Activation",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "When Fragrance Becomes Art",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "At Abu Dhabi Art Fair, Hind Al-Oud revealed Ahojas through an immersive installation that transformed fragrance into art. Designed as a sculptural, multi-sensory environment, the space invited visitors to think, feel, and create, positioning perfume as both an emotional journey and a contemporary artwork.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303618815e14f850e63e_1.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303eae82ac604cc694c2_2.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3303eae82ac604cc694c2_2.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c4f86be1d424ad7f97_19.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c4f86be1d424ad7f97_19.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1ea0573b103be166f_18.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1ea0573b103be166f_18.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c68dc09cab89b75b9a_13.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c68dc09cab89b75b9a_13.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c051d51ac2a7058397_17.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c051d51ac2a7058397_17.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c6e4876ff3e97ba1db_14.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c6e4876ff3e97ba1db_14.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c3ea77044cbfd30e80_15.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c3ea77044cbfd30e80_15.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c47ed6a1da79d24aa4_16.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c47ed6a1da79d24aa4_16.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1d2164e10c02bd9dc_21.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c1d2164e10c02bd9dc_21.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c12a6232ea09c1844f_22.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335c12a6232ea09c1844f_22.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cb30d0cdb2456612d4_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cb30d0cdb2456612d4_1.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbe6240a05b9e25960_2.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbe6240a05b9e25960_2.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbf86be1d424ad8045_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b335cbf86be1d424ad8045_3.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "alya",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "AlyaE'' Event",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "anfasic-flagship-store-",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Anfasic Flagship Store ",
+          "spans": []
+        }
+      ],
+      "category": "luxury-retail-hospitality",
+      "client": "Anfasic",
+      "year": "2024",
+      "location": "Dubai Mall, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Flagship Store | Luxury Retail Architecture | Rebranding Rollout",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Designing the Future of Emirati Perfumery",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The Anfasic flagship at Dubai Mall reimagines traditional perfume retail into a futuristic, immersive environment. Curved forms, glowing violet tones, and reflective surfaces create a space that feels both rooted in Emirati culture and ahead of its time. This store became the first physical expression of Anfasic’s rebranding, a bold step into modern luxury design within one of the world’s most prestigious retail destinations.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56baa0c57b5b11955ecca_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb883bf5431917edd71_9.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb883bf5431917edd71_9.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb843dac84784103ee6_8.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb843dac84784103ee6_8.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb9fb4f82f39164b6d1_10.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb9fb4f82f39164b6d1_10.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb8bf0308dce4939d6c_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bb8bf0308dce4939d6c_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba0cfe3d16791585bb_7.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba0cfe3d16791585bb_7.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb8e2a9e7dd4239396_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb8e2a9e7dd4239396_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb3da90fc757630a9b_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb3da90fc757630a9b_1.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb7ad6ce8cc82a6552_2.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbb7ad6ce8cc82a6552_2.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba864847576bed1bf2_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bba864847576bed1bf2_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbad2ddbc8f128f1962_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b56bbad2ddbc8f128f1962_4.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "charles-zuber",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "CHARLES ZUBER",
+          "spans": []
+        }
+      ],
+      "category": "luxury-retail-hospitality",
+      "client": "Charles Zuber (Switzerland)",
+      "year": "2023",
+      "location": "Yas Mall, Abu Dhabi, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Luxury Jewellery & Watch Retail",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Framing Watches as Works of Art",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The Charles Zuber boutique at Yas Mall marks the brand’s first global flagship outside Switzerland. Designed at the Geneva headquarters, the Abu Dhabi boutique was envisioned as a contemporary temple of watchmaking and jewelry, blending Swiss precision with a Middle Eastern sense of luxury.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3912944d6aa9ee3be_CZ7.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3912944d6aa9ee3be_CZ7.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3b255c7f36ee76b65_CZ-inside-1.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3b255c7f36ee76b65_CZ-inside-1.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda39b54f4b2da437247_CZ-inside-2.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda39b54f4b2da437247_CZ-inside-2.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fd8c79f0181e37394a27_charles-zuber-abu-dhabi2.webp"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fd8c79f0181e37394a27_charles-zuber-abu-dhabi2.webp"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3ed93a757f222b834_20230523-RON_4511.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3ed93a757f222b834_20230523-RON_4511.jpg"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "canadian-university-dubai-auditorium",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "CUD Auditorium",
+          "spans": []
+        }
+      ],
+      "category": "hospitality-lifestyle-spaces",
+      "client": "Canadian University Dubai ",
+      "year": "2024",
+      "location": "Dubai, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Auditorium & Innovation Hub",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Futuristic Auditorium & Training Hub",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "For Canadian University Dubai, a new auditorium and innovation hub was designed to serve as both the university’s formal ceremonial hall and a training ground for the next generation of marketers and brand builders. With a capacity of 200–300, the space embodies a futuristic, VIP atmosphere aligned with the university’s innovative spirit.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378fb6e6b2f1c849f432_2404_AUDITORIUM_CUD_DXB_10.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f5557ed96c2f7af2e_2404_AUDITORIUM_CUD_DXB_09.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f5557ed96c2f7af2e_2404_AUDITORIUM_CUD_DXB_09.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f42513fd144fddc43_2404_AUDITORIUM_CUD_DXB_08.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378f42513fd144fddc43_2404_AUDITORIUM_CUD_DXB_08.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a6dae8bd34ebc211_2404_AUDITORIUM_CUD_DXB_04.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33794a6dae8bd34ebc211_2404_AUDITORIUM_CUD_DXB_04.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33777a8ef92db17e1d071_2404_AUDITORIUM_CUD_DXB_01.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33777a8ef92db17e1d071_2404_AUDITORIUM_CUD_DXB_01.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3377d87f35d2c5c9f03b0_2404_AUDITORIUM_CUD_DXB_03.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3377d87f35d2c5c9f03b0_2404_AUDITORIUM_CUD_DXB_03.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337942199006db8a30897_2404_AUDITORIUM_CUD_DXB_02.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337942199006db8a30897_2404_AUDITORIUM_CUD_DXB_02.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337900f5b95bfbd940bec_2404_AUDITORIUM_CUD_DXB_06.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b337900f5b95bfbd940bec_2404_AUDITORIUM_CUD_DXB_06.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378eea0573b103be5c08_2404_AUDITORIUM_CUD_DXB_07.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3378eea0573b103be5c08_2404_AUDITORIUM_CUD_DXB_07.jpg"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "hind-aloud---dubai-design-week-2024",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Dubai Design Week 2024",
+          "spans": []
+        }
+      ],
+      "category": "experiential-space",
+      "client": "Hind ALoud",
+      "year": "2024",
+      "location": "Dubai Design Week, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Experiential Pop-Up | Artistic Installation | Brand Activation",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31268cfdd1b6704993bef_1730803541923.jpeg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31268cfdd1b6704993bef_1730803541923.jpeg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "When Scent Becomes Art",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "At Dubai Design Week, Hind Al-Oud presented an immersive pop-up installation that transformed fragrance into art and poetry into space. Inspired by Kibriya’E by poet Faisal Al-Adwani, the activation introduced two exclusive perfumes — Alifi and Ya’E — expressed as a multi-sensory journey from certainty to singularity, blending scent, light, sound, and spatial storytelling into an evocative design experience.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe787f6_1731419627558.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe787f6_1731419627558.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe7883a_1731419611191.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310865b2139addbe7883a_1731419611191.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b0761e3f384a58059_1730803537307.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b0761e3f384a58059_1730803537307.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3108692d2b3414cb904e9_1731419612494.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3108692d2b3414cb904e9_1731419612494.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086b22ee95bf9f27af6_1731419641776.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086b22ee95bf9f27af6_1731419641776.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3071eba88460ab6579622_1730803542137.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b3c36fe3216ccddd7_1730803539601.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073b3c36fe3216ccddd7_1730803539601.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073bd91ae4a78df268cc_1730803537183.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073bd91ae4a78df268cc_1730803537183.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ab35144efa9250d6e_1730803538371.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ab35144efa9250d6e_1730803538371.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3117b36b30e9273152998_Captureee.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3117b36b30e9273152998_Captureee.JPG"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ac35638d62c441e30_1730803538131.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3073ac35638d62c441e30_1730803538131.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31172d92647de1029a463_Capture2.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31172d92647de1029a463_Capture2.JPG"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086162a977fcb5426ee_1731419622639.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31086162a977fcb5426ee_1731419622639.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310869d6cf033963b0060_1731419610137.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310869d6cf033963b0060_1731419610137.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b30710e86b0b10ea7e0f87_1730803542099.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b30710e86b0b10ea7e0f87_1730803542099.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31184b2f93665e6008c9b_Capture33.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31184b2f93665e6008c9b_Capture33.JPG"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31180a749f198990f4e56_Capturewe.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31180a749f198990f4e56_Capturewe.JPG"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310bad2164e10c026727b_Capture1.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b310bad2164e10c026727b_Capture1.JPG"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "emirati-womens-day",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Emirati Women's Day ",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "the-emovation-lab",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Emovation LAB",
+          "spans": []
+        }
+      ],
+      "category": "experiential-space",
+      "client": "Mohamad Hilal Group ",
+      "year": "2023",
+      "location": "Sharjah Research Technology and Innovation Park, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Multi-Sensory Hub for Innovation",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Emotional Design for Creativity",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The Emovation Lab was designed as a first-of-its-kind hub for emotional innovation in Sharjah’s Technology and Innovation Park. Created as a space where invention begins with emotion, it offered a multi-sensory environment for students, researchers, and creators to imagine, develop, and showcase new ideas.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb30cfe3d1679e215da_39.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb22ab674a24f66b219_41.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb22ab674a24f66b219_41.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb43f3c2a85d808965c_40.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb43f3c2a85d808965c_40.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b5343f00503ee3a46bcc80_Untitled%20design%20(2).png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b5343f00503ee3a46bcc80_Untitled%20design%20(2).png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb2a70ab6fafacf69d3_42.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb2a70ab6fafacf69d3_42.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb195d8af8b0e90a0b1_44.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb195d8af8b0e90a0b1_44.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb153fb5920dfe1422e_45.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb153fb5920dfe1422e_45.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb025982ab007bce31e_46.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb025982ab007bce31e_46.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb5cbb6689c94e9c069_37.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb5cbb6689c94e9c069_37.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f6ed2164e10c0482b24_48.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad62a8ec6d56365350_49.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad62a8ec6d56365350_49.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f75c1043de5add986a5_50.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43f75c1043de5add986a5_50.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43faf81022e43087521f7_47.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43faf81022e43087521f7_47.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2edf33e4f056279ce4dfe_EMOVATION%20LAB%20MATERIAL%20BOARD.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2edf33e4f056279ce4dfe_EMOVATION%20LAB%20MATERIAL%20BOARD.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3c36fe3216efb1d5_51.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3c36fe3216efb1d5_51.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb51f6e749ac3a2887a_38.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fb51f6e749ac3a2887a_38.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3090cca3788f1fab_53.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b43fad3090cca3788f1fab_53.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "emovation-lab",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Emovation LAB - Pop-Up Store",
+          "spans": []
+        }
+      ],
+      "category": "experiential-space",
+      "client": "Mohamed Hilal Group",
+      "year": "2023",
+      "location": "UAE, GCC ",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Experiential Pop-Up ",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541afd0e27a6badb7219b_81.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541afd0e27a6badb7219b_81.png"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541afd0e27a6badb7219b_81.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541afd0e27a6badb7219b_81.png"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "The Architecture of Emotion",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The Emovation Lab was a pioneering multi-sensory pop-up, born from the fusion of emotion and innovation. It transformed fragrance into an immersive journey, redefining how customers engage with luxury retail.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e59700503ee3a4210cd4_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e59700503ee3a4210cd4_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e59789706f211fc889f6_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e59789706f211fc889f6_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e5956214850d346d41f6_7.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e5956214850d346d41f6_7.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e595fcf9ac0d43fbd8a9_8.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e595fcf9ac0d43fbd8a9_8.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2d68abfd24f1685ae9ec9_Untitled%20(2).png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2d68abfd24f1685ae9ec9_Untitled%20(2).png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e593e4876ff3e9707b62_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e593e4876ff3e9707b62_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e593fde228bec9ee3ddc_12.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e593fde228bec9ee3ddc_12.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e593576293e25d47369f_13.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e593576293e25d47369f_13.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e851e98db8a0975f4dfb_18.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e851e98db8a0975f4dfb_18.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e8518dc3718c292701ad_19.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e8518dc3718c292701ad_19.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e85195d8af8b0e682f58_20.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e85195d8af8b0e682f58_20.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e85187f35d2c5c93659f_21.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e85187f35d2c5c93659f_21.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e8513f8b69013601d553_22.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e8513f8b69013601d553_22.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e8511ea422fa5e4bc499_23.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2e8511ea422fa5e4bc499_23.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2edf33e4f056279ce4dfe_EMOVATION%20LAB%20MATERIAL%20BOARD.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b2edf33e4f056279ce4dfe_EMOVATION%20LAB%20MATERIAL%20BOARD.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541afd0e27a6badb7219b_81.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541afd0e27a6badb7219b_81.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c9b07856dcd8b40ca7_82.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c9b07856dcd8b40ca7_82.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c925982ab007e368f6_83.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c925982ab007e368f6_83.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c9576293e25d98f288_84.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c9576293e25d98f288_84.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c8cc319d9245e5f231_85.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c8cc319d9245e5f231_85.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c7ec0d2d0e60b4de98_86.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c7ec0d2d0e60b4de98_86.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c794b819313f7bf91c_87.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c794b819313f7bf91c_87.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c6b99aac96fb2ae555_88.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c6b99aac96fb2ae555_88.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c7e18a56cb23665773_89.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b541c7e18a56cb23665773_89.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "enchanted",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Enchanted Moment",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "eter",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Eter Story",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "gallery-lafayette-doha",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Gallery Lafayette Doha",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "gallery-lafayette-dubai",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "HAO - Gallery Lafayette Doha",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "HAO",
+      "year": "2025",
+      "location": "Gallery Lafayette Doha",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "hao-x-christofle-",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "HAO x Christofle ",
+          "spans": []
+        }
+      ],
+      "category": "brands-collaborations",
+      "client": "",
+      "year": "2025",
+      "location": "Global",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "hao-x-moser-",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "HAO x MOSER ",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "HAO x MOSER ",
+      "year": "2025",
+      "location": "Global",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "hob-department-store",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "HOB Department Store",
+          "spans": []
+        }
+      ],
+      "category": "luxury-retail-hospitality",
+      "client": "HOB",
+      "year": "2022",
+      "location": "YAS Mall ,UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Department Store – Retail Architecture & Multi-Brand Concept",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b94e6e3ee6fe5461e522__MG_3610.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b94e6e3ee6fe5461e522__MG_3610.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b94e6e3ee6fe5461e522__MG_3610.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b94e6e3ee6fe5461e522__MG_3610.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "The First Emirati Luxury Department Store Reimagined",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "HOB marked the UAE’s first Emirati luxury department store, and this Yas Mall flagship was a pivotal moment in elevating its identity. The store was envisioned as a premium multi-brand destination — housing perfumes, fashion, accessories, jewelry, and private event spaces — designed to reflect global luxury standards while remaining rooted in regional identity.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f993f827410c6cd5d8e3_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f993f827410c6cd5d8e3_1.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f9933ffd107a0b6bae15_2.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f9933ffd107a0b6bae15_2.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f992f6bc60d4bafcb6da_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f992f6bc60d4bafcb6da_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f991d10a95f391063f36_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f991d10a95f391063f36_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f990fb3707c7edd5296f_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f990fb3707c7edd5296f_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f99041a13e87b8bef4dd_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f99041a13e87b8bef4dd_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b93a2c4eee4a81af9dc2__MG_3648.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b93a2c4eee4a81af9dc2__MG_3648.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98ce2088a216f46ad46_8.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98ce2088a216f46ad46_8.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98b08f78333a9675ffa_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98b08f78333a9675ffa_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b9530d989266b82489a2__MG_3671.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b9530d989266b82489a2__MG_3671.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f9907db6f9cb028b4d7c_7.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f9907db6f9cb028b4d7c_7.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98c522558898f5d3055_10.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98c522558898f5d3055_10.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b5cd64cb3345b18ce23ace_hob.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b5cd64cb3345b18ce23ace_hob.JPG"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98c73ccf6539c4da38c_9.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9f98c73ccf6539c4da38c_9.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "hind-al-oud---immersive-pop-up",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Hind Al Oud Pop-Up Store",
+          "spans": []
+        }
+      ],
+      "category": "immersive-environments-pop-ups",
+      "client": "Hind Al Oud",
+      "year": "2023",
+      "location": "Galleria Mall, Abu Dhabi, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Immersive Pop-Up Store",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd15a98c1de8d3f530b_16.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd15a98c1de8d3f530b_16.png"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd15a98c1de8d3f530b_16.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd15a98c1de8d3f530b_16.png"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Design Concept",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "This immersive pop-up was designed as a luxury pavilion in the heart of Galleria Mall, combining bold architecture with sensorial storytelling to create a memorable retail destination.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd15a98c1de8d3f530b_16.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd15a98c1de8d3f530b_16.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd158c2ba948b634f73_17.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd158c2ba948b634f73_17.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31e55cfdd1b67049afb07_Captureww.JPG"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31e55cfdd1b67049afb07_Captureww.JPG"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd1bab532707805fb89_14.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31dd1bab532707805fb89_14.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3169695d8af8b0e6f3b30_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3169695d8af8b0e6f3b30_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3168c5f8a5cce19c37ecc_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3168c5f8a5cce19c37ecc_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b316923c940a53d30406e2_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b316923c940a53d30406e2_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31691e38646b7c773f7d4_7.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31691e38646b7c773f7d4_7.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3169428aa2dc316bfd797_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3169428aa2dc316bfd797_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31692b2f93665e601617e_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31692b2f93665e601617e_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b316912245f238d5f36d37_8.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b316912245f238d5f36d37_8.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3168f9810e6cd45bcc23b_9.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3168f9810e6cd45bcc23b_9.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3168edc6a6e119cd88504_12.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b3168edc6a6e119cd88504_12.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31694a8ef92db17dc86f2_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b31694a8ef92db17dc86f2_1.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "hind-aloud---bas-mall",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Hind Aloud Flagship Store",
+          "spans": []
+        }
+      ],
+      "category": "luxury-retail-hospitality",
+      "client": "Hind Aloud",
+      "year": "2023",
+      "location": "UAE to Global Expansion",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Experiential Flagship & Brand Transformation",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "The First Flagship of a Global Rollout",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The Hind Al-Oud Bas Mall flagship marked the beginning of a full rebranding journey, setting a new benchmark for luxury perfume retail. Designed as an immersive environment where architecture, scent, and storytelling converge, it became the first store in a global rollout that now extends across the UAE, GCC, Moscow, and London.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b75b2139addbeb3bc9_08.Final.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b75b2139addbeb3bc9_08.Final.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b93213b1afa57d76b2_06.Final.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b93213b1afa57d76b2_06.Final.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b856d5157f36f23674_07.Final.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b856d5157f36f23674_07.Final.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b658c2ba948b64ce84_Nameless%20collection.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b658c2ba948b64ce84_Nameless%20collection.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327ba0349c9a38596428b_05.Final.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327ba0349c9a38596428b_05.Final.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b63090cca3786f6921_Shopfront.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327b63090cca3786f6921_Shopfront.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7cba00ab0a7dad959f_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7cba00ab0a7dad959f_1.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7ce6240a05b9e0aaa7_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7ce6240a05b9e0aaa7_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b79d18d59f6b7a52fe3_9.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b79d18d59f6b7a52fe3_9.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7836b30e9273191370_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7836b30e9273191370_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7d56d5157f36f2f4fe_2.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7d56d5157f36f2f4fe_2.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7c82c328140eca27b1_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7c82c328140eca27b1_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7dde14675fab047593_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7dde14675fab047593_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b6da30c0622e7002eaf_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b6da30c0622e7002eaf_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7864e27f400726683b_7.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b7864e27f400726683b_7.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b78f40bdb594e5f025e_8.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b32b78f40bdb594e5f025e_8.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327e60db36cef52354938_IMG_6237_Original.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327e60db36cef52354938_IMG_6237_Original.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327c0aa0603ac4710bdc0_cropped%20ribbon.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b327c0aa0603ac4710bdc0_cropped%20ribbon.jpg"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "innovation-conference-hall",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Innovation Conference Hall",
+          "spans": []
+        }
+      ],
+      "category": "hospitality-lifestyle-spaces",
+      "client": "MHG",
+      "year": "2024",
+      "location": "Dubai, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Corporate Interior | Conference Hall | Experiential Design",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Futuristic Minimalism with Luxury Detail",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The Innovation Conference Hall was conceived as a prestigious space for VIP gatherings, strategic meetings, and high-level discussions. Designed with a futuristic minimalist language and luxurious detailing, the hall embodies authority, sophistication, and forward-looking vision, creating an environment where leadership and innovation converge.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a72ae82ac604cc837b8_01_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8fb35144efa92cafda_02_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8fb35144efa92cafda_02_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a787f1c93046293e4d5_03_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8e5a45cdc47b3f0a7e_04_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8e5a45cdc47b3f0a7e_04_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ebd8883d77dc717d7_05_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ebd8883d77dc717d7_05_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8d993999fc870bde83_06_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8d993999fc870bde83_06_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8c907e30f0a0d7a600_07_Interactive%20LightMix.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8c907e30f0a0d7a600_07_Interactive%20LightMix.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33af2f40bdb594e611155_09.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33af2f40bdb594e611155_09.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ca8ef92db17e23c2e_10.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ca8ef92db17e23c2e_10.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ce37fd1de44d83e88_11.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8ce37fd1de44d83e88_11.jpg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8cde14675fab066986_12.jpg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b33a8cde14675fab066986_12.jpg"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "khaltat-flagship-store",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Khaltat Flagship Store",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "Khaltat",
+      "year": "2024",
+      "location": "GCC",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "khaltat-gallery-lafayette-dubai",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Khaltat Gallery Lafayette Dubai",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "Khaltat ",
+      "year": "2024",
+      "location": "Gallery Lafayette Dubai",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "ramadan",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Love to be YOU",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "mhg-headquarter",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "MHG Headquarter",
+          "spans": []
+        }
+      ],
+      "category": "hospitality-lifestyle-spaces",
+      "client": "MHG",
+      "year": "2021",
+      "location": "SRTIP, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Corporate Headquarters | Experiential Office Design | Emotional Spatial Concept",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Where Work Becomes Wellbeing",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "The MHG Headquarters was envisioned as more than a workplace — it was designed as an emotional journey. I led the project from concept to completion, shaping the headquarters around the philosophy of Breath Out, Breath In, Innovation. Each zone was crafted to influence mood, wellbeing, and creativity, turning the office into a living ecosystem of energy and belonging.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1de534d02c267e7700_75.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1de534d02c267e7700_75.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1d8e2a9e7dd4143854_76.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1d8e2a9e7dd4143854_76.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b05fd3c36b689bef0c1_77.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1e4cd54a4d274712d3_78.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b1e4cd54a4d274712d3_78.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b2830d0cdb245a5b3d7_80.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b2830d0cdb245a5b3d7_80.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4f145c9dc5b62647f0_54.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4f145c9dc5b62647f0_54.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4fcc319d9245e48158_55.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4fcc319d9245e48158_55.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4e1568ffba5d1ed7fa_57.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4e1568ffba5d1ed7fa_57.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4bc79d8c1e20d682a7_61.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4bc79d8c1e20d682a7_61.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4492d2b3414cfe6c22_74.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4492d2b3414cfe6c22_74.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b442bcc1dd2b918944e_72.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b442bcc1dd2b918944e_72.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4883bf5431916e3192_71.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b4883bf5431916e3192_71.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b471501677bed2b5c26_73.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b53b471501677bed2b5c26_73.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "old-is-gold-villa",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "OLD is Gold Villa",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "private-ceo-office-perfume-lab---dubai",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Private Office",
+          "spans": []
+        }
+      ],
+      "category": "hospitality-lifestyle-spaces",
+      "client": "Mohamed Hilal",
+      "year": "2023",
+      "location": "Dubai, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Private CEO Office | Perfume Lab | Luxury Interior Design",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e102211f56f5ca98a8b_1.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e102211f56f5ca98a8b_1.png"
+      },
+      "preview_image": {
+        "origin": {
+          "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e102211f56f5ca98a8b_1.png"
+        },
+        "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e102211f56f5ca98a8b_1.png"
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "Architecting Calm & Authority",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "This CEO office was designed as both an executive headquarters and a creative laboratory, reflecting the dual role of a leader who drives a luxury retail group while personally creating fragrances. The space delivers a first impression of prestige and refinement, while offering a calm, home-like atmosphere rarely found in corporate environments.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e102211f56f5ca98a8b_1.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e102211f56f5ca98a8b_1.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e314770c1e3b2da32a2_2.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e314770c1e3b2da32a2_2.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e37d1ceb4a1b581d594_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e37d1ceb4a1b581d594_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e33c454f21ccc7713d4_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e33c454f21ccc7713d4_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e30f83c98700c159659_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e30f83c98700c159659_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e2ed86d0aa4034aba3e_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e2ed86d0aa4034aba3e_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e31ba111a43f93ceb6b_9.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e31ba111a43f93ceb6b_9.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e37a70ab6fafaca9e21_10.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e37a70ab6fafaca9e21_10.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e33aa0603ac472a3f20_11.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e33aa0603ac472a3f20_11.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e37c454f21ccc77141c_12.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e37c454f21ccc77141c_12.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e35f83c98700c15970b_13.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e35f83c98700c15970b_13.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e2e5e15888b0ef8cd6a_17.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e2e5e15888b0ef8cd6a_17.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e332c4eee4a8197b50b_15.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b41e332c4eee4a8197b50b_15.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc1e186a04d8b33a682_20.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc1e186a04d8b33a682_20.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc113e3300e223a77e2_21.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc113e3300e223a77e2_21.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc120c0b1ec1fd8f812_22.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc120c0b1ec1fd8f812_22.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc1469af2a9018cb722_23.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc1469af2a9018cb722_23.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc67db03bbb047d3763_27.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc67db03bbb047d3763_27.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc626d1a38749141bc5_28.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc626d1a38749141bc5_28.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc3458a47d9d81b9978_29.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b42bc3458a47d9d81b9978_29.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b439006ac21db37b0ff90d_30.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b439006ac21db37b0ff90d_30.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b438ffa40a27844a7dec1c_31.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b438ffa40a27844a7dec1c_31.png"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "toda-event---ramadan-suhoor-",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "TODA Event - Ramadan Suhoor ",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "HAO",
+      "year": "2024",
+      "location": "Souk Madinat Jumeirah, UAE",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "Immersive Brand Event",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "the-perfumer",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "The Perfumer",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "the-perfumer-campaign",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "The Perfumer Campaign",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "Khaltat",
+      "year": "2024",
+      "location": "GCC",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "360 Campaign ",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "pink-october---hao-awareness-campaign",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "The Pink Emotions",
+          "spans": []
+        }
+      ],
+      "category": "exhibitions-activations",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "slices": [
+        {
+          "slice_type": "content_block",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {
+            "content": [
+              {
+                "type": "heading2",
+                "text": "A Journey Through Emotions",
+                "spans": []
+              },
+              {
+                "type": "paragraph",
+                "text": "“The Pink Emotions” campaign was launched during Breast Cancer Awareness Month, reimagining awareness as an emotional journey. Instead of relying on symbolic pink visuals alone, the concept translated the stages of a woman’s healing process — discovery, empowerment, healing, and renewal — into a multi-sensory narrative across digital, retail, and live experiences.",
+                "spans": []
+              }
+            ]
+          },
+          "items": []
+        },
+        {
+          "slice_type": "image_gallery",
+          "slice_label": null,
+          "variation": "default",
+          "primary": {},
+          "items": [
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43874d49e132a52fb4f_3.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43874d49e132a52fb4f_3.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438076ffbdecaaf17ae_4.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438076ffbdecaaf17ae_4.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4382fd0e2918920851a_5.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4382fd0e2918920851a_5.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43885c628d4388e86ce_6.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43885c628d4388e86ce_6.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438e8a7c316afb4db4e_20.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438e8a7c316afb4db4e_20.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4384baa518096c4b1b9_21.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4384baa518096c4b1b9_21.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43875001b388281f6b7_22.png"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43875001b388281f6b7_22.png"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924baa518096c9a099_WhatsApp%20Image%202023-09-05%20at%204.09.09%20PM.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924baa518096c9a099_WhatsApp%20Image%202023-09-05%20at%204.09.09%20PM.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2928094c8a92aed1c83_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM%20(1).jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2928094c8a92aed1c83_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM%20(1).jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2926417ecb906fcdc78_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2926417ecb906fcdc78_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM.jpeg"
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "origin": {
+                  "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924491df99d17a3196_WhatsApp%20Image%202023-09-22%20at%209.31.57%20AM.jpeg"
+                },
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924491df99d17a3196_WhatsApp%20Image%202023-09-22%20at%209.31.57%20AM.jpeg"
+              },
+              "caption": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "work",
+    "uid": "third-avenue-restaurant-",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Third Avenue Restaurant ",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "2024",
+      "location": "Dubai Mall",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "summer",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "summer ",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  },
+  {
+    "type": "work",
+    "uid": "the-art-of-self",
+    "lang": "en-us",
+    "data": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "the Art of self",
+          "spans": []
+        }
+      ],
+      "category": "Other",
+      "client": "",
+      "year": "",
+      "location": "",
+      "intro": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "spans": []
+        }
+      ],
+      "main_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      },
+      "preview_image": {
+        "origin": {
+          "url": ""
+        },
+        "url": ""
+      }
+    }
+  }
+]

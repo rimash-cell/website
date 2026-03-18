@@ -1,0 +1,615 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { client } from "../lib/prismic";
+import { SliceZone } from "../components/SliceZone";
+import { PrismicRichText } from "@prismicio/react";
+
+let page;
+let selectedWorks: any[] = [];
+try {
+	// Try to find the homepage document
+	const response = await client.getByType("homepage", {
+		lang: "*",
+		fetchLinks: [
+			"work.title",
+			"work.main_image",
+			"work.category",
+			"work.year",
+		],
+	});
+	page = response.results[0];
+} catch (e) {
+	console.error("Homepage fetch failed:", e);
+}
+
+try {
+	const allWorks = await client.getAllByType("work", {
+		lang: "*",
+		orderings: [
+			{ field: "my.work.featured", direction: "desc" },
+			{ field: "my.work.year", direction: "desc" },
+		],
+	});
+	// Filter client-side: not hidden, has a main image — then take top 4
+	selectedWorks = allWorks
+		.filter((w: any) => !w.data.hidden && w.data.main_image?.url)
+		.slice(0, 4);
+} catch (e) {
+	console.error("Works fetch failed:", e);
+}
+---
+
+<Layout>
+	{
+		page ? (
+			<div class="page-shell">
+				<div class="left-col">
+					<!-- HERO -->
+					<div class="hero-panel">
+						<div class="hero-role">
+							{page.data.hero_subtitle ? (
+								<PrismicRichText field={page.data.hero_subtitle} />
+							) : (
+								"Spatial Experience Designer & Creative Director"
+							)}
+						</div>
+						<div class="hero-name">RIMA<span>ALSHOUFI</span></div>
+						<div class="hero-what">
+							{page.data.bio ? (
+								<PrismicRichText field={page.data.bio} />
+							) : (
+								"I design how people experience physical space — shaping how it feels, flows, and is remembered."
+							)}
+						</div>
+						<p class="hero-scope">Luxury Retail, Hospitality, Immersive Experiences, Events & Activations, Private Residential, and Workplace Environments.</p>
+						<div class="hero-ctas">
+							<a href="#key-projects" class="btn-primary"><span>Explore Work</span> <i>→</i></a>
+							<a href="#connect" class="btn-ghost"><span>Connect</span></a>
+						</div>
+					</div>
+
+					<!-- ABOUT -->
+					<div class="about-panel" id="about">
+						<div class="panel-tag">About</div>
+						<p class="about-p">I design the emotional and sensory layer of physical space — the part people <strong>feel</strong>, not just see.</p>
+						<p class="about-p">The atmosphere that shifts at the threshold. The sequence that shapes how people move, where they pause, and what they remember when they leave.</p>
+						<p class="about-p" style="color:rgba(255,255,255,0.88);font-weight:600">I work with luxury founders, hospitality developers, cultural institutions, private clients, and brands entering the GCC.</p>
+						
+						<div class="glance-strip">
+							<div class="gl-item">
+								<div class="gl-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><polyline points="12 7 12 12 15.5 14" /></svg></div>
+								<div class="gl-val">13+ Years</div>
+								<div class="gl-lbl">Industry experience</div>
+							</div>
+							<div class="gl-item">
+								<div class="gl-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></svg></div>
+								<div class="gl-val">300+ Projects</div>
+								<div class="gl-lbl">Delivered across sectors</div>
+							</div>
+							<div class="gl-item">
+								<div class="gl-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3.27 1.93 8.73 1.93 12 0v-5" /></svg></div>
+								<div class="gl-val">MBA</div>
+								<div class="gl-lbl">Luxury Management</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-sticky">
+					<img src="/hero.png" alt="Rima Alshoufi">
+				</div>
+			</div>
+
+			<!-- PROJECT TYPES -->
+			<div class="full alt" id="project-types">
+				<div class="inner">
+					<div class="sec-tag">Project Types</div>
+					<p class="section-intro">I lead spatial experience and creative direction across selected sectors.</p>
+					
+					<div class="sector-compact-grid">
+						<div class="sector-tag-item"><div class="sector-tag-name">Luxury Retail</div></div>
+						<div class="sector-tag-item"><div class="sector-tag-name">Hospitality</div></div>
+						<div class="sector-tag-item"><div class="sector-tag-name">Immersive Experiences</div></div>
+						<div class="sector-tag-item"><div class="sector-tag-name">Events & Activations</div></div>
+						<div class="sector-tag-item"><div class="sector-tag-name">Private Residential</div></div>
+						<div class="sector-tag-item"><div class="sector-tag-name">Workplace Environments</div></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- KEY PROJECTS -->
+			<div class="full" id="key-projects">
+				<div class="inner">
+					<div class="sec-tag">Key Projects</div>
+
+					{selectedWorks.length > 0 ? (
+						selectedWorks.map((work: any, i: number) => (
+							<a href={`/work/${work.uid}`} class={`work-card ${i % 2 !== 0 ? 'work-card-offset' : ''}`}>
+								<div class="work-img" style={work.data.main_image?.url ? `background-image: url('${work.data.main_image.url}')` : ''}>
+									<span class="work-img-l">{work.data.title?.[0]?.text || "Untitled"}</span>
+								</div>
+								<div class="work-info">
+									<div class="work-meta">{work.data.category || 'Architecture'}</div>
+									<div class="work-title">{work.data.title?.[0]?.text || "Untitled"}</div>
+									<div class="work-truth">Set a new benchmark for narrative retail architecture.</div>
+									<div class="work-cta"><span>View Project</span> <i>→</i></div>
+								</div>
+							</a>
+						))
+					) : (
+						<p>Works coming soon.</p>
+					)}
+
+					<div class="work-footer">
+						<a href="/work" class="btn-all-work"><span>View All Projects</span> <i>→</i></a>
+						<p class="work-footer-note">Full case studies available on request.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="sec-close" id="connect">
+				<div class="close-h">Space is felt <strong>before it is seen.</strong></div>
+				<div class="close-p">If you are building an environment that needs to be more than designed — let's talk.</div>
+				<a href="mailto:connect@rimaalshoufi.com" class="btn-cta"><span>Connect</span> <i>→</i></a>
+			</div>
+			
+			<SliceZone slices={page.data.slices} client:load />
+		) : (
+			<main class="min-h-screen flex flex-col justify-center px-8 md:px-12">
+				<div class="max-w-7xl mx-auto w-full">
+					<p>CMS connecting...</p>
+				</div>
+			</main>
+		)
+	}
+</Layout>
+
+
+<style>
+/* SHELL */
+.page-shell {
+	display: grid;
+	grid-template-columns: 1fr 44%;
+	align-items: start
+}
+
+/* LEFT COLUMN */
+.left-col {
+	background: var(--bk)
+}
+
+/* HERO */
+.hero-panel {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 100px var(--px) 64px;
+	position: relative;
+}
+
+.hero-panel::before {
+	content: '';
+	position: absolute;
+	bottom: 40px;
+	left: -60px;
+	width: 360px;
+	height: 360px;
+	border-radius: 50%;
+	background: radial-gradient(circle, rgba(184, 115, 51, .08) 0%, transparent 65%);
+	pointer-events: none;
+}
+
+.hero-role {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	color: rgba(184, 115, 51, 0.85);
+	margin-bottom: 22px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.hero-role::before {
+	content: '';
+	width: 16px;
+	height: .5px;
+	background: rgba(184, 115, 51, 0.7);
+}
+
+.hero-name {
+	font-size: clamp(52px, 5.8vw, 92px);
+	font-weight: 900;
+	letter-spacing: -.045em;
+	line-height: .88;
+	color: #fff;
+	margin-bottom: 28px;
+}
+
+.hero-name span {
+	font-weight: 200;
+	display: block;
+}
+
+.hero-what {
+	font-size: clamp(14px, 1.3vw, 17px);
+	font-weight: 300;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.75);
+	margin-bottom: 14px;
+	max-width: 380px;
+}
+
+.hero-scope {
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.65;
+	color: rgba(255, 255, 255, 0.38);
+	margin-bottom: 44px;
+	max-width: 360px;
+}
+
+.hero-ctas {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+/* RIGHT (PORTRAIT) */
+.right-sticky {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+	border-left: var(--hl-d)
+}
+
+.right-sticky img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 10%;
+	filter: saturate(.80) brightness(.93)
+}
+
+.right-sticky::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(to right, rgba(10, 10, 10, 0.28) 0%, transparent 22%),
+		linear-gradient(to bottom, rgba(10, 10, 10, 0.45) 0%, transparent 18%);
+	pointer-events: none
+}
+
+/* ABOUT PANEL */
+.about-panel {
+	padding: 64px var(--px) 72px;
+	border-top: var(--hl-d)
+}
+
+.panel-tag {
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: .25em;
+	text-transform: uppercase;
+	color: rgba(184, 115, 51, 0.75);
+	margin-bottom: 28px;
+	display: flex;
+	align-items: center;
+	gap: 12px
+}
+
+.panel-tag::after {
+	content: '';
+	width: 16px;
+	height: .5px;
+	background: rgba(184, 115, 51, 0.5)
+}
+
+.about-p {
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 1.85;
+	color: rgba(255, 255, 255, 0.55);
+	margin-bottom: 18px
+}
+
+.about-p:last-of-type {
+	margin-bottom: 0
+}
+
+.about-p strong {
+	color: rgba(255, 255, 255, 0.85);
+	font-weight: 400
+}
+
+.glance-strip {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px 16px;
+	margin-top: 32px;
+	padding-top: 28px;
+	border-top: var(--hl-d)
+}
+
+.gl-item {
+	display: flex;
+	flex-direction: column;
+	gap: 6px
+}
+
+.gl-icon {
+	width: 20px;
+	height: 20px;
+	color: rgba(184, 115, 51, 0.65)
+}
+
+.gl-icon svg {
+	width: 100%;
+	height: 100%;
+	stroke: currentColor;
+	fill: none;
+	stroke-width: 1.2;
+	stroke-linecap: round;
+	stroke-linejoin: round
+}
+
+.gl-val {
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: -.01em;
+	color: #fff
+}
+
+.gl-lbl {
+	font-size: 10px;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.55);
+	line-height: 1.4
+}
+
+/* FULL-WIDTH SECTIONS */
+.full {
+	padding: 72px var(--px)
+}
+
+.full.alt {
+	background: var(--ww)
+}
+
+.full .inner {
+	max-width: var(--max);
+	margin: 0 auto;
+}
+
+.section-intro {
+	max-width: 720px;
+	margin-bottom: 40px;
+	font-weight: 200;
+}
+
+/* COMPACT SECTOR GRID */
+.sector-compact-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px 32px;
+	margin-top: 56px;
+	border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+	padding-top: 48px;
+}
+
+.sector-tag-item {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	border-left: 0.5px solid rgba(0, 0, 0, 0.1);
+	padding-left: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.sector-tag-name {
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 0em;
+	color: var(--bk);
+	line-height: 1.4;
+	transition: color 0.3s ease;
+}
+
+.sector-tag-item:hover .sector-tag-name {
+	color: var(--br);
+}
+
+/* WORK */
+.work-card {
+	display: grid;
+	grid-template-columns: 60% 40%;
+	text-decoration: none;
+	color: inherit;
+	transition: opacity 0.3s ease;
+	margin-bottom: 120px;
+	align-items: stretch;
+	background: #fff;
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+
+.work-card:last-of-type {
+	margin-bottom: 0;
+}
+
+.work-card-offset {
+	transform: translateX(40px);
+	width: calc(100% - 40px);
+}
+
+.work-img {
+	height: 280px;
+	background: #eee;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+
+.work-img-l {
+	position: absolute;
+	bottom: 20px;
+	left: 22px;
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: .18em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .28)
+}
+
+.work-info {
+	padding: 24px 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.work-meta {
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: .15em;
+	text-transform: uppercase;
+	color: #b87333;
+	margin-bottom: 12px;
+	opacity: 0.8;
+}
+
+.work-title {
+	font-size: 26px;
+	font-weight: 300;
+	letter-spacing: -.01em;
+	line-height: 1.25;
+	margin-bottom: 12px;
+	color: #111;
+}
+
+.work-truth {
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 1.6;
+	color: #666;
+	margin-bottom: 16px;
+	max-width: 320px;
+}
+
+.work-cta {
+	display: inline-flex;
+	align-items: center;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 0.06em;
+	text-transform: none;
+	color: var(--bk);
+	position: relative;
+	padding: 8px 0;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.work-cta span {
+	position: relative;
+	display: inline-block;
+}
+
+.work-cta span::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 0.5px;
+	background: var(--bk);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.4s ease;
+}
+
+.work-card:hover .work-cta span::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.work-footer {
+	margin-top: 24px;
+	padding-top: 48px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.work-footer-note {
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: .08em;
+	color: #999;
+	text-transform: uppercase;
+}
+
+/* RESPONSIVE CSS */
+@media(max-width:1100px) {
+	.work-card-offset {
+		transform: none;
+		width: 100%;
+	}
+}
+
+@media(max-width:900px) {
+	.sector-compact-grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+}
+
+@media(max-width:800px) {
+	.page-shell {
+		display: block
+	}
+
+	.left-col {
+		width: 100%
+	}
+
+	.right-sticky {
+		display: none
+	}
+
+	.hero-panel {
+		padding: 120px var(--px) 80px;
+		min-height: 0
+	}
+
+	.glance-strip {
+		grid-template-columns: 1fr 1fr
+	}
+	
+	.full {
+		padding: 64px var(--px)
+	}
+
+	.work-card {
+		grid-template-columns: 1fr;
+		margin-bottom: 64px;
+	}
+
+	.work-img {
+		height: 220px;
+	}
+
+	.work-info {
+		padding: 24px 20px;
+	}
+}
+</style>

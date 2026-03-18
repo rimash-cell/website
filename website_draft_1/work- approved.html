@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Rima Alshoufi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bk: #0a0a0a;
+            --ow: #f7f5f2;
+            --ww: #faf9f7;
+            --br: #b87333;
+            --sd: #c8c2b8;
+            --gr-d: rgba(255, 255, 255, 0.45);
+            --hl: 0.5px solid #c8c2b8;
+            --hl-d: 0.5px solid rgba(255, 255, 255, 0.1);
+            --max: 1200px;
+            --px: 40px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background: var(--ow);
+            color: var(--bk);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 200;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 26px var(--px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        nav.scrolled {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 20px var(--px) 28px;
+        }
+
+        /* Dark nav variation for white background page */
+        nav.dark-mode {
+            padding: 26px var(--px);
+        }
+
+        nav.dark-mode.scrolled {
+            background: linear-gradient(to bottom, rgba(250, 249, 247, 0.95) 0%, rgba(250, 249, 247, 0) 100%);
+            border-bottom: var(--hl);
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 15px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s;
+        }
+
+        .logo span {
+            font-weight: 200
+        }
+
+        nav.dark-mode .logo {
+            color: #111;
+            text-shadow: none;
+        }
+
+        nav.dark-mode.scrolled .logo,
+        nav.dark-mode.scrolled .nav-links a {
+            color: #111;
+            text-shadow: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            opacity: .8;
+            transition: all .2s;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-links a.active {
+            opacity: 1;
+        }
+
+        nav.dark-mode .nav-links a {
+            color: #111;
+            text-shadow: none;
+            opacity: .6;
+        }
+
+        .nav-links a:hover {
+            opacity: 1
+        }
+
+        .nav-links a.cta {
+            opacity: 1;
+            padding: 10px 0;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .nav-links a.cta span {
+            position: relative;
+            padding-bottom: 6px;
+        }
+
+        .nav-links a.cta span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.5px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.4s ease;
+        }
+
+        .nav-links a.cta:hover span::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* HEADER PANEL */
+        .page-header {
+            padding: 160px var(--px) 40px;
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .sec-tag {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 0;
+        }
+
+        .sec-tag::after {
+            content: '';
+            width: 16px;
+            height: .5px;
+            background: #b87333
+        }
+
+        .page-title {
+            font-size: clamp(40px, 5vw, 68px);
+            font-weight: 200;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            color: #111;
+            margin-bottom: 24px;
+        }
+
+        .page-intro {
+            font-size: clamp(16px, 1.5vw, 20px);
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(0, 0, 0, 0.6);
+            max-width: 720px;
+        }
+
+        /* FILTER NAV ASYMMETRICAL INDEX */
+        .filter-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 24px var(--px);
+            margin: 0 auto 60px;
+            max-width: var(--max);
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+            overflow-x: auto;
+            white-space: nowrap;
+            /* Hide scrollbar */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .filter-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-btn {
+            font-family: inherit;
+            background: none;
+            border: none;
+            font-size: 11px;
+            font-weight: 600;
+            /* Bolded as requested */
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            color: rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .filter-btn:hover,
+        .filter-item:hover .filter-btn {
+            color: #111;
+        }
+
+        .filter-btn.active {
+            color: #111;
+        }
+
+        /* Subtle indicator under active */
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            /* match padding of container to sit on the border */
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #111;
+        }
+
+        /* Hover Subcategory Logic for Filter Nav */
+        .filter-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .sector-subcats {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            margin-top: 18px;
+            background: #fff;
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border: 0.5px solid rgba(0, 0, 0, 0.06);
+            border-radius: 2px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 50;
+            min-width: 180px;
+        }
+
+        /* The invisible bridge so hover doesnt break between element and dropdown */
+        .sector-subcats::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: 0;
+            width: 100%;
+            height: 24px;
+        }
+
+        .filter-item:hover .sector-subcats {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: auto;
+        }
+
+        .sector-subcats a {
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: .08em;
+            color: rgba(0, 0, 0, 0.45);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        .sector-subcats a:hover {
+            color: #111;
+        }
+
+        /* Mobile specific behavior */
+        @media(max-width: 900px) {
+            .filter-item {
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .sector-subcats {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin-top: 0;
+                padding: 0;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                /* Max-height accordion technique for smooth mobile tap expansion */
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease, margin-top 0.4s ease, padding 0.4s ease;
+            }
+
+            .filter-item.active .sector-subcats {
+                max-height: 350px;
+                margin-top: 12px;
+                padding: 16px 20px;
+                background: #fff;
+                border: 0.5px solid rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        /* THE MAGAZINE SPREAD (CONTROLLED ASYMMETRY) */
+        .work-list {
+            padding: 0 var(--px) 160px;
+            max-width: var(--max);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 40px 24px;
+        }
+
+        .work-row {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.3s ease;
+        }
+
+        .work-img {
+            width: 100%;
+            background: #eee;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 12px;
+        }
+
+        /* Hover Overlay for 'View' Action */
+        .work-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            /* Darker for higher visibility */
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .work-img::before {
+            content: 'View';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .work-row:hover .work-img::after {
+            opacity: 1;
+        }
+
+        .work-row:hover .work-img::before {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .work-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* A subtle line to anchor the taxonomy to the row */
+        .work-meta::after {
+            content: '';
+            flex-grow: 1;
+            height: 0.5px;
+            background: rgba(0, 0, 0, 0.08);
+            max-width: 40px;
+        }
+
+        .work-meta {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: #b87333;
+            margin-bottom: 6px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .work-submeta {
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.45);
+            margin-bottom: 12px;
+        }
+
+        .work-title {
+            font-size: clamp(24px, 2.5vw, 32px);
+            font-weight: 200;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            /* Tightened from 12px */
+            color: #111;
+        }
+
+        .work-truth {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(0, 0, 0, 0.5);
+            /* lighter string color for scanning */
+            margin-bottom: 0;
+            max-width: 90%;
+        }
+
+        /* DYNAMIC INTENTIONAL HIERARCHY RULES */
+        /* Row 1 (Charles Zuber): Massive hero spread */
+        .work-row:nth-child(1) {
+            grid-column: span 12;
+        }
+
+        .work-row:nth-child(1) .work-img {
+            aspect-ratio: 21/9;
+            height: auto;
+        }
+
+        .work-row:nth-child(1) .work-title {
+            font-size: clamp(40px, 4vw, 56px);
+        }
+
+        /* Row 2 (Emovation + Private Office): 50/50 Split */
+        .work-row:nth-child(2) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(2) .work-img {
+            aspect-ratio: 4/3;
+        }
+
+        .work-row:nth-child(3) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(3) .work-img {
+            aspect-ratio: 4/3;
+        }
+
+        /* Row 3 (MHG Headquarter): Full width panoramic */
+        .work-row:nth-child(4) {
+            grid-column: span 12;
+        }
+
+        .work-row:nth-child(4) .work-img {
+            aspect-ratio: 21/9;
+            height: auto;
+        }
+
+        .work-row:nth-child(4) .work-title {
+            font-size: clamp(40px, 4vw, 56px);
+        }
+
+        /* Row 4 (Hind Aloud + Dubai Design Week): 50/50 Split */
+        .work-row:nth-child(5) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(5) .work-img {
+            aspect-ratio: 4/3;
+        }
+
+        .work-row:nth-child(6) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(6) .work-img {
+            aspect-ratio: 4/3;
+        }
+
+        /* Row 5 (ANA Restaurant): Full width panoramic */
+        .work-row:nth-child(7) {
+            grid-column: span 12;
+        }
+
+        .work-row:nth-child(7) .work-img {
+            aspect-ratio: 21/9;
+            height: auto;
+        }
+
+        .work-row:nth-child(7) .work-title {
+            font-size: clamp(40px, 4vw, 56px);
+        }
+
+        /* Row 6 (HOB Department Store + CUD Auditorium): 50/50 Split */
+        .work-row:nth-child(8) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(8) .work-img {
+            aspect-ratio: 4/3;
+        }
+
+        .work-row:nth-child(9) {
+            grid-column: span 6;
+        }
+
+        .work-row:nth-child(9) .work-img {
+            aspect-ratio: 4/3;
+        }
+
+
+        /* CLOSE */
+        .sec-close {
+            background: var(--bk);
+            padding: 130px var(--px);
+            text-align: center
+        }
+
+        .close-h {
+            font-size: clamp(28px, 4vw, 60px);
+            font-weight: 200;
+            letter-spacing: -.02em;
+            line-height: 1.1;
+            color: #fff;
+            margin-bottom: 20px
+        }
+
+        .close-h strong {
+            font-weight: 900
+        }
+
+        .close-p {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, .35);
+            max-width: 360px;
+            margin: 0 auto 40px;
+            line-height: 1.9
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            padding: 14px 0;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            color: #fff;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn-cta span::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 0.5px;
+            background: currentColor;
+            transform: scaleX(0.2);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            opacity: 0.5;
+        }
+
+        .btn-cta:hover span::after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        .btn-cta i {
+            margin-left: 12px;
+            font-style: normal;
+            transition: transform 0.4s ease;
+            display: inline-block;
+        }
+
+        .btn-cta:hover i {
+            transform: translateX(8px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bk);
+            border-top: 0.5px solid rgba(200, 194, 184, .07);
+            padding: 26px var(--px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .f-logo {
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #fff
+        }
+
+        .f-logo span {
+            font-weight: 200
+        }
+
+        .f-links {
+            display: flex;
+            gap: 24px
+        }
+
+        .f-links a {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .2);
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .f-links a:hover {
+            color: rgba(255, 255, 255, .65)
+        }
+
+        .f-copy {
+            font-size: 11px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, .12);
+            letter-spacing: .08em;
+            text-transform: uppercase
+        }
+
+        /* Responsive Fixes */
+        @media(max-width: 900px) {
+            .work-list {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+            }
+
+            .work-img {
+                width: 100%;
+                height: 60vw !important;
+                aspect-ratio: auto !important;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .filter-nav {
+                gap: 16px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-nav" class="dark-mode">
+        <a href="homepage_preview.html" class="logo">RIMA <span>ALSHOUFI</span></a>
+        <div class="nav-links">
+            <a href="work.html" class="active">Work</a>
+            <a href="homepage_preview.html#about">About</a>
+            <a href="#connect" class="cta"><span>Connect</span></a>
+        </div>
+    </nav>
+
+    <!-- HEADER INTRO -->
+    <header class="page-header">
+        <h1 class="page-title">Work</h1>
+        <p class="page-intro">An archive of spatial experience, creative direction, and narrative environments.</p>
+    </header>
+
+    <!-- FILTERS -->
+    <div class="filter-nav">
+        <div class="filter-item" onclick="this.classList.toggle('active')">
+            <button class="filter-btn active">All</button>
+        </div>
+        <div class="filter-group">
+            <div class="filter-item" onclick="this.classList.toggle('active')">
+                <button class="filter-btn">Luxury Retail</button>
+                <div class="sector-subcats">
+                    <a href="#">Flagship & Boutique</a>
+                    <a href="#">Pop-Up</a>
+                    <a href="#">Visual Merchandising</a>
+                </div>
+            </div>
+            <div class="filter-item" onclick="this.classList.toggle('active')">
+                <button class="filter-btn">Hospitality</button>
+                <div class="sector-subcats">
+                    <a href="#">Restaurant</a>
+                    <a href="#">Café & Lounge</a>
+                    <a href="#">Hotel & Resort</a>
+                </div>
+            </div>
+            <div class="filter-item" onclick="this.classList.toggle('active')">
+                <button class="filter-btn">Immersive Experiences</button>
+                <div class="sector-subcats">
+                    <a href="#">Exhibitions</a>
+                    <a href="#">Experiential Spaces</a>
+                    <a href="#">Narrative Environments</a>
+                </div>
+            </div>
+            <div class="filter-item" onclick="this.classList.toggle('active')">
+                <button class="filter-btn">Luxury Residential</button>
+                <div class="sector-subcats">
+                    <a href="#">Private Villa</a>
+                    <a href="#">Private Apartment</a>
+                    <a href="#">Show Residence</a>
+                </div>
+            </div>
+            <div class="filter-item" onclick="this.classList.toggle('active')">
+                <button class="filter-btn">Workplace Environments</button>
+                <div class="sector-subcats">
+                    <a href="#">Headquarters</a>
+                    <a href="#">Office Spaces</a>
+                    <a href="#">Executive Spaces</a>
+                </div>
+            </div>
+            <div class="filter-item" onclick="this.classList.toggle('active')">
+                <button class="filter-btn">Events & Activations</button>
+                <div class="sector-subcats">
+                    <a href="#">Launch Events</a>
+                    <a href="#">Brand Activations</a>
+                    <a href="#">Product Launches</a>
+                    <a href="#">360 Campaigns</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WORK ARCHIVE LIST -->
+    <main class="work-list">
+
+        <!-- PROJECT 1: CHARLES ZUBER -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7T8HNYClf9o35l_1767822320638-68b9fda3d3360d1be019bf0a_cz-btq1.jpg?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Luxury Retail</div>
+                <div class="work-submeta">Flagship & Boutique</div>
+                <div class="work-title">CHARLES ZUBER</div>
+                <div class="work-truth">An intimate, architectural boutique experience shielding high-value transaction
+                    zones.</div>
+            </div>
+        </a>
+
+        <!-- PROJECT 2: Emovation LAB -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7UIXNYClf9o36O_1767822368042-68b43f6ed2164e10c0482b24_48.png?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Immersive Experiences</div>
+                <div class="work-submeta">Experiential Spaces</div>
+                <div class="work-title">Emovation LAB</div>
+                <div class="work-truth">A multi-sensory innovation hub designed to trigger emotional spatial responses.
+                </div>
+            </div>
+        </a>
+
+        <!-- PROJECT 3: Private Office -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7UzXNYClf9o38V_1767822539515-68b41e102211f56f5ca98a8b_1.png?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Workplace Environments</div>
+                <div class="work-submeta">Executive Spaces</div>
+                <div class="work-title">Private Office</div>
+                <div class="work-truth">An ultra-discreet, sensory-rich workplace crafted for high-level operations.
+                </div>
+            </div>
+        </a>
+
+        <!-- PROJECT 4: MHG Headquarter -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7UuXNYClf9o38G_1767822519310-68b53b05fd3c36b689bef0c1_77.png?auto=format%2Ccompress&rect=0%2C0%2C1792%2C1007&w=1792&h=1007');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Workplace Environments</div>
+                <div class="work-submeta">Headquarters</div>
+                <div class="work-title">MHG Headquarter</div>
+                <div class="work-truth">A layered corporate environment balancing operational flow with brand prestige.
+                </div>
+            </div>
+        </a>
+
+        <!-- PROJECT 5: Hind Aloud Flagship Store -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7UinNYClf9o37j_1767822474537-68b324a4dd6358872966e401_01-Final.jpg?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Luxury Retail</div>
+                <div class="work-submeta">Flagship & Boutique</div>
+                <div class="work-title">Hind Aloud Flagship Store</div>
+                <div class="work-truth">A benchmark luxury perfume retail space blending stark materiality with
+                    olfactory interaction.</div>
+            </div>
+        </a>
+
+        <!-- PROJECT 6: Dubai Design Week 2024 -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7UCHNYClf9o356_1767822344356-68b3071eba88460ab6579622_1730803542137.jpeg?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Immersive Experiences</div>
+                <div class="work-submeta">Exhibitions</div>
+                <div class="work-title">Dubai Design Week 2024</div>
+                <div class="work-truth">A temporary narrative environment challenging traditional exhibition design
+                    norms.</div>
+            </div>
+        </a>
+
+        <!-- PROJECT 7: ANA Restaurant -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7Tr3NYClf9o34o_1767822254743-68b9ec619df97f69f019b8dd_ANA.jpg?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Hospitality</div>
+                <div class="work-submeta">Restaurant</div>
+                <div class="work-title">ANA Restaurant</div>
+                <div class="work-truth">An immersive journey translating traditional Emirati hospitality into a
+                    commercial footprint.</div>
+            </div>
+        </a>
+
+        <!-- PROJECT 8: HOB Department Store -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7UZ3NYClf9o37C_1767822437517-68b4b94e6e3ee6fe5461e522__MG_3610.jpg?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Luxury Retail</div>
+                <div class="work-submeta">Flagship & Boutique</div>
+                <div class="work-title">HOB Department Store</div>
+                <div class="work-truth">A multi-brand retail environment orchestrating varied identities within a
+                    unified framework.</div>
+            </div>
+        </a>
+
+        <!-- PROJECT 9: CUD Auditorium -->
+        <a href="#" class="work-row">
+            <div class="work-img"
+                style="background-image: url('https://images.prismic.io/rima/aV7T-nNYClf9o35t_1767822330414-68b33794a392231854193c7a_2404_AUDITORIUM_CUD_DXB_05.jpg?auto=format,compress');">
+            </div>
+            <div class="work-info">
+                <div class="work-meta">Immersive Experiences</div>
+                <div class="work-submeta">Experiential Spaces</div>
+                <div class="work-title">CUD Auditorium</div>
+                <div class="work-truth">An acoustic-driven assembly space prioritizing clear sightlines and elevated
+                    materiality.</div>
+            </div>
+        </a>
+
+    </main>
+
+    <!-- CLOSE SEC -->
+    <div class="sec-close" id="connect">
+        <div class="close-h">Space is felt <strong>before it is seen.</strong></div>
+        <div class="close-p">If you are building an environment that needs to be more than designed — let's
+            talk.
+        </div>
+        <a href="mailto:connect@rimaalshoufi.com" class="btn-cta"><span>Connect</span> <i>→</i></a>
+    </div>
+
+    <footer>
+        <div class="f-logo">RIMA <span>ALSHOUFI</span></div>
+        <div class="f-links">
+            <a href="work.html">Work</a><a href="homepage_preview.html#about">About</a><a href="#connect">Connect</a>
+        </div>
+        <div class="f-copy">Spatial Experience Designer · Dubai, UAE · © 2026</div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

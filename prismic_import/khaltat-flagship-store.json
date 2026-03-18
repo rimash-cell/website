@@ -1,0 +1,37 @@
+{
+  "type": "work",
+  "uid": "khaltat-flagship-store",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Khaltat Flagship Store",
+        "spans": []
+      }
+    ],
+    "category": "Other",
+    "client": "Khaltat",
+    "year": "2024",
+    "location": "GCC",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    }
+  }
+}

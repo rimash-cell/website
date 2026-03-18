@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Rima Alshoufi</title>
+    <meta name="description" content="Get in touch with Rima Alshoufi — Spatial Experience Designer based in Dubai.">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: var(--ow);
+            color: var(--bk);
+        }
+
+        /* NAV */
+        .connect-nav a {
+            color: var(--bk);
+            text-shadow: none;
+            opacity: 0.5;
+        }
+
+        .connect-nav a:hover,
+        .connect-nav a.active {
+            opacity: 1;
+        }
+
+        .connect-nav .logo {
+            color: var(--bk);
+            text-shadow: none;
+        }
+
+        /* PAGE LAYOUT — two-column split */
+        .connect-shell {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        /* LEFT — identity panel */
+        .connect-left {
+            padding: 160px var(--px) 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-right: 0.5px solid rgba(0,0,0,0.06);
+        }
+
+        .connect-eyebrow {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--sd);
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .connect-heading {
+            font-size: clamp(48px, 6vw, 88px);
+            font-weight: 200;
+            letter-spacing: -0.03em;
+            line-height: 0.95;
+            color: var(--bk);
+            margin: 0 0 40px;
+        }
+
+        .connect-line {
+            font-size: clamp(15px, 1.6vw, 18px);
+            font-weight: 300;
+            line-height: 1.7;
+            color: rgba(0,0,0,0.5);
+            max-width: 380px;
+            margin-bottom: 64px;
+        }
+
+        .connect-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .connect-meta-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .connect-meta-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(0,0,0,0.35);
+        }
+
+        .connect-meta-value {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--bk);
+        }
+
+        .connect-meta-value a {
+            color: var(--bk);
+            text-decoration: none;
+            border-bottom: 0.5px solid rgba(0,0,0,0.15);
+            padding-bottom: 1px;
+            transition: border-color 0.3s, opacity 0.3s;
+        }
+
+        .connect-meta-value a:hover {
+            border-color: var(--bk);
+            opacity: 0.7;
+        }
+
+        /* RIGHT — form panel */
+        .connect-right {
+            padding: 160px var(--px) 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-label-top {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--sd);
+            margin-bottom: 48px;
+            display: block;
+        }
+
+        .minimal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+
+        .f-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .f-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .f-lbl {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(0,0,0,0.35);
+        }
+
+        .f-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 0.5px solid rgba(0,0,0,0.12);
+            padding: 10px 0 14px;
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--bk);
+            transition: border-color 0.3s;
+        }
+
+        .f-input:focus {
+            outline: none;
+            border-bottom-color: var(--bk);
+        }
+
+        .f-input::placeholder {
+            color: rgba(0,0,0,0.18);
+        }
+
+        textarea.f-input {
+            resize: none;
+            min-height: 90px;
+        }
+
+        select.f-input {
+            cursor: pointer;
+            appearance: none;
+            border-radius: 0;
+            color: rgba(0,0,0,0.4);
+        }
+
+        select.f-input:focus {
+            color: var(--bk);
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .expectation-text {
+            font-size: 12px;
+            font-weight: 300;
+            color: rgba(0,0,0,0.35);
+        }
+
+        .btn-send {
+            background: transparent;
+            border: none;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            color: var(--bk);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .btn-send span {
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn-send span::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 0.5px;
+            background: var(--bk);
+            transform: scaleX(0.15);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.19,1,0.22,1);
+            opacity: 0.4;
+        }
+
+        .btn-send:hover span::after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        .btn-send i {
+            font-style: normal;
+            transition: transform 0.4s ease;
+        }
+
+        .btn-send:hover i {
+            transform: translateX(6px);
+        }
+
+        /* CONFIRM STATE */
+        .confirm-state {
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+            padding: 40px 0;
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        .confirm-state h2 {
+            font-size: clamp(28px, 3vw, 40px);
+            font-weight: 200;
+            letter-spacing: -0.02em;
+            color: var(--bk);
+        }
+
+        .confirm-state p {
+            font-size: 14px;
+            font-weight: 300;
+            color: rgba(0,0,0,0.45);
+            line-height: 1.7;
+            max-width: 360px;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 860px) {
+            .connect-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .connect-left {
+                border-right: none;
+                border-bottom: 0.5px solid rgba(0,0,0,0.06);
+                padding: 140px var(--px) 56px;
+                gap: 48px;
+            }
+
+            .connect-right {
+                padding: 56px var(--px) 80px;
+            }
+
+            .f-row {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .connect-left, .connect-right {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="main-nav" class="connect-nav">
+        <a href="index.html" class="logo">RIMA <span>ALSHOUFI</span></a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="work.html">Work</a>
+            <a href="connect.html" class="cta active"><span>Connect</span></a>
+        </div>
+    </nav>
+
+    <div class="connect-shell">
+
+        <!-- LEFT: Identity -->
+        <div class="connect-left">
+            <div>
+                <span class="connect-eyebrow">Connect</span>
+                <h1 class="connect-heading">Let's build<br>something<br>felt.</h1>
+                <p class="connect-line">
+                    Whether you are opening a flagship, designing a hospitality experience,
+                    or building an environment that needs to say something — I'd like to hear about it.
+                </p>
+            </div>
+
+            <div class="connect-meta">
+                <div class="connect-meta-row">
+                    <span class="connect-meta-label">Location</span>
+                    <span class="connect-meta-value">Dubai, UAE</span>
+                </div>
+                <div class="connect-meta-row">
+                    <span class="connect-meta-label">LinkedIn</span>
+                    <span class="connect-meta-value">
+                        <a href="https://www.linkedin.com/in/rima-alshoufi-46962628b/" target="_blank" rel="noopener">
+                            linkedin.com/in/rima-alshoufi
+                        </a>
+                    </span>
+                </div>
+                <div class="connect-meta-row">
+                    <span class="connect-meta-label">Response</span>
+                    <span class="connect-meta-value">Within a few business days</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="connect-right">
+            <div id="form-container">
+                <span class="form-label-top">Send a message</span>
+
+                <form class="minimal-form" id="connect-form" onsubmit="handleFormSubmit(event)">
+                    <div class="f-row">
+                        <div class="f-group">
+                            <label class="f-lbl" for="name">Name</label>
+                            <input class="f-input" type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="f-group">
+                            <label class="f-lbl" for="email">Email</label>
+                            <input class="f-input" type="email" id="email" placeholder="Your address" required>
+                        </div>
+                    </div>
+
+                    <div class="f-group">
+                        <label class="f-lbl" for="area">Area of interest</label>
+                        <select class="f-input" id="area">
+                            <option value="" disabled selected>Select a focus area…</option>
+                            <option value="luxury-retail">Luxury Retail</option>
+                            <option value="hospitality">Hospitality</option>
+                            <option value="immersive">Immersive Experiences</option>
+                            <option value="workplace">Workplace Environments</option>
+                            <option value="events">Events &amp; Activations</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="f-group">
+                        <label class="f-lbl" for="message">Message</label>
+                        <textarea class="f-input" id="message" placeholder="What are we building?" required></textarea>
+                    </div>
+
+                    <div class="form-footer">
+                        <span class="expectation-text">Replies within a few business days</span>
+                        <button type="submit" class="btn-send"><span>Send</span> <i>→</i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="confirm-state" class="confirm-state">
+                <h2>Thank you.</h2>
+                <p>Your message has been received. I will review the details and follow up with you shortly.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="f-logo">RIMA <span>ALSHOUFI</span></div>
+        <div class="f-links">
+            <a href="index.html#about">About</a>
+            <a href="work.html">Work</a>
+            <a href="connect.html" class="active">Connect</a>
+        </div>
+        <div class="f-copy">Spatial Experience Designer · Dubai, UAE · © 2026</div>
+    </footer>
+
+    <script>
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('form-container').style.display = 'none';
+            const cs = document.getElementById('confirm-state');
+            cs.style.display = 'flex';
+        }
+    </script>
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

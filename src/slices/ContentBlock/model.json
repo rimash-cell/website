@@ -1,0 +1,25 @@
+{
+    "id": "content_block",
+    "type": "SharedSlice",
+    "name": "ContentBlock",
+    "description": "Rich text content block",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Rich Text",
+            "primary": {
+                "content": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "Content",
+                        "multi": "paragraph,em,strong,heading2,heading3,hyperlink,list-item,o-list-item"
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

@@ -1,0 +1,166 @@
+{
+  "type": "work",
+  "uid": "pink-october---hao-awareness-campaign",
+  "lang": "en-us",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "The Pink Emotions",
+        "spans": []
+      }
+    ],
+    "category": "exhibitions-activations",
+    "client": "",
+    "year": "",
+    "location": "",
+    "intro": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ],
+    "main_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "preview_image": {
+      "origin": {
+        "url": ""
+      },
+      "url": ""
+    },
+    "slices": [
+      {
+        "slice_type": "content_block",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {
+          "content": [
+            {
+              "type": "heading2",
+              "text": "A Journey Through Emotions",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "“The Pink Emotions” campaign was launched during Breast Cancer Awareness Month, reimagining awareness as an emotional journey. Instead of relying on symbolic pink visuals alone, the concept translated the stages of a woman’s healing process — discovery, empowerment, healing, and renewal — into a multi-sensory narrative across digital, retail, and live experiences.",
+              "spans": []
+            }
+          ]
+        },
+        "items": []
+      },
+      {
+        "slice_type": "image_gallery",
+        "slice_label": null,
+        "variation": "default",
+        "primary": {},
+        "items": [
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43874d49e132a52fb4f_3.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43874d49e132a52fb4f_3.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438076ffbdecaaf17ae_4.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438076ffbdecaaf17ae_4.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4382fd0e2918920851a_5.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4382fd0e2918920851a_5.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43885c628d4388e86ce_6.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43885c628d4388e86ce_6.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438e8a7c316afb4db4e_20.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa438e8a7c316afb4db4e_20.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4384baa518096c4b1b9_21.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa4384baa518096c4b1b9_21.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43875001b388281f6b7_22.png"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68baa43875001b388281f6b7_22.png"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924baa518096c9a099_WhatsApp%20Image%202023-09-05%20at%204.09.09%20PM.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924baa518096c9a099_WhatsApp%20Image%202023-09-05%20at%204.09.09%20PM.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2928094c8a92aed1c83_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM%20(1).jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2928094c8a92aed1c83_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM%20(1).jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2926417ecb906fcdc78_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2926417ecb906fcdc78_WhatsApp%20Image%202023-09-21%20at%201.09.00%20PM.jpeg"
+            },
+            "caption": ""
+          },
+          {
+            "image": {
+              "origin": {
+                "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924491df99d17a3196_WhatsApp%20Image%202023-09-22%20at%209.31.57%20AM.jpeg"
+              },
+              "url": "https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68bab2924491df99d17a3196_WhatsApp%20Image%202023-09-22%20at%209.31.57%20AM.jpeg"
+            },
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  }
+}

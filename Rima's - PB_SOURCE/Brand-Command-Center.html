@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Command Center — Rima Alshoufi</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0a;--ow:#f7f5f2;--ww:#faf9f7;--bronze:#b87333;--gray:#666;--sand:#c8c2b8;--ls:#e8e4df;--hl:0.5px solid #c8c2b8;--sw:260px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--ow);color:var(--black);-webkit-font-smoothing:antialiased;display:flex;min-height:100vh}
+#sb{width:var(--sw);min-height:100vh;background:var(--black);position:fixed;top:0;left:0;display:flex;flex-direction:column;padding:48px 32px;z-index:100;overflow-y:auto}
+.sb-brand span:first-child{font-weight:900;font-size:20px;text-transform:uppercase;letter-spacing:-.5px;color:#fff;display:block}
+.sb-brand span:last-child{font-weight:200;font-size:20px;text-transform:uppercase;color:var(--bronze);display:block;margin-top:-3px}
+.sb-role{font-size:9px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-top:8px}
+.sb-nav{margin-top:48px;flex:1}
+.nav-section{font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.2);margin:28px 0 8px}
+.sb-nav a{display:block;font-size:10px;font-weight:500;letter-spacing:.5px;color:rgba(255,255,255,.4);text-decoration:none;text-transform:uppercase;padding:7px 0;border-bottom:.5px solid rgba(255,255,255,.05);transition:color .2s}
+.sb-nav a:hover,.sb-nav a.active{color:#fff}
+.sb-nav a.top{font-weight:700;font-size:11px;color:rgba(255,255,255,.65);letter-spacing:1px;border-color:rgba(255,255,255,.1)}
+.sb-nav a.top:hover,.sb-nav a.top.active{color:var(--bronze)}
+.sb-foot{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,.15);text-transform:uppercase;margin-top:32px;padding-top:24px;border-top:.5px solid rgba(255,255,255,.08)}
+main{margin-left:var(--sw);flex:1;min-width:0}
+.sec{padding:72px 64px;border-bottom:1px solid var(--ls)}
+.sec:nth-child(odd){background:var(--ow)}.sec:nth-child(even){background:var(--ww)}
+.sec-hd{margin-bottom:56px;padding-bottom:20px;border-bottom:var(--hl);display:flex;justify-content:space-between;align-items:flex-end}
+.sec-num{font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--bronze);display:block;margin-bottom:6px}
+.sec-title{font-weight:800;font-size:32px;letter-spacing:-1px;text-transform:uppercase}
+.sec-desc{font-size:11px;font-weight:300;color:var(--gray);letter-spacing:.5px;max-width:320px;text-align:right;line-height:1.7}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr 1fr}
+.full{grid-column:1/-1}
+.card{background:#fff;border:var(--hl);padding:32px;min-width:0}
+.lbl{font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.lbl::after{content:'';flex:1;height:.5px;background:var(--sand)}
+.card p{font-size:13px;font-weight:300;color:var(--gray);line-height:1.75}
+.card ul{list-style:none;margin-top:4px}
+.card ul li{font-size:12px;font-weight:300;color:var(--gray);line-height:1.6;padding:5px 0;border-bottom:.5px solid var(--ls)}
+.card ul li:last-child{border:none}
+.card ul li b{font-weight:700;color:var(--black)}
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{font-weight:700;font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:10px 14px;background:rgba(0,0,0,.025);border-bottom:1px solid var(--ls);text-align:left}
+.tbl td{padding:12px 14px;border-bottom:.5px solid var(--ls);vertical-align:top;font-weight:300;color:var(--gray);line-height:1.6}
+.tbl td:first-child{font-weight:700;color:var(--black);min-width:140px}
+.tbl tr:last-child td{border:none}
+.qblock{background:var(--black);padding:44px 52px;grid-column:1/-1}
+.qblock blockquote{font-weight:200;font-size:20px;color:#fff;line-height:1.45}
+.qblock cite{display:block;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--bronze);margin-top:16px;font-style:normal;font-weight:500}
+.swatch-row{display:flex;gap:14px;flex-wrap:wrap}
+.sw{flex:1;min-width:100px}.sw-c{height:64px;border:var(--hl)}
+.sw-name{font-weight:700;font-size:10px;text-transform:uppercase;margin-top:6px}
+.sw-hex{font-weight:300;font-size:10px;color:var(--gray);letter-spacing:1px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{border:var(--hl);padding:3px 10px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.tag.b{border-color:var(--bronze);color:var(--bronze)}
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.do-c,.dn-c{padding:20px}
+.do-c{border-right:.5px solid var(--ls)}
+.do-c h4{font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3d7a55;margin-bottom:10px}
+.dn-c h4{font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#8b3a3a;margin-bottom:10px}
+.do-c li,.dn-c li{font-size:12px;font-weight:300;color:var(--gray);padding:5px 0;border-bottom:.5px solid var(--ls);list-style:none;line-height:1.5}
+.do-c li:last-child,.dn-c li:last-child{border:none}
+.do-c li::before{content:'+ ';color:#3d7a55;font-weight:700}
+.dn-c li::before{content:'- ';color:#8b3a3a;font-weight:700}
+.krow{display:flex;gap:14px}
+.kpi{flex:1;border:var(--hl);padding:20px;text-align:center;background:var(--ow)}
+.kpi-v{font-weight:900;font-size:26px;letter-spacing:-1px;display:block}
+.kpi-l{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-top:3px}
+.step{display:flex;align-items:flex-start;justify-content:space-between;padding:16px 22px;border:var(--hl);border-bottom:none;background:var(--ow);transition:background .2s;gap:16px}
+.step:last-child{border-bottom:var(--hl)}
+.step:hover{background:#fff;border-left:2px solid var(--bronze)}
+.step h4{font-weight:800;font-size:12px;text-transform:uppercase}
+.step p{font-size:11px;font-weight:300;color:var(--gray);margin-top:2px}
+.step-r{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);white-space:nowrap;padding-top:2px}
+.method-row{display:grid;grid-template-columns:repeat(7,1fr);border-top:var(--hl);border-left:var(--hl)}
+.mstep{padding:14px;border-right:var(--hl);border-bottom:var(--hl)}
+.mstep-n{font-weight:900;font-size:16px;color:var(--bronze);opacity:.25;line-height:1;margin-bottom:5px}
+.mstep-t{font-weight:800;font-size:9px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.mstep-q{font-size:10px;font-weight:300;color:var(--gray);line-height:1.4;margin-bottom:5px;font-style:italic}
+.mstep-o{font-size:9px;font-weight:600;color:var(--bronze)}
+.arch-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:var(--hl);border-left:var(--hl)}
+.arch-item{padding:20px;border-right:var(--hl);border-bottom:var(--hl)}
+.arch-w{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:4px}
+.arch-t{font-weight:800;font-size:12px;text-transform:uppercase;margin-bottom:6px}
+.arch-d{font-size:11px;font-weight:300;color:var(--gray);line-height:1.5}
+.chan-block{border:var(--hl);padding:22px;background:var(--ow);min-width:0}
+.chan-name{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.chan-role{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;display:block}
+.chan-block p,.chan-block li{font-size:12px;font-weight:300;color:var(--gray);line-height:1.65}
+.chan-block ul{list-style:none;margin-top:8px}
+.chan-block ul li::before{content:'— ';color:var(--bronze)}
+.sub-hd{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--black);margin:32px 0 12px;padding-bottom:8px;border-bottom:var(--hl)}
+@media(max-width:1100px){:root{--sw:0px}#sb{display:none}main{margin-left:0}.sec{padding:40px 24px}.g2,.g3{grid-template-columns:1fr}.dd{grid-template-columns:1fr}.do-c{border-right:none;border-bottom:.5px solid var(--ls)}.method-row{grid-template-columns:1fr 1fr}.arch-row{grid-template-columns:1fr 1fr}.sec-hd{flex-direction:column;align-items:flex-start;gap:8px}.sec-desc{text-align:left;max-width:100%}.krow{flex-wrap:wrap}}
+</style></head>
+<body>
+<aside id="sb">
+<div>
+<div class="sb-brand"><span>RIMA</span><span>ALSHOUFI</span></div>
+<div class="sb-role">Brand Command Center</div>
+</div>
+<nav class="sb-nav">
+<div class="nav-section">Master Brand</div>
+<a href="#mb" class="top">01 — Master Brand</a>
+<a href="#mb-foundation">Foundation</a>
+<a href="#mb-positioning">Positioning</a>
+<a href="#mb-method">SED Method</a>
+<a href="#mb-capabilities">Capabilities</a>
+<a href="#mb-offers">Offer Architecture</a>
+<a href="#mb-audience">Audience</a>
+<a href="#mb-personality">Personality &amp; Archetypes</a>
+<a href="#mb-roadmap">30-60-90 Roadmap</a>
+<div class="nav-section">Playbook</div>
+<a href="#pb" class="top">02 — Brand Playbook</a>
+<a href="#pb-voice">Voice Rules</a>
+<a href="#pb-ai">AI Voice Guide</a>
+<a href="#pb-channel">Channel Tone</a>
+<a href="#pb-messaging">Messaging</a>
+<a href="#pb-content">Content System</a>
+<a href="#pb-bios">Bios &amp; Taglines</a>
+<div class="nav-section">Guidelines</div>
+<a href="#gl" class="top">03 — Brand Guidelines</a>
+<a href="#gl-visual">Visual Standards</a>
+<a href="#gl-verbal">Verbal Standards</a>
+<div class="nav-section">Brand OS</div>
+<a href="#os" class="top">04 — Brand OS</a>
+<a href="#os-goals">Goals &amp; KPIs</a>
+<a href="#os-ops">Operations</a>
+<a href="#os-decisions">Decision Rules</a>
+<a href="#os-scale">Scale Logic</a>
+</nav>
+<div class="sb-foot">V2.0 · Feb 2026 · Confidential · MB R1 Source</div>
+</aside>
+<main>
+<!-- ═══════════ SECTION 01: MASTER BRAND -->
+<section class="sec" id="mb">
+<div class="sec-hd">
+<div><span class="sec-num">01</span><h2 class="sec-title">Master Brand</h2></div>
+<p class="sec-desc">Who the brand is — the single source of truth for all brand decisions.</p>
+</div>
+
+<div id="mb-foundation" class="sub-hd">Brand Foundation</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Brand Essence</div>
+<p>Emotion-led spatial intelligence. Sensory precision. Narrative-driven environments. Calm authority. Founder-level creative direction.</p>
+</div>
+<div class="card">
+<div class="lbl">Identity Statement</div>
+<p>Rima Alshoufi designs how people experience physical space — shaping identity, emotion, and narrative into luxury, cultural, hospitality, corporate, and residential environments that are felt long after they are left.</p>
+</div>
+<div class="card">
+<div class="lbl">Purpose</div>
+<p>To design the invisible architecture of physical experience — the sensory, emotional, and behavioral layer that turns a designed space into a felt one. To make environments that people carry with them when they leave.</p>
+</div>
+<div class="card">
+<div class="lbl">Vision</div>
+<p>To define what Spatial Experience Design means in the GCC and set the global standard for the discipline. Operating from a position 10 years ahead of where the market currently sits.</p>
+</div>
+<div class="card full">
+<div class="lbl">Credentials &amp; Authority</div>
+<table class="tbl">
+<tr><td>MBA — Luxury Management</td><td>Sup de Luxe (Founded by Cartier) · Paris, France · 2023–2024</td></tr>
+<tr><td>BA — Interior Architecture</td><td>Damascus University · 2009–2013</td></tr>
+<tr><td>UAE Golden Visa</td><td>Creative Category</td></tr>
+<tr><td>Inside LVMH Certificate</td><td>Brand Experience &amp; Innovation</td></tr>
+<tr><td>Design Jury Member</td><td>Sup de Luxe, Paris · 2025</td></tr>
+<tr><td>48H de la Créativité — Winner</td><td>Franco-Syrian · 2010</td></tr>
+<tr><td>Experience</td><td>13+ years across luxury, hospitality, cultural, and corporate environments in the GCC and Europe</td></tr>
+<tr><td>Language</td><td>Bilingual: English and Arabic. Fluent in GCC and European luxury market contexts.</td></tr>
+</table>
+</div>
+</div>
+
+<div id="mb-positioning" class="sub-hd">Positioning</div>
+<div class="grid g2">
+<div class="qblock">
+<blockquote>"Not how it looks — how it makes them feel."</blockquote>
+<cite>Master Tagline · Rima Alshoufi · MB R1</cite>
+</div>
+<div class="card full">
+<div class="lbl">Three Positioning Pillars</div>
+<table class="tbl">
+<tr><td>Spatial Experience Design</td><td>Designing the full sensory, emotional, and behavioral experience of a physical environment — not its decoration.</td></tr>
+<tr><td>Creative Direction for Environments</td><td>Leading the vision, narrative, and experiential strategy of spaces from concept through execution.</td></tr>
+<tr><td>Sensory &amp; Atmospheric Intelligence</td><td>Designing what a space feels, sounds, and breathes like — the invisible architecture.</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Sectors Served</div>
+<ul>
+<li><b>Luxury:</b> Flagship retail, luxury brand environments, high-end boutiques</li>
+<li><b>Cultural &amp; Exhibition:</b> Museums, cultural institutions, curated exhibition experiences</li>
+<li><b>Hospitality:</b> Hotels, F&amp;B, resort environments — full atmosphere design</li>
+<li><b>High-End Residential:</b> Private residences designed around how the resident wants to feel</li>
+<li><b>Experiential Events &amp; Installations:</b> Immersive activations, brand events, sensory installations</li>
+<li><b>Corporate &amp; Workplace:</b> HQ, executive offices, corporate campuses — experience-led, not fit-out</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Anti-Positioning — What I Am Not</div>
+<ul>
+<li><b>Not an interior decorator:</b> Not concerned with style trends or decorative choices</li>
+<li><b>Not a fit-out contractor:</b> Does not manage procurement and FF&amp;E as primary scope</li>
+<li><b>Not a stager or stylist:</b> Not making existing spaces look better for photography</li>
+<li><b>Not a digital UX designer:</b> "Experience" is grounded in physical, sensory space only</li>
+<li><b>Not a generalist agency:</b> Branding, social, and marketing are not core services</li>
+<li><b>Interior Architect:</b> Secondary descriptor only — for CV, technical, or registration contexts</li>
+</ul>
+</div>
+</div>
+
+<div id="mb-method" class="sub-hd">The Spatial Experience Method (SEM)</div>
+<div class="card full">
+<div class="lbl">Identity → Narrative → Spatial Concept → Sensory Spec → Choreography → Atmosphere → Memory</div>
+<div class="method-row">
+<div class="mstep"><div class="mstep-n">01</div><div class="mstep-t">Identity</div><div class="mstep-q">Who is this for? What is the core truth?</div><div class="mstep-o">Identity &amp; vision brief</div></div>
+<div class="mstep"><div class="mstep-n">02</div><div class="mstep-t">Narrative</div><div class="mstep-q">What story must this space tell?</div><div class="mstep-o">Conceptual narrative</div></div>
+<div class="mstep"><div class="mstep-n">03</div><div class="mstep-t">Spatial Concept</div><div class="mstep-q">How does narrative become architecture, material, and sequence?</div><div class="mstep-o">Spatial concept &amp; flow</div></div>
+<div class="mstep"><div class="mstep-n">04</div><div class="mstep-t">Sensory Spec</div><div class="mstep-q">What does this space feel, sound, smell, and breathe like?</div><div class="mstep-o">Full sensory specification</div></div>
+<div class="mstep"><div class="mstep-n">05</div><div class="mstep-t">Choreography</div><div class="mstep-q">How will people move, pause, discover, and interact?</div><div class="mstep-o">Movement &amp; experience map</div></div>
+<div class="mstep"><div class="mstep-n">06</div><div class="mstep-t">Atmosphere</div><div class="mstep-q">What is the ambient emotional field of this space?</div><div class="mstep-o">Atmosphere direction</div></div>
+<div class="mstep"><div class="mstep-n">07</div><div class="mstep-t">Memory</div><div class="mstep-q">What will they remember in 10 years?</div><div class="mstep-o">Signature experiential moment</div></div>
+</div>
+</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Case Study Framework</div>
+<ul>
+<li><b>1. Identity Truth:</b> The core, immutable truth of the client or vision. Always first. One sentence.</li>
+<li><b>2. Narrative Core:</b> What story must live inside this space?</li>
+<li><b>3. Spatial Translation:</b> How does narrative become architecture, material, and sequence?</li>
+<li><b>4. Sensory Specification:</b> What does this space feel, sound, smell, and move like?</li>
+<li><b>5. Experience Outcome:</b> What does a person remember six months after leaving?</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Core Values</div>
+<ul>
+<li><b>Precision:</b> Every detail deliberate. Nothing accidental.</li>
+<li><b>Depth:</b> Works at the level of concept and emotion — not style trends.</li>
+<li><b>Restraint:</b> Knows what to leave out. Silence is as designed as presence.</li>
+<li><b>Confidence:</b> Speaks with authority. Does not hedge.</li>
+<li><b>Cultural Intelligence:</b> Fluent in GCC luxury standards and European sensibility.</li>
+<li><b>Vision:</b> Operates from a position 10 years ahead of the market.</li>
+</ul>
+</div>
+</div>
+
+<div id="mb-capabilities" class="sub-hd">Core Capabilities</div>
+<div class="card full">
+<div class="lbl">Eight Disciplines of Spatial Intelligence</div>
+<table class="tbl">
+<tr><td>Spatial Experience Design</td><td>Full sensory, emotional, and behavioral design of physical environments — from identity brief through atmosphere delivery.</td></tr>
+<tr><td>Creative Direction</td><td>Leading the vision, narrative, and quality of complex multi-disciplinary projects across interior, content, product, and digital.</td></tr>
+<tr><td>Visual Merchandising</td><td>Translating brand narrative and spatial identity directly into the physical presentation layer — the point where product, environment, and customer behaviour converge. VM is not styling; it is the final act of brand storytelling in space.</td></tr>
+<tr><td>Campaign Storytelling (EN &amp; AR · 360°)</td><td>Conceiving and directing integrated creative campaigns in both English and Arabic — from spatial environments through to content, digital, and experiential activations. Bilingual narrative capability across GCC and global audiences.</td></tr>
+<tr><td>Sensory &amp; Atmospheric Specification</td><td>Defining the full sensory environment: light quality, material weight, acoustic texture, scent direction, and ambient field.</td></tr>
+<tr><td>Narrative-Led Spatial Choreography</td><td>Designing how people move, pause, discover, and respond — turning circulation into experience.</td></tr>
+<tr><td>Interior Architecture</td><td>Technical spatial foundation — space planning, structure, material systems, built delivery — used to underpin experiential vision.</td></tr>
+<tr><td>AI-Enhanced Visualization</td><td>Generative design and AI-driven concept visualization to accelerate decision-making and protect design intent.</td></tr>
+</table>
+</div>
+
+<div id="mb-offers" class="sub-hd">Offer Architecture</div>
+<div class="card full">
+<div class="lbl">Four-Level Offer Ladder</div>
+<div class="step"><div><h4>01 — Spatial Identity Session</h4><p>2–3 session deep-dive · For founders and developers · Experiential DNA defined before a single design decision is made</p></div><div class="step-r">Entry</div></div>
+<div class="step"><div><h4>02 — Spatial Experience Design</h4><p>Project-based · Hospitality, Cultural, Residential, Corporate · Full SED: narrative, concept, sensory spec, choreography, atmosphere</p></div><div class="step-r">Core</div></div>
+<div class="step"><div><h4>03 — Creative Direction Retainer</h4><p>Monthly · Studios, brands, developers · Ongoing spatial creative intelligence and experience quality control</p></div><div class="step-r">Growth</div></div>
+<div class="step"><div><h4>04 — Experiential Environment Design</h4><p>End-to-end, large-scale · Cultural, Hospitality, Experiential · Complete immersive environment from identity through installation</p></div><div class="step-r">Flagship</div></div>
+</div>
+
+<div id="mb-audience" class="sub-hd">Audience Architecture</div>
+<div class="card full">
+<div class="lbl">Target Audiences — The Gap They Feel</div>
+<table class="tbl">
+<thead><tr><th>Audience</th><th>What They're Missing</th><th>What Rima Delivers</th></tr></thead>
+<tbody>
+<tr><td>Luxury Founders</td><td>A space that looks expensive but doesn't feel like their brand</td><td>Spatial identity — an environment that is unmistakably theirs</td></tr>
+<tr><td>Cultural Institutions</td><td>Exhibitions that inform but don't move people</td><td>Spatial narrative — an experience visitors carry with them</td></tr>
+<tr><td>Hospitality Developers</td><td>Hotels and F&amp;B that are designed but not felt</td><td>Atmospheric intelligence — the invisible layer that makes a guest return</td></tr>
+<tr><td>HNW Residents</td><td>Beautiful homes with no emotional signature</td><td>Sensory environments built around how the resident wants to feel</td></tr>
+<tr><td>International Founders (GCC)</td><td>Spaces that feel imported, not rooted</td><td>Cultural-spatial translation — luxury that feels right here</td></tr>
+<tr><td>Experiential Developers</td><td>Retail and activations that entertain but don't endure</td><td>Experience systems that create memory, not just footfall</td></tr>
+<tr><td>Corporate Leaders</td><td>Offices that are efficient but carry no identity</td><td>Workplace environments where culture and ambition are translated into spatial atmosphere</td></tr>
+</tbody>
+</table>
+<p style="font-size:11px;color:var(--gray);margin-top:14px;font-style:italic;">Audience principle: These are not people looking for a designer. They are people who already have a designer — and something still doesn't feel right. Rima is the person who fixes what they can feel but can't name.</p>
+</div>
+
+<div id="mb-personality" class="sub-hd">Personality &amp; Archetypes</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Personality Traits</div>
+<ul>
+<li><b>Precision:</b> Every detail deliberate. Nothing accidental.</li>
+<li><b>Depth:</b> Works at the level of concept and emotion — not style trends.</li>
+<li><b>Restraint:</b> Knows what to leave out. Negative space is designed, not leftover.</li>
+<li><b>Confidence:</b> Speaks with authority. Does not hedge or apologize for a strong position.</li>
+<li><b>Warmth:</b> Beneath the premium exterior: deep understanding of the human condition.</li>
+<li><b>Vision:</b> Works from a position 10 years ahead of where the market sits.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">How Personality Shows Up</div>
+<ul>
+<li><b>In writing:</b> Measured. Precise. One powerful idea, not ten average ones.</li>
+<li><b>In design:</b> Intentional silence. Negative space is designed, not leftover.</li>
+<li><b>In client work:</b> Listens deeply, articulates clearly, leads with conviction.</li>
+<li><b>In content:</b> Every post, every case study earns the reader's time.</li>
+</ul>
+</div>
+<div class="card full">
+<div class="lbl">Brand Archetype Stack</div>
+<div class="arch-row">
+<div class="arch-item"><div class="arch-w">Primary</div><div class="arch-t">The Creator</div><div class="arch-d">Builds worlds, systems, and environments from vision. Originates. Does not decorate.</div></div>
+<div class="arch-item"><div class="arch-w">Secondary</div><div class="arch-t">The Ruler</div><div class="arch-d">Commands through clarity, precision, and executive-level creative direction.</div></div>
+<div class="arch-item"><div class="arch-w">Supporting</div><div class="arch-t">The Sage</div><div class="arch-d">Brings philosophical depth to spatial intelligence and sensory design.</div></div>
+<div class="arch-item"><div class="arch-w">Expressive</div><div class="arch-t">The Magician</div><div class="arch-d">Transforms invisible identity into visible, felt, remembered environment.</div></div>
+</div>
+<p style="font-size:11px;color:var(--gray);margin-top:14px;font-style:italic;">The Creator builds. The Ruler directs. The Sage grounds. The Magician transforms. Together: a Spatial Experience Designer who is both visionary and rigorous.</p>
+</div>
+</div>
+
+<div id="mb-roadmap" class="sub-hd">30-60-90 Day Roadmap</div>
+<div class="grid g3">
+<div class="card">
+<div class="lbl">Month 1 — Foundation &amp; Launch</div>
+<ul>
+<li><b>Identity Lock:</b> Finalize title, bio, one-liner, and signature language across all platforms</li>
+<li><b>Website Launch:</b> Go live with new portfolio — spatial language, narrative case studies</li>
+<li><b>LinkedIn Launch:</b> Formally transition profile to Spatial Experience Designer positioning</li>
+<li><b>LinkedIn Content:</b> Begin publishing 2–3× weekly — founder-level, SED content</li>
+<li><b>Case Study 1:</b> Produce flagship case study using the 5-part narrative framework</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Month 2 — Visibility &amp; Authority</div>
+<ul>
+<li><b>Content Authority:</b> Increase to 3× weekly. Thought leadership on SED in the GCC</li>
+<li><b>Case Studies 2 &amp; 3:</b> Show range: one hospitality, one cultural or residential</li>
+<li><b>GCC Outreach:</b> Direct outreach to luxury founders, developers, cultural institutions</li>
+<li><b>PR Activation:</b> Pitch regional design and culture press</li>
+<li><b>First Conversion:</b> Convert one qualified lead into a Spatial Identity Session</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Month 3 — Conversion &amp; Growth</div>
+<ul>
+<li><b>Live Project:</b> Activate first signature project for public portfolio</li>
+<li><b>Offer Launch:</b> Formally launch one packaged offer to market</li>
+<li><b>Ecosystem:</b> Build relationships with GCC contractors, suppliers, cultural connectors</li>
+<li><b>Speaking:</b> Submit to one GCC design event, panel, or design week</li>
+<li><b>Review:</b> Assess what's working. Update roadmap for months 4–6.</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<!-- ═══════════ SECTION 02: BRAND PLAYBOOK -->
+<section class="sec" id="pb">
+<div class="sec-hd">
+<div><span class="sec-num">02</span><h2 class="sec-title">Brand Playbook</h2></div>
+<p class="sec-desc">How the brand is expressed — the communication logic, voice system, and content engine.</p>
+</div>
+
+<div id="pb-voice" class="sub-hd">Voice Rules</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Voice Profile — Six Qualities</div>
+<table class="tbl">
+<tr><td>Calm</td><td>Never rushed. Space between ideas. Confidence without volume. No exclamation marks.</td></tr>
+<tr><td>Premium</td><td>Elevated, never generic. Every word chosen. No default adjectives.</td></tr>
+<tr><td>Spatial</td><td>Language rooted in physical environments — light, weight, texture, silence, atmosphere.</td></tr>
+<tr><td>Modern</td><td>Forward-looking, clean. Not nostalgic, not academic. No heritage clichés.</td></tr>
+<tr><td>Precise</td><td>Say it once, say it exactly right. Precision over decoration. Active over passive.</td></tr>
+<tr><td>Emotionally Grounded</td><td>Understands what people feel in space — and designs language the same way.</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Vocabulary — Use</div>
+<div class="tags">
+<span class="tag b">Atmosphere</span><span class="tag b">Spatial Identity</span><span class="tag b">Narrative</span><span class="tag b">Sequence</span><span class="tag b">Threshold</span><span class="tag b">Ritual</span><span class="tag b">Memory</span><span class="tag b">Choreography</span><span class="tag b">Sensory</span><span class="tag b">Identity Truth</span><span class="tag b">Invisible Architecture</span><span class="tag b">Atmospheric Intelligence</span><span class="tag b">Spatial Experience</span><span class="tag b">Felt</span><span class="tag b">Deliberate</span><span class="tag b">Presence</span>
+</div>
+<div class="lbl" style="margin-top:20px">Vocabulary — Avoid</div>
+<div class="tags">
+<span class="tag" style="text-decoration:line-through">Decor</span><span class="tag" style="text-decoration:line-through">Fit-out</span><span class="tag" style="text-decoration:line-through">Color scheme</span><span class="tag" style="text-decoration:line-through">Renovation</span><span class="tag" style="text-decoration:line-through">Passionate</span><span class="tag" style="text-decoration:line-through">World-class</span><span class="tag" style="text-decoration:line-through">Bespoke</span><span class="tag" style="text-decoration:line-through">Unique</span><span class="tag" style="text-decoration:line-through">Stunning</span><span class="tag" style="text-decoration:line-through">Synergies</span><span class="tag" style="text-decoration:line-through">User experience</span><span class="tag" style="text-decoration:line-through">Wireframe</span><span class="tag" style="text-decoration:line-through">Seamless</span>
+</div>
+</div>
+</div>
+
+<div id="pb-ai" class="sub-hd">AI Voice Guide — Precise Rules for AI-Generated Content</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Sentence Structure</div>
+<ul>
+<li><b>Short declarative sentences preferred.</b> One idea per sentence. Do not embed clauses inside clauses.</li>
+<li><b>Active voice always.</b> "I design the identity." Not: "The identity is designed by me."</li>
+<li><b>Lead verbs:</b> "I design," "I translate," "I define," "I protect." Not: "I offer," "I provide," "I specialize in."</li>
+<li><b>Avoid subordinate clauses</b> that dilute the main claim. Rephrase to a standalone sentence instead.</li>
+<li><b>No semicolons</b> in brand-facing copy. Use a full stop and new sentence.</li>
+<li><b>Em dashes permitted</b> for emphasis and rhythm — but no more than one per paragraph.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Paragraph Rhythm</div>
+<ul>
+<li><b>Opening line:</b> The observation or spatial truth — never a self-introduction.</li>
+<li><b>Middle:</b> The decision, trade-off, or method. One example. Specific, not general.</li>
+<li><b>Closing line:</b> A quiet, declarative statement. No call to action in editorial content.</li>
+<li><b>LinkedIn rhythm:</b> 3–4 short paragraphs maximum. Each paragraph: 1–2 sentences. One blank line between each.</li>
+<li><b>Website rhythm:</b> Longer sentences acceptable in case study prose. Still: one idea per sentence.</li>
+<li><b>No more than 4 sentences</b> per paragraph in any brand channel.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Preferred Phrasing Patterns</div>
+<ul>
+<li><b>Gap-first openings:</b> "The hotel was finished. The atmosphere was never designed."</li>
+<li><b>Declarative spatial observations:</b> "Space is felt before it is seen."</li>
+<li><b>The refusal:</b> "We removed the marble. It was reading 'hotel lobby.'"</li>
+<li><b>Identity Truth leads:</b> "This museum needed its visitors to feel the weight of what they were about to see — before they saw anything."</li>
+<li><b>No possessives for work:</b> Say "the environment" not "my environment"</li>
+<li><b>GCC/Europe tension phrasing:</b> "At GCC scale, beauty is abundant. Atmosphere is rare."</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Banned Phrases — Never Generate These</div>
+<ul>
+<li>"I am passionate about..." — Replace with a declarative claim</li>
+<li>"I specialize in..." — Replace with "I design / translate / direct..."</li>
+<li>"I offer..." / "I provide..." — Strip service language entirely</li>
+<li>"Masterful," "stunning," "unparalleled," "world-class" — No promotional adjectives</li>
+<li>"Seamless experience" / "Bespoke solutions" — Generic agency filler</li>
+<li>"User experience design" / "Digital touchpoints" / "Wireframe" — Incorrect domain</li>
+<li>"Workflow optimization" / "Synergies" — Corporate filler</li>
+<li>"How I..." / "Why I..." headline constructions — Too personal-brand-blog</li>
+<li>Starting a LinkedIn post with "I" — Begin with the spatial observation, never self</li>
+</ul>
+</div>
+<div class="card full">
+<div class="lbl">Structural Rules for AI Tools (Prompting Guide)</div>
+<p style="margin-bottom:12px">When using AI tools to generate content in Rima's voice, provide these constraints explicitly:</p>
+<table class="tbl">
+<thead><tr><th>Rule</th><th>What to Tell the AI</th></tr></thead>
+<tbody>
+<tr><td>Identity Truth first</td><td>"Begin every case study or project post with one sentence: the core reason this space exists. No material or design mention until this line is written."</td></tr>
+<tr><td>No promotional adjectives</td><td>"Replace all adjectives that praise the work with specific trade-offs and decisions. Show the decision, not the result."</td></tr>
+<tr><td>Spatial vocabulary only</td><td>"Use only vocabulary from this list: atmosphere, spatial identity, narrative, sequence, threshold, ritual, memory, choreography, sensory, felt. Do not use: decor, fit-out, color scheme, bespoke, seamless."</td></tr>
+<tr><td>Active, declarative</td><td>"Write in active voice. Short sentences. One idea per sentence. No subordinate clauses."</td></tr>
+<tr><td>The Material No</td><td>"For every material, texture, or light choice mentioned, include one thing that was refused or removed to protect the atmosphere."</td></tr>
+<tr><td>Name the Ritual</td><td>"Every case study must name the primary ritual intended for the user: the ritual of arrival, discovery, decompression, etc."</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="pb-channel" class="sub-hd">Channel Tone — Four Distinct Voices</div>
+<div class="grid g2">
+<div class="chan-block">
+<div class="chan-name">LinkedIn</div>
+<span class="chan-role">Strategic Authority · 3× / week · One CTA maximum / week</span>
+<p style="margin-bottom:10px"><b>Voice:</b> The Operator. Decision gates, trade-offs, and the GCC/Europe luxury tension. Thought leadership without self-promotion.</p>
+<ul>
+<li>Open with a spatial observation, never "I"</li>
+<li>3–4 short paragraphs. One blank line between each.</li>
+<li>One hard decision, trade-off, or refusal per post</li>
+<li>Close with a quiet declaration. No hashtag clusters.</li>
+<li>Reference GCC/Europe tension in at least 50% of posts</li>
+<li>Pillars: Decision Narratives (02) and Structural Leadership (04)</li>
+</ul>
+<p style="margin-top:12px;font-size:11px;color:var(--gray);font-style:italic;">Example opening: "The hospitality client had settled on a marble that looked exactly right. I had it removed."</p>
+</div>
+<div class="chan-block">
+<div class="chan-name">Website</div>
+<span class="chan-role">Editorial Atmosphere · Updated per project + quarterly</span>
+<p style="margin-bottom:10px"><b>Voice:</b> The Designer. High-impact atmosphere. Narrative case studies. Sensory outcomes preceded by Identity Truth.</p>
+<ul>
+<li>Every case study: Identity Truth first (one sentence)</li>
+<li>Longer sentences permitted in project prose — still one idea</li>
+<li>Name the primary ritual in every project description</li>
+<li>Include the sensory specification (light, material, sound, scent)</li>
+<li>End with the Memory: what a visitor carries six months later</li>
+<li>Pillars: Spatial Rituals (01) and Decision Narratives (02)</li>
+</ul>
+<p style="margin-top:12px;font-size:11px;color:var(--gray);font-style:italic;">Example opening: "Identity Truth: This museum needed its visitors to feel the weight of what they were about to see — before they saw anything."</p>
+</div>
+<div class="chan-block">
+<div class="chan-name">Proposals &amp; Client Documents</div>
+<span class="chan-role">Strategic Peer · On request · One CTA on final page only</span>
+<p style="margin-bottom:10px"><b>Voice:</b> The Architect. Precise, professional, and structured. Demonstrates method before deliverable. No portfolio sales language.</p>
+<ul>
+<li>Open with the client's gap — the thing they feel but can't name</li>
+<li>Present the SED Method overview before any scope or pricing</li>
+<li>Use case studies as proof of method, not as "past work"</li>
+<li>No promotional adjectives anywhere in a proposal document</li>
+<li>Recommendation singular: one approach, not options</li>
+<li>Close: "Working with Rima is not hiring a designer. It is choosing a creative director who will own the experience."</li>
+</ul>
+</div>
+<div class="chan-block">
+<div class="chan-name">Email</div>
+<span class="chan-role">Calm Precision · Direct, never performative</span>
+<p style="margin-bottom:10px"><b>Voice:</b> Calm, clear, brief. Email is for transactions and clarity — not for brand narrative or persuasion attempts.</p>
+<ul>
+<li>First line: state the purpose of the email directly</li>
+<li>No weather-check openers: "I hope this finds you well" — omit entirely</li>
+<li>Maximum 3 paragraphs. Each paragraph: 2–3 sentences.</li>
+<li>No exclamation marks. Full stops only.</li>
+<li>Signature: Name (Black 900 weight) · Role (Light 300) · Minimal links</li>
+<li>Do not repeat content already communicated in a previous email</li>
+</ul>
+</div>
+</div>
+
+<div id="pb-messaging" class="sub-hd">Messaging Framework</div>
+<div class="grid g2">
+<div class="card full">
+<div class="lbl">Messaging Pillars — Four Themes</div>
+<table class="tbl">
+<thead><tr><th>Pillar</th><th>Focus</th><th>Platform Home</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>01 — Spatial Rituals</td><td>What people do inside a space — and what it makes them feel. Sequential experience.</td><td>Website, Instagram (P2)</td><td>Reader perceives deep understanding of human behavior in space</td></tr>
+<tr><td>02 — Decision Narratives</td><td>Portfolio through the lens of trade-offs: what changed, what was protected.</td><td>LinkedIn, Portfolio</td><td>Reader trusts Rima to navigate complex project realities without losing vision</td></tr>
+<tr><td>03 — Luxury &amp; Cultural Codes</td><td>Taste as a series of decisions. Cultural intelligence: GCC vs Europe nuance.</td><td>LinkedIn, Website</td><td>Reader respects strategic aesthetic anchored in global cultural intelligence</td></tr>
+<tr><td>04 — Structural Leadership</td><td>Decision gates, constraints mapping, protecting the vision across a 12–24 month build.</td><td>LinkedIn, Portfolio</td><td>Reader sees a strategic peer who understands the machinery of delivery</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card full">
+<div class="lbl">Audience-Specific Messaging</div>
+<table class="tbl">
+<thead><tr><th>Audience</th><th>Lead With (The Gap)</th><th>The Promise</th></tr></thead>
+<tbody>
+<tr><td>Luxury Founders</td><td>"Your space is designed — but does it feel like you?"</td><td>I design the spatial identity of your brand — the version people walk into, feel, and remember.</td></tr>
+<tr><td>Hospitality Developers</td><td>"Your hotel is specified to the millimeter. But the atmosphere was never designed."</td><td>I design the invisible architecture — the sensory layer that turns a stay into a memory.</td></tr>
+<tr><td>Cultural Institutions</td><td>"Visitors are informed. They are not moved."</td><td>I translate cultural narrative into spatial sequence — turning visits into experiences.</td></tr>
+<tr><td>Corporate Leaders</td><td>"Your headquarters is finished. It doesn't feel like your company."</td><td>I design the spatial identity of your workplace — so your people feel what your brand stands for.</td></tr>
+<tr><td>HNW Residents</td><td>"Every surface is premium. But the space doesn't feel like yours."</td><td>I design sensory environments built entirely around how you want to feel inside your own home.</td></tr>
+<tr><td>GCC Market Entry</td><td>"Your brand works globally. But here, it feels imported."</td><td>I translate your identity into a spatial experience that feels rooted in this place, this culture.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Key Message Bank — Signature Lines</div>
+<ul>
+<li>"I design the emotional DNA of spaces."</li>
+<li>"Identity translated into atmosphere."</li>
+<li>"Luxury is not what you see — it's what you feel when you walk in."</li>
+<li>"A story you can walk into."</li>
+<li>"Atmosphere is a strategy, not a side effect."</li>
+<li>"Spaces that shape behavior."</li>
+<li>"Designing the decisions that protect the atmosphere."</li>
+<li>"Space is felt before it is seen."</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Messaging Hierarchy</div>
+<ul>
+<li><b>1. Lead with the gap:</b> Name the thing the client can feel but cannot articulate.</li>
+<li><b>2. Prove with narrative:</b> Show, through case studies, how SED solves what decoration cannot.</li>
+<li><b>3. Close with authority:</b> Working with Rima is choosing a creative director who will own the experience.</li>
+</ul>
+<p style="margin-top:12px;font-size:11px;color:var(--gray)">Content rule: End every piece on a declaration, never a question. Authority does not solicit agreement.</p>
+</div>
+</div>
+
+<div id="pb-content" class="sub-hd">Content System</div>
+<div class="grid g2">
+<div class="card full">
+<div class="lbl">Content Rules — Six Non-Negotiables</div>
+<table class="tbl">
+<tr><td>Identity Truth First</td><td>Every case study or project post must open with one sentence on the Identity Truth — the core reason the space exists — before any mention of materials or design.</td></tr>
+<tr><td>The Material No</td><td>For every material or light choice featured, document one thing refused or removed to protect the atmosphere.</td></tr>
+<tr><td>Name the Ritual</td><td>Every case study must name the primary ritual intended for the user: arrival, decompression, discovery, transition, etc.</td></tr>
+<tr><td>GCC/Europe Edge</td><td>At least 50% of content must reference the specific tension or opportunity between GCC luxury standards and European sensibility.</td></tr>
+<tr><td>No Promotional Adjectives</td><td>Replace "masterful" or "unparalleled" with specific trade-offs and decisions.</td></tr>
+<tr><td>Show the Gates</td><td>Content should often address how the vision moves from Identity to Atmosphere through specific decision milestones — not as process description but as narrative.</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Content Recycling Logic</div>
+<ul>
+<li>1 Live project → 1 case study brief (5-part framework)</li>
+<li>1 Case study → 1 Website project page</li>
+<li>1 Case study → 4 LinkedIn Decision Narrative posts</li>
+<li>1 Case study → 3 Instagram visual pulses (Phase 2)</li>
+<li>1 Case study → 1 Portfolio PDF section</li>
+<li>4 LinkedIn posts → 1 quarterly editorial on Website</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Content Cadence</div>
+<ul>
+<li><b>LinkedIn:</b> 3 posts / week. CTA max 1× / week.</li>
+<li><b>Website:</b> Update per project + quarterly editorial updates.</li>
+<li><b>Instagram (Phase 2, Month 4+):</b> 2–3 visual pulses / week. No CTA.</li>
+<li><b>Portfolio PDF:</b> Distribution on request. CTA on last page only.</li>
+</ul>
+</div>
+</div>
+
+<div id="pb-bios" class="sub-hd">Bios &amp; Taglines</div>
+<div class="grid g2">
+<div class="card full">
+<div class="lbl">Bio Versions</div>
+<table class="tbl">
+<tr><td>Long-form<br><span style="font-weight:300;font-size:10px">Website, Press Kit, Award Submissions</span></td><td>Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them feel. A Spatial Experience Designer and Creative Director based in Dubai, she translates the identity and emotional truth of a brand into environments that shape how people move, behave, and remember. Her practice spans luxury retail, hospitality, cultural institutions, and corporate environments across the GCC and Europe. Over thirteen years, she has directed flagship retail environments, cultural experiences, brand headquarters, and experiential spaces. MBA in Luxury Management, Sup de Luxe (Founded by Cartier), Paris. BA in Interior Architecture. Inside LVMH certified. Design Jury Member, Sup de Luxe, 2025. Bilingual in English and Arabic.</td></tr>
+<tr><td>Short-form<br><span style="font-weight:300;font-size:10px">LinkedIn, Events, Speaker Bureaus</span></td><td>Rima Alshoufi designs how people experience physical space — not how it looks, but how it makes them feel. A Spatial Experience Designer and Creative Director based in Dubai, she has shaped luxury, hospitality, cultural, and corporate environments across the GCC and Europe for thirteen years. MBA in Luxury Management, Sup de Luxe (Founded by Cartier), Paris. Bilingual in English and Arabic.</td></tr>
+<tr><td>One-liner<br><span style="font-weight:300;font-size:10px">Profile, Signature, Slides</span></td><td>Spatial Experience Designer &amp; Creative Director — designing how people feel, move, and remember. GCC &amp; Europe.</td></tr>
+<tr><td>Speaking intro<br><span style="font-weight:300;font-size:10px">First person · Keynotes, Panels, Podcasts</span></td><td>"I design how people experience space — not the part you see, but the part you feel. That moment you step into a room and something shifts. I've been working in that layer for thirteen years, across luxury, hospitality, and cultural environments throughout the GCC and Europe."</td></tr>
+</table>
+</div>
+<div class="card full">
+<div class="lbl">Tagline System</div>
+<table class="tbl">
+<thead><tr><th>Profile</th><th>Use Case</th><th>Statement</th></tr></thead>
+<tbody>
+<tr><td>Master Tagline</td><td>Website hero, primary brand collateral</td><td><b>"Not how it looks — how it makes them feel."</b></td></tr>
+<tr><td>The Designer</td><td>Website / Portfolio</td><td>"Identity translated into atmosphere."</td></tr>
+<tr><td>The Operator</td><td>LinkedIn / Briefs</td><td>"Designing the decisions that protect the atmosphere."</td></tr>
+<tr><td>The Visionary</td><td>Speaking / Intros</td><td>"Designing how people move, feel, and remember."</td></tr>
+<tr><td>The Strategic Peer</td><td>Pitch / Executive Intro</td><td>"I design the emotional and behavioral DNA of spaces."</td></tr>
+<tr><td>The Cultural Edge</td><td>GCC/Europe Context</td><td>"Translating global luxury into rooted spatial experience."</td></tr>
+</tbody>
+</table>
+<p style="margin-top:12px;font-size:11px;color:var(--gray)">Statement principle: Never say "I provide" or "I offer." Use the active brand role: "I design," "I translate," "I protect." Focus on the gap between a finished space and a felt identity.</p>
+</div>
+</div>
+
+</section>
+
+<!-- ═══════════ SECTION 03: BRAND GUIDELINES -->
+<section class="sec" id="gl">
+<div class="sec-hd">
+<div><span class="sec-num">03</span><h2 class="sec-title">Brand Guidelines</h2></div>
+<p class="sec-desc">How the brand looks and sounds — visual and verbal technical specifications.</p>
+</div>
+
+<div id="gl-visual" class="sub-hd">Visual Standards</div>
+<div class="grid g2">
+<div class="card full">
+<div class="lbl">Name &amp; Wordmark Usage</div>
+<table class="tbl">
+<tr><td>Display Format</td><td><b>RIMA</b> (Weight 900) + <span style="font-weight:200">ALSHOUFI</span> (Weight 200) — always uppercase, always this weight-contrast pair. Never mixed case, never same weight.</td></tr>
+<tr><td>Clear Space</td><td>Minimum 2× the cap-height of the 'R' clear on all sides. No graphic elements within this zone.</td></tr>
+<tr><td>Minimum Size</td><td>120px width (digital) · 30mm (print)</td></tr>
+<tr><td>Primary Variant</td><td>Near-Black (#0a0a0a) on Warm Off-White (#f7f5f2)</td></tr>
+<tr><td>Inverted Variant</td><td>Warm White text on Near-Black field — for dark-background documents</td></tr>
+<tr><td>Accent Variant</td><td>RIMA in Near-Black / ALSHOUFI in Bronze (#b87333) — flagship documents only</td></tr>
+<tr><td>Prohibited</td><td>Do not skew, stretch, rotate, add shadows, or apply filters. Do not use decorative, serif, or any typeface other than Hanken Grotesk.</td></tr>
+</table>
+</div>
+<div class="card full">
+<div class="lbl">Color Palette — Option E Light · Locked Feb 2026</div>
+<div class="swatch-row">
+<div class="sw"><div class="sw-c" style="background:#0a0a0a"></div><div class="sw-name">Near-Black</div><div class="sw-hex">#0a0a0a · Headlines, borders, authority</div></div>
+<div class="sw"><div class="sw-c" style="background:#f7f5f2"></div><div class="sw-name">Warm Off-White</div><div class="sw-hex">#f7f5f2 · Hero / page background</div></div>
+<div class="sw"><div class="sw-c" style="background:#faf9f7"></div><div class="sw-name">Warm White</div><div class="sw-hex">#faf9f7 · Body sections</div></div>
+<div class="sw"><div class="sw-c" style="background:#b87333"></div><div class="sw-name">Bronze</div><div class="sw-hex">#b87333 · One accent per layout</div></div>
+<div class="sw"><div class="sw-c" style="background:#666666"></div><div class="sw-name">Warm Gray</div><div class="sw-hex">#666666 · Body text, secondary</div></div>
+<div class="sw"><div class="sw-c" style="background:#c8c2b8"></div><div class="sw-name">Light Sand</div><div class="sw-hex">#c8c2b8 · Dividers, hairlines, metadata</div></div>
+</div>
+<p style="font-size:11px;color:var(--gray);margin-top:14px;font-style:italic">No cool tones. Every colour references material reality — stone, plaster, bronze, parchment.</p>
+</div>
+<div class="card">
+<div class="lbl">Typography — Hanken Grotesk (Single Family)</div>
+<table class="tbl">
+<tr><td>Black 900</td><td>First name / hero display. -4% tracking. Never body copy.</td></tr>
+<tr><td>ExtraLight 200</td><td>Last name / hero contrast pair. Creates typographic tension.</td></tr>
+<tr><td>ExtraBold 800</td><td>Section headings, pull quotes. -1.5% tracking.</td></tr>
+<tr><td>Bold 700</td><td>Sub-headings within documents.</td></tr>
+<tr><td>Medium 500</td><td>Labels, navigation, tags. Uppercase. +4px letter-spacing.</td></tr>
+<tr><td>Light 300</td><td>All body copy, descriptions, narrative prose.</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Image Style</div>
+<ul>
+<li><b>Lighting:</b> Directional, soft, natural. Calm shadows are intentional — preserve them.</li>
+<li><b>Colour grading:</b> Warm and desaturated. Reference: linen, stone, raw plaster. No cold blues or clinical whites.</li>
+<li><b>Focus:</b> Depth of field on "Ritual Moments" — materials, hands on surfaces, light at thresholds.</li>
+<li><b>Human presence:</b> Blurred or partial. Scale indicator, never subject. No portrait-style shots in environment photography.</li>
+<li><b>Avoid:</b> Wide-angle real estate shots. Overlighting. Heavily retouched perfection that erases depth and material texture.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Layout Principles</div>
+<ul>
+<li><b>Generous margins:</b> Silence is a deliberate design choice — not empty space.</li>
+<li><b>Hairlines only:</b> 0.5–1px dividers in Light Sand (#c8c2b8). No thick rules or decorative borders.</li>
+<li><b>One bronze touch per layout:</b> One accent element. Never repeat bronze as a structural color.</li>
+<li><b>Bronze glow maximum:</b> 7–13% opacity radial gradient. Atmosphere, not decoration.</li>
+<li><b>No drop shadows:</b> Everything lives on the surface. No depth illusions.</li>
+<li><b>Type as architecture:</b> Weight, spacing, and silence are the primary compositional tools.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Channel Visual Expressions</div>
+<table class="tbl">
+<tr><td>Website</td><td>Off-white hero · Near-black type · Bronze on labels · Max 1 gradient</td></tr>
+<tr><td>LinkedIn Banner</td><td>Near-black field · Cream name in Hanken · Bronze one-line position</td></tr>
+<tr><td>Instagram</td><td>Alternating off-white / near-black · Spatial photography only</td></tr>
+<tr><td>Presentations</td><td>Near-black slides · Cream type · Bronze on key quotes only</td></tr>
+<tr><td>Documents</td><td>Off-white background · Hairline dividers · Hanken Medium headers</td></tr>
+<tr><td>Email Signature</td><td>Name (Black 900) · Role (Light 300) · Minimal textual links. No graphic clutter.</td></tr>
+</table>
+</div>
+<div class="card full">
+<div class="lbl">Visual Misuse — What Is Never Permitted</div>
+<div class="dd">
+<div class="do-c">
+<h4>Correct</h4>
+<ul>
+<li>Hanken Grotesk in all brand contexts</li>
+<li>Off-white and near-black as primary background/text pairing</li>
+<li>One bronze accent element per layout</li>
+<li>Hairline rules (0.5px–1px) in Light Sand</li>
+<li>Spatial photography with depth and material texture</li>
+<li>Weight contrast (900 vs 200) on wordmark</li>
+</ul>
+</div>
+<div class="dn-c">
+<h4>Never Permitted</h4>
+<ul>
+<li>Any typeface other than Hanken Grotesk</li>
+<li>Pure #000000 black or #FFFFFF white</li>
+<li>Cool grays, blues, or clinical neutrals</li>
+<li>Multiple bronze elements in one composition</li>
+<li>Drop shadows on type or brand elements</li>
+<li>Stock photography that reads "corporate lifestyle"</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="gl-verbal" class="sub-hd">Verbal Standards</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Voice Summary — Five Operating Principles</div>
+<table class="tbl">
+<tr><td>Calm</td><td>No rushing. Confidence does not shout. No urgency language. No exclamation marks.</td></tr>
+<tr><td>Measured</td><td>One strong idea per communication. Not three average ones.</td></tr>
+<tr><td>Precise</td><td>Active verbs, declarative sentences. No hedging. No passive constructions.</td></tr>
+<tr><td>Grounded</td><td>Language rooted in physical reality — not abstraction, trend, or system-speak.</td></tr>
+<tr><td>Non-promotional</td><td>Proof, not proclamation. Trade-offs over superlatives. Specific over general.</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Headline Style Rules</div>
+<ul>
+<li>Short. One idea. No filler. No punctuation unless a full stop creates emphasis.</li>
+<li>Lead with the tension or gap — not the solution.</li>
+<li>Declarative over interrogative. State it; don't ask it.</li>
+<li>Never start a LinkedIn post with "I" — begin with the spatial observation.</li>
+<li>Avoid "How I…" or "Why I…" constructions — too personal blog.</li>
+<li>No sentence-case for headers in branded documents — use consistent caps rules per brand layer.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Vocabulary — Preferred</div>
+<div class="tags">
+<span class="tag b">Atmosphere</span><span class="tag b">Spatial Identity</span><span class="tag b">Narrative</span><span class="tag b">Sequence</span><span class="tag b">Threshold</span><span class="tag b">Ritual</span><span class="tag b">Memory</span><span class="tag b">Choreography</span><span class="tag b">Sensory</span><span class="tag b">Invisible architecture</span><span class="tag b">Identity Truth</span><span class="tag b">Felt</span><span class="tag b">Deliberate</span>
+</div>
+</div>
+<div class="card">
+<div class="lbl">Vocabulary — Avoid</div>
+<div class="tags">
+<span class="tag" style="text-decoration:line-through">Decor / Decorative</span><span class="tag" style="text-decoration:line-through">Renovation</span><span class="tag" style="text-decoration:line-through">Fit-out</span><span class="tag" style="text-decoration:line-through">Color scheme</span><span class="tag" style="text-decoration:line-through">Passionate</span><span class="tag" style="text-decoration:line-through">World-class</span><span class="tag" style="text-decoration:line-through">Bespoke</span><span class="tag" style="text-decoration:line-through">Seamless</span><span class="tag" style="text-decoration:line-through">User experience</span><span class="tag" style="text-decoration:line-through">Digital touchpoints</span><span class="tag" style="text-decoration:line-through">Synergies</span><span class="tag" style="text-decoration:line-through">Stunning</span>
+</div>
+</div>
+<div class="card full">
+<div class="lbl">Descriptor Consistency — Standard Terms</div>
+<table class="tbl">
+<tr><td>Primary Title</td><td>Spatial Experience Designer &amp; Creative Director</td></tr>
+<tr><td>Discipline</td><td>Spatial Experience Design (never "interior design" as primary)</td></tr>
+<tr><td>Secondary Descriptor</td><td>"Interior Architect" — for CV, technical, or professional registration contexts only</td></tr>
+<tr><td>Location</td><td>Dubai, UAE · GCC &amp; Europe</td></tr>
+<tr><td>Experience</td><td>13+ years</td></tr>
+<tr><td>Primary Credential</td><td>MBA — Luxury Management · Sup de Luxe (Founded by Cartier) · Paris</td></tr>
+<tr><td>Language Note</td><td>Bilingual in English and Arabic</td></tr>
+</table>
+</div>
+</div>
+
+</section>
+
+<!-- ═══════════ SECTION 04: BRAND OS -->
+<section class="sec" id="os">
+<div class="sec-hd">
+<div><span class="sec-num">04</span><h2 class="sec-title">Brand OS</h2></div>
+<p class="sec-desc">How the brand functions and scales — the operational blueprint behind the identity.</p>
+</div>
+
+<div id="os-goals" class="sub-hd">Main Goals &amp; KPIs</div>
+<div class="grid g2">
+<div class="card">
+<div class="lbl">Main Goals — 2026</div>
+<ul>
+<li>Establish Spatial Experience Design as a named, recognized discipline in the GCC market</li>
+<li>Launch portfolio website with narrative case studies live in Month 1</li>
+<li>Formally transition LinkedIn to SED positioning and establish 3× / week authority content</li>
+<li>Convert first qualified lead to Spatial Identity Session by Month 2</li>
+<li>Activate first live signature project for public portfolio by Month 3</li>
+<li>Build GCC referral ecosystem: luxury founders, developers, cultural institutions</li>
+<li>Submit to one GCC design speaking event, panel, or design week by Month 3</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">KPI Logic</div>
+<table class="tbl">
+<tr><td>Brand KPI</td><td>Clients reflecting Rima's exact language back: "narrative," "spatial identity," "atmosphere." Language adoption is resonance proof.</td></tr>
+<tr><td>Sales KPI</td><td>Offer Transition Rate — conversion from Spatial Identity Session to full SED engagement.</td></tr>
+<tr><td>Product KPI</td><td>Memory Score — qualitative client feedback captured 6 months post-handover.</td></tr>
+<tr><td>Authority KPI</td><td>Inbound qualified enquiries from LinkedIn content (not cold outbound).</td></tr>
+<tr><td>Content KPI</td><td>LinkedIn post reach among target sectors: hospitality, luxury, cultural, corporate.</td></tr>
+</table>
+<div class="krow" style="margin-top:14px">
+<div class="kpi"><span class="kpi-v">3×</span><span class="kpi-l">LinkedIn / week</span></div>
+<div class="kpi"><span class="kpi-v">1×</span><span class="kpi-l">CTA max / week</span></div>
+<div class="kpi"><span class="kpi-v">M2</span><span class="kpi-l">First conversion</span></div>
+</div>
+</div>
+</div>
+
+<div id="os-ops" class="sub-hd">Operations</div>
+<div class="grid g2">
+<div class="card full">
+<div class="lbl">Audience Journey — Five Phases</div>
+<table class="tbl">
+<thead><tr><th>Phase</th><th>State</th><th>Trigger</th><th>Goal</th></tr></thead>
+<tbody>
+<tr><td>Discovery</td><td>Curious</td><td>LinkedIn post or website case study surfaces in their feed</td><td>Follow / bookmark / direct message</td></tr>
+<tr><td>Diagnosis</td><td>Interested</td><td>Reads 2–3 case studies or feels the LinkedIn content is "written for them"</td><td>Request for Spatial Identity Session</td></tr>
+<tr><td>Deep Dive</td><td>Engaged</td><td>Session reveals the gap between their "designed" space and an "experienced" space</td><td>Commit to full SED engagement</td></tr>
+<tr><td>Delivery</td><td>Invested</td><td>Active project: Identity → Atmosphere</td><td>Closing documentation capturing the felt outcome</td></tr>
+<tr><td>Advocacy</td><td>Peer</td><td>6-month post-handover relationship deepens</td><td>Warm referral to other luxury founders or cultural institutions</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Platform Roles</div>
+<table class="tbl">
+<tr><td>LinkedIn (Phase 1)</td><td>Strategic authority. Decision gates, trade-offs, GCC/Europe tension. 3× / week.</td></tr>
+<tr><td>Website (Phase 1)</td><td>Editorial atmosphere. Narrative case studies. Identity Truths. Sensory outcomes.</td></tr>
+<tr><td>Instagram (Phase 2 · Month 4+)</td><td>Visual evidence. Ritual moments, material behavior, light. 2–3 pulses / week. No text essays.</td></tr>
+<tr><td>Portfolio PDF</td><td>Technical proof. Architect's voice. Distributed on request only.</td></tr>
+</table>
+</div>
+<div class="card">
+<div class="lbl">Content Workflow</div>
+<ul>
+<li><b>Input:</b> Decision logs kept during every live project — what was chosen, refused, protected</li>
+<li><b>Processing:</b> Map to the 4 pillars. Assign platform and format.</li>
+<li><b>Production:</b> Draft from Identity Truth first. One idea per piece.</li>
+<li><b>Recycling:</b> 1 case study → 1 Website page + 4 LinkedIn posts + 3 Instagram pulses + 1 Portfolio section</li>
+<li><b>Quality gate:</b> Does every piece pass the "Identity Truth first" rule before publishing?</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Proof Assets</div>
+<ul>
+<li><b>Case studies (minimum):</b> One per sector — Luxury, Hospitality, Cultural, Corporate. Each using the 5-part framework.</li>
+<li><b>Emovation Lab:</b> Permanent sensory innovation space at SRTIP — spatial R&amp;D and brand engagement. Two distinct formats: permanent location + travelling experiential activations.</li>
+<li><b>Credentials:</b> MBA Luxury Management (Sup de Luxe / Cartier) · Inside LVMH Certificate · Design Jury Member 2025</li>
+<li><b>Testimonials:</b> Framed as outcomes, not praise. What changed in the space, not what was appreciated.</li>
+<li><b>Speaking:</b> Activate Month 3. GCC design events and regional press.</li>
+</ul>
+</div>
+<div class="card full">
+<div class="lbl">Conversion Logic</div>
+<table class="tbl">
+<tr><td>Entry principle</td><td>Content reveals the gap — not the solution. The solution is only visible after a Spatial Identity Session.</td></tr>
+<tr><td>Session goal</td><td>Move client from "I want a beautiful space" to "I want to shape this specific behavior in this specific person."</td></tr>
+<tr><td>Closing principle</td><td>We don't present options. We present one recommendation based on the Identity Truth.</td></tr>
+<tr><td>No portfolio sales</td><td>Projects are not presented as "past work." They are presented as proof of method.</td></tr>
+<tr><td>Referral trigger</td><td>Closing documentation captures the "felt outcome" — this document becomes the referral asset.</td></tr>
+</table>
+</div>
+</div>
+
+<div id="os-decisions" class="sub-hd">Decision Rules</div>
+<div class="card full">
+<div class="lbl">Five-Point Decision Filter — Applied to Every Engagement</div>
+<table class="tbl">
+<thead><tr><th>#</th><th>Gate</th><th>Question to Answer</th><th>If No:</th></tr></thead>
+<tbody>
+<tr><td>01</td><td>Identity Check</td><td>Does this project solve for an Identity Truth — a genuine, immutable reason the space exists?</td><td>Decline or renegotiate scope to include identity work first</td></tr>
+<tr><td>02</td><td>Atmospheric Stake</td><td>Do I have sufficient creative control over the felt outcome of the environment?</td><td>Negotiate scope and authority before signing</td></tr>
+<tr><td>03</td><td>Scale Factor</td><td>Does this project increase authority in a target sector, or create a case study worth publishing?</td><td>Reassess project weight against current pipeline</td></tr>
+<tr><td>04</td><td>The Bronze Rule</td><td>Is the vision protected from committee drift across the project timeline?</td><td>No engagement — vision without protection is decoration</td></tr>
+<tr><td>05</td><td>Sensory ROI</td><td>Can the emotional outcome be captured and documented 6 months post-delivery?</td><td>Build documentation requirement into contract scope</td></tr>
+</tbody>
+</table>
+</div>
+
+<div id="os-scale" class="sub-hd">Scale Direction</div>
+<div class="grid g3">
+<div class="card">
+<div class="lbl">Offer Evolution Logic</div>
+<ul>
+<li>Build from <b>Session → Design → Retainer.</b></li>
+<li>The Retainer model = scalable depth without volume. It is the target format for long-term relationships.</li>
+<li>The Flagship Experiential Environment is the highest-value offer — pursued selectively, not as a primary lead generator.</li>
+<li>No volume discounting. No commoditized packages.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Geographic &amp; Sector Scale</div>
+<ul>
+<li><b>80/20 rule:</b> 80% of projects in core sectors (Luxury, Hospitality, Cultural). 20% in strategic expansion (Corporate, Residential).</li>
+<li><b>Phase 1:</b> GCC-first authority — UAE, KSA, wider GCC.</li>
+<li><b>Phase 2:</b> European institutional and luxury brand expansion — Paris, London, Milan.</li>
+<li><b>Not both simultaneously:</b> GCC authority must be established before European positioning begins.</li>
+</ul>
+</div>
+<div class="card">
+<div class="lbl">Innovation Rules</div>
+<ul>
+<li><b>80/20 exploration:</b> 80% proven method. 20% safe-to-fail experimentation (e.g., AI-enhanced sensory mapping, generative visualization).</li>
+<li>Every experimental tool must be documented as a <b>Decision Narrative</b> — proof of method and judgment, not proof of software.</li>
+<li>AI-enhanced visualization is an acceleration tool. It does not replace identity-led spatial intelligence.</li>
+<li>New capabilities are added only when they protect the felt outcome — not for novelty.</li>
+</ul>
+</div>
+</div>
+
+</section>
+
+<script>
+const secs = document.querySelectorAll('.sec');
+const links = document.querySelectorAll('.sb-nav a');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector('.sb-nav a[href="#'+e.target.id+'"]');
+      if(active) active.classList.add('active');
+    }
+  });
+}, {threshold: 0.2});
+secs.forEach(s => obs.observe(s));
+
+document.querySelectorAll('.sb-nav a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
+</main>
+</body></html>
