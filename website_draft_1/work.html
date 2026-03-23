@@ -5,6 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work | Rima Alshoufi</title>
+    <meta name="description"
+        content="Selected work by Rima Alshoufi across luxury retail, hospitality, immersive, and branded environments.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://www.rimaalshoufi.com/work.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="Rima Alshoufi">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Work | Rima Alshoufi">
+    <meta property="og:description"
+        content="Selected work by Rima Alshoufi across luxury retail, hospitality, immersive, and branded environments.">
+    <meta property="og:url" content="https://www.rimaalshoufi.com/work.html">
+    <meta property="og:image" content="https://www.rimaalshoufi.com/og-image.png">
+    <meta property="og:image:width" content="2732">
+    <meta property="og:image:height" content="1536">
+    <meta property="og:image:alt" content="Portrait of Rima Alshoufi with portfolio branding">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Work | Rima Alshoufi">
+    <meta name="twitter:description"
+        content="Selected work by Rima Alshoufi across luxury retail, hospitality, immersive, and branded environments.">
+    <meta name="twitter:image" content="https://www.rimaalshoufi.com/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
     <style>
@@ -799,7 +823,7 @@
         <div class="close-p">If you are building an environment that needs to be more than designed — let's
             talk.
         </div>
-        <a href="mailto:connect@rimaalshoufi.com" class="btn-cta"><span>Connect</span> <i>→</i></a>
+        <a href="connect.html" class="btn-cta"><span>Connect</span> <i>→</i></a>
     </div>
 
     <footer>
@@ -812,11 +836,15 @@
 
     <script>
         const CONTAINER = document.querySelector('.work-list');
-        const REPO_NAME = 'rima';
-        const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InJpbWEtYmY1MGZlZTAtMmQ5MC00MDg1LWJhNGUtOTNjMjMyZTQ3MTc0XzUiLCJkYXRlIjoxNzY3ODE2Mzc5LCJkb21haW4iOiJyaW1hIiwiYXBwTmFtZSI6ImFpLWFnZW50IiwiaWF0IjoxNzY3ODE2Mzc5fQ.yRmJo_s6uM7yDY7ezNneLctl3YGsje_24P082aT83hI';
-
         const filterBtns = document.querySelectorAll('.filter-btn');
         const subLinks = document.querySelectorAll('.sector-subcats a');
+        const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[char]));
 
         // Nav transparent trigger
         const nav = document.getElementById('main-nav');
@@ -829,25 +857,11 @@
 
         async function loadFromPrismic() {
             try {
-                // 1. Get Master Ref
-                const apiRes = await fetch(`https://${REPO_NAME}.cdn.prismic.io/api/v2?access_token=${TOKEN}`);
-                const apiData = await apiRes.json();
-                const ref = apiData.refs[0].ref;
-
-                // 2. Query works matching 'work'
-                const docsRes = await fetch(
-                    `https://${REPO_NAME}.cdn.prismic.io/api/v2/documents/search?ref=${ref}&access_token=${TOKEN}&pageSize=100&q=[[at(document.type,"work")]]`
-                );
+                const docsRes = await fetch('/api/work');
+                if (!docsRes.ok) throw new Error('Unable to load projects');
                 const docsData = await docsRes.json();
 
                 CONTAINER.innerHTML = ''; // Clear fallback triggers
-
-                // Sort by sort_order ascending (nulls go to end)
-                docsData.results.sort((a, b) => {
-                    const sa = a.data.sort_order ?? 9999;
-                    const sb = b.data.sort_order ?? 9999;
-                    return sa - sb;
-                });
 
                 docsData.results.forEach((item) => {
                     const data = item.data;
@@ -864,7 +878,7 @@
                     const img = data.preview_image?.url || data.main_image?.url || '';
 
                     const node = document.createElement('a');
-                    node.href = `project_view.html?uid=${item.uid}`;
+                    node.href = `project_view.html?uid=${encodeURIComponent(item.uid)}`;
                     node.className = 'work-row';
 
                     // Normalize both category and subcategory to slug format
@@ -876,8 +890,8 @@
                     node.innerHTML = `
                         <div class="work-img" style="background-image: url('${img}');"></div>
                         <div class="work-info">
-                            ${subcategory ? `<div class="work-meta">${subcategory}</div>` : ''}
-                            <div class="work-title">${title}</div>
+                            ${subcategory ? `<div class="work-meta">${escapeHtml(subcategory)}</div>` : ''}
+                            <div class="work-title">${escapeHtml(title)}</div>
                         </div>
                     `;
                     CONTAINER.appendChild(node);
@@ -887,8 +901,8 @@
                 filterGrid('all');
 
             } catch (e) {
-                console.error("Prismic Load Error:", e);
-                CONTAINER.innerHTML = `<div style="padding: 40px; text-align: center; color: #555;">Failed to load items.</div>`;
+                console.error("Project load error:", e);
+                CONTAINER.innerHTML = `<div style="padding: 40px; text-align: center; color: #555;">Projects are temporarily unavailable.</div>`;
             }
         }
 

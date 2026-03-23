@@ -5,7 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect | Rima Alshoufi</title>
-    <meta name="description" content="Get in touch with Rima Alshoufi — Spatial Experience Designer based in Dubai.">
+    <meta name="description"
+        content="Connect with Rima Alshoufi for luxury retail, hospitality, immersive, and branded environment projects.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://www.rimaalshoufi.com/connect.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="Rima Alshoufi">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Connect | Rima Alshoufi">
+    <meta property="og:description"
+        content="Connect with Rima Alshoufi for luxury retail, hospitality, immersive, and branded environment projects.">
+    <meta property="og:url" content="https://www.rimaalshoufi.com/connect.html">
+    <meta property="og:image" content="https://www.rimaalshoufi.com/og-image.png">
+    <meta property="og:image:width" content="2732">
+    <meta property="og:image:height" content="1536">
+    <meta property="og:image:alt" content="Portrait of Rima Alshoufi with portfolio branding">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Connect | Rima Alshoufi">
+    <meta name="twitter:description"
+        content="Connect with Rima Alshoufi for luxury retail, hospitality, immersive, and branded environment projects.">
+    <meta name="twitter:image" content="https://www.rimaalshoufi.com/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -211,6 +234,19 @@
             color: rgba(0,0,0,0.35);
         }
 
+        .form-status {
+            min-height: 20px;
+            margin-top: 18px;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: rgba(0,0,0,0.5);
+        }
+
+        .form-status.is-error {
+            color: #9f3a24;
+        }
+
         .btn-send {
             background: transparent;
             border: none;
@@ -258,6 +294,19 @@
 
         .btn-send:hover i {
             transform: translateX(6px);
+        }
+
+        .btn-send[disabled] {
+            opacity: 0.45;
+            cursor: wait;
+        }
+
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
         }
 
         /* CONFIRM STATE */
@@ -374,17 +423,28 @@
                     <div class="f-row">
                         <div class="f-group">
                             <label class="f-lbl" for="name">Name</label>
-                            <input class="f-input" type="text" id="name" placeholder="Your name" required>
+                            <input class="f-input" type="text" id="name" name="name" placeholder="Your name" required>
                         </div>
                         <div class="f-group">
                             <label class="f-lbl" for="email">Email</label>
-                            <input class="f-input" type="email" id="email" placeholder="Your address" required>
+                            <input class="f-input" type="email" id="email" name="email" placeholder="Your address" required>
+                        </div>
+                    </div>
+
+                    <div class="f-row">
+                        <div class="f-group">
+                            <label class="f-lbl" for="mobile">Mobile</label>
+                            <input class="f-input" type="tel" id="mobile" name="mobile" placeholder="Your mobile number" required>
+                        </div>
+                        <div class="f-group">
+                            <label class="f-lbl" for="location">Location</label>
+                            <input class="f-input" type="text" id="location" name="location" placeholder="City, country" required>
                         </div>
                     </div>
 
                     <div class="f-group">
                         <label class="f-lbl" for="area">Area of interest</label>
-                        <select class="f-input" id="area">
+                        <select class="f-input" id="area" name="area">
                             <option value="" disabled selected>Select a focus area…</option>
                             <option value="luxury-retail">Luxury Retail</option>
                             <option value="hospitality">Hospitality</option>
@@ -397,19 +457,25 @@
 
                     <div class="f-group">
                         <label class="f-lbl" for="message">Message</label>
-                        <textarea class="f-input" id="message" placeholder="What are we building?" required></textarea>
+                        <textarea class="f-input" id="message" name="message" placeholder="What are we building?" required></textarea>
+                    </div>
+
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
                     </div>
 
                     <div class="form-footer">
-                        <span class="expectation-text">Replies within a few business days</span>
-                        <button type="submit" class="btn-send"><span>Send</span> <i>→</i></button>
+                        <span class="expectation-text">Sent privately and stored for follow-up</span>
+                        <button type="submit" class="btn-send" id="submit-btn"><span>Send</span> <i>→</i></button>
                     </div>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
 
             <div id="confirm-state" class="confirm-state">
                 <h2>Thank you.</h2>
-                <p>Your message has been received. I will review the details and follow up with you shortly.</p>
+                <p>Your message has been sent successfully and added to the project inquiry log for review.</p>
             </div>
         </div>
 
@@ -426,11 +492,50 @@
     </footer>
 
     <script>
-        function handleFormSubmit(e) {
+        async function handleFormSubmit(e) {
             e.preventDefault();
-            document.getElementById('form-container').style.display = 'none';
-            const cs = document.getElementById('confirm-state');
-            cs.style.display = 'flex';
+            const form = document.getElementById('connect-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const status = document.getElementById('form-status');
+            const payload = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                mobile: document.getElementById('mobile').value.trim(),
+                location: document.getElementById('location').value.trim(),
+                area: document.getElementById('area').value.trim(),
+                message: document.getElementById('message').value.trim(),
+                company: document.getElementById('company').value.trim()
+            };
+
+            submitBtn.disabled = true;
+            status.textContent = 'Sending your message...';
+            status.classList.remove('is-error');
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (!response.ok || !result.ok) {
+                    throw new Error(result.error || 'Unable to submit the form.');
+                }
+
+                form.reset();
+                document.getElementById('form-container').style.display = 'none';
+                const cs = document.getElementById('confirm-state');
+                cs.style.display = 'flex';
+            } catch (error) {
+                status.textContent = error.message || 'Unable to send your message right now.';
+                status.classList.add('is-error');
+            } finally {
+                submitBtn.disabled = false;
+            }
         }
     </script>
     <script src="scripts.js"></script>

@@ -4,8 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project — Rima Alshoufi</title>
-    <meta name="description" content="Project by Rima Alshoufi — Spatial Experience Designer, Dubai.">
+    <title>Project | Rima Alshoufi</title>
+    <meta name="description" content="Project by Rima Alshoufi, spatial experience designer based in Dubai.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://www.rimaalshoufi.com/project_view.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta property="og:site_name" content="Rima Alshoufi">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Project | Rima Alshoufi">
+    <meta property="og:description" content="Project by Rima Alshoufi, spatial experience designer based in Dubai.">
+    <meta property="og:url" content="https://www.rimaalshoufi.com/project_view.html">
+    <meta property="og:image" content="https://www.rimaalshoufi.com/og-image.png">
+    <meta property="og:image:width" content="2732">
+    <meta property="og:image:height" content="1536">
+    <meta property="og:image:alt" content="Portrait of Rima Alshoufi with portfolio branding">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Project | Rima Alshoufi">
+    <meta name="twitter:description" content="Project by Rima Alshoufi, spatial experience designer based in Dubai.">
+    <meta name="twitter:image" content="https://www.rimaalshoufi.com/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -798,8 +818,13 @@
         /* ═══════════════════════════════
            CONFIG
         ═══════════════════════════════ */
-        const REPO_NAME = 'rima';
-        const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoibWFjaGluZTJtYWNoaW5lIiwiZGJpZCI6InJpbWEtYmY1MGZlZTAtMmQ5MC00MDg1LWJhNGUtOTNjMjMyZTQ3MTc0XzUiLCJkYXRlIjoxNzY3ODE2Mzc5LCJkb21haW4iOiJyaW1hIiwiYXBwTmFtZSI6ImFpLWFnZW50IiwiaWF0IjoxNzY3ODE2Mzc5fQ.yRmJo_s6uM7yDY7ezNneLctl3YGsje_24P082aT83hI';
+        const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
+        }[char]));
 
         /* ═══════════════════════════════
            SCROLL NAV
@@ -990,13 +1015,8 @@
             }
 
             try {
-                const apiRes = await fetch(`https://${REPO_NAME}.cdn.prismic.io/api/v2?access_token=${TOKEN}`);
-                const apiData = await apiRes.json();
-                const ref = apiData.refs[0].ref;
-
-                const docRes = await fetch(
-                    `https://${REPO_NAME}.cdn.prismic.io/api/v2/documents/search?ref=${ref}&access_token=${TOKEN}&q=[[at(my.work.uid,"${uid}")]]`
-                );
+                const docRes = await fetch(`/api/project?uid=${encodeURIComponent(uid)}`);
+                if (!docRes.ok) throw new Error('Not found');
                 const docData = await docRes.json();
                 if (!docData.results || docData.results.length === 0) throw new Error('Not found');
 
@@ -1006,7 +1026,7 @@
                 /* ── 1. TITLE & META ── */
                 const title = d.project_title || getText(d.title) || 'Untitled';
                 document.getElementById('title').innerText = title;
-                document.title = `${title} — Rima Alshoufi`;
+                document.title = `${title} | Rima Alshoufi`;
 
                 // Category from project_category, type, or intro text
                 let category = d.project_category || d.type || d.category || '';
@@ -1022,16 +1042,16 @@
                 }
 
                 const taxonomyEl = document.getElementById('taxonomy');
-                taxonomyEl.innerHTML = `<span>${category}</span>`;
+                taxonomyEl.innerHTML = `<span>${escapeHtml(category)}</span>`;
                 if (subcategory) {
-                    taxonomyEl.innerHTML += `<div class="proj-taxi-sep"></div><span>${subcategory}</span>`;
+                    taxonomyEl.innerHTML += `<div class="proj-taxi-sep"></div><span>${escapeHtml(subcategory)}</span>`;
                 }
 
                 const essence = d.project_essence || getText(d.intro) || '';
                 document.getElementById('essence').innerText = essence;
 
                 const metaParts = [d.location, d.year, d.client].filter(Boolean);
-                document.getElementById('meta').innerHTML = metaParts.map(p => `<span>${p}</span>`).join('');
+                document.getElementById('meta').innerHTML = metaParts.map(p => `<span>${escapeHtml(p)}</span>`).join('');
 
                 /* ── 2. HERO ── */
                 const heroEl = document.getElementById('hero');
@@ -1053,7 +1073,7 @@
                 const ytEmbed = getYoutubeEmbed(heroVideo);
 
                 if (heroImg) {
-                    heroEl.innerHTML = `<img src="${heroImg}" alt="${title}">`;
+                    heroEl.innerHTML = `<img src="${heroImg}" alt="${escapeHtml(title)}">`;
                 } else if (ytEmbed) {
                     heroEl.innerHTML = ytEmbed;
                     heroEl.style.position = 'relative';
@@ -1092,7 +1112,7 @@
                     // Keys: scope__, scope_2 … scope_8
                     Object.values(obj).forEach(val => {
                         if (val && typeof val === 'string' && val.trim()) {
-                            scopeList.innerHTML += `<li class="proj-scope-item">${val.trim()}</li>`;
+                            scopeList.innerHTML += `<li class="proj-scope-item">${escapeHtml(val.trim())}</li>`;
                             hasScope = true;
                         }
                     });
@@ -1101,7 +1121,7 @@
                     const obj = d.deliverables1[0];
                     Object.values(obj).forEach(val => {
                         if (val && typeof val === 'string' && val.trim()) {
-                            scopeList.innerHTML += `<li class="proj-scope-item">${val.trim()}</li>`;
+                            scopeList.innerHTML += `<li class="proj-scope-item">${escapeHtml(val.trim())}</li>`;
                             hasScope = true;
                         }
                     });
@@ -1109,7 +1129,7 @@
                     d.scope.forEach(s => {
                         const label = s.tag_label || s.item || '';
                         if (label) {
-                            scopeList.innerHTML += `<li class="proj-scope-item">${label}</li>`;
+                            scopeList.innerHTML += `<li class="proj-scope-item">${escapeHtml(label)}</li>`;
                             hasScope = true;
                         }
                     });
@@ -1142,10 +1162,10 @@
                             let html = '';
                             slice.primary.content.forEach(p => {
                                 if (p.type === 'heading1' || p.type === 'heading2') {
-                                    html += `<div class="proj-concept-name">${p.text}</div>`;
+                                    html += `<div class="proj-concept-name">${escapeHtml(p.text)}</div>`;
                                     sliceHasConcept = true;
                                 } else if (p.type === 'paragraph' && p.text) {
-                                    html += `<p class="proj-concept-body">${p.text}</p>`;
+                                    html += `<p class="proj-concept-body">${escapeHtml(p.text)}</p>`;
                                 }
                             });
                             if (html) {
@@ -1165,8 +1185,8 @@
                     sec.className = 'proj-concept reveal-up';
                     sec.innerHTML = `
                         <span class="proj-concept-label">The Concept</span>
-                        ${conceptTitle ? `<div class="proj-concept-name">${conceptTitle}</div>` : ''}
-                        ${conceptBody ? `<p class="proj-concept-body">${conceptBody}</p>` : ''}
+                        ${conceptTitle ? `<div class="proj-concept-name">${escapeHtml(conceptTitle)}</div>` : ''}
+                        ${conceptBody ? `<p class="proj-concept-body">${escapeHtml(conceptBody)}</p>` : ''}
                     `;
                     story.appendChild(sec);
                     hasStoryContent = true;
@@ -1252,7 +1272,7 @@
                     const proofSec = document.createElement('section');
                     proofSec.className = 'proj-proof-wrap reveal-up';
                     proofSec.innerHTML = `
-                        <div class="proj-proof-statement">${outcomeText}</div>
+                        <div class="proj-proof-statement">${escapeHtml(outcomeText)}</div>
                     `;
                     story.appendChild(proofSec);
                     hasStoryContent = true;
@@ -1276,9 +1296,7 @@
                     const linkIds = [prevProject, nextProject].filter(p => p?.id).map(p => p.id);
                     if (linkIds.length > 0) {
                         try {
-                            const linkedRes = await fetch(
-                                `https://${REPO_NAME}.cdn.prismic.io/api/v2/documents/search?ref=${ref}&access_token=${TOKEN}&q=[[in(document.id,[${linkIds.map(id => `"${id}"`).join(',')}])]]`
-                            );
+                            const linkedRes = await fetch(`/api/linked?ids=${encodeURIComponent(linkIds.join(','))}`);
                             const linkedData = await linkedRes.json();
                             const linkedMap = {};
                             linkedData.results.forEach(r => { linkedMap[r.id] = r; });
@@ -1291,11 +1309,11 @@
                                 const lTitle = ld.project_title || getText(ld.title) || 'Project';
                                 const lImg = ld.preview_image?.url || ld.main_image?.url || '';
                                 navContainer.innerHTML += `
-                                    <a href="project_view.html?uid=${linked.uid}" class="nav-card">
-                                        <div class="nav-img-box">${lImg ? `<img src="${lImg}" alt="${lTitle}">` : ''}</div>
+                                    <a href="project_view.html?uid=${encodeURIComponent(linked.uid)}" class="nav-card">
+                                        <div class="nav-img-box">${lImg ? `<img src="${lImg}" alt="${escapeHtml(lTitle)}">` : ''}</div>
                                         <div class="nav-content">
-                                            <span class="nav-label">${label}</span>
-                                            <span class="nav-title">${lTitle}</span>
+                                            <span class="nav-label">${escapeHtml(label)}</span>
+                                            <span class="nav-title">${escapeHtml(lTitle)}</span>
                                         </div>
                                     </a>
                                 `;
