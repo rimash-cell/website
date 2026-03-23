@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.rimaalshoufi.com/sitemap.xml
+Sitemap: https://rimaalshoufi.com/sitemap.xml
