@@ -27,6 +27,14 @@ function parsePrivateKey(rawKey) {
     return rawKey.replace(/\\n/g, '\n');
 }
 
+function hasGoogleSheetsConfig() {
+    return Boolean(
+        process.env.GOOGLE_SHEETS_CLIENT_EMAIL &&
+        process.env.GOOGLE_SHEETS_PRIVATE_KEY &&
+        process.env.GOOGLE_SHEETS_SPREADSHEET_ID
+    );
+}
+
 async function getGoogleAccessToken() {
     const clientEmail = getRequiredEnv('GOOGLE_SHEETS_CLIENT_EMAIL');
     const privateKey = parsePrivateKey(getRequiredEnv('GOOGLE_SHEETS_PRIVATE_KEY'));
@@ -78,6 +86,10 @@ async function getGoogleAccessToken() {
 }
 
 async function appendSubmissionToSheet(submission) {
+    if (!hasGoogleSheetsConfig()) {
+        return { stored: false, reason: 'sheet_not_configured' };
+    }
+
     const accessToken = await getGoogleAccessToken();
     const spreadsheetId = getRequiredEnv('GOOGLE_SHEETS_SPREADSHEET_ID');
     const range = process.env.GOOGLE_SHEETS_RANGE || 'Sheet1!A:J';
@@ -111,6 +123,8 @@ async function appendSubmissionToSheet(submission) {
         const details = await response.text();
         throw new Error(`Google Sheets append failed: ${details}`);
     }
+
+    return { stored: true };
 }
 
 async function sendNotificationEmail(submission) {
@@ -209,8 +223,8 @@ export default async function handler(req, res) {
             ip: getIpAddress(req)
         };
 
-        if (!submission.name || !submission.email || !submission.mobile || !submission.location || !submission.message) {
-            json(res, 400, { ok: false, error: 'Please complete all required fields.' });
+        if (!submission.name || !submission.email || !submission.message) {
+            json(res, 400, { ok: false, error: 'Please share your name, email, and project details.' });
             return;
         }
 
@@ -220,12 +234,29 @@ export default async function handler(req, res) {
             return;
         }
 
-        await appendSubmissionToSheet(submission);
-        const emailResult = await sendNotificationEmail(submission);
+        let sheetResult = { stored: false, reason: 'not_attempted' };
+        let emailResult = { sent: false, reason: 'not_attempted' };
+
+        try {
+            sheetResult = await appendSubmissionToSheet(submission);
+        } catch (sheetError) {
+            console.error('Contact submission sheet storage failed:', sheetError);
+        }
+
+        try {
+            emailResult = await sendNotificationEmail(submission);
+        } catch (emailError) {
+            console.error('Contact notification email failed:', emailError);
+        }
+
+        if (!sheetResult.stored && !emailResult.sent) {
+            throw new Error('No contact destination is currently available.');
+        }
 
         json(res, 200, {
             ok: true,
-            emailSent: emailResult.sent === true
+            emailSent: emailResult.sent === true,
+            storedInSheet: sheetResult.stored === true
         });
     } catch (error) {
         console.error('Contact submission failed:', error);

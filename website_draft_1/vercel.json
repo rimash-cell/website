@@ -1,5 +1,20 @@
 {
-  "cleanUrls": false,
+  "cleanUrls": true,
+  "functions": {
+    "api/project-page.js": {
+      "includeFiles": "project_view.html"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/projects/(.*)",
+      "destination": "/api/project-page?uid=$1"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Carousel - Restrained Authority</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bk: #0a0a0a;     /* Near-black */
+            --ow: #f7f5f2;     /* Off-white background */
+            --br: #b87333;     /* Bronze Accent */
+            --sd: #c8c2b8;     /* Sand Dividers / Light Tone */
+            --img: url("file:///C:/Users/rimaa/.gemini/antigravity/brain/b43e5258-8e4b-4410-8126-2da0762649f1/architectural_floor_map_1774348880305.png");
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #e0ddd8;
+            font-family: 'Hanken Grotesk', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            padding: 60px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, p { text-rendering: optimizeLegibility; }
+
+        .controls {
+            background: var(--bk);
+            color: var(--ow);
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-weight: 300;
+        }
+
+        /* Essential Slide Container */
+        .slide {
+            width: 1080px;
+            height: 1350px;
+            background-color: var(--ow);
+            color: var(--bk);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            overflow: hidden;
+            /* Massive margins. Silence is part of design. */
+            padding: 240px 160px;
+        }
+
+        /* Base Typography */
+        .content {
+            font-size: 64px;
+            font-weight: 300; /* Light 300 for body */
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            z-index: 2;
+        }
+        .content p { margin-bottom: 24px; }
+        .content p:last-child { margin-bottom: 0; }
+        .content strong { font-weight: 500; } /* Medium 500 for emphasis */
+
+        /* S1: Full Bleed Image */
+        .s1 {
+            background-image: var(--img);
+            background-size: cover;
+            background-position: center;
+            /* No extra elements */
+        }
+        .s1 .content {
+            font-size: 80px; /* Large typography hero */
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        /* S2: Left Aligned */
+        .s2 .content { text-align: left; }
+
+        /* S3: Centered */
+        .s3 .content { text-align: center; }
+
+        /* S4: Left Aligned */
+        .s4 .content { text-align: left; }
+
+        /* S5: Centered */
+        .s5 .content { text-align: center; }
+
+        /* S6: Left Aligned */
+        .s6 .content { text-align: left; }
+
+        /* S7: Centered */
+        .s7 .content { text-align: center; }
+
+        /* S8: Same image, softer crop. Text lighter in tone. */
+        .s8 {
+            background-image: var(--img);
+            background-size: 160%; /* Softer crop */
+            background-position: top center;
+        }
+        .s8 .content {
+            /* No dramatic ending, quiet */
+            color: #555; /* Lighter tone, strictly legible on sand/plaster */
+            text-align: center;
+        }
+
+        /* Footer / Brand Indicator - Strictly minimal */
+        .footer {
+            position: absolute;
+            bottom: 80px;
+            left: 160px;
+            right: 160px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .s1 .footer { display: none; } /* Slide 1: No extra elements */
+        
+        .logo {
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--bk);
+        }
+        .logo span { font-weight: 300; color: var(--br); /* Minimal Bronze */ }
+        
+        .counter {
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--sd);
+            letter-spacing: 0.1em;
+            font-variant-numeric: tabular-nums;
+        }
+
+        @media print {
+            body { background: transparent; padding: 0; gap: 0; }
+            .controls { display: none; }
+            .slide { box-shadow: none; margin: 0; border: none; page-break-after: always; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            @page { size: 1080px 1350px; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <strong>Ready to post!</strong> Press <code>Ctrl + P</code> (or Cmd + P) to Print, select <strong>"Save as PDF"</strong>, and uncheck "Headers and Footers" to generate your LinkedIn carousel.
+    </div>
+
+    <!-- S1 -->
+    <div class="slide s1">
+        <div class="content">
+            <p>Movement may be the most overlooked design material.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">01 / 08</div></div>
+    </div>
+
+    <!-- S2 -->
+    <div class="slide s2">
+        <div class="content">
+            <p>The plan is approved.</p>
+            <p>The circulation works.</p>
+            <p>But how people move through it was never truly designed.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">02 / 08</div></div>
+    </div>
+
+    <!-- S3 -->
+    <div class="slide s3">
+        <div class="content">
+            <p>Layouts organise space.</p>
+            <p>Sequence shapes experience.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">03 / 08</div></div>
+    </div>
+
+    <!-- S4 -->
+    <div class="slide s4">
+        <div class="content">
+            <p>Where people slow down.</p>
+            <p>Where they pause.</p>
+            <p>Where they turn.</p>
+            <p>This is where experience begins.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">04 / 08</div></div>
+    </div>
+
+    <!-- S5 -->
+    <div class="slide s5">
+        <div class="content">
+            <p>Many spaces guide movement.</p>
+            <p>Fewer shape pause.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">05 / 08</div></div>
+    </div>
+
+    <!-- S6 -->
+    <div class="slide s6">
+        <div class="content">
+            <p>Discovery needs a degree of restraint.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">06 / 08</div></div>
+    </div>
+
+    <!-- S7 -->
+    <div class="slide s7">
+        <div class="content">
+            <p>Movement is not only solved.</p>
+            <p>It is directed.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">07 / 08</div></div>
+    </div>
+
+    <!-- S8 -->
+    <div class="slide s8">
+        <div class="content">
+            <p>Design the movement.</p>
+            <p>Memory tends to follow.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">08 / 08</div></div>
+    </div>
+
+</body>
+</html>

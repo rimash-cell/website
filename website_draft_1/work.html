@@ -4,29 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work | Rima Alshoufi</title>
+    <title>Luxury Retail, Hospitality &amp; Experiential Design Projects | Rima Alshoufi</title>
     <meta name="description"
-        content="Selected work by Rima Alshoufi across luxury retail, hospitality, immersive, and branded environments.">
+        content="Selected luxury retail, hospitality, immersive, workplace, and residential design projects by Rima Alshoufi in Dubai and the GCC.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://rimaalshoufi.com/work.html">
+    <link rel="canonical" href="https://rimaalshoufi.com/work">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta property="og:site_name" content="Rima Alshoufi">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Work | Rima Alshoufi">
+    <meta property="og:title" content="Luxury Retail, Hospitality &amp; Experiential Design Projects | Rima Alshoufi">
     <meta property="og:description"
-        content="Selected work by Rima Alshoufi across luxury retail, hospitality, immersive, and branded environments.">
-    <meta property="og:url" content="https://rimaalshoufi.com/work.html">
+        content="Selected luxury retail, hospitality, immersive, workplace, and residential design projects by Rima Alshoufi in Dubai and the GCC.">
+    <meta property="og:url" content="https://rimaalshoufi.com/work">
     <meta property="og:image" content="https://rimaalshoufi.com/og-image-v3.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="675">
     <meta property="og:image:alt" content="Portrait of Rima Alshoufi with portfolio branding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Work | Rima Alshoufi">
+    <meta name="twitter:title" content="Luxury Retail, Hospitality &amp; Experiential Design Projects | Rima Alshoufi">
     <meta name="twitter:description"
-        content="Selected work by Rima Alshoufi across luxury retail, hospitality, immersive, and branded environments.">
+        content="Selected luxury retail, hospitality, immersive, workplace, and residential design projects by Rima Alshoufi in Dubai and the GCC.">
     <meta name="twitter:image" content="https://rimaalshoufi.com/og-image-v3.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
             --bk: #0a0a0a;
             --ow: #f7f5f2;
             --ww: #faf9f7;
-            --br: #b87333;
+            --br: #8f8477;
             --sd: #c8c2b8;
             --gr-d: rgba(255, 255, 255, 0.45);
             --hl: 0.5px solid #c8c2b8;
@@ -93,7 +93,7 @@
         }
 
         nav.dark-mode.scrolled {
-            background: linear-gradient(to bottom, rgba(250, 249, 247, 0.95) 0%, rgba(250, 249, 247, 0) 100%);
+            background: var(--ow);
             border-bottom: var(--hl);
         }
 
@@ -200,7 +200,7 @@
             font-weight: 500;
             letter-spacing: .25em;
             text-transform: uppercase;
-            color: #b87333;
+            color: var(--br);
             margin-bottom: 40px;
             display: flex;
             align-items: center;
@@ -212,7 +212,7 @@
             content: '';
             width: 16px;
             height: .5px;
-            background: #b87333
+            background: var(--br)
         }
 
         .page-title {
@@ -240,6 +240,45 @@
             margin: 0 auto 64px;
             max-width: var(--max);
             border-bottom: 0.5px solid rgba(0,0,0,0.12);
+            background: var(--ow);
+        }
+
+        .mobile-filter-panel {
+            display: none;
+            max-width: var(--max);
+            margin: 0 auto 36px;
+            padding: 0 var(--px);
+        }
+
+        .mobile-filter-shell {
+            display: block;
+            padding: 18px 0 22px;
+            border-bottom: none;
+        }
+
+        .mobile-filter-select {
+            width: 100%;
+            appearance: none;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.14);
+            background: transparent;
+            padding: 0 28px 14px 0;
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: #111;
+            border-radius: 0;
+            background-image: linear-gradient(45deg, transparent 50%, #111 50%), linear-gradient(135deg, #111 50%, transparent 50%);
+            background-position: calc(100% - 12px) calc(50% - 2px), calc(100% - 6px) calc(50% - 2px);
+            background-size: 6px 6px, 6px 6px;
+            background-repeat: no-repeat;
+        }
+
+        .mobile-filter-select:focus {
+            outline: none;
+            border-bottom-color: #111;
         }
 
         .filter-group {
@@ -281,78 +320,6 @@
             color: #111;
             border-bottom-color: #111;
         }
-
-        /* ── DROPDOWN ── */
-        .sector-subcats {
-            position: absolute;
-            top: calc(100% + 2px);
-            left: 0;
-            background: #fff;
-            border: 0.5px solid rgba(0,0,0,0.1);
-            padding: 16px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            min-width: 190px;
-            z-index: 200;
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(-4px);
-            transition: opacity 0.18s ease, transform 0.18s ease;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.07);
-        }
-
-        /* Desktop: open on hover */
-        @media (min-width: 901px) {
-            .filter-item:hover .sector-subcats {
-                opacity: 1;
-                pointer-events: auto;
-                transform: translateY(0);
-            }
-        }
-
-        /* Mobile/tablet: open via .open class set by JS */
-        @media (max-width: 900px) {
-            .sector-subcats {
-                position: fixed;
-                top: auto;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                border: none;
-                border-top: 0.5px solid rgba(0,0,0,0.1);
-                padding: 20px 24px 36px;
-                min-width: unset;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 12px 20px;
-                background: #fff;
-                box-shadow: 0 -8px 32px rgba(0,0,0,0.08);
-                transform: translateY(8px);
-            }
-            .filter-item.open .sector-subcats {
-                opacity: 1;
-                pointer-events: auto;
-                transform: translateY(0);
-            }
-            .filter-btn {
-                padding: 16px 14px;
-                font-size: 10px;
-            }
-        }
-
-        .sector-subcats a {
-            font-size: 11px;
-            font-weight: 400;
-            letter-spacing: .1em;
-            color: rgba(0,0,0,0.5);
-            text-decoration: none;
-            text-transform: uppercase;
-            white-space: nowrap;
-            transition: color 0.2s;
-        }
-        .sector-subcats a:hover,
-        .sector-subcats a.active-sub { color: #111; }
 
         /* THE MAGAZINE SPREAD (CONTROLLED ASYMMETRY) */
         .work-list {
@@ -441,10 +408,10 @@
             font-weight: 500;
             letter-spacing: .15em;
             text-transform: uppercase;
-            color: #b87333;
+            color: var(--br);
             margin-bottom: 6px;
             opacity: 0.8;
-            display: flex;
+            display: none;
             align-items: center;
             gap: 12px;
         }
@@ -704,15 +671,11 @@
         /* Responsive Fixes */
         @media(max-width: 900px) {
             .filter-nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-                padding-bottom: 20px;
+                display: none;
             }
-            .filter-group {
-                flex-wrap: wrap;
-                overflow-x: visible;
-                gap: 8px 4px; /* Row gap and Column gap */
+
+            .mobile-filter-panel {
+                display: block;
             }
 
             .work-list {
@@ -733,10 +696,6 @@
                 display: none;
             }
 
-            .filter-nav {
-                gap: 16px;
-            }
-
             footer {
                 flex-direction: column;
                 text-align: center;
@@ -749,11 +708,11 @@
 <body>
 
     <nav id="main-nav" class="dark-mode">
-        <a href="index.html" class="logo">RIMA <span>ALSHOUFI</span></a>
+        <a href="/" class="logo">RIMA <span>ALSHOUFI</span></a>
         <div class="nav-links">
-            <a href="index.html#about">About</a>
-            <a href="work.html" class="active">Work</a>
-            <a href="connect.html" class="cta"><span>Connect</span></a>
+            <a href="/#about">About</a>
+            <a href="/work" class="active">Work</a>
+            <a href="/connect" class="cta"><span>Connect</span></a>
         </div>
     </nav>
 
@@ -771,43 +730,36 @@
         <div class="filter-group">
             <div class="filter-item">
                 <button class="filter-btn" data-filter="luxury-retail">Luxury Retail</button>
-                <div class="sector-subcats">
-                    <a href="#" data-sub="flagship-boutique">Flagship &amp; Boutique</a>
-                    <a href="#" data-sub="pop-up">Pop-Up</a>
-                    <a href="#" data-sub="experiential-spaces">Experiential Spaces</a>
-                </div>
             </div>
             <div class="filter-item">
                 <button class="filter-btn" data-filter="luxury-residential">Luxury Residential</button>
             </div>
             <div class="filter-item">
                 <button class="filter-btn" data-filter="hospitality">Hospitality</button>
-                <div class="sector-subcats">
-                    <a href="#" data-sub="restaurant">Restaurant</a>
-                </div>
             </div>
             <div class="filter-item">
                 <button class="filter-btn" data-filter="immersive-experiences">Immersive Experiences</button>
-                <div class="sector-subcats">
-                    <a href="#" data-sub="experiential-spaces">Experiential Spaces</a>
-                </div>
             </div>
             <div class="filter-item">
                 <button class="filter-btn" data-filter="workplace-environments">Workplace Environments</button>
-                <div class="sector-subcats">
-                    <a href="#" data-sub="headquarters">Headquarters</a>
-                    <a href="#" data-sub="office-spaces">Office Spaces</a>
-                    <a href="#" data-sub="executive-spaces">Executive Spaces</a>
-                    <a href="#" data-sub="experiential-spaces">Experiential Spaces</a>
-                </div>
             </div>
             <div class="filter-item">
                 <button class="filter-btn" data-filter="events-activations">Events &amp; Activations</button>
-                <div class="sector-subcats">
-                    <a href="#" data-sub="launch-events">Launch Events</a>
-                    <a href="#" data-sub="360-campaigns">360 Campaigns</a>
-                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="mobile-filter-panel">
+        <div class="mobile-filter-shell">
+            <select id="mobile-category-filter" class="mobile-filter-select" aria-label="Filter by category">
+                <option value="all">All</option>
+                <option value="luxury-retail">Luxury Retail</option>
+                <option value="luxury-residential">Luxury Residential</option>
+                <option value="hospitality">Hospitality</option>
+                <option value="immersive-experiences">Immersive Experiences</option>
+                <option value="workplace-environments">Workplace Environments</option>
+                <option value="events-activations">Events &amp; Activations</option>
+            </select>
         </div>
     </div>
 
@@ -821,24 +773,26 @@
     <!-- CLOSE SEC -->
     <div class="sec-close" id="connect">
         <div class="close-h">Space is felt <strong>before it is seen.</strong></div>
-        <div class="close-p">If you are building an environment that needs to be more than designed — let's
+        <div class="close-p">If you are building an environment that needs to be more than designed, let's
             talk.
         </div>
-        <a href="connect.html" class="btn-cta"><span>Connect</span> <i>→</i></a>
+        <a href="/connect?intent=consultation" class="btn-cta"><span>Connect</span> <i>→</i></a>
     </div>
 
     <footer>
         <div class="f-logo">RIMA <span>ALSHOUFI</span></div>
         <div class="f-links">
-            <a href="index.html#about">About</a><a href="work.html">Work</a><a href="connect.html">Connect</a>
+            <a href="/#about">About</a><a href="/work">Work</a><a href="/connect">Connect</a>
         </div>
-        <div class="f-copy">Spatial Experience Designer · Dubai, UAE · © 2026</div>
+        <div class="f-copy">Spatial Experience Designer | Dubai, UAE | &copy; 2026</div>
     </footer>
 
     <script>
         const CONTAINER = document.querySelector('.work-list');
         const filterBtns = document.querySelectorAll('.filter-btn');
-        const subLinks = document.querySelectorAll('.sector-subcats a');
+        const mobileCategoryFilter = document.getElementById('mobile-category-filter');
+        const pageParams = new URLSearchParams(window.location.search);
+        const initialCategory = pageParams.get('category') || 'all';
         const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (char) => ({
             '&': '&amp;',
             '<': '&lt;',
@@ -846,6 +800,15 @@
             '"': '&quot;',
             "'": '&#39;'
         }[char]));
+
+        function updateFiltersInUrl(category) {
+            const url = new URL(window.location.href);
+            if (!category || category === 'all') url.searchParams.delete('category');
+            else url.searchParams.set('category', category);
+            url.searchParams.delete('sub');
+
+            window.history.replaceState({}, '', url);
+        }
 
         // Nav transparent trigger
         const nav = document.getElementById('main-nav');
@@ -879,7 +842,7 @@
                     const img = data.preview_image?.url || data.main_image?.url || '';
 
                     const node = document.createElement('a');
-                    node.href = `project_view.html?uid=${encodeURIComponent(item.uid)}`;
+                    node.href = `/projects/${encodeURIComponent(item.uid)}`;
                     node.className = 'work-row';
 
                     // Normalize both category and subcategory to slug format
@@ -891,7 +854,6 @@
                     node.innerHTML = `
                         <div class="work-img" style="background-image: url('${img}');"></div>
                         <div class="work-info">
-                            ${subcategory ? `<div class="work-meta">${escapeHtml(subcategory)}</div>` : ''}
                             <div class="work-title">${escapeHtml(title)}</div>
                         </div>
                     `;
@@ -899,15 +861,21 @@
                 });
 
                 // Trigger layout cycle once populated
-                filterGrid('all');
+                filterGrid(initialCategory);
+                syncMobileFilters(initialCategory);
 
             } catch (e) {
                 console.error("Project load error:", e);
-                CONTAINER.innerHTML = `<div style="padding: 40px; text-align: center; color: #555;">Projects are temporarily unavailable.</div>`;
+                CONTAINER.innerHTML = `
+                    <div style="padding: 40px; text-align: center; color: #555;">
+                        <p style="margin-bottom: 16px;">Projects are temporarily unavailable.</p>
+                        <a href="/connect?intent=deck" class="btn-cta" style="color:#111;"><span>Request the portfolio deck</span> <i>→</i></a>
+                    </div>
+                `;
             }
         }
 
-        function filterGrid(category, subFilter) {
+        function filterGrid(category) {
             let visibleIndex = 0;
             const workItems = document.querySelectorAll('.work-row');
 
@@ -919,18 +887,12 @@
 
             workItems.forEach(item => {
                 const itemCat = item.getAttribute('data-category') || '';
-                const itemSub = item.getAttribute('data-subcategory') || '';
 
                 let show = false;
                 if (category === 'all') {
                     show = true;
                 } else {
                     show = filterWords.some(word => itemCat.includes(word));
-                    // Subcategory drill-down: if subFilter provided, also match that
-                    if (show && subFilter) {
-                        show = itemSub.includes(subFilter.replace(/-/g, '')) ||
-                               subFilter.split('-').some(w => itemSub.includes(w));
-                    }
                 }
 
                 if (show) {
@@ -959,53 +921,32 @@
             });
         }
 
-        /* ── FILTER EVENT WIRING ── */
-        const isMobile = () => window.innerWidth <= 900;
-
-        // Close all mobile open dropdowns
-        function closeAllDropdowns() {
-            document.querySelectorAll('.filter-item.open').forEach(el => el.classList.remove('open'));
+        function syncMobileFilters(category) {
+            if (!mobileCategoryFilter) return;
+            mobileCategoryFilter.value = category || 'all';
         }
 
-        // Close on outside tap (mobile)
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.filter-item')) closeAllDropdowns();
-        });
+        /* ── FILTER EVENT WIRING ── */
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const filterItem = btn.closest('.filter-item');
-                const subcats = filterItem.querySelector('.sector-subcats');
                 const cat = btn.getAttribute('data-filter');
 
-                if (isMobile() && subcats) {
-                    // Mobile: toggle dropdown open/closed
-                    const isOpen = filterItem.classList.contains('open');
-                    closeAllDropdowns();
-                    if (!isOpen) filterItem.classList.add('open');
-                } else {
-                    // Desktop or no subcats: filter immediately
-                    closeAllDropdowns();
-                }
-                // Always apply the category filter
                 filterGrid(cat);
+                syncMobileFilters(cat);
+                updateFiltersInUrl(cat);
             });
         });
 
-        subLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const sub = link.getAttribute('data-sub');
-                const cat = link.closest('.filter-item').querySelector('.filter-btn').getAttribute('data-filter');
-                // Mark active subcat visually
-                document.querySelectorAll('.sector-subcats a').forEach(a => a.classList.remove('active-sub'));
-                link.classList.add('active-sub');
-                closeAllDropdowns();
-                filterGrid(cat, sub);
+        if (mobileCategoryFilter) {
+            mobileCategoryFilter.addEventListener('change', (e) => {
+                const category = e.target.value || 'all';
+                filterGrid(category);
+                syncMobileFilters(category);
+                updateFiltersInUrl(category);
             });
-        });
+        }
 
         // Hydrate
         document.addEventListener('DOMContentLoaded', loadFromPrismic);

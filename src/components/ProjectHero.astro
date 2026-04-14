@@ -1,0 +1,118 @@
+---
+interface Props {
+    title: string;
+    image?: {
+        url: string;
+        alt?: string;
+    };
+    videoFile?: {
+        url: string;
+    };
+    videoEmbed?: {
+        html: string;
+    };
+}
+
+const { title, image, videoFile, videoEmbed } = Astro.props;
+
+// Helper to extract YouTube ID and build embed URL
+const getYouTubeEmbedUrl = (url: string) => {
+    if (!url) return null;
+    let videoId = "";
+    
+    // Handle shorts links
+    if (url.includes("shorts/")) {
+        videoId = url.split("shorts/")[1].split("?")[0];
+    } 
+    // Handle standard watch links
+    else if (url.includes("watch?v=")) {
+        videoId = url.split("v=")[1].split("&")[0];
+    }
+    // Handle youtu.be links
+    else if (url.includes("youtu.be/")) {
+        videoId = url.split("youtu.be/")[1].split("?")[0];
+    }
+
+    if (videoId) {
+        // Build autoplaying, muted, looping embed URL
+        // muted=1 is required for autoplay in most browsers
+        return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1&rel=0`;
+    }
+    return null;
+};
+
+// Check for YouTube link in videoFile if it looks like a URL string instead of a direct file object
+// Or if the user passed it via hero_video from Prismic
+const prismicVideoUrl = typeof videoFile === 'string' ? videoFile : videoFile?.url;
+const youtubeEmbedUrl = getYouTubeEmbedUrl(prismicVideoUrl);
+
+const hasVideoFile = videoFile && videoFile.url && !youtubeEmbedUrl;
+const hasVideoEmbed = (videoEmbed && videoEmbed.html) || youtubeEmbedUrl;
+const hasVideo = hasVideoFile || hasVideoEmbed;
+---
+
+<div class="w-full aspect-[21/9] bg-[#0a0a0a] overflow-hidden mb-32 group relative shadow-2xl">
+    {
+        hasVideoFile ? (
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                class="w-full h-full object-cover transition-opacity duration-1000"
+            >
+                <source src={videoFile.url} type="video/mp4" />
+            </video>
+        ) : hasVideoEmbed ? (
+            <div class="absolute inset-0 w-full h-full pointer-events-none scale-[1.3]">
+                {youtubeEmbedUrl ? (
+                    <iframe 
+                        src={youtubeEmbedUrl}
+                        class="absolute inset-0 w-full h-full"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        frameborder="0"
+                    ></iframe>
+                ) : (
+                    <div class="video-embed-container" set:html={videoEmbed.html} />
+                )}
+            </div>
+        ) : image?.url ? (
+            <img
+                src={image.url}
+                alt={image.alt || title}
+                class="w-full h-full object-cover transition-transform duration-[3s] ease-out group-hover:scale-105"
+            />
+        ) : (
+            <div class="w-full h-full flex items-center justify-center bg-zinc-900/50">
+               <div class="text-[10px] tracking-widest text-zinc-500 uppercase">Visual coming soon</div>
+            </div>
+        )
+    }
+
+    {/* Elegant subtle grid overlay for a premium tectonic feel */}
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.3)_100%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-black/10 mix-blend-overlay pointer-events-none"></div>
+
+    {/* Top and Bottom Gradients for Depth */}
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 pointer-events-none"></div>
+</div>
+
+<style is:global>
+    .video-embed-container iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
+    /* Aspect ratio fallback for embeds */
+    .video-embed-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        width: 100%;
+    }
+</style>

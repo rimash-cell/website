@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rima Alshoufi — Selected Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bk: #0a0a0a;
+            --ow: #ffffff;
+            --off-white: #f7f5f2;
+            --br: #b87333; /* Bronze */
+            
+            --slide-px: 5vw;
+            --slide-py: 8vh;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            color: var(--bk);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            background: var(--bk);
+        }
+
+        .slide {
+            width: 100vw; height: 100vh;
+            scroll-snap-align: start; position: relative;
+            background: var(--ow); display: flex; flex-direction: column; overflow: hidden;
+            page-break-after: always;
+        }
+        
+        @media print {
+            body { scroll-snap-type: none; background: #fff; }
+            .slide { width: 297mm; height: 210mm; page-break-inside: avoid; page-break-after: always; }
+        }
+
+        .slide.dark { background: var(--bk); color: var(--ow); }
+        .slide.dark .header-logo, .slide.dark .header-role { color: var(--ow); }
+        .slide.dark .accent { color: var(--br); }
+        .slide.dark .rule { border-color: rgba(255,255,255,0.15); }
+        
+        .slide.light { background: var(--off-white); color: var(--bk); }
+        .slide.light .rule { border-color: rgba(0,0,0,0.15); }
+
+        h1, h2, h3, h4, p { font-weight: 300; line-height: 1.2; }
+        .accent { color: var(--br); font-weight: 500; }
+        .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; color: var(--br); margin-bottom: 2vh; }
+        .title-xl { font-size: clamp(2.5rem, 6vw, 6rem); font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase; line-height: .9; }
+        .title-lg { font-size: clamp(2rem, 4.5vw, 4.5rem); font-weight: 300; letter-spacing: -0.01em; margin-bottom: 3vh; }
+        .title-md { font-size: clamp(1.5rem, 2.8vw, 2.8rem); font-weight: 300; margin-bottom: 2vh; }
+        .title-sm { font-size: clamp(1.2rem, 1.8vw, 1.8rem); font-weight: 300; line-height: 1.3; }
+        .body-lg { font-size: clamp(1.1rem, 1.6vw, 1.6rem); line-height: 1.5; font-weight: 300; opacity: 0.9; }
+        .body-md { font-size: clamp(0.95rem, 1.1vw, 1.1rem); line-height: 1.6; font-weight: 300; opacity: 0.85; }
+        .rule { border-bottom: 1px solid; margin: 3vh 0; }
+
+        /* Editorial Headers / Footers */
+        .slide-header { position: absolute; top: 4vh; left: var(--slide-px); right: var(--slide-px); display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+        .header-logo { font-size: 0.85rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: inherit; text-decoration: none; }
+        .header-logo span { font-weight: 300; }
+        .header-role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; }
+        
+        .slide-caption { position: absolute; bottom: 4vh; left: var(--slide-px); right: var(--slide-px); display: flex; justify-content: space-between; align-items: baseline; z-index: 10; font-size: 0.8rem; opacity: 0.7; }
+
+        .content-center { display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1; padding: var(--slide-px); text-align: center; }
+        
+        /* Layouts */
+        .full-bleed { position: absolute; inset: 0; z-index: 0; }
+        .full-bleed img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay.dark-fade { background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0) 100%);  }
+        
+        /* Splitting / Grids */
+        .split-50 { display: flex; width: 100%; height: 100%; }
+        .split-50 > div { flex: 1; position: relative; }
+        .split-50 img { width: 100%; height: 100%; object-fit: cover; }
+        .split-text { padding: 14vh var(--slide-px) var(--slide-py) var(--slide-px); display: flex; flex-direction: column; justify-content: center; z-index: 2; overflow-y: auto; }
+
+        .image-grid-4 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; width: 100%; height: 100%; }
+        .image-grid-4 img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Specific content typography */
+        .project-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; color: var(--br); margin-bottom: 2vh; }
+        .hero-title { font-size: clamp(3.5rem, 6vw, 6rem); font-weight: 300; letter-spacing: 0.02em; text-transform: uppercase; line-height: .9; margin-bottom: 2vh; }
+        
+        /* Strengths Box */
+        .strengths-box { margin-top: 4vh; border-left: 2px solid var(--br); padding-left: 2vw; }
+        .strengths-box h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--br); font-weight: 600; margin-bottom: 1.5vh; }
+        .strengths-box ul { list-style: none; }
+        .strengths-box ul li { display: flex; gap: 0.8vw; margin-bottom: 1vh; font-size: 0.95rem; line-height: 1.4; opacity: 0.9; align-items: baseline; }
+        .strengths-box ul li::before { content: "—"; color: var(--br); font-weight: 700; }
+
+        /* Drawing Link Button */
+        .btn-drawing { display: inline-flex; align-items: center; justify-content: center; gap: 0.5vw; background: var(--br); color: var(--ow); padding: 1.5vh 3vw; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; text-decoration: none; transition: background 0.3s ease; margin-top: 4vh; align-self: flex-start;}
+        .btn-drawing:hover { background: #9c602a; }
+
+        .divider-slide { display: flex; align-items: center; justify-content: center; background: var(--bk); color: var(--ow); }
+        .divider-slide h2 { font-size: 2.5rem; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase;}
+    </style>
+</head>
+<body>
+
+    <!-- 01. COVER -->
+    <div class="slide dark">
+        <div class="content-center">
+            <h1 class="title-xl">Rima <span style="font-weight: 200;">Alshoufi</span></h1>
+            <p class="eyebrow" style="margin-top: 3vh;">Selected Works — Interior Architecture</p>
+        </div>
+        <div class="slide-caption">
+            <div>Spatial Design, Materiality & Execution</div>
+            <div>2026 Edition</div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- HERO 1: HIND AL OUD (4 SLIDES) -->
+    <!-- ========================================== -->
+    
+    <!-- 1.1 Hero & Strengths -->
+    <div class="slide dark">
+         <div class="full-bleed">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b324a52033092ec0f36894_02-Final-p-2000.jpg" alt="Hind Al Oud Interior" style="object-position: 70% 50%;">
+        </div>
+        <div class="full-bleed hero-overlay dark-fade" style="background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0) 100%);"></div>
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role" style="color:var(--br);">01 / Architecture</div>
+        </div>
+        
+        <div class="split-50" style="position:relative; z-index: 2;">
+            <div class="split-text" style="color: white;">
+                <div class="project-meta">Mohamed Hilal Group · Luxury Flagship</div>
+                <h2 class="hero-title">Hind Al Oud</h2>
+                <p class="body-md" style="max-width: 500px; color: #ccc;">A complete architectural repositioning. Redefining Middle Eastern perfumery into a futuristic, spatially continuous flagship model.</p>
+                
+                <div class="strengths-box">
+                    <h4>Core Design Solutions</h4>
+                    <ul>
+                        <li><strong>Sensory Routing:</strong> Discarded linear retail for an immersive, curved "Museum of Emotions."</li>
+                        <li><strong>Material Innovation:</strong> Custom structural quartz formulation.</li>
+                        <li><strong>Geometric Scalability:</strong> Engineered organic facades into a modular kit-of-parts for rapid global deployment.</li>
+                    </ul>
+                </div>
+            </div>
+            <div></div> <!-- Image space -->
+        </div>
+    </div>
+
+    <!-- 1.2 Design Narrative (Space & Concept) -->
+    <div class="slide bg-white">
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role">Hind Al Oud / Concept Narrative</div>
+        </div>
+        <div class="split-50">
+            <div class="split-text bg-white" style="background: var(--ow);">
+                <div class="eyebrow" style="margin-bottom: 1vh;">Design Approach</div>
+                <h3 class="title-sm" style="margin-bottom: 3vh; color: var(--br);">The "Museum of Emotions" Spatial Concept</h3>
+                
+                <div class="rule" style="margin: 2vh 0;"></div>
+                
+                <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5vh;">Spatial Language</h4>
+                <p class="body-md" style="margin-bottom: 3vh;">The architecture was conceived as a continuous, flowing envelope. Avoiding orthogonal junctions, the floorplan relies entirely on sweeping radii to physically pull the customer into an uninterrupted journey. The concept acts as a museum—the product is completely recessed, demanding the user engage sensually rather than transactionally.</p>
+                
+                <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5vh;">Materiality & Illumination</h4>
+                <p class="body-md">Sourced bespoke translucent quartz paired with highly polished marble. To support the stark material geometry, museum-grade integrated lighting was detailed to wash the structural curves exclusively, removing ambient ceiling arrays to generate intimate, high-contrast product focal points.</p>
+            </div>
+            <div>
+                 <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg" style="object-position: 80% 50%;" alt="Hind facade">
+            </div>
+        </div>
+    </div>
+
+    <!-- 1.3 Immersive Visual Gallery -->
+    <div class="slide dark">
+        <div class="image-grid-4">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b3252f58eac24d101d2a10_01-p-1600.webp" alt="Quartz Detail">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b324a52033092ec0f36894_02-Final-p-2000.jpg" alt="Interior View">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b324a4fddee7a36cb9267a_03-Final-p-1080.jpg" alt="Lighting Detail">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b324a4dd6358872966e401_01-Final.jpg" alt="Exterior View">
+        </div>
+    </div>
+
+    <!-- 1.4 Technical & Layouts -->
+    <div class="slide light">
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role">Hind Al Oud / Technical Execution</div>
+        </div>
+        <div class="split-50">
+            <div style="background:var(--bk); display: flex; align-items: center; justify-content: center; padding: 4vw; color: rgba(255,255,255,0.4);">
+                <!-- Placeholder for technical layout, showing intent -->
+                <div style="border: 1px dashed rgba(255,255,255,0.2); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; text-align: center;">
+                    [ Technical Floorplan /<br>Zoning Schematic Overlay ]
+                </div>
+            </div>
+            <div class="split-text">
+                <h3 class="title-sm" style="margin-bottom: 2vh; color: var(--br);">Modular Rollout Engineering</h3>
+                <p class="body-md" style="margin-bottom: 2vh;">Designing an organic flagship is visually striking; engineering it to scale across 50+ locations is the true architectural achievement. The curved geometries were deconstructed into a standardized 'kit-of-parts.'</p>
+                <p class="body-md">This technical logic governed everything from MEP routing in drop ceilings to the slip-match junction specifications, allowing tight contractor tolerances globally.</p>
+                
+                <a href="#" class="btn-drawing">View Full Drawing Set ↗</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- HERO 2: HOB DEPARTMENT STORE (3 SLIDES) -->
+    <!-- ========================================== -->
+
+    <!-- 2.1 Hero & Strengths -->
+    <div class="slide dark">
+        <div class="full-bleed">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b94e6e3ee6fe5461e522__MG_3610.jpg" alt="HOB Mall Arch" style="object-position: left; filter: brightness(0.6);">
+        </div>
+        <div class="full-bleed hero-overlay dark-fade" style="background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0) 100%); width: 60vw;"></div>
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role" style="color:var(--br);">02 / Architecture</div>
+        </div>
+        
+        <div class="split-50" style="position:relative; z-index: 2;">
+            <div class="split-text" style="color: white; padding-right: 0;">
+                <div class="project-meta">Yas Mall, Abu Dhabi · Multi-Brand Ecosystem</div>
+                <h2 class="hero-title">HOB</h2>
+                <p class="body-md" style="max-width: 500px; color: #ccc;">Crafting spatial authority. A commanding 1,000+ sqm department store defined by massive architectural volumes.</p>
+                
+                <div class="strengths-box">
+                    <h4>Core Design Solutions</h4>
+                    <ul>
+                        <li><strong>Monumental Scale:</strong> The signature green resin entry portal dictates dominance over the surrounding mall atrium.</li>
+                        <li><strong>Spatial Governance:</strong> Authored rigid internal retail guidelines enforcing material cohesion across all incoming luxury tenant brands.</li>
+                        <li><strong>Fixture Logic:</strong> Fabricated 100+ bespoke unifying display cases.</li>
+                    </ul>
+                </div>
+            </div>
+            <div></div> <!-- Image space -->
+        </div>
+    </div>
+
+    <!-- 2.2 Concept Narrative (Space & Materiality) -->
+    <div class="slide bg-white">
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role">HOB / Design Language</div>
+        </div>
+        <div class="split-50">
+            <div class="split-text bg-white" style="background: var(--ow);">
+                <div class="eyebrow" style="margin-bottom: 1vh;">Design Approach</div>
+                <h3 class="title-sm" style="margin-bottom: 3vh; color: var(--br);">Architectural Hierarchy & Integration</h3>
+                
+                <div class="rule" style="margin: 2vh 0;"></div>
+                
+                <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5vh;">Structural Command</h4>
+                <p class="body-md" style="margin-bottom: 3vh;">The core difficulty of multi-brand architecture is visual chaos. If tenant brands dictate their own space, the department store loses identity. My approach was to construct an uncompromising, minimalist architectural shell. The massive volumes and repetitive geometric framing lines force internal cohesion, overpowering the disparate languages of jewelry, fashion, and fragrance brands within.</p>
+                
+                <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5vh;">Material Palette</h4>
+                <p class="body-md">Anchored by a highly polished emerald resin monolith against raw, monolithic stone cladding. The contrast between high-gloss modernism and heavy lithic mass establishes an updated, confident tone for "Emirati Luxury."</p>
+                
+                <a href="#" class="btn-drawing" style="margin-top: 3vh;">View Construction Set ↗</a>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                 <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4ba151010ea35def93892__MG_3622-p-800.jpg" alt="Interior Details" style="flex: 1; border-bottom: 2px solid white;">
+                 <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b4bf03a9fcd2372f85bd8a_perfumes.jpg" alt="Fragrance Details" style="flex: 1;">
+            </div>
+        </div>
+    </div>
+
+    <!-- 2.3 Image Spread -->
+    <div class="slide dark">
+        <div class="split-50">
+            <div><img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b4b94e6e3ee6fe5461e522__MG_3610.jpg" alt="HOB Arch"></div>
+            <div><img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b4be7ad8b8bc13ccdd5aae_DSC1248-p-2000.jpg" alt="HOB Interior Arch"></div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- HERO 3: ANA RESTAURANT (3 SLIDES) -->
+    <!-- ========================================== -->
+
+    <!-- 3.1 Hero & Strengths -->
+    <div class="slide dark">
+        <div class="full-bleed">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec619df97f69f019b8dd_ANA.jpg" alt="ANA Facade" style="object-position: bottom; filter:brightness(0.6);">
+        </div>
+        <div class="full-bleed hero-overlay dark-fade" style="background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0) 100%);"></div>
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role" style="color:var(--br);">03 / Architecture</div>
+        </div>
+        
+        <div class="split-50" style="position:relative; z-index: 2;">
+            <div class="split-text" style="color: white;">
+                <div class="project-meta">Dubai Mall · High-End Hospitality</div>
+                <h2 class="hero-title">ANA</h2>
+                <p class="body-md" style="max-width: 500px; color: #ccc;">Defining modern Arabian hospitality. A zero-logo structural facade blending completely into a multi-sensory interior dining environment.</p>
+                
+                <div class="strengths-box">
+                    <h4>Core Design Solutions</h4>
+                    <ul>
+                        <li><strong>Macro-to-Micro Integration:</strong> Designed the overarching floorplan architecture alongside custom tableware, guaranteeing an unbroken narrative.</li>
+                        <li><strong>The "No-Logo" Facade:</strong> Utilizing purely architectural massing as the primary brand beacon.</li>
+                        <li><strong>Cultural Translation:</strong> Avoiding literal Arabesque clichés in favor of modern, abstracted tactile space.</li>
+                    </ul>
+                </div>
+            </div>
+            <div></div> <!-- Image space -->
+        </div>
+    </div>
+
+    <!-- 3.2 Concept Narrative (Total Environment) -->
+    <div class="slide bg-white">
+        <div class="slide-header">
+            <div class="header-logo">RIMA <span>ALSHOUFI</span></div>
+            <div class="header-role">ANA / Total Environment Design</div>
+        </div>
+        <div class="split-50">
+            <div class="split-text bg-white" style="background: var(--ow);">
+                <div class="eyebrow" style="margin-bottom: 1vh;">Design Approach</div>
+                <h3 class="title-sm" style="margin-bottom: 3vh; color: var(--br);">Crafting the Modern Majlīs</h3>
+                
+                <div class="rule" style="margin: 2vh 0;"></div>
+                
+                <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5vh;">Seamless Narrative Space</h4>
+                <p class="body-md" style="margin-bottom: 3vh;">A high-end dining environment succeeds only if the physical architecture, staff operations, and guest touchpoints feel authored by a single hand. Rather than pasting a brand identity onto a built envelope, I fused them. The architectural surfaces bleed directly into the interior finishes.</p>
+                
+                <h4 style="font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5vh;">Micro-Materiality</h4>
+                <p class="body-md">The design relied heavily on sensory layers—honed travertine against plush, muted upholstery. I designed bespoke serveware and operational tooling to perfectly mirror the brutalist-yet-warm structural aesthetic, ensuring visual continuity at every scale.</p>
+
+                <a href="#" class="btn-drawing" style="margin-top: 3vh;">View F&B Layout Logic ↗</a>
+            </div>
+            <div class="image-grid-4" style="grid-template-columns: 1fr;">
+                <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b422a55928ea4e4abff872_ANA%20FronT-p-2000.webp" style="object-position: 80% 50%; max-height: 50vh;" alt="ANA facade detail">
+                <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9ec73241dd1d377e5de5f_DSC04936-scaled.webp" alt="ANA Interior Details" style="max-height: 50vh; object-position: 50% 20%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- 3.3 Micro-Detail Gallery -->
+    <div class="slide dark">
+         <div class="split-50">
+            <div><img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b422a7e446ab56a953eab2_ANA%20SPOONS.jpg" alt="ANA Spoons Detail"></div>
+            <div><img src="https://cdn.prod.website-files.com/68b1b40ff8f7a0b3b4773bbe/68b9ec614d10f882fcad2167_ANA2.jpg" alt="ANA Details" style="object-position: top;"></div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- ADDITIONAL WORKS (Shorter profiles) -->
+    <!-- ========================================== -->
+
+    <div class="slide dark">
+        <div class="full-bleed">
+            <img src="https://cdn.prod.website-files.com/68b1b40ff8f7a47bdc773ba5/68b9fda3d3360d1be019bf0a_cz-btq1.jpg" alt="Charles Zuber" style="filter: brightness(0.4);">
+        </div>
+        <div class="hero-overlay dark-fade" style="width: 100vw; display: flex; flex-direction: row; justify-content: space-around; align-items: center; padding: 0 10vw;">
+            
+            <div style="flex: 1; padding: 4vw;">
+                <div class="eyebrow" style="color:var(--br);">Swiss HQ Spatial QA</div>
+                <h3 class="title-md" style="margin-bottom: 2vh;">Charles Zuber</h3>
+                <p class="body-md">Precision execution. Guaranteeing absolute zero dilution of Swiss architectural intent in the UAE market through rigorous material sourcing and technical QA, specifically focusing on bespoke silver-leaf finishes.</p>
+            </div>
+
+            <div style="flex: 1; padding: 4vw; border-left: 1px solid rgba(255,255,255,0.1);">
+                <div class="eyebrow" style="color:var(--br);">Sensory Zoning</div>
+                <h3 class="title-md" style="margin-bottom: 2vh;">Emovation Lab</h3>
+                <p class="body-md">Engineering an active research environment in Sharjah using color theory and sensory routing to passively stimulate student creativity, proving architecture as a functional catalyst.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CLOSING SLIDE -->
+    <div class="slide light">
+        <div class="content-center">
+            <h2 class="title-lg" style="margin-bottom: 4vh;">Let's discuss the execution.</h2>
+            <div style="text-align: center; opacity: 0.9;">
+                <h3 style="font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5vh;">Rima Alshoufi</h3>
+                <div class="eyebrow" style="color: grey; letter-spacing: 0.05em; margin-bottom: 6vh;">Design Director</div>
+                
+                <div style="font-weight: 300; font-size: 1.1rem; line-height: 2;">
+                    <div>rimaalshoufi@gmail.com</div>
+                    <div>+971 52 873 1303 (UAE)</div>
+                    <div>+41 78 304 35 68 (CH)</div>
+                    <div style="margin-top: 3vh;">
+                        <a href="http://www.rimaalshoufi.com" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.3); padding-bottom: 2px;">rimaalshoufi.com</a> &nbsp;&nbsp;&nbsp; 
+                        <a href="https://linkedin.com/in/rima-alshoufi-46962628b/" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.3); padding-bottom: 2px;">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

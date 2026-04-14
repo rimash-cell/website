@@ -60,7 +60,7 @@ export default function ProjectList({ initialWorks }) {
                     filteredWorks.map((work, i) => (
                         <a
                             key={work.uid}
-                            href={`/work/${work.uid}`}
+                            href={`/projects/${work.uid}`}
                             className={`work-card animate-fade-in-up ${i % 2 !== 0 ? 'work-card-offset' : ''}`}
                             style={{ animationDelay: `${0.2 + i * 0.1}s` }}
                         >

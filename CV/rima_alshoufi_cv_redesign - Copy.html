@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rima Alshoufi — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bk: #0a0a0a;
+            --ow: #f7f5f2;
+            --br: #b87333;
+            --sd: #c8c2b8;
+            --hl-d: 0.5px solid rgba(0, 0, 0, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page { size: A4; margin: 0; }
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-size: 8.8px;
+            line-height: 1.5;
+            color: var(--bk);
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            max-height: 297mm;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 10mm 12mm;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 5mm;
+            border-bottom: 0.5px solid var(--sd);
+            gap: 6mm;
+            flex-shrink: 0;
+            margin-bottom: 5mm;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 32px;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            color: var(--bk);
+            line-height: 1;
+            margin-bottom: 1.5mm;
+        }
+
+        .logo span {
+            font-weight: 200;
+        }
+
+        .title {
+            font-size: 10.5px;
+            font-weight: 400;
+            color: var(--br);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 4mm;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 1.5mm 6mm;
+            font-size: 8px;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .contact-grid a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-grid a:hover {
+            color: var(--br);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .photo-container {
+            width: 42mm;
+            height: 42mm;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1.5px solid var(--sd);
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            background: #fdfdfd;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        /* ── BODY ── */
+        .body-container {
+            display: grid;
+            grid-template-columns: 55mm 125mm;
+            gap: 6mm;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ── LEFT COLUMN ── */
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            gap: 4.8mm;
+            border-right: 0.5px solid rgba(0, 0, 0, 0.04);
+            padding-right: 4mm;
+        }
+
+        .sub-sec {
+            display: flex;
+            flex-direction: column;
+            gap: 2mm;
+        }
+
+        .sec-tag {
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--br);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 0.8mm;
+            position: relative;
+        }
+
+        .sec-tag::after {
+            content: '';
+            width: 14px;
+            height: .5px;
+            background: var(--br);
+        }
+
+        /* Sectors */
+        .sectors-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1mm 1.2mm;
+        }
+
+        .sector-tag {
+            font-size: 7.8px;
+            color: var(--bk);
+            font-weight: 300;
+            background: #fff;
+            padding: 0.5mm 1.5mm;
+            border-radius: 2px;
+            border: 0.5px solid #dedede;
+        }
+
+        /* Skills */
+        .skill-group {
+            margin-bottom: 1mm;
+        }
+
+        .skill-group-title {
+            font-size: 7.2px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 0.8mm;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8mm;
+        }
+
+        .skill-tag {
+            font-size: 7px;
+            color: #555;
+            background: #f9f9f9;
+            padding: 0.4mm 1.2mm;
+            border-radius: 2px;
+            font-weight: 300;
+            border: 0.5px solid rgba(0,0,0,0.02);
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 2mm;
+        }
+
+        .edu-degree {
+            font-size: 8.2px;
+            font-weight: 700;
+            color: var(--bk);
+        }
+
+        .edu-school {
+            font-size: 7.5px;
+            color: var(--br);
+            font-weight: 400;
+        }
+
+        .edu-date {
+            font-size: 7px;
+            color: #777;
+            font-weight: 300;
+        }
+
+        /* Credentials */
+        .cred-item {
+            margin-bottom: 1.5mm;
+        }
+
+        .cred-title {
+            font-size: 8.2px;
+            font-weight: 600;
+            color: var(--bk);
+        }
+
+        .cred-detail {
+            font-size: 7px;
+            color: #666;
+            font-weight: 300;
+        }
+
+        /* Languages */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 8px;
+            font-weight: 300;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.03);
+            padding-bottom: 0.5mm;
+        }
+
+        .lang-level {
+            color: #888;
+            font-size: 7.5px;
+        }
+
+        /* ── RIGHT COLUMN ── */
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            gap: 4mm;
+            overflow: hidden;
+        }
+
+        .tagline {
+            font-size: 8.5px;
+            font-weight: 300;
+            color: #222;
+            line-height: 1.6;
+            padding: 3mm;
+            background: #fbfbfa;
+            border-radius: 3px;
+            border: 0.5px solid rgba(0,0,0,0.03);
+            border-left: 1.5px solid var(--br);
+        }
+
+        .section-title {
+            font-size: 10.5px;
+            font-weight: 800;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            color: var(--bk);
+            margin-bottom: 0.5mm;
+            flex-shrink: 0;
+        }
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5mm;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .exp-entry {
+            page-break-inside: avoid;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5mm;
+        }
+
+        .exp-role {
+            font-size: 9.5px;
+            font-weight: 800;
+            color: var(--bk);
+        }
+
+        .exp-date {
+            font-size: 7.8px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .exp-company {
+            font-size: 8.5px;
+            color: var(--br);
+            font-weight: 500;
+            margin-bottom: 0.8mm;
+        }
+
+        .exp-summary {
+            font-size: 8px;
+            color: #333;
+            line-height: 1.45;
+            margin-bottom: 1mm;
+            font-weight: 300;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding-left: 0.5mm;
+        }
+
+        .exp-bullets li {
+            font-size: 8px;
+            color: #222;
+            line-height: 1.5;
+            padding-left: 3.5mm;
+            position: relative;
+            margin-bottom: 0.5mm;
+            font-weight: 300;
+        }
+
+        .exp-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4.5px;
+            width: 2.2px;
+            height: 2.2px;
+            background: var(--br);
+            border-radius: 50%;
+        }
+
+        .exp-projects {
+            font-size: 7.5px;
+            color: #555;
+            margin-top: 1.2mm;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            padding-top: 3mm;
+            border-top: 0.5px solid var(--sd);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            font-size: 7.8px;
+            color: #888;
+            font-weight: 300;
+        }
+
+        @media print {
+            body, .page { background: #fff; padding: 10mm 12mm; }
+        }
+
+        @media screen {
+            body { background: #e0ddd8; padding: 20px 0; }
+            .page { box-shadow: 0 4px 30px rgba(0,0,0,0.12); }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="logo">
+                    RIMA <span>ALSHOUFI</span>
+                </div>
+                <div class="title">Creative Director | Spatial Experience &amp; Brand Innovation</div>
+
+                <div class="contact-grid">
+                    <div><span style="color:#888">UAE</span> &nbsp;+971 52 873 1303</div>
+                    <div><span style="color:#888">Mail</span> &nbsp;<a href="mailto:rimaalshoufi@gmail.com">rimaalshoufi@gmail.com</a></div>
+                    <div><span style="color:#888">Swiss</span> &nbsp;+41 78 304 35 68</div>
+                    <div><span style="color:#888">Web</span> &nbsp;<a href="http://www.rimaalshoufi.com" target="_blank">www.rimaalshoufi.com</a></div>
+                    <div><span style="color:#888">Loc</span> &nbsp;Dubai, UAE &amp; Lausanne, CH</div>
+                    <div><span style="color:#888">In</span> &nbsp;<a href="https://linkedin.com/in/rima-alshoufi-46962628b/" target="_blank">linkedin.com/in/rima-alshoufi</a></div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="photo-container">
+                    <img src="../downloaded-images/Rima - Cv photo.png" alt="Rima Alshoufi">
+                </div>
+            </div>
+        </div>
+
+        <!-- Body Columns -->
+        <div class="body-container">
+
+            <!-- LEFT COLUMN -->
+            <div class="left-col">
+
+                <!-- Sectors -->
+                <div class="sub-sec">
+                    <div class="sec-tag">Sectors</div>
+                    <div class="sectors-list">
+                        <span class="sector-tag">Luxury Retail</span>
+                        <span class="sector-tag">Hospitality</span>
+                        <span class="sector-tag">Immersive Experiences</span>
+                        <span class="sector-tag">Luxury Residential</span>
+                        <span class="sector-tag">Workplace Environments</span>
+                        <span class="sector-tag">Events &amp; Activations</span>
+                    </div>
+                </div>
+
+
+                <!-- Skills -->
+                <div class="sub-sec">
+                    <div class="sec-tag">Skills &amp; Tools</div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">AI &amp; Emerging</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Midjourney</span>
+                            <span class="skill-tag">Runway</span>
+                            <span class="skill-tag">ChatGPT</span>
+                            <span class="skill-tag">Claude</span>
+                            <span class="skill-tag">Adobe Firefly</span>
+                            <span class="skill-tag">Nano-Banana</span>
+                        </div>
+
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Design &amp; Technical</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AutoCAD</span>
+                            <span class="skill-tag">3Ds Max</span>
+                            <span class="skill-tag">SketchUp</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">InDesign</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Professional</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Strategic Planning</span>
+                            <span class="skill-tag">Visual Merchandising</span>
+                            <span class="skill-tag">Workflow Optimization</span>
+                            <span class="skill-tag">Campaign Storytelling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="sub-sec">
+                    <div class="sec-tag">Education</div>
+                    <div class="edu-item">
+                        <div class="edu-degree">MBA — Luxury Management</div>
+                        <div class="edu-school">Sup de Luxe (Founded by Cartier)</div>
+                        <div class="edu-date">Paris, France · 2023 — 2024</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">BA — Interior Architecture</div>
+                        <div class="edu-school">Damascus University</div>
+                        <div class="edu-date">2009 — 2013</div>
+                    </div>
+                </div>
+
+                <!-- Credentials -->
+                <div class="sub-sec">
+                    <div class="sec-tag">Credentials</div>
+                    <div class="cred-item">
+                        <div class="cred-title">UAE Golden Visa</div>
+                        <div class="cred-detail">Creative Category</div>
+                    </div>
+                    <div class="cred-item">
+                        <div class="cred-title">Inside LVMH Certificate</div>
+                        <div class="cred-detail">Brand Experience &amp; Innovation</div>
+                    </div>
+                    <div class="cred-item">
+                        <div class="cred-title">Design Jury Member</div>
+                        <div class="cred-detail">Sup de Luxe, Paris · 2025</div>
+                    </div>
+                    <div class="cred-item">
+                        <div class="cred-title">48H de la Créativité Awards</div>
+                        <div class="cred-detail">Winner · Franco-Syrian · 2010</div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="sub-sec">
+                    <div class="sec-tag">Languages</div>
+                    <div class="lang-item"><span>Arabic</span> <span class="lang-level">Native</span></div>
+                    <div class="lang-item"><span>English</span> <span class="lang-level">Professional</span></div>
+                    <div class="lang-item"><span>French</span> <span class="lang-level">Basic</span></div>
+                </div>
+
+                <!-- Brand Experience -->
+                <div class="sub-sec" style="margin-top: auto; padding-bottom: 2mm;">
+                    <div class="sec-tag">Brand Experience</div>
+                    <p style="font-size:7.5px; color:#666; font-style:italic; line-height:1.4;">
+                        Waldorf Astoria · Sofitel · JW Marriott · Galeries Lafayette · Printemps · Harvey Nichols · Bloomingdale's · Sephora · Christofle · Moser
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-col">
+                <div class="tagline">
+                    Creative Director and Spatial Experience leader with 13+ years across luxury retail, hospitality, immersive activations, and branded environments in the GCC and Europe. Experienced in leading concept development, flagship design, multi-site rollouts, 360 campaign integration, and cross-functional delivery from strategy through execution. Combines interior architecture, brand storytelling, and AI-enabled creative workflows to build commercially relevant, emotionally resonant experiences for premium and luxury brands.
+                </div>
+
+
+
+
+                <div class="section-title">Professional Experience</div>
+                <div class="experience-list">
+
+                    <!-- Current Practice -->
+                    <div class="exp-entry">
+                        <div class="exp-header">
+                            <span class="exp-role">Creative Director | Independent Luxury Brand &amp; Spatial Experience Consultancy</span>
+                            <span class="exp-date">Nov 2024 — Present</span>
+                        </div>
+                        <div class="exp-company">Self-Employed · Dubai &amp; Lausanne (Hybrid)</div>
+                        <ul class="exp-bullets">
+                            <li>Advise luxury and premium clients on concept strategy, spatial identity, and experience design across retail, hospitality, and residential projects.</li>
+                            <li>Develop early-stage creative direction, narrative frameworks, and AI-supported visual prototyping to accelerate concept approval and stakeholder alignment.</li>
+                            <li>Translate brand positioning into spatial concepts, customer journey logic, and design direction for high-value environments.</li>
+                            <li>Collaborate across Dubai and Lausanne with clients, consultants, and suppliers to move concepts toward implementation.</li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <!-- Creative Director - MHG -->
+                    <div class="exp-entry">
+                        <div class="exp-header">
+                            <span class="exp-role">Creative Director</span>
+                            <span class="exp-date">Oct 2022 — Nov 2024</span>
+                        </div>
+                        <div class="exp-company">Mohamed Hilal Group (MHG) · Dubai, UAE</div>
+                        <p class="exp-summary">Led creative strategy, spatial identity, and 360° campaign direction for a portfolio of luxury retail, fragrance, and F&B brands, including Hind Al Oud, Khaltat, Anfasic Dukhoon, HOB, Ana Restaurant, and Third Avenue. Drove brand evolution from traditional retail into immersive, multi-sensory storytelling—ensuring every environment, campaign, and physical touchpoint operated as a cohesive brand narrative.</p>
+                        <p style="font-size:7.8px; font-weight:600; color:#444; margin-top:1.2mm; margin-bottom:0.6mm;">Key impact:</p>
+                        <ul class="exp-bullets">
+                            <li>Designed and rolled out flagship retail concepts and scalable multi-site formats across the GCC and selected global markets.</li>
+                            <li>Led creative strategy, spatial identity, and 360° campaign direction—aligning physical, digital, and content touchpoints into one brand narrative system.</li>
+                            <li>Conceived and delivered Emovation Lab—a sensory innovation platform for fragrance, emotion, and brand engagement.</li>
+                            <li>Led immersive brand activations &amp; luxury events translating brand worlds into live experience.</li>
+                            <li>Directed prestige creative collaborations with heritage luxury houses, embedding international luxury codes into locally resonant storytelling.</li>
+                        </ul>
+                    </div>
+
+
+
+                    <!-- Design Manager - MHG -->
+                    <div class="exp-entry">
+                        <div class="exp-header">
+                            <span class="exp-role">Design Manager | Head of Interior Architecture</span>
+                            <span class="exp-date">Oct 2018 — Oct 2022</span>
+                        </div>
+                        <div class="exp-company">Mohamed Hilal Group (MHG) · Dubai, UAE</div>
+                        <p class="exp-summary">Headed department delivering flagship environments (concept to site) across retail, hospitality, and commercial.</p>
+                        <ul class="exp-bullets">
+                            <li>Led flagship concepts and rollouts for Hind Al Oud, Khaltat, Anfasic Dukhoon, and HOB.</li>
+                            <li>Designed and delivered HOB (Yas Mall) — group's premier luxury department store.</li>
+                            <li>Designed MHG HQ (2,600 sqm) — focused on employee well-being and choreography.</li>
+                            <li>Managed full lifecycle: concept, space planning, FF&amp;E, tendering, and site supervision.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Design Manager - Catalina -->
+                    <div class="exp-entry">
+                        <div class="exp-header">
+                            <span class="exp-role">Design Manager</span>
+                            <span class="exp-date">Apr 2014 — Jun 2018</span>
+                        </div>
+                        <div class="exp-company">Catalina Design Group · Dubai, UAE</div>
+                        <p class="exp-summary">Led design department across 50+ commercial, residential, and F&amp;B projects in UAE.</p>
+                        <ul class="exp-bullets">
+                            <li>Directed lifecycle: concept, space-planning, FF&amp;E, and site supervision.</li>
+                            <li>Led and mentored a team of designers across multiple parallel projects.</li>
+                            <li>Delivered luxury styling outcomes across residential and hospitality typologies.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Event Designer -->
+                    <div class="exp-entry">
+                        <div class="exp-header">
+                            <span class="exp-role">Event Designer</span>
+                            <span class="exp-date">Aug 2013 — Mar 2014</span>
+                        </div>
+                        <div class="exp-company">Meraas Holding (Duvent) · Dubai, UAE</div>
+                        <ul class="exp-bullets">
+                            <li>Design and engineer immersive spatial architectures for large-scale corporate activations, luxury grand openings, and global entertainment productions.</li>
+                            <li>Formulate high-impact spatial layouts, visual concepts, and technical blueprints to direct multi-disciplinary execution teams.</li>
+                        </ul>
+                        <div class="exp-projects">
+                            <strong>Events:</strong> Cirque du Soleil Immortal Tour (Dubai WTC) · Sofitel Grand Opening · Shah Rukh Khan Live · JBR Beach Grand Opening
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div>Atmosphere is a strategy, not a side effect.</div>
+            <div>&copy; 2026 Rima Alshoufi</div>
+        </div>
+
+    </div>
+</body>
+</html>

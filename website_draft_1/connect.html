@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect | Rima Alshoufi</title>
     <meta name="description"
-        content="Connect with Rima Alshoufi for luxury retail, hospitality, immersive, and branded environment projects.">
+        content="Connect regarding luxury retail, hospitality, immersive, workplace, and residential environments in Dubai and the GCC.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0a0a0a">
-    <link rel="canonical" href="https://rimaalshoufi.com/connect.html">
+    <link rel="canonical" href="https://rimaalshoufi.com/connect">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <meta property="og:site_name" content="Rima Alshoufi">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Connect | Rima Alshoufi">
     <meta property="og:description"
-        content="Connect with Rima Alshoufi for luxury retail, hospitality, immersive, and branded environment projects.">
-    <meta property="og:url" content="https://rimaalshoufi.com/connect.html">
+        content="Connect regarding luxury retail, hospitality, immersive, workplace, and residential environments in Dubai and the GCC.">
+    <meta property="og:url" content="https://rimaalshoufi.com/connect">
     <meta property="og:image" content="https://rimaalshoufi.com/og-image-v3.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Connect | Rima Alshoufi">
     <meta name="twitter:description"
-        content="Connect with Rima Alshoufi for luxury retail, hospitality, immersive, and branded environment projects.">
+        content="Connect regarding luxury retail, hospitality, immersive, workplace, and residential environments in Dubai and the GCC.">
     <meta name="twitter:image" content="https://rimaalshoufi.com/og-image-v3.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -207,8 +207,14 @@
         }
 
         textarea.f-input {
-            resize: none;
-            min-height: 90px;
+            resize: vertical;
+            min-height: 170px;
+            padding: 14px 0 18px;
+            line-height: 1.7;
+        }
+
+        textarea.f-input:focus {
+            border-bottom-color: var(--bk);
         }
 
         select.f-input {
@@ -373,12 +379,12 @@
 
 <body>
 
-    <nav id="main-nav" class="connect-nav">
-        <a href="index.html" class="logo">RIMA <span>ALSHOUFI</span></a>
+    <nav id="main-nav" class="dark-mode">
+        <a href="/" class="logo">RIMA <span>ALSHOUFI</span></a>
         <div class="nav-links">
-            <a href="index.html#about">About</a>
-            <a href="work.html">Work</a>
-            <a href="connect.html" class="cta active"><span>Connect</span></a>
+            <a href="/#about">About</a>
+            <a href="/work">Work</a>
+            <a href="/connect" class="cta active"><span>Connect</span></a>
         </div>
     </nav>
 
@@ -388,11 +394,7 @@
         <div class="connect-left">
             <div>
                 <span class="connect-eyebrow">Connect</span>
-                <h1 class="connect-heading">Let's build<br>something<br>felt.</h1>
-                <p class="connect-line">
-                    Whether you are opening a flagship, designing a hospitality experience,
-                    or building an environment that needs to say something — I'd like to hear about it.
-                </p>
+                <h1 class="connect-heading">Let's<br>connect.</h1>
             </div>
 
             <div class="connect-meta">
@@ -404,13 +406,9 @@
                     <span class="connect-meta-label">LinkedIn</span>
                     <span class="connect-meta-value">
                         <a href="https://www.linkedin.com/in/rima-alshoufi-46962628b/" target="_blank" rel="noopener">
-                            linkedin.com/in/rima-alshoufi
+                            View LinkedIn profile
                         </a>
                     </span>
-                </div>
-                <div class="connect-meta-row">
-                    <span class="connect-meta-label">Response</span>
-                    <span class="connect-meta-value">Within a few business days</span>
                 </div>
             </div>
         </div>
@@ -418,7 +416,7 @@
         <!-- RIGHT: Form -->
         <div class="connect-right">
             <div id="form-container">
-                <span class="form-label-top">Send a message</span>
+                <span class="form-label-top">Share a few details</span>
 
                 <form class="minimal-form" id="connect-form" onsubmit="handleFormSubmit(event)">
                     <div class="f-row">
@@ -435,11 +433,11 @@
                     <div class="f-row">
                         <div class="f-group">
                             <label class="f-lbl" for="mobile">Mobile</label>
-                            <input class="f-input" type="tel" id="mobile" name="mobile" placeholder="Your mobile number" required>
+                            <input class="f-input" type="tel" id="mobile" name="mobile" placeholder="Optional">
                         </div>
                         <div class="f-group">
                             <label class="f-lbl" for="location">Location</label>
-                            <input class="f-input" type="text" id="location" name="location" placeholder="City, country" required>
+                            <input class="f-input" type="text" id="location" name="location" placeholder="Optional">
                         </div>
                     </div>
 
@@ -456,9 +454,9 @@
                         </select>
                     </div>
 
-                    <div class="f-group">
+                    <div class="f-group f-group-message">
                         <label class="f-lbl" for="message">Message</label>
-                        <textarea class="f-input" id="message" name="message" placeholder="What are we building?" required></textarea>
+                        <textarea class="f-input" id="message" name="message" rows="8" placeholder="What are you building, where is it based, and what kind of experience should it create?" required></textarea>
                     </div>
 
                     <div class="hp-field" aria-hidden="true">
@@ -467,7 +465,6 @@
                     </div>
 
                     <div class="form-footer">
-                        <span class="expectation-text">Sent privately and stored for follow-up</span>
                         <button type="submit" class="btn-send" id="submit-btn"><span>Send</span> <i>→</i></button>
                     </div>
                     <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
@@ -476,7 +473,7 @@
 
             <div id="confirm-state" class="confirm-state">
                 <h2>Thank you.</h2>
-                <p>Your message has been sent successfully and added to the project inquiry log for review.</p>
+                <p>Your message has been sent successfully. It will be reviewed and followed up with the right next step.</p>
             </div>
         </div>
 
@@ -485,14 +482,44 @@
     <footer>
         <div class="f-logo">RIMA <span>ALSHOUFI</span></div>
         <div class="f-links">
-            <a href="index.html#about">About</a>
-            <a href="work.html">Work</a>
-            <a href="connect.html" class="active">Connect</a>
+            <a href="/#about">About</a>
+            <a href="/work">Work</a>
+            <a href="/connect" class="active">Connect</a>
         </div>
-        <div class="f-copy">Spatial Experience Designer · Dubai, UAE · © 2026</div>
+        <div class="f-copy">Spatial Experience Designer | Dubai, UAE | &copy; 2026</div>
     </footer>
 
     <script>
+        function hydrateFormFromQuery() {
+            const params = new URLSearchParams(window.location.search);
+            const area = params.get('area');
+            const intent = params.get('intent');
+            const source = params.get('source');
+            const areaField = document.getElementById('area');
+            const messageField = document.getElementById('message');
+
+            if (area && areaField && [...areaField.options].some((option) => option.value === area)) {
+                areaField.value = area;
+            }
+
+            if (!messageField || messageField.value.trim()) return;
+
+            const messageParts = [];
+            if (intent === 'deck') {
+                messageParts.push('Please send the full portfolio and case study deck.');
+            } else if (intent === 'consultation') {
+                messageParts.push('I would like to discuss a new project.');
+            }
+
+            if (source) {
+                messageParts.push(`Reference project or page: ${source}.`);
+            }
+
+            if (messageParts.length > 0) {
+                messageField.value = messageParts.join(' ');
+            }
+        }
+
         async function handleFormSubmit(e) {
             e.preventDefault();
             const form = document.getElementById('connect-form');
@@ -538,6 +565,8 @@
                 submitBtn.disabled = false;
             }
         }
+
+        document.addEventListener('DOMContentLoaded', hydrateFormFromQuery);
     </script>
     <script src="scripts.js"></script>
 

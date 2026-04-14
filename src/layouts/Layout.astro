@@ -68,7 +68,36 @@ const { title = "Rima Alshoufi | Creative Director" } = Astro.props;
 					}
 				});
 			}
+
+			// Video Modal Logic
+			window.openVideoModal = (url) => {
+				const modal = document.getElementById('videoModal');
+				const iframe = document.getElementById('modalIframe');
+				if (modal && iframe) {
+					iframe.src = url;
+					modal.classList.add('is-active');
+					document.body.style.overflow = 'hidden';
+				}
+			};
+
+			window.closeVideoModal = () => {
+				const modal = document.getElementById('videoModal');
+				const iframe = document.getElementById('modalIframe');
+				if (modal && iframe) {
+					modal.classList.remove('is-active');
+					iframe.src = '';
+					document.body.style.overflow = '';
+				}
+			};
 		</script>
+
+		{/* Global Video Modal */}
+		<div id="videoModal" class="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 [&.is-active]:opacity-100 [&.is-active]:pointer-events-auto">
+			<button class="absolute top-8 right-8 text-white text-4xl leading-none cursor-pointer hover:scale-110 transition-transform" onclick="closeVideoModal()">×</button>
+			<div class="w-[90%] max-w-7xl aspect-video">
+				<iframe id="modalIframe" src="" class="w-full h-full border-none" allow="autoplay; fullscreen" allowfullscreen></iframe>
+			</div>
+		</div>
 	</body>
 </html>
 

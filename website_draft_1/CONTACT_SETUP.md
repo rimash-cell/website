@@ -2,12 +2,14 @@
 
 The contact form is wired to `POST /api/contact`.
 
-It does two things on the server:
+It can do two things on the server:
 
 1. Appends each inquiry to Google Sheets
 2. Sends an email notification to the private inbox configured in Vercel
 
-## Google Sheet
+The form now succeeds as long as at least one destination is configured.
+
+## Google Sheet (Optional but recommended)
 
 Create a sheet with these columns in row 1:
 
@@ -38,6 +40,7 @@ Add these in Vercel:
 
 ## Notes
 
-- `CONTACT_TO_EMAIL` is server-side only and is not exposed in the page HTML
-- Email sending is optional in code, but Google Sheets storage is required
-- After adding the environment variables, redeploy the site
+- Google Sheets storage is optional if email notifications are configured
+- Email sending is optional if Google Sheets storage is configured
+- The site now requires one working destination: Google Sheets, email, or both
+- After adding or changing the environment variables, redeploy the site

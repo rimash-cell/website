@@ -16,7 +16,20 @@ export default function Hero({ slice }: any) {
                 </div>
             </div>
 
-            {slice.primary.image?.url && (
+            {slice.primary.video_url || slice.primary.video_file?.url ? (
+                <div className="absolute inset-0 -z-10">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover opacity-40"
+                    >
+                        <source src={slice.primary.video_url || slice.primary.video_file?.url} type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0a]/50 to-[#0a0a0a]"></div>
+                </div>
+            ) : slice.primary.image?.url && (
                 <div className="absolute inset-0 -z-10">
                     <img
                         src={slice.primary.image.url}

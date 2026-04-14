@@ -124,7 +124,7 @@ try {
 
 					{selectedWorks.length > 0 ? (
 						selectedWorks.map((work: any, i: number) => (
-							<a href={`/work/${work.uid}`} class={`work-card ${i % 2 !== 0 ? 'work-card-offset' : ''}`}>
+							<a href={`/projects/${work.uid}`} class={`work-card ${i % 2 !== 0 ? 'work-card-offset' : ''}`}>
 								<div class="work-img" style={work.data.main_image?.url ? `background-image: url('${work.data.main_image.url}')` : ''}>
 									<span class="work-img-l">{work.data.title?.[0]?.text || "Untitled"}</span>
 								</div>
@@ -141,7 +141,7 @@ try {
 					)}
 
 					<div class="work-footer">
-						<a href="/work" class="btn-all-work"><span>View All Projects</span> <i>→</i></a>
+						<a href="/projects" class="btn-all-work"><span>View All Projects</span> <i>→</i></a>
 						<p class="work-footer-note">Full case studies available on request.</p>
 					</div>
 				</div>

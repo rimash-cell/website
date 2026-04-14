@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Carousel - Refined Luxury Editorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bk: #0a0a0a;
+            --ow: #f7f5f2;
+            --br: #b87333; /* Bronze Accent */
+            --sd: #c8c2b8; /* Sand Dividers */
+            --img: url("file:///C:/Users/rimaa/.gemini/antigravity/brain/b43e5258-8e4b-4410-8126-2da0762649f1/luxury_metallic_fluid_1774334937759.png");
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #e0ddd8;
+            font-family: 'Hanken Grotesk', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            padding: 60px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .controls { background: var(--bk); color: var(--ow); padding: 16px 32px; border-radius: 8px; font-weight: 300; }
+
+        .slide {
+            width: 1080px; height: 1350px;
+            background-color: var(--ow); color: var(--bk);
+            position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+            padding: 160px 140px;
+            z-index: 1;
+        }
+
+        .dark { background-color: var(--bk); color: var(--ow); }
+
+        /* The Image Texture (kept exquisitely subtle to maintain luxury, not busy) */
+        .img-texture {
+            position: absolute; inset: 0; z-index: -1;
+            background-image: var(--img); background-size: cover; background-position: center;
+            opacity: 0.12; /* Barely there, extremely high-end */
+            mix-blend-mode: multiply;
+        }
+        .dark .img-texture { opacity: 0.1; mix-blend-mode: screen; filter: grayscale(100%); }
+
+        /* Clean Typography System */
+        .content { z-index: 2; font-size: 72px; font-weight: 300; line-height: 1.3; letter-spacing: -0.01em; }
+        .content p { margin-bottom: 32px; }
+        .content p:last-child { margin-bottom: 0; }
+        .content strong { font-weight: 500; }
+
+        /* Composition & Pacing */
+
+        /* S1: Huge, grounded center */
+        .s1 .content { text-align: center; margin-top: -60px; }
+        .s1 p { font-size: 110px; line-height: 1.05; letter-spacing: -0.03em; }
+
+        /* S2: Anchored to the bottom left */
+        .s2 .content { margin-top: auto; padding-bottom: 60px; }
+
+        /* S3: Shifted right */
+        .s3 .content { margin-left: 180px; }
+        
+        /* S4: Right aligned, building tension */
+        .s4 .content { text-align: right; }
+        .s4 .pause { margin-bottom: 80px; }
+
+        /* S5: Tight horizontal constraints */
+        .s5 .content { margin-left: 80px; margin-right: 120px; }
+
+        /* S6: Stark, symmetrical pivot */
+        .s6 .content { text-align: center; }
+        .s6 .pre { font-size: 40px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(247, 245, 242, 0.6); margin-bottom: 24px; }
+        .s6 .punch { font-size: 100px; font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+
+        /* S7: Decisive scale shift */
+        .s7 .content { margin-top: -80px; }
+        .s7 p { font-size: 64px; }
+        .s7 .punch { font-size: 160px; font-weight: 500; line-height: 0.9; letter-spacing: -0.04em; color: var(--br); margin-top: 40px; }
+
+        /* S8: Anchored to the top, quiet conclusion */
+        .s8 .content { margin-bottom: auto; margin-top: 60px; }
+        .s8 p { font-size: 110px; line-height: 1.05; letter-spacing: -0.03em; }
+        .s8 .punch { font-size: 52px; font-weight: 400; font-style: italic; color: var(--br); margin-top: 40px; }
+
+
+        /* Minimal Footer */
+        .footer {
+            position: absolute; bottom: 80px; left: 140px; right: 140px;
+            display: flex; justify-content: space-between; align-items: flex-end; z-index: 10;
+            font-weight: 500; font-size: 16px; letter-spacing: 0.08em; text-transform: uppercase;
+        }
+        .footer .logo span { font-weight: 300; }
+        .footer .counter { font-variant-numeric: tabular-nums; }
+        
+        /* Footer Theming */
+        .slide .footer { color: var(--bk); border-top: 1px solid rgba(10, 10, 10, 0.15); padding-top: 24px; }
+        .dark .footer { color: var(--ow); border-top-color: rgba(247, 245, 242, 0.15); }
+
+        @media print { body { background: transparent; padding: 0; gap: 0; } .controls { display: none; } .slide { box-shadow: none; margin: 0; border: none; page-break-after: always; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; } @page { size: 1080px 1350px; margin: 0; } }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <strong>Ready to post!</strong> Press <code>Ctrl + P</code> (or Cmd + P) to Print, select <strong>"Save as PDF"</strong>, and uncheck "Headers and Footers" to generate your LinkedIn carousel.
+    </div>
+
+    <!-- S1 -->
+    <div class="slide s1">
+        <div class="img-texture"></div>
+        <div class="content">
+            <p>Movement<br>is the most<br><strong>ignored</strong><br>design material.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">01 / 08</div></div>
+    </div>
+
+    <!-- S2 -->
+    <div class="slide dark s2">
+        <div class="content">
+            <p>The plan is approved.</p>
+            <p>The circulation works.</p>
+            <p>But no one designed <strong>how people actually move</strong>.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">02 / 08</div></div>
+    </div>
+
+    <!-- S3 -->
+    <div class="slide s3">
+        <div class="content">
+            <p>People don’t experience layouts.</p>
+            <p>They experience <strong>sequence</strong>.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">03 / 08</div></div>
+    </div>
+
+    <!-- S4 -->
+    <div class="slide s4">
+        <div class="content">
+            <p>Where they slow down.</p>
+            <p>Where they pause.</p>
+            <p class="pause">Where they turn.</p>
+            <p><strong>This is the design.</strong></p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">04 / 08</div></div>
+    </div>
+
+    <!-- S5 -->
+    <div class="slide s5">
+        <div class="content">
+            <p>Most spaces move people through.</p>
+            <p>Very few <strong>make people stay</strong>.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">05 / 08</div></div>
+    </div>
+
+    <!-- S6 -->
+    <div class="slide dark s6">
+        <div class="content">
+            <p class="pre">If everything is clear,</p>
+            <p class="punch">nothing is discovered.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">06 / 08</div></div>
+    </div>
+
+    <!-- S7 -->
+    <div class="slide s7">
+        <div class="content">
+            <p>Movement is not solved.</p>
+            <p class="punch">It is<br>directed.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">07 / 08</div></div>
+    </div>
+
+    <!-- S8 -->
+    <div class="slide s8">
+        <div class="img-texture"></div>
+        <div class="content">
+            <p><strong>Design the movement.</strong></p>
+            <p class="punch">Or the space will be forgotten.</p>
+        </div>
+        <div class="footer"><div class="logo">RIMA <span>ALSHOUFI</span></div><div class="counter">08 / 08</div></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { client } from "../../lib/prismic";
+import ProjectList from "../../components/ProjectList";
+
+let works: any[] = [];
+try {
+    works = await client.getAllByType("work", {
+        lang: "*",
+        orderings: {
+            field: "my.work.order",
+            direction: "asc",
+        },
+    });
+
+    // PILOT MOCK: Inject the KHT project into the Prismic results
+    works.push({
+        uid: "kht-the-perfumers",
+        data: {
+            title: [{ type: "heading1", text: "The Perfumers", spans: [] }],
+            category: "Events & Activations",
+            year: "2023",
+            hidden: false,
+            main_image: {
+                url: "/projects/kht-the-perfumers/1_the_perfumers_banner.jpg"
+            }
+        }
+    });
+    works = works.filter((w) => !w.data.hidden);
+} catch (e) {
+    console.error("Failed to fetch works", e);
+}
+---
+
+<Layout title="Work | Rima Alshoufi">
+    <main class="pt-32 px-8 md:px-12 max-w-7xl mx-auto">
+        <ProjectList client:load initialWorks={works} />
+
+        {/* ── Static case studies (no Prismic required) ── */}
+        <div class="mt-32 border-t border-black/5 dark:border-white/5 pt-32">
+        </div>
+    </main>
+</Layout>
+
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        opacity: 0;
+        animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
+</style>
