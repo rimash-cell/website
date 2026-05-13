@@ -25,17 +25,39 @@ import Layout from "../layouts/Layout.astro";
                     Reach out to start the conversation.
                 </p>
 
-                <!-- Tally Form Placeholder -->
-                <div
-                    class="w-full bg-neutral-900/50 border border-neutral-800 rounded-lg p-12 text-center"
-                >
-                    <p
-                        class="text-neutral-500 uppercase tracking-widest text-sm"
-                    >
-                        Tally Form Embed Placeholder
-                    </p>
+                <div class="tally-container -ml-1">
+                    <iframe
+                        data-tally-src="https://tally.so/embed/RGvyKP?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                        loading="lazy"
+                        width="100%"
+                        height="600"
+                        frameborder="0"
+                        marginheight="0"
+                        marginwidth="0"
+                        title="Contact / Project Inquiry"
+                    ></iframe>
                 </div>
             </div>
+
+            <script is:inline>
+                var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+                    if(typeof Tally!=="undefined"){
+                        Tally.loadEmbeds();
+                    }else{
+                        d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
+                            e.src=e.dataset.tallySrc;
+                        });
+                    }
+                };
+                if(typeof Tally!=="undefined") v();
+                else if(d.querySelector('script[src="'+w+'"]')==null){
+                    var s=d.createElement("script");
+                    s.src=w;
+                    s.onload=v;
+                    s.onerror=v;
+                    d.body.appendChild(s);
+                }
+            </script>
 
             <div class="space-y-16 animate-fade-in-up delay-100 mt-12 md:mt-32">
                 <div>
